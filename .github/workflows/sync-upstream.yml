@@ -2,9 +2,10 @@ name: Sync Upstream Manifest
 
 on:
   schedule:
-    # 每天 UTC 时间 00:00 运行（北京时间 08:00）
-    - cron: '0 0 * * *'
-  workflow_dispatch: # 允许手动触发
+  # 每天 UTC 时间 00:00 运行（北京时间 08:00）
+  - cron: '0 0 * * *'
+  workflow_dispatch:
+    # 允许手动触发
 
 permissions:
   contents: write
@@ -13,19 +14,19 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: true
 
-      - name: Download upstream manifest
-        run: |
-          curl -L "https://raw.githubusercontent.com/mtkennerly/ludusavi-manifest/master/data/manifest.yaml" -o manifest/manifest.yaml
+    - name: Download upstream manifest
+      run: |
+        curl -L "https://raw.githubusercontent.com/mtkennerly/ludusavi-manifest/master/data/manifest.yaml" -o manifest/manifest.yaml
 
-      - name: Commit and push changes
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add manifest/manifest.yaml
-          git commit -m "chore: sync upstream manifest $(date +%Y-%m-%d)" || echo "No changes to commit"
-          git push
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add manifest/manifest.yaml
+        git commit -m "chore: sync upstream manifest $(date +%Y-%m-%d)" || echo "No changes to commit"
+        git push
