@@ -23,14 +23,47 @@ jobs:
       run: |
         curl -L "https://raw.githubusercontent.com/mtkennerly/ludusavi-manifest/master/data/manifest.yaml" -o manifest/manifest.yaml
 
-    - name: Generate SHA256 hash
+    - name: Generate SHA256 hash and metadata
       run: |
+        # Calculate hash
+        HASH=$(sha256sum manifest/manifest.yaml | cut -d' ' -f1)
+        
+        # Get file size in bytes
+        SIZE=$(stat -c%s manifest/manifest.yaml 2>/dev/null || wc -c < manifest/manifest.yaml)
+        
+        # Get sync date
+        SYNC_DATE=$(date +%Y-%m-%d)
+        SYNC_TIMESTAMP=$(date +%s)
+        
+        # Count games (count top-level YAML keys that look like game names)
+        GAME_COUNT=$(grep -E '^"?[^#"[:space:]]+"?:' manifest/manifest.yaml | grep -v '::' | wc -l)
+        
+        # Get upstream commit info
+        UPSTREAM_COMMIT=$(curl -s "https://api.github.com/repos/mtkennerly/ludusavi-manifest/commits?path=data/manifest.yaml&per_page=1" | jq -r '.[0].sha' 2>/dev/null || echo "unknown")
+        UPSTREAM_DATE=$(curl -s "https://api.github.com/repos/mtkennerly/ludusavi-manifest/commits?path=data/manifest.yaml&per_page=1" | jq -r '.[0].commit.committer.date' 2>/dev/null | cut -dT -f1 || echo "unknown")
+        
+        # Generate version from sync date (vYYYY.M.D format)
+        VERSION=$(date +v%Y.%-m.%-d)
+        
+        # Write metadata YAML
+        cat > manifest/manifest.meta.yaml << EOF
+        hash: $HASH
+        date: $SYNC_DATE
+        timestamp: $SYNC_TIMESTAMP
+        version: $VERSION
+        size_bytes: $SIZE
+        game_count: $GAME_COUNT
+        upstream_commit: $UPSTREAM_COMMIT
+        upstream_date: $UPSTREAM_DATE
+        EOF
+        
+        # Also keep sha256 file for compatibility
         sha256sum manifest/manifest.yaml > manifest/manifest.sha256
 
     - name: Commit and push changes
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add manifest/manifest.yaml manifest/manifest.sha256
+        git add manifest/manifest.yaml manifest/manifest.sha256 manifest/manifest.meta.yaml
         git commit -m "chore: sync upstream manifest $(date +%Y-%m-%d)" || echo "No changes to commit"
         git push
