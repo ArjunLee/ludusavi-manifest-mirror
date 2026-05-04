@@ -23,10 +23,14 @@ jobs:
       run: |
         curl -L "https://raw.githubusercontent.com/mtkennerly/ludusavi-manifest/master/data/manifest.yaml" -o manifest/manifest.yaml
 
+    - name: Generate SHA256 hash
+      run: |
+        sha256sum manifest/manifest.yaml > manifest/manifest.sha256
+
     - name: Commit and push changes
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add manifest/manifest.yaml
+        git add manifest/manifest.yaml manifest/manifest.sha256
         git commit -m "chore: sync upstream manifest $(date +%Y-%m-%d)" || echo "No changes to commit"
         git push
