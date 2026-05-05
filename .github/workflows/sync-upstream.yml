@@ -35,8 +35,8 @@ jobs:
         SYNC_DATE=$(date +%Y-%m-%d)
         SYNC_TIMESTAMP=$(date +%s)
         
-        # Count games (count top-level YAML keys that look like game names)
-        GAME_COUNT=$(grep -E '^"?[^#"[:space:]]+"?:' manifest/manifest.yaml | grep -v '::' | wc -l)
+        # Count games (top-level YAML entries = lines with no indentation, excluding ---)
+        GAME_COUNT=$(grep -v '^---' manifest/manifest.yaml | grep -v '^#' | grep -v '^$' | grep -v '^  ' | grep -v '^\t' | wc -l)
         
         # Get upstream commit info
         UPSTREAM_COMMIT=$(curl -s "https://api.github.com/repos/mtkennerly/ludusavi-manifest/commits?path=data/manifest.yaml&per_page=1" | jq -r '.[0].sha' 2>/dev/null || echo "unknown")
