@@ -37332,6 +37332,11 @@ Ancestors Legacy:
         - save
       when:
         - os: windows
+    "<home>/Library/Application Support/com.vpltd.ancestorslegacy":
+      tags:
+        - save
+      when:
+        - os: mac
     "<winDocuments>/AncestorsLegacy/SaveGames":
       tags:
         - save
@@ -37348,10 +37353,13 @@ Ancestors Legacy:
     id: 1848455842
   id:
     gogExtra:
+      - 1093926826
       - 1338520897
+      - 1371802621
       - 1774090337
       - 1797616458
       - 1855776856
+      - 1951593802
       - 2117158635
     lutris: ancestors-legacy
     steamExtra:
@@ -37367,6 +37375,10 @@ Ancestors Legacy:
         when:
           - bit: 64
             os: windows
+            store: steam
+    "<base>/AncestorsLegacy.app":
+      - when:
+          - os: mac
             store: steam
   steam:
     id: 620590
@@ -69520,20 +69532,16 @@ Batla:
     steamExtra:
       - 35020
       - 35060
+      - 35140
   installDir:
-    Batman Arkham Asylum GOTY: {}
+    Batman Arkham Asylum: {}
   launch:
-    "<base>/Batman Arkham Asylum GOTY.app":
-      - when:
-          - os: mac
-            store: steam
     "<base>/Binaries/BmLauncher.exe":
       - when:
-          - os: windows
-            store: steam
+          - store: steam
         workingDir: "<base>/Binaries"
   steam:
-    id: 35140
+    id: 35010
 "Batman: Arkham City":
   cloud:
     gog: true
@@ -73074,8 +73082,21 @@ Battlestar Galactica Deadlock:
 "Battlestar Galactica: Scattered Hopes":
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Alt Shift/Battlestar Galactica Scattered Hopes/Saves":
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1615322203
+  installDir:
+    BattlestarGalacticaScatteredHopes: {}
+  launch:
+    "<base>/BattlestarGalacticaScatteredHopes.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2535950
 "Battlestations: Midway":
@@ -149385,9 +149406,11 @@ Copycat (2024):
   cloud:
     steam: true
   files:
-    "<base>/Copycat_Data/saves/*.json":
+    "<base>/Copycat_Data/saves":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   id:
     steamExtra:
       - 3185120
@@ -149402,6 +149425,10 @@ Copycat (2024):
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Spoonful of Wonder/Copycat:
+      tags:
+        - config
   steam:
     id: 1622350
 Coral Island:
@@ -152727,6 +152754,9 @@ Cows VS Vikings:
             store: steam
   steam:
     id: 854860
+Cozy Game Restoration:
+  steam:
+    id: 3581230
 Cozy Grove:
   cloud:
     epic: true
@@ -174107,11 +174137,6 @@ Darksiders Warmastered Edition:
     lutris: darksiders-warmastered-edition
   installDir:
     Darksiders Warmastered Edition: {}
-  launch:
-    "<base>/darksiders1.exe":
-      - when:
-          - os: windows
-            store: steam
   steam:
     id: 462780
 Darkspore:
@@ -276805,6 +276830,14 @@ Forza Horizon 6:
       - 4444140
       - 4444150
       - 4562050
+  installDir:
+    ForzaHorizon6: {}
+  launch:
+    "<base>/forzahorizon6.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2483190
 Forza Motorsport:
@@ -289419,6 +289452,7 @@ Game of Thrones Winter is Coming:
       - 3477690
       - 3508440
       - 3516830
+      - 4214820
   installDir:
     Game of Thrones Kingsroad: {}
   launch:
@@ -369023,6 +369057,27 @@ It Pays To Be A Winner:
             store: steam
   steam:
     id: 1114990
+It Reaches:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/ItReaches/Saved/SaveGames/**/*.sav":
+      when:
+        - store: steam
+  id:
+    lutris: it-reaches
+    steamExtra:
+      - 4119380
+      - 4705830
+      - 4705840
+  installDir:
+    It Reaches: {}
+  launch:
+    "<base>/ItReaches.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4119360
 It Runs Red:
   installDir:
     It Runs Red: {}
@@ -402426,6 +402481,9 @@ Lego Alpha Team:
   steam:
     id: 313690
 "Lego Batman: Legacy of the Dark Knight":
+  cloud:
+    epic: true
+    steam: true
   files:
     "<winLocalAppData>/Warner Bros. Interactive Entertainment/LEGO Batman - Legacy of the Dark Knight/SaveGames/steam/<storeUserId>/*.sav":
       when:
@@ -483500,6 +483558,7 @@ New Star Soccer 5:
   id:
     gogExtra:
       - 1495957441
+    lutris: new-super-luckys-tale
     steamExtra:
       - 1491620
   installDir:
@@ -547024,6 +547083,16 @@ Project Mirror:
   steam:
     id: 2171840
 Project Mist:
+  files:
+    "<home>/AppData/LocalLow/Chicken Launcher/ProjectMist":
+      when:
+        - store: steam
+  installDir:
+    Mist: {}
+  launch:
+    "<base>/ProjectMist.exe":
+      - when:
+          - store: steam
   steam:
     id: 2383130
 Project Mix:
@@ -690721,6 +690790,7 @@ Supreme Commander:
 Supreme Commander 2:
   cloud:
     gog: true
+    steam: true
   files:
     "<winDocuments>/My Games/SquareEnix/Supreme Commander 2/savegames":
       tags:
@@ -749253,7 +749323,7 @@ The Slaverian Trucker:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/SawyerK Games/The Slaverian Trucker":
+    "<home>/AppData/LocalLow/Budai/The Wasteland Trucker":
       tags:
         - config
         - save
@@ -770761,6 +770831,12 @@ Toree 3D:
   steam:
     id: 1554840
 Toree Saturn:
+  files:
+    "<home>/AppData/LocalLow/Siactro/Toree_Saturn":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: toree-saturn
   installDir:
@@ -833812,6 +833888,11 @@ With Loneliness:
 "Withering Kingdom: Flurry of Arrows":
   steam:
     id: 516230
+Withering Realms:
+  id:
+    lutris: withering-realms
+  steam:
+    id: 3441990
 Withering Rooms:
   cloud:
     steam: true
