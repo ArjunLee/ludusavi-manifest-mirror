@@ -75904,6 +75904,8 @@ Becoming a Dandelion Spore:
   steam:
     id: 1048410
 Becrowned:
+  cloud:
+    steam: true
   id:
     lutris: becrowned
   steam:
@@ -101296,11 +101298,16 @@ Breath of Fire IV:
   cloud:
     gog: true
   files:
-    "<base>/SAV/*.DAT":
+    "<base>/BOF4-*.DAT":
       tags:
         - save
       when:
         - os: windows
+    "<base>/SAV/*.DAT":
+      tags:
+        - save
+      when:
+        - store: gog
     "<base>/bof4.cfg":
       tags:
         - config
@@ -140277,8 +140284,28 @@ Coffee Talk:
   steam:
     id: 1663220
 Coffee Talk Tokyo:
+  files:
+    "<home>/AppData/LocalLow/Chorus Worldwide/CTT/SaveData/Steam/<storeUserId>":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Chorus Worldwide/CTT/SaveData/Steam/<storeUserId>":
+      when:
+        - os: mac
+          store: steam
   gog:
     id: 1655473839
+  installDir:
+    Coffee Talk Tokyo: {}
+  launch:
+    "<base>/CTT.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/CTT.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3161220
 Coffee Trainer VR:
@@ -183239,6 +183266,9 @@ Debuff:
             store: steam
   steam:
     id: 759850
+Debug Nephemee:
+  steam:
+    id: 3965750
 "Debugger 3.16: 100% bugged":
   cloud:
     steam: true
@@ -259169,6 +259199,8 @@ Fateholders of Tetsoidea:
 Fatekeeper:
   cloud:
     steam: true
+  id:
+    lutris: fatekeeper
   steam:
     id: 2186990
 Fateless:
@@ -316400,6 +316432,8 @@ HYPERFIGHT Max Battle:
   steam:
     id: 1005870
 HYPERFUNK:
+  id:
+    lutris: hyperfunk
   steam:
     id: 3183480
 "HYPERNOVA: Escape from Hadea":
@@ -358150,6 +358184,8 @@ InGame.exe:
     id: 705230
 InKonbini:
   cloud:
+    epic: true
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/Nagai Industries/inKonbini/*.dat":
@@ -358159,10 +358195,20 @@ InKonbini:
       when:
         - os: mac
           store: steam
+  gog:
+    id: 1974598212
   id:
-    lutris: inkonbini
+    gogExtra:
+      - 1678702499
+      - 1751254516
+      - 1798714211
+      - 1986984158
+      - 2110513065
+    lutris: inkonbini-one-store-many-stories
     steamExtra:
       - 3638700
+      - 4508150
+      - 4676870
       - 4689760
   installDir:
     inKonbini: {}
@@ -399560,6 +399606,8 @@ Leaf it Alone:
         - config
       when:
         - os: windows
+  id:
+    lutris: leaf-it-alone
   installDir:
     Leaf it Alone: {}
   launch:
@@ -402579,6 +402627,11 @@ Lego Alpha Team:
     epic: true
     steam: true
   files:
+    "<winLocalAppData>/Dinner/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/Warner Bros. Interactive Entertainment/LEGO Batman - Legacy of the Dark Knight/SaveGames":
       tags:
         - save
@@ -421250,6 +421303,15 @@ Luna Abyss:
     lutris: luna-abyss
     steamExtra:
       - 2423690
+      - 4577390
+  installDir:
+    Luna Abyss: {}
+  launch:
+    "<base>/LunaAbyss.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 1933000
 "Luna Online: Reborn":
@@ -451995,6 +452057,8 @@ Mini Motorways:
   steam:
     id: 1127500
 Mini Ninjas:
+  cloud:
+    steam: true
   files:
     "<home>/Saved Games/Eidos/Mini Ninjas/main.ini":
       tags:
@@ -481663,8 +481727,11 @@ NeptuneGL:
     steam: true
   files:
     "<winDocuments>/My Games/Idea Factory International, Inc/Neptunia Game Maker REvolution":
+      tags:
+        - config
+        - save
       when:
-        - store: steam
+        - os: windows
   installDir:
     Neptunia Game Maker REvolution: {}
   launch:
@@ -650690,6 +650757,7 @@ Space Hotel:
     id: 564900
 Space Hulk (2013):
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/.config/Full Control/SpaceHulk":
@@ -650702,6 +650770,8 @@ Space Hulk (2013):
         - save
       when:
         - os: windows
+  gog:
+    id: 1233233578
   id:
     steamExtra:
       - 246561
@@ -650732,6 +650802,7 @@ Space Hulk Ascension:
   alias: "Space Hulk: Ascension"
 "Space Hulk: Ascension":
   cloud:
+    gog: true
     steam: true
   files:
     "<winAppData>/Full Control/SpaceHulkAscension":
@@ -650739,6 +650810,8 @@ Space Hulk Ascension:
         - save
       when:
         - os: windows
+  gog:
+    id: 1281601346
   id:
     steamExtra:
       - 335260
@@ -656252,6 +656325,8 @@ Spellcaster University:
   steam:
     id: 895620
 Spellcasters Chronicles:
+  id:
+    lutris: spellcasters-chronicles
   installDir:
     SpellcastersChronicles: {}
   steam:
@@ -767579,6 +767654,25 @@ Tohu:
         - config
   steam:
     id: 1075200
+Toilet Paper Idle:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/CHIZ/Toilet Paper Idle":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: toilet-paper-idle
+  installDir:
+    Toilet Paper Idle: {}
+  launch:
+    "<base>/Toilet Paper Idle.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4280420
 Toilet Party:
   steam:
     id: 2859880
@@ -818058,6 +818152,7 @@ Warhalla:
       - 1973808336
       - 2004956225
       - 2105142233
+      - 2116108601
     steamExtra:
       - 1718640
       - 1793050
@@ -818068,6 +818163,7 @@ Warhalla:
       - 2583910
       - 3202720
       - 3577600
+      - 3577690
   installDir:
     Warhammer 40000 Battlesector: {}
   launch:
@@ -818573,6 +818669,9 @@ Warhalla:
   steam:
     id: 285190
 "Warhammer 40,000: Dawn of War IV":
+  id:
+    steamExtra:
+      - 4759250
   steam:
     id: 2272360
 "Warhammer 40,000: Dawn of War: Dark Crusade":
@@ -818773,6 +818872,7 @@ Warhalla:
       - 1267649005
       - 1274205699
       - 1296748658
+      - 1329725338
       - 1377836469
       - 1399110589
       - 1420534358
@@ -818805,6 +818905,7 @@ Warhalla:
       - 3326080
       - 3743110
       - 4084640
+      - 4660150
   installDir:
     Warhammer 40000 Gladius - Relics of War: {}
   launch:
@@ -818937,6 +819038,27 @@ Warhalla:
   steam:
     id: 673880
 "Warhammer 40,000: Mechanicus II":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/BulwarkStudios/Mechanicus2/Saves":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/BulwarkStudios/Mechanicus2/Variables":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Mechanicus2: {}
+  launch:
+    "<base>/Mechanicus2.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2532480
 "Warhammer 40,000: Regicide":
@@ -851287,10 +851409,39 @@ Zero One / 杀戮世界:
 Zero Parades:
   alias: "Zero Parades: For Dead Spies"
 "Zero Parades: For Dead Spies":
+  cloud:
+    epic: true
+    gog: true
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/ZAUM Studio/Zero Parades/Saves":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/ZAUM Studio/Zero Parades/Settings":
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1726016440
   id:
     lutris: zero-parades-for-dead-spies
+    steamExtra:
+      - 4464230
+      - 4719150
+  installDir:
+    Zero Parades: {}
+  launch:
+    "<base>/ZeroParades.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+      - arguments: "-force-vulkan"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2863680
 Zero Point:
