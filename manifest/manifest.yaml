@@ -38639,7 +38639,7 @@ Angels Fall First:
     Angels Fall First: {}
   launch:
     "<base>/Binaries/AFFLift.exe":
-      - arguments: "-SEEKFREELOADING"
+      - arguments: "-SEEKFREELOADING -DX9"
         when:
           - os: windows
             store: steam
@@ -75908,6 +75908,8 @@ Becrowned:
     steam: true
   id:
     lutris: becrowned
+    steamExtra:
+      - 2776410
   steam:
     id: 2266890
 Bed Lying Simulator:
@@ -104934,12 +104936,40 @@ Bubli:
   steam:
     id: 322430
 Bubsy 4D:
+  cloud:
+    epic: true
+    gog: true
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Fabraz _ Atari/Bubsy 4D":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<root>/userdata/<storeUserId>/3237970/remote":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1844328427
   id:
     lutris: bubsy-4d
     steamExtra:
       - 4032170
+  installDir:
+    Bubsy 4D: {}
+  launch:
+    "<base>/Bubsy 4D.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Fabraz _ Atari/Bubsy 4D:
+      tags:
+        - config
   steam:
     id: 3237970
 Bubsy Two-Fur:
@@ -119702,19 +119732,13 @@ Castlevania Dominus Collection:
   cloud:
     steam: true
   files:
-    "<base>/bin/Profile/Saves/Castlevania.cfg":
+    "<root>/userdata/<storeUserId>/234080/remote/Castlevania.cfg":
       tags:
         - config
       when:
-        - os: windows
-    "<base>/bin/Profile/Saves/Castlevania.profile":
+        - store: steam
+    "<root>/userdata/<storeUserId>/234080/remote/Castlevania.profile":
       tags:
-        - save
-      when:
-        - os: windows
-    "<root>/userdata/<storeUserId>/234080/remote":
-      tags:
-        - config
         - save
       when:
         - store: steam
@@ -226962,6 +226986,8 @@ Echoes of Aetheria:
 Echoes of Aincrad:
   cloud:
     steam: true
+  id:
+    lutris: echoes-of-aincrad
   steam:
     id: 2244210
 "Echoes of War: The Last Heartbeat":
@@ -339990,6 +340016,13 @@ Hollow Steps:
             store: steam
   steam:
     id: 802900
+"Hollow Stories: Lockdown":
+  id:
+    lutris: hollow-stories-lockdown
+    steamExtra:
+      - 4244200
+  steam:
+    id: 3968040
 Hollow Throne:
   files:
     "<winAppData>/HollowThrone/**/*.dongeroo":
@@ -342219,6 +342252,11 @@ HopeLine:
             store: steam
   steam:
     id: 886520
+Hopetown:
+  id:
+    lutris: hopetown
+  steam:
+    id: 3481610
 Hopkins FBI:
   files:
     "<base>/SAVE":
@@ -402639,6 +402677,12 @@ Lego Alpha Team:
         - os: windows
   id:
     lutris: lego-batman-legacy-of-the-dark-knight
+    steamExtra:
+      - 4168610
+      - 4168620
+      - 4168630
+      - 4168640
+      - 4468750
   installDir:
     LEGO Batman - Legacy of the Dark Knight: {}
   launch:
@@ -487522,12 +487566,15 @@ Ninja Code:
     id: 949880
 Ninja Five-O:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/Saved Games/Limited Run Games/Ninja Five-O":
       when:
         - os: windows
           store: steam
+  gog:
+    id: 1911433238
   installDir:
     Ninja Five-O: {}
   launch:
@@ -549259,6 +549306,35 @@ Prototypers:
 "Prove You're Human":
   steam:
     id: 4533950
+Proverbs:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Divide The Plunder Limited/Proverbs":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/Divide The Plunder Limited/Proverbs/Unity":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: proverbs
+  installDir:
+    Proverbs: {}
+  launch:
+    "<base>/Proverbs.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Proverbs.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3083300
 Proviant:
   steam:
     id: 659090
@@ -585585,6 +585661,7 @@ Road to Eden:
     id: 929060
 Road to Empress I:
   id:
+    lutris: road-to-empress-i
     steamExtra:
       - 3972390
   installDir:
@@ -585597,6 +585674,9 @@ Road to Empress I:
             store: steam
   steam:
     id: 3478050
+Road to Empress II:
+  steam:
+    id: 4148240
 Road to Guangdong:
   files:
     "<winDocuments>/Excalibur/RoadToGuangdong":
@@ -588178,10 +588258,15 @@ Rocket Knight:
   steam:
     id: 19030
 "Rocket Knight Adventures: Re-Sparked!":
+  cloud:
+    gog: true
+    steam: true
   files:
     "<home>/Saved Games/Limited Run Games/ Rocket Knight Adventures":
       when:
         - store: steam
+  gog:
+    id: 1876835821
   installDir:
     Rocket Knight Adventures Re-Sparked!: {}
   launch:
@@ -594109,6 +594194,19 @@ Rugosi:
 "Rugrats: Retro Rewind Collection":
   cloud:
     steam: true
+  files:
+    "<home>/Saved Games/Limited Run Games/Rugrats Retro Rewind Collection":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Rugrats Collection: {}
+  launch:
+    "<base>/Rugrats.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3817710
 Ruin City Gasolina:
@@ -642261,6 +642359,8 @@ Soda Dungeon:
         - save
       when:
         - os: windows
+  id:
+    lutris: soda-dungeon
   installDir:
     Soda Dungeon: {}
   launch:
@@ -739229,13 +739329,13 @@ The Matchless Kungfu:
     lutris: the-matrix-path-of-neo
 The Maw:
   files:
-    "<root>/userdata/96898617/26000/local":
+    "<root>/userdata/<storeUserId>/26000/local":
       tags:
         - save
       when:
         - os: windows
           store: steam
-    "<root>/userdata/96898617/26000/local/prefs.xml":
+    "<root>/userdata/<storeUserId>/26000/local/prefs.xml":
       tags:
         - config
       when:
@@ -819740,17 +819840,17 @@ Warhammer Survivors:
     gog: true
     steam: true
   files:
-    "<winDocuments>/Warhammer Battle March/Save":
-      tags:
-        - save
-      when:
-        - os: windows
-    "<winDocuments>/Warhammer Mark of Chaos Gold Classic/Save":
+    "<winAppData>/Warhammer Mark of Chaos Gold Classic/Save":
       tags:
         - save
       when:
         - os: windows
           store: steam
+    "<winDocuments>/Warhammer Battle March/Save":
+      tags:
+        - save
+      when:
+        - os: windows
     "<winDocuments>/Warhammer Mark of Chaos/Save":
       tags:
         - save
