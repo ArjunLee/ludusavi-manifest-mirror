@@ -172399,6 +172399,9 @@ Dark Scavenger:
             store: steam
   steam:
     id: 293880
+Dark Scrolls:
+  steam:
+    id: 2912550
 Dark Sector:
   files:
     "<base>/Configs":
@@ -310790,6 +310793,11 @@ Grin Bandana:
 Grind Zones:
   steam:
     id: 327680
+Grindset T.V.:
+  id:
+    lutris: grindset-tv
+  steam:
+    id: 3159750
 Grindstone:
   cloud:
     epic: true
@@ -446140,13 +446148,18 @@ Metro 2033:
       tags:
         - config
       when:
-        - os: windows
-          store: steam
+        - store: steam
     "<winDocuments>/4A Games/Metro 2033":
       tags:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/4A Games/Metro 2033/user.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: gog
   gog:
     id: 1259935712
   id:
@@ -447417,17 +447430,15 @@ Microlandia:
     Microlandia: {}
   launch:
     "<base>/microlandia.app":
-      - arguments: "--webgpu"
-        when:
+      - when:
           - os: mac
             store: steam
     "<base>/microlandia.exe":
-      - arguments: "--out-of-process-gpu --enable-direct-composition --webgpu"
-        when:
+      - when:
           - os: windows
             store: steam
     "<base>/run.sh":
-      - arguments: "--webgpu"
+      - arguments: "--use-gl-angle"
         when:
           - os: linux
             store: steam
@@ -454713,6 +454724,19 @@ Mistress of Maids:
           - store: steam
   steam:
     id: 1035800
+Mists of Aiden:
+  id:
+    lutris: mists-of-aiden
+  installDir:
+    Fear Deception: {}
+  launch:
+    "<base>/MistsOfAiden.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1239050
 Mists of Noyah:
   id:
     steamExtra:
@@ -487608,9 +487632,6 @@ Ninja Code:
   steam:
     id: 949880
 Ninja Five-O:
-  cloud:
-    gog: true
-    steam: true
   files:
     "<home>/Saved Games/Limited Run Games/Ninja Five-O":
       when:
@@ -565182,6 +565203,7 @@ Ravenous Devils:
   id:
     gogExtra:
       - 1866198789
+    lutris: ravenous-devils
     steamExtra:
       - 1696410
   installDir:
@@ -588315,11 +588337,9 @@ Rocket Knight:
     gog: true
     steam: true
   files:
-    "<home>/Saved Games/Limited Run Games/Rocket Knight Adventures/system.cfg":
-      tags:
-        - config
+    "<home>/Saved Games/Limited Run Games/ Rocket Knight Adventures":
       when:
-        - os: windows
+        - store: steam
   gog:
     id: 1876835821
   installDir:
@@ -655196,11 +655216,28 @@ Special Warfare:
   steam:
     id: 774541
 "Species: Unknown":
+  cloud:
+    steam: true
   files:
-    "<winLocalAppData>/SpeciesUnknown/Saved/SaveGames/SaveGame_Progress.sav":
+    "<winLocalAppData>/SpeciesUnknown/Saved/Config/Windows":
+      tags:
+        - config
       when:
         - os: windows
-          store: steam
+    "<winLocalAppData>/SpeciesUnknown/Saved/SaveGames":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/SpeciesUnknown/Saved/SaveGames/SaveGame_Progress.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: species-unknown
+    steamExtra:
+      - 4030870
   installDir:
     Species Unknown: {}
   launch:
@@ -712586,6 +712623,12 @@ The Adventures of Elena Temple:
 "The Adventures of Elliot: The Millennium Tales":
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/The Adventures of Elliot_The Millennium Tales/Steam/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: the-adventures-of-elliot-the-millennium-tales
   steam:
@@ -720227,6 +720270,22 @@ The Curse of Nordic Cove:
             store: steam
   steam:
     id: 358000
+The Curse of Womanland:
+  files:
+    "<home>/AppData/LocalLow/FuliGames/Cruse Of Womanland/CloudData/Saves":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    The Curse of Womanland: {}
+  launch:
+    "<base>/Cruse Of Womanland.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3995110
 The Curse of Yendor:
   installDir:
     The Curse Of Yendor: {}
