@@ -108611,6 +108611,19 @@ ButcherBoy:
             store: steam
   steam:
     id: 826160
+Butcherman:
+  id:
+    lutris: butcherman
+  installDir:
+    Butcherman: {}
+  launch:
+    "<base>/Butcherman.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3979350
 Butsbal:
   installDir:
     Butsbal: {}
@@ -421664,6 +421677,8 @@ Lunacid:
   steam:
     id: 3506110
 "Lunacy: Saint Rhodes":
+  cloud:
+    steam: true
   files:
     "<winLocalAppData>/Lunacy/Saved/*.jpg":
       when:
@@ -421673,6 +421688,12 @@ Lunacid:
       when:
         - os: windows
           store: steam
+  gog:
+    id: 2051120275
+  id:
+    lutris: lunacy-saint-rhodes
+    steamExtra:
+      - 2183510
   installDir:
     Lunacy: {}
   launch:
@@ -435530,6 +435551,26 @@ Mary Skelter 2:
             store: steam
   steam:
     id: 1496250
+Mary Skelter Finale:
+  cloud:
+    steam: true
+  files:
+    "<winDocuments>/My Games/Idea Factory International, Inc/Mary Skelter Finale":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    Mary Skelter Finale: {}
+  launch:
+    "<base>/MarySkelterFinale.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2357400
 "Mary Skelter: Nightmares":
   cloud:
     gog: true
@@ -449450,6 +449491,25 @@ Migrate:
           - store: steam
   steam:
     id: 1764960
+"Mika and The Witch's Mountain":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Chibig/Mika/Save":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: mika-and-the-witchs-mountain
+  installDir:
+    Mika: {}
+  launch:
+    "<base>/Mika.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1819460
 Mikapyon:
   installDir:
     mikapyon: {}
@@ -457612,6 +457672,11 @@ Monopoly Tycoon:
         - save
       when:
         - os: windows
+"Monopoly: SpongeBob SquarePants Edition":
+  registry:
+    HKEY_CURRENT_USER/Software/Virtools/UserConfig/Sarbakan/SBMonopoly:
+      tags:
+        - save
 "Monopoly: Star Wars - Heroes vs. Villains":
   steam:
     id: 3936610
@@ -497436,6 +497501,36 @@ Odyssey Reborn:
           - store: steam
   steam:
     id: 738600
+Odyssey of Gianna:
+  files:
+    "<base>/Game/www/save_Easy":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+    "<base>/Game/www/save_Hard":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+    "<base>/Game/www/save_Normal":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    Odyssey of Gianna: {}
+  launch:
+    "<base>/Odyssey of Gianna Launcher.exe":
+      - arguments: "-windowed"
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1848460
 Oedipus Dating Sim:
   cloud:
     steam: true
@@ -506681,6 +506776,10 @@ Ori and the Blind Forest:
     id: 1384944984
   id:
     lutris: ori-and-the-blind-forest-definitive-edition
+    steamExtra:
+      - 406380
+      - 465980
+      - 466390
   installDir:
     Ori DE: {}
   launch:
@@ -517462,6 +517561,22 @@ Paragon:
   steam:
     id: 1531430
 Paralives:
+  files:
+    "<base>/MySavedGames":
+      when:
+        - store: steam
+  installDir:
+    Paralives: {}
+  launch:
+    "<base>/Paralives.app/Contents/MacOS/Paralives":
+      - when:
+          - os: mac
+            store: steam
+        workingDir: "<base>/Paralives.app/Contents/MacOS"
+    "<base>/Paralives.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 1118520
 Parallax:
@@ -577203,6 +577318,13 @@ Resurgence:
             store: steam
   steam:
     id: 674250
+"Resurrection: The Return of the Black Dragon":
+  files:
+    "<base>/Nebula.Ini":
+      tags:
+        - config
+      when:
+        - os: windows
 Resurrector:
   installDir:
     Resurrector: {}
@@ -626960,6 +627082,29 @@ SiNKR 3:
             store: steam
   steam:
     id: 1705580
+SiNiSistar 2:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Uu/SiNiSistar2/SaveData_S":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    SiNiSistar 2: {}
+  launch:
+    "<base>/SiNiSistar2.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/SiNiSistar2.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4466620
 Siam Twinstick:
   installDir:
     Siam Twinstick: {}
@@ -720275,7 +720420,9 @@ The Curse of Womanland:
     "<home>/AppData/LocalLow/FuliGames/Cruse Of Womanland/CloudData/Saves":
       tags:
         - config
+        - save
       when:
+        - os: windows
         - os: windows
           store: steam
   installDir:
@@ -736636,11 +736783,36 @@ The Legend of Viccess:
         - os: windows
 "The Legend of Zelda: Majora's Mask (Zelda 64: Recompiled)":
   files:
+    "<winLocalAppData>/Zelda64Recompiled/*.json":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Zelda64Recompiled/mod_config/*.json":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/Zelda64Recompiled/saves":
       tags:
         - save
       when:
         - os: windows
+    "<xdgConfig>/Zelda64Recompiled/*.json":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<xdgConfig>/Zelda64Recompiled/mod_config/*.json":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<xdgConfig>/Zelda64Recompiled/saves":
+      tags:
+        - save
+      when:
+        - os: linux
 "The Legend of Zelda: Ocarina of Time":
   alias: "The Legend of Zelda: Ocarina of Time (Ship of Harkinian)"
 "The Legend of Zelda: Ocarina of Time (Ship of Harkinian)":
@@ -736650,6 +736822,19 @@ The Legend of Viccess:
         - save
       when:
         - os: windows
+        - os: linux
+    "<base>/Save/global.sav":
+      tags:
+        - config
+      when:
+        - os: windows
+        - os: linux
+    "<base>/shipofharkinian.json":
+      tags:
+        - config
+      when:
+        - os: windows
+        - os: linux
 "The Legend of Zelda: Ocarina of Time (Ship of Harkinian/unofficial PC port)":
   alias: "The Legend of Zelda: Ocarina of Time (Ship of Harkinian)"
 "The Legend of Zelda: Twilight Princess (Dusk)":
@@ -776866,6 +777051,25 @@ Tracks and Turrets:
 "Tracks of Triumph: Summertime":
   steam:
     id: 528210
+Tracks of the Arcana:
+  cloud:
+    steam: true
+  files:
+    "<base>/SavesDir/*.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/ArcanaTrain_Prototyp/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
+  installDir:
+    Tracks of the Arcana: {}
+  launch:
+    "<base>/Tracks of the Arcana.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2620870
 "Tracon!2012:SE":
   id:
     steamExtra:
@@ -787185,6 +787389,17 @@ Turbo Pug DX:
 Turbo Sloths:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/Turbo Sloths/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Turbo Sloths/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: turbo-sloths
     steamExtra:
@@ -790674,6 +790889,18 @@ UNI TURRET:
 "UNSUBSCRIBED: THE GAME":
   steam:
     id: 1072950
+UP:
+  files:
+    "<winAppData>/UP/config.opt":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winDocuments>/THQ/Disney_Pixar/UP/*.DISNEY_PIXAR_UPSavedGame":
+      tags:
+        - save
+      when:
+        - os: windows
 URBO:
   cloud:
     steam: true
@@ -796077,6 +796304,15 @@ Unexplored:
           - store: steam
   steam:
     id: 1095040
+Unfair Corners:
+  installDir:
+    Unfair Corners: {}
+  launch:
+    "<base>/BouncingBall.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4562200
 Unfair Jousting Fair:
   installDir:
     Unfair Jousting Fair: {}
@@ -799100,18 +799336,6 @@ Unworthy:
             store: steam
   steam:
     id: 613190
-Up:
-  files:
-    "<winAppData>/UP/config.opt":
-      tags:
-        - config
-      when:
-        - os: windows
-    "<winDocuments>/THQ/Disney_Pixar/UP/*.DISNEY_PIXAR_UPSavedGame":
-      tags:
-        - save
-      when:
-        - os: windows
 Up And Up:
   installDir:
     Up And Up: {}
@@ -827702,6 +827926,8 @@ When Sirens Fall Silent:
     steam: true
   gog:
     id: 1149533967
+  id:
+    lutris: when-sirens-fall-silent
   steam:
     id: 2600920
 When Ski Lifts Go Wrong:
