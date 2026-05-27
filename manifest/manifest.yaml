@@ -428,6 +428,47 @@ $1 Ride:
   steam:
     id: 639880
 007 First Light:
+  cloud:
+    steam: true
+  files:
+    "<root>/userdata/<storeUserId>/3768760":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: steam
+  id:
+    steamExtra:
+      - 3950810
+      - 3950820
+      - 3950830
+      - 3950850
+      - 3950870
+      - 3950880
+      - 3950900
+      - 3950910
+      - 3950930
+      - 3954230
+      - 3954250
+      - 3954260
+      - 4521800
+      - 4521810
+      - 4521820
+      - 4521830
+      - 4521840
+      - 4601250
+      - 4707780
+  installDir:
+    007 First Light: {}
+  launch:
+    "<base>/Retail/007FirstLight.exe":
+      - when:
+          - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/IO Interactive/007 First Light:
+      tags:
+        - config
   steam:
     id: 3768760
 007 Legends:
@@ -52361,9 +52402,24 @@ Asphyxia:
       tags:
         - save
       when:
-        - os: windows
-          store: uplay
+        - store: uplay
+    "<root>/savegames/<storeUserId>/1955":
+      tags:
+        - save
+      when:
+        - store: uplay
+    "<root>/savegames/<storeUserId>/1956":
+      tags:
+        - save
+      when:
+        - store: uplay
     "<root>/savegames/<storeUserId>/1957":
+      tags:
+        - save
+      when:
+        - store: steam
+        - store: uplay
+    "<root>/savegames/<storeUserId>/1958":
       tags:
         - save
       when:
@@ -77155,6 +77211,10 @@ Bejeweled 3:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: bejeweled-3
+    steamExtra:
+      - 78002
   installDir:
     Bejeweled 3: {}
   launch:
@@ -77190,6 +77250,10 @@ Bejeweled Twist:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: bejeweled-twist
+    steamExtra:
+      - 3562
   installDir:
     Bejeweled Twist: {}
   launch:
@@ -181217,13 +181281,16 @@ Death Must Die:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Realm Archive/Death Must Die/Saves/*.sav":
+    "<home>/AppData/LocalLow/Realm Archive/Death Must Die/Options":
+      tags:
+        - config
       when:
-        - store: steam
-    "<home>/Library/Application Support/Realm Archive/Death Must Die/Saves/*.sav":
+        - os: windows
+    "<home>/AppData/LocalLow/Realm Archive/Death Must Die/Saves":
+      tags:
+        - save
       when:
-        - os: mac
-          store: steam
+        - os: windows
   id:
     lutris: death-must-die
   installDir:
@@ -182128,6 +182195,28 @@ Death end re;Quest 2:
             store: steam
   steam:
     id: 1266220
+"Death end re;Quest: Code Z":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/IDEA FACTORY/Death end re;Quest Code Z":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: death-end-re-quest-code-z
+    steamExtra:
+      - 3678270
+  installDir:
+    Death end re;Quest Code Z: {}
+  launch:
+    "<base>/Death end re;Quest Code Z.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2914490
 "Death from Unknown: Survival":
   steam:
     id: 809550
@@ -233428,6 +233517,8 @@ Empire Earth:
     steamExtra:
       - 3770
       - 3780
+  installDir:
+    Empire Earth Gold Edition: {}
   registry:
     HKEY_CURRENT_USER/SOFTWARE/Mad Doc Software/EE-AOC:
       tags:
@@ -233458,6 +233549,8 @@ Empire Earth II:
     steamExtra:
       - 63300
       - 63310
+  installDir:
+    Empire Earth II Gold Edition: {}
   steam:
     id: 254780
 Empire Earth III:
@@ -233477,6 +233570,13 @@ Empire Earth III:
   id:
     steamExtra:
       - 63370
+  installDir:
+    Empire Earth III: {}
+  launch:
+    "<base>/EE3.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 254800
 Empire Live:
@@ -252529,6 +252629,26 @@ Fairy Fencer F Advent Dark Force:
           - store: steam
   steam:
     id: 524580
+"Fairy Fencer F: Refrain Chord":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Idea Factory International, Inc/Fairy Fencer F_ Refrain Chord/SaveData":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: fairy-fencer-f-refrain-chord
+  installDir:
+    Fairy Fencer F Refrain Chord: {}
+  launch:
+    "<base>/Fairy Fencer F Refrain Chord.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2228390
 Fairy Fixer:
   files:
     "<base>/game/saves":
@@ -267233,17 +267353,12 @@ Five Hearts Under One Roof:
   cloud:
     steam: true
   files:
-    "<home>/.config/unity3d/Storytaco/MilkGame/SavesDir/**/*.sav":
+    "<home>/AppData/LocalLow/Storytaco/MilkGame/GOGSave":
+      tags:
+        - save
       when:
-        - os: linux
-          store: steam
-    "<home>/AppData/LocalLow/Storytaco/MilkGame/SavesDir/**/*.sav":
-      when:
-        - store: steam
-    "<home>/Library/Application Support/Storytaco/MilkGame/SavesDir/*.sav":
-      when:
-        - os: mac
-          store: steam
+        - os: windows
+          store: gog
   gog:
     id: 1963012717
   installDir:
@@ -289754,6 +289869,20 @@ GameEllen:
             store: steam
   steam:
     id: 961060
+GameMaker 25th Anniversary:
+  installDir:
+    GM25: {}
+  launch:
+    "<base>/GM-25.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/GameMaker 25th Anniversary.app":
+      - when:
+          - os: mac
+            store: steam
+  steam:
+    id: 3219220
 "GameMaster: Magus":
   installDir:
     GameMasterMAGUS: {}
@@ -337923,6 +338052,9 @@ Hinedere Beat:
             store: steam
   steam:
     id: 759220
+Hino:
+  steam:
+    id: 3946090
 Hinterhalt:
   installDir:
     Hinterhalt: {}
@@ -349490,6 +349622,11 @@ HyperRogue:
             store: steam
   steam:
     id: 342610
+"HyperYuki: Snowboard Syndicate":
+  cloud:
+    steam: true
+  steam:
+    id: 3082730
 HyperZen Training:
   installDir:
     HyperZen Training: {}
@@ -401534,6 +401671,7 @@ Legend of Lusca:
     id: 1068330
 Legend of Mana:
   cloud:
+    gog: true
     steam: true
   files:
     "<winDocuments>/My Games/Legend of Mana/Steam/<storeUserId>":
@@ -401542,6 +401680,8 @@ Legend of Mana:
         - save
       when:
         - os: windows
+  gog:
+    id: 1868111779
   installDir:
     Legend of Mana: {}
   launch:
@@ -410154,6 +410294,16 @@ Link the animals:
         - save
       when:
         - os: windows
+    "<xdgData>/Zelda_LA/SaveFiles":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<xdgData>/Zelda_LA/settings":
+      tags:
+        - save
+      when:
+        - os: linux
 "Link: The Unleashed Nexus":
   id:
     steamExtra:
@@ -439599,6 +439749,7 @@ MechWarrior 3:
       - 1254147353
       - 1444478826
       - 1459558952
+      - 1543101560
       - 1554421209
       - 1687807209
       - 1811346339
@@ -439615,6 +439766,7 @@ MechWarrior 3:
       - 2489020
       - 2782050
       - 3799610
+      - 4371500
   installDir:
     MechWarrior 5 Mercenaries: {}
   launch:
@@ -494430,6 +494582,9 @@ O.C.D. - On Completeness & Dissonance:
     id: 887880
 O.D.T. Escape or Die Trying:
   alias: "O.D.T.: Escape... Or Die Trying"
+"O.D.T.: Escape Again... Or Die Trying":
+  steam:
+    id: 4180370
 "O.D.T.: Escape... Or Die Trying":
   cloud:
     gog: true
@@ -521861,6 +522016,10 @@ Peggle:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: peggle-deluxe
+    steamExtra:
+      - 3482
   installDir:
     Peggle Deluxe: {}
   launch:
@@ -521900,6 +522059,10 @@ Peggle Nights:
         - save
       when:
         - os: windows
+  id:
+    lutris: peggle-nights
+    steamExtra:
+      - 3542
   installDir:
     Peggle Nights: {}
   launch:
@@ -534136,6 +534299,10 @@ Plants vs. Zombies:
         - save
       when:
         - os: windows
+  id:
+    lutris: plants-vs-zombies-game-of-the-year
+    steamExtra:
+      - 3592
   installDir:
     Plants Vs Zombies: {}
   launch:
@@ -569331,6 +569498,29 @@ Record Store Nightmare:
           - store: steam
   steam:
     id: 722400
+Record of Agarest War Mariage:
+  cloud:
+    steam: true
+  files:
+    "<root>/userdata/<storeUserId>/740550/remote":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: steam
+  id:
+    steamExtra:
+      - 1015490
+  installDir:
+    Agarest Mariage: {}
+  launch:
+    "<base>/Exe/AgarestMariage.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/Exe"
+  steam:
+    id: 740550
 Record of Lodoss War Online:
   installDir:
     Record of Lodoss War Online: {}
@@ -577320,6 +577510,11 @@ Resurgence:
     id: 674250
 "Resurrection: The Return of the Black Dragon":
   files:
+    "<base>/Games":
+      tags:
+        - save
+      when:
+        - os: windows
     "<base>/Nebula.Ini":
       tags:
         - config
@@ -595738,6 +595933,23 @@ Rune:
         workingDir: "<base>/System"
   steam:
     id: 210950
+Rune Dice:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Smart Raven Studio/Rune Dice":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Rune Dice: {}
+  launch:
+    "<base>/Rune Dice.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3542380
 Rune Factory 3 Special:
   cloud:
     steam: true
@@ -642599,6 +642811,10 @@ Soda Dungeon 2:
         - save
       when:
         - os: windows
+  id:
+    lutris: soda-dungeon-2
+    steamExtra:
+      - 1379690
   installDir:
     Soda Dungeon 2: {}
   launch:
@@ -647434,6 +647650,16 @@ Sorcerer Lord:
             store: steam
   steam:
     id: 656220
+"Sorcerer's Maze":
+  installDir:
+    "Sorcerer's Maze": {}
+  launch:
+    "<base>/sorcerer's maze.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 431170
 "Sorcerer's Path":
   id:
     steamExtra:
@@ -669014,12 +669240,14 @@ Starship Troopers - Terran Command:
     id: 2138535729
   id:
     gogExtra:
+      - 1418607390
       - 1649592488
       - 1762634820
     steamExtra:
       - 1753940
       - 2139990
       - 2139991
+      - 3454110
   installDir:
     Starship Troopers - Terran Command: {}
   launch:
@@ -690345,6 +690573,15 @@ Superdimension Neptune VS Sega Hard Girls:
         - config
       when:
         - store: steam
+  id:
+    steamExtra:
+      - 620740
+      - 620741
+      - 620742
+      - 620743
+      - 620744
+      - 620745
+      - 620746
   installDir:
     Superdimension Neptune VS Sega Hard Girls: {}
   launch:
@@ -767579,6 +767816,12 @@ ToHeart2:
         - save
       when:
         - os: windows
+ToMyX:
+  id:
+    steamExtra:
+      - 4458330
+  steam:
+    id: 4444610
 ToaZZle:
   installDir:
     ToaZZle: {}
@@ -775925,6 +776168,29 @@ Town of Salem:
         - config
   steam:
     id: 334230
+Town to City:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/TownToCity/Saved/SaveGames/**/*.sav":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: town-to-city
+    steamExtra:
+      - 3653800
+      - 3812070
+      - 3829160
+      - 3873380
+  installDir:
+    Town To City: {}
+  launch:
+    "<base>/TownToCity.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3115220
 TownCraft:
   files:
     "<base>/saves/*.prf":
@@ -782397,6 +782663,7 @@ Trials of Innocence:
     id: 2983140
 Trials of Mana:
   cloud:
+    gog: true
     steam: true
   files:
     "<winDocuments>/My Games/Trials of Mana/Steam/<storeUserId>/Saved/Config/WindowsNoEditor":
@@ -782421,6 +782688,8 @@ Trials of Mana:
         - save
       when:
         - os: windows
+  gog:
+    id: 1525434144
   installDir:
     Trials of Mana: {}
   launch:
@@ -799948,6 +800217,11 @@ Urban Runner:
   id:
     lutris: urban-runner
 Urban Strife:
+  files:
+    "<winLocalAppData>/USG/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
   installDir:
     Urban Strife: {}
   launch:
@@ -836132,6 +836406,13 @@ Wolf Tails:
             store: steam
   steam:
     id: 822930
+Wolf Team:
+  files:
+    "<base>/profiles/Player.txt":
+      tags:
+        - config
+      when:
+        - os: windows
 Wolf or Boy:
   files:
     "<home>/AppData/LocalLow/Airlib/Wolf or Boy":
@@ -839489,6 +839770,23 @@ World of Tanks Blitz:
             store: steam
   steam:
     id: 444200
+"World of Tanks: Heat":
+  files:
+    "<winLocalAppData>/coldwar/game.settings":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    WoT HEAT: {}
+  launch:
+    "<base>/wgcs_api.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2100280
 World of Tea:
   steam:
     id: 865050
@@ -855956,6 +856254,10 @@ Zuma Legend VR:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: zumas-revenge
+    steamExtra:
+      - 3622
   installDir:
     "Zuma's Revenge": {}
   launch:
@@ -856454,6 +856756,30 @@ Zzzzz:
             store: steam
   steam:
     id: 1170200
+Öoo:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Ooo/main.bin":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Ooo/option.bin":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: ooo-1
+  installDir:
+    Ooo: {}
+  launch:
+    "<base>/Ooo.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2721890
 ÜberSoldier:
   files:
     "<base>/SAVES":
