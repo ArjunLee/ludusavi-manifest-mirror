@@ -154139,6 +154139,11 @@ Crashnauts:
             store: steam
   steam:
     id: 414490
+Crashout Crew:
+  cloud:
+    steam: true
+  steam:
+    id: 3583210
 Crashphalt:
   installDir:
     Crashphalt: {}
@@ -226842,6 +226847,18 @@ Echo Generation:
             store: steam
   steam:
     id: 1072300
+Echo Generation 2:
+  cloud:
+    steam: true
+  installDir:
+    Echo Generation 2: {}
+  launch:
+    "<base>/Echo Generation 2.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1115990
 Echo Grotto:
   installDir:
     Echo Grotto: {}
@@ -379274,6 +379291,38 @@ Kabus 22:
         - config
       when:
         - os: windows
+Kabuto Park:
+  cloud:
+    steam: true
+  files:
+    "<home>/.config/unity3d/DootTinyGames/KabutoPark/*.json":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/DootTinyGames/KabutoPark/*.json":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/DootTinyGames/KabutoPark/*.json":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Kabuto Park: {}
+  launch:
+    "<base>/Contents/MacOS/KabutoPark":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/KabutoPark.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/KabutoPark.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 3376990
 Kach:
   installDir:
     Kach: {}
@@ -423013,6 +423062,26 @@ Lyantei:
             store: steam
   steam:
     id: 1022000
+Lyca:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Incremental_Game/*.sav":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: lyca
+  installDir:
+    Lyca: {}
+  launch:
+    "<base>/Lyca.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3421300
 Lycah:
   installDir:
     Lycah: {}
@@ -449355,17 +449424,14 @@ Mighty Gemstones:
   steam:
     id: 778230
 Mighty Goose:
+  cloud:
+    steam: true
   files:
-    "<base>/Mighty Goose.app/Contents/Resources/storageMighty Goose.app/Contents/Resources/dat":
-      when:
-        - os: mac
-          store: steam
     "<base>/storage.dat":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
-        - os: linux
-          store: steam
   installDir:
     Mighty Goose: {}
   launch:
@@ -450682,6 +450748,8 @@ Mina the Hollower:
     steam: true
   id:
     lutris: mina-the-hollower
+    steamExtra:
+      - 3741460
   steam:
     id: 1875580
 Minabo:
@@ -496953,6 +497021,9 @@ Octopath Traveler 0:
         - os: windows
   id:
     lutris: octopath-traveler-0
+    steamExtra:
+      - 3014330
+      - 3825480
   installDir:
     Octopath_Traveler0: {}
   launch:
@@ -517717,9 +517788,16 @@ Paragon:
     id: 1531430
 Paralives:
   files:
-    "<base>/MySavedGames":
+    "<home>/AppData/LocalLow/Paralives/Paralives/MyOptions.mod":
+      tags:
+        - config
       when:
-        - store: steam
+        - os: windows
+    "<home>/AppData/LocalLow/Paralives/Paralives/MySavedGames.mod":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Paralives: {}
   launch:
@@ -579167,6 +579245,8 @@ Reveal The Deep:
     id: 411560
 Reveil:
   cloud:
+    epic: true
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/Pixelsplit/REVEIL/**/Collectables":
@@ -579190,6 +579270,16 @@ Reveil:
       when:
         - os: mac
           store: steam
+  gog:
+    id: 1731997182
+  id:
+    gogExtra:
+      - 1134414790
+      - 1553049898
+    lutris: reveil
+    steamExtra:
+      - 2418300
+      - 2581720
   installDir:
     REVEIL: {}
   launch:
