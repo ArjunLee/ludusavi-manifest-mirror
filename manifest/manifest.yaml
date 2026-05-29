@@ -436,8 +436,14 @@ $1 Ride:
         - config
         - save
       when:
+        - store: steam
         - os: windows
           store: steam
+    "<winAppData>/IO Interactive/Epic/<storeUserId>/007 First Light/KntSlotSaveFile-0":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     steamExtra:
       - 3950810
@@ -23699,6 +23705,10 @@ Age of Empires II (2013):
   installDir:
     AoE2DE: {}
   launch:
+    "<base>/Age of Empires II.app":
+      - when:
+          - os: mac
+            store: steam
     "<base>/AoE2DE_s.exe":
       - when:
           - os: windows
@@ -93605,6 +93615,17 @@ Blueshift:
   steam:
     id: 3064040
 "Bluey's Quest for the Gold Pen":
+  files:
+    "<home>/AppData/LocalLow/Halfbrick/BlueysQuest":
+      when:
+        - store: steam
+  installDir:
+    "Bluey's Quest For The Gold Pen": {}
+  launch:
+    "<base>/BlueysQuest.exe":
+      - when:
+          - bit: 64
+            store: steam
   steam:
     id: 4127530
 "Bluey: The Videogame":
@@ -96415,6 +96436,24 @@ Boomerang X:
         - config
   steam:
     id: 1170060
+Boomeroad:
+  files:
+    "<base>/BOOMEROAD_Data/SaveData":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: boomeroad
+  installDir:
+    BOOMEROAD: {}
+  launch:
+    "<base>/BOOMEROAD.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2512820
 Boon Boon:
   installDir:
     Boon Boon: {}
@@ -111617,6 +111656,7 @@ Calibre 10 Racing:
     id: 266370
 Calico:
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -112541,6 +112581,9 @@ Call of Duty Black Ops Cold War:
       - 42690
   steam:
     id: 115300
+"Call of Duty: Modern Warfare 4":
+  steam:
+    id: 4435490
 "Call of Duty: Modern Warfare II":
   files:
     "<winDocuments>/Call of Duty MWII/players":
@@ -218917,6 +218960,7 @@ Dungeon Shooter 2:
 Dungeon Siege:
   cloud:
     gog: true
+    steam: true
   files:
     "<winDocuments>/Dungeon Siege/DungeonSiege.ini":
       tags:
@@ -310256,6 +310300,7 @@ Grim Dawn:
       - 642280
       - 897670
       - 1088290
+      - 2699230
       - 2701090
   installDir:
     Grim Dawn: {}
@@ -313527,6 +313572,16 @@ Gumball Drift:
     Gumball Drift: {}
   steam:
     id: 418260
+Gumball in Trick-or-Treat Land:
+  installDir:
+    Gumball in Trick-or-Treat Land: {}
+  launch:
+    "<base>/Gumball in Trick-or-Treat Land.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3640330
 Gumboy Tournament:
   installDir:
     Gumboy Tournament: {}
@@ -361896,6 +361951,8 @@ Infliction:
         - os: windows
   gog:
     id: 1368061512
+  id:
+    lutris: infliction
   installDir:
     Infliction: {}
   launch:
@@ -479015,6 +479072,7 @@ Necrophosis:
     steamExtra:
       - 2959950
       - 3837860
+      - 4769800
   installDir:
     Necrophosis: {}
   launch:
@@ -485431,6 +485489,13 @@ Nickelodeon All-Star Brawl 2:
   steam:
     id: 2017080
 Nickelodeon Extreme Tennis Next!:
+  installDir:
+    Project Mandarine: {}
+  launch:
+    "<base>/Nickelodeon Extreme Tennis.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4111390
 "Nickelodeon Kart Racers 2: Grand Prix":
@@ -529112,12 +529177,14 @@ Pioneers of Pagonia:
   id:
     gogExtra:
       - 1190088237
+      - 1312122633
       - 2018186901
       - 2083144874
     steamExtra:
       - 2717840
       - 2721120
       - 4351430
+      - 4518280
   installDir:
     Pioneers of Pagonia: {}
   launch:
@@ -533628,23 +533695,6 @@ Planet Zoo:
         - os: windows
   id:
     lutris: planet-zoo
-    steamExtra:
-      - 1098120
-      - 1098121
-      - 1196770
-      - 1238440
-      - 1349400
-      - 1471590
-      - 1567110
-      - 1647620
-      - 1726150
-      - 1747960
-      - 1934140
-      - 2013290
-      - 2150050
-      - 2199210
-      - 2346830
-      - 2675740
   installDir:
     Planet Zoo: {}
   launch:
@@ -541194,6 +541244,13 @@ Power Punch II:
             store: steam
   steam:
     id: 1110100
+"Power Rangers: Super Legends":
+  files:
+    "<base>/engine.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 Power Solitaire VR:
   installDir:
     Power Solitaire VR: {}
@@ -717348,6 +717405,8 @@ The Bridge:
     id: 204240
 "The Bridge Curse 2: The Extrication":
   cloud:
+    epic: true
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/TBC2/Saved/Config/WindowsNoEditor":
@@ -717360,6 +717419,14 @@ The Bridge:
         - save
       when:
         - os: windows
+  gog:
+    id: 1336548526
+  id:
+    lutris: the-bridge-curse-2-the-extrication
+    steamExtra:
+      - 2417770
+      - 2915350
+      - 2963530
   installDir:
     TBC2: {}
   launch:
@@ -717372,12 +717439,18 @@ The Bridge:
     id: 2331330
 "The Bridge Curse: Road to Salvation":
   cloud:
+    epic: true
     steam: true
   files:
     "<winLocalAppData>/TBC/Saved/SaveGames/*.sav":
       when:
         - os: windows
           store: steam
+  id:
+    lutris: the-bridge-curse-road-to-salvation
+    steamExtra:
+      - 1836100
+      - 2022750
   installDir:
     TheBridgeCurse: {}
   steam:
