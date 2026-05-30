@@ -43999,6 +43999,12 @@ Apple Jack 1&2:
     id: 351690
 Apple Knight:
   alias: Apple Slash
+Apple Picker:
+  id:
+    steamExtra:
+      - 4715760
+  steam:
+    id: 4573410
 Apple Pop:
   steam:
     id: 1136030
@@ -61642,6 +61648,36 @@ B.m.g 19 - bike messenger go!:
             store: steam
   steam:
     id: 1038120
+BABBDI:
+  files:
+    "<home>/AppData/LocalLow/LemaitreBros/Babbdi/save.dabadi":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: babbdi
+  installDir:
+    BABBDI: {}
+  launch:
+    "<base>/BABBDI_1.2.5.x86_64":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/BABBDI_Mac_1.2.5.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Babbdi.exe":
+      - when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/LemaitreBros/Babbdi:
+      tags:
+        - config
+  steam:
+    id: 2240530
 BAE:
   steam:
     id: 685000
@@ -62805,6 +62841,14 @@ Baba Is You:
   steam:
     id: 736260
 Babbdi:
+  files:
+    "<home>/AppData/LocalLow/LemaitreBros/Babbdi/save.dabadi":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: babbdi
   installDir:
     BABBDI: {}
   launch:
@@ -62820,6 +62864,10 @@ Babbdi:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/LemaitreBros/Babbdi:
+      tags:
+        - config
   steam:
     id: 2240530
 Babel Climbers:
@@ -126139,6 +126187,13 @@ Cheap Car Repair:
     steamExtra:
       - 3323560
       - 3501610
+  installDir:
+    Auto Fuszerka: {}
+  launch:
+    "<base>/Fuszerka.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2904040
 Cheap Golf:
@@ -154185,6 +154240,23 @@ Crashnauts:
 Crashout Crew:
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Aggro Crab/CrashoutCrew/saves/<storeUserId>/*.sav":
+      when:
+        - store: steam
+  id:
+    lutris: crashout-crew
+    steamExtra:
+      - 4076520
+      - 4736070
+  installDir:
+    CrashoutCrew: {}
+  launch:
+    "<base>/CrashoutCrew.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3583210
 Crashphalt:
@@ -157316,6 +157388,11 @@ Crimson Metal:
     CRIMSON METAL: {}
   steam:
     id: 606960
+Crimson Moon:
+  id:
+    lutris: crimson-moon--1
+  steam:
+    id: 4317690
 Crimson Nights:
   installDir:
     Crimson Nights: {}
@@ -251176,10 +251253,12 @@ Faaast Penguin:
   steam:
     id: 2590150
 Fable (2021):
-  alias: Fable (2026)
+  alias: Fable (2027)
 Fable (2025):
-  alias: Fable (2026)
+  alias: Fable (2027)
 Fable (2026):
+  alias: Fable (2027)
+Fable (2027):
   id:
     lutris: fable--1
   steam:
@@ -380260,6 +380339,7 @@ Kandagawa Jet Girls:
 "Kane & Lynch 2: Dog Days":
   cloud:
     gog: true
+    steam: true
   files:
     "<winDocuments>/Square Enix/Kane & Lynch 2 - Dog Days":
       tags:
@@ -450802,11 +450882,45 @@ MinSweeper:
     id: 726030
 Mina the Hollower:
   cloud:
+    gog: true
     steam: true
+  files:
+    "<xdgData>/Yacht Club Games/Mina the Hollower/gamePrefs.yc":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<xdgData>/Yacht Club Games/Mina the Hollower/saveData.yc":
+      tags:
+        - save
+      when:
+        - os: linux
+  gog:
+    id: 1413488655
   id:
+    gogExtra:
+      - 1138750326
+      - 2007575600
     lutris: mina-the-hollower
     steamExtra:
       - 3741460
+      - 4743810
+  installDir:
+    Mina the Hollower: {}
+  launch:
+    "<base>/Mina the Hollower.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/MinaTheHollower":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/MinaTheHollower.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 1875580
 Minabo:
@@ -466013,6 +466127,27 @@ Mr. Robot:
         - config
   steam:
     id: 20710
+Mr. Saitou:
+  files:
+    "<base>/*.rxdata":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    MrSaitou: {}
+  launch:
+    "<base>/Mr. Saitou.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/mrsaitou.bin":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 628740
 Mr. Shadow:
   installDir:
     Mr. Shadow: {}
@@ -466298,6 +466433,11 @@ Muay Thai Fighting:
             store: steam
   steam:
     id: 878400
+Muchi Muchi Pork! & PinkSweets Boosted:
+  cloud:
+    steam: true
+  steam:
+    id: 4229200
 MudRunner:
   cloud:
     epic: true
@@ -541976,6 +542116,24 @@ Pratagon:
             store: steam
   steam:
     id: 950780
+Pratfall:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Pratfall/save_data/*.sav":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: pratfall
+    steamExtra:
+      - 4245100
+      - 4296600
+      - 4327880
+  installDir:
+    Pratfall: {}
+  steam:
+    id: 4244510
 Pray for Death:
   gog:
     id: 1642230881
@@ -607866,10 +608024,32 @@ Scalak:
   steam:
     id: 858760
 Scale the Depths:
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Glass Gecko Games/Scale The Depths":
+      tags:
+        - save
+      when:
+        - os: windows
+  gog:
+    id: 1285127237
   id:
     lutris: scale-the-depths
     steamExtra:
       - 3821770
+  installDir:
+    Scale the Depths: {}
+  launch:
+    "<base>/Scale The Depths.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Scale The Depths.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3198890
 "Scallywag's Honor":
@@ -718432,6 +718612,9 @@ The Cat in the Hat (2003):
         - save
       when:
         - os: windows
+"The Cat in the Hat: Rainy Day Mayhem":
+  steam:
+    id: 3465710
 "The Cat! Porfirio's Adventure":
   installDir:
     "The Cat! Porfirio's Adventure": {}
@@ -750300,6 +750483,13 @@ The Skies:
           - store: steam
   steam:
     id: 337950
+The Skin Stapler:
+  id:
+    lutris: the-skin-stapler
+    steamExtra:
+      - 4343530
+  steam:
+    id: 4310610
 The Sky Climber:
   installDir:
     The Sky Climber: {}
