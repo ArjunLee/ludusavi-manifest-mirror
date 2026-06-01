@@ -65223,13 +65223,13 @@ Balatro:
         - config
       when:
         - os: mac
-    "<winAppData>/Roaming/Balatro":
+    "<winAppData>/Balatro":
       tags:
         - save
       when:
         - os: windows
           store: steam
-    "<winAppData>/Roaming/Balatro/settings.jkr":
+    "<winAppData>/Balatro/settings.jkr":
       tags:
         - config
       when:
@@ -104318,9 +104318,19 @@ Brotato:
         - save
       when:
         - os: mac
+    "<home>/Library/Application Support/Brotato/<storeUserId>/settings.json":
+      tags:
+        - config
+      when:
+        - os: mac
     "<winAppData>/Brotato/<storeUserId>/*.json":
       tags:
         - save
+      when:
+        - os: windows
+    "<winAppData>/Brotato/<storeUserId>/settings.json":
+      tags:
+        - config
       when:
         - os: windows
   gog:
@@ -115861,6 +115871,30 @@ Car Mechanic Simulator 2018:
         - save
       when:
         - os: windows
+  id:
+    lutris: car-mechanic-simulator-2018
+    steamExtra:
+      - 672270
+      - 672271
+      - 710430
+      - 717490
+      - 754920
+      - 754921
+      - 754922
+      - 754923
+      - 783150
+      - 799950
+      - 868280
+      - 947930
+      - 987050
+      - 1019540
+      - 1125210
+      - 1215050
+      - 1265620
+      - 1710610
+      - 1851590
+      - 1851591
+      - 1966190
   installDir:
     Car Mechanic Simulator 2018: {}
   launch:
@@ -130471,6 +130505,9 @@ Chowdertwo:
             store: steam
   steam:
     id: 585750
+"Chris Moneymaker's World Poker Championship":
+  id:
+    lutris: chris-moneymakers-world-poker-championship
 "Chris Sawyer's Locomotion":
   files:
     "<base>/Data/GAME.CFG":
@@ -148385,6 +148422,8 @@ Content Creator Simulator:
   steam:
     id: 811250
 Content Warning:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/Landfall Games/Content Warning":
       tags:
@@ -154301,6 +154340,9 @@ Crate Punks:
             store: steam
   steam:
     id: 517960
+Craving Wisps:
+  steam:
+    id: 4334910
 Crawl:
   cloud:
     steam: true
@@ -158035,6 +158077,7 @@ Critters - Cute Cubs in a Cruel World:
     id: 717280
 Critters for Sale:
   id:
+    lutris: critters-for-sale
     steamExtra:
       - 1350240
   installDir:
@@ -475160,6 +475203,13 @@ NHL Eastside Hockey Manager 2007:
         - config
       when:
         - os: windows
+"NHRA Drag Racing: Quarter Mile Showdown":
+  files:
+    "<base>/NHRA.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 "NHRA: Speed for All":
   installDir:
     NHRA Championship Drag Racing Speed For All: {}
@@ -475677,6 +475727,15 @@ NVL:
         - save
       when:
         - os: windows
+NZ78:
+  files:
+    "<winLocalAppData>/NZ78/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  steam:
+    id: 4125810
 "Naau: The Lost Eye":
   installDir:
     Naau The Lost Eye: {}
@@ -522359,6 +522418,9 @@ Pegasus Door:
             store: steam
   steam:
     id: 794030
+Pegfinity:
+  steam:
+    id: 3947040
 Peggle:
   files:
     "<winProgramData>/PopCap Games/Peggle/userdata":
@@ -549086,6 +549148,8 @@ Project Zero Deaths:
   steam:
     id: 1089650
 Project Zomboid:
+  cloud:
+    steam: true
   files:
     "<home>/Zomboid":
       tags:
@@ -639801,6 +639865,12 @@ Smashbox Arena:
 Smasher:
   steam:
     id: 989230
+Smashing Bottles:
+  id:
+    steamExtra:
+      - 4675800
+  steam:
+    id: 4637870
 Smashing the Battle:
   installDir:
     SMASHING THE BATTLE: {}
@@ -639864,6 +639934,9 @@ Smelter:
             store: steam
   steam:
     id: 1094540
+"Smersh: Wolfhound":
+  steam:
+    id: 4431400
 Smile To Fly:
   installDir:
     Smile To Fly: {}
@@ -795324,6 +795397,8 @@ Undead Horde:
         - os: linux
   gog:
     id: 1668089272
+  id:
+    lutris: undead-horde
   installDir:
     Undead Horde: {}
   launch:
@@ -795341,6 +795416,35 @@ Undead Horde:
             store: steam
   steam:
     id: 790850
+"Undead Horde 2: Necropolis":
+  cloud:
+    epic: true
+    gog: true
+    steam: true
+  files:
+    "<winAppData>/10tons/UndeadHorde2/save":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  gog:
+    id: 1586513788
+  id:
+    lutris: undead-horde-2-necropolis
+  installDir:
+    Undead Horde 2 Necropolis: {}
+  launch:
+    "<base>/UndeadHorde2.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/UndeadHorde2.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2065810
 Undead Hunter:
   steam:
     id: 591080
@@ -828999,6 +829103,12 @@ Where Is The Beach?:
   steam:
     id: 1008260
 Where The Forest Ends:
+  installDir:
+    Where the forest ends: {}
+  launch:
+    "<base>/ZombieShooter.exe":
+      - when:
+          - store: steam
   steam:
     id: 3583670
 Where They Cremate the Roadkill:
@@ -839038,6 +839148,13 @@ World Peace Simulator 2019:
             store: steam
   steam:
     id: 1027960
+"World Poker Championship 2: Final Table Showdown":
+  files:
+    "<base>/WPC2.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 World Racing 2:
   files:
     "<base>/Config.ini":

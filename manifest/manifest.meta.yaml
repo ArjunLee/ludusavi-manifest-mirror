@@ -1,8 +1,8 @@
-hash: b7896c425b2f3f06caa9f22e6613f97ce26ef98d5a2236f73b3014e8d01e3cf6
-date: 2026-05-31
-timestamp: 1780200873
-version: v2026.5.31
-size_bytes: 17309413
-game_count: 52544
-upstream_commit: 3565b3cd2845e935dae961f0b9695d399f699fa7
-upstream_date: 2026-05-31
+hash: da83069158d117c30d2f912d1e4ce5ad7a749dad17edafd42d60b1aa80231c6f
+date: 2026-06-01
+timestamp: 1780288954
+version: v2026.6.1
+size_bytes: 17311570
+game_count: 52553
+upstream_commit: ffaac584d9d36c278158554147784a25a986813f
+upstream_date: 2026-06-01
