@@ -25410,6 +25410,13 @@ Aggelos:
     id: 783210
 "Agni: Queen of Darkness":
   alias: "Netherworld: Beyond Time I Stand"
+"Agni: Village of Calamity":
+  gog:
+    id: 1141061595
+  id:
+    lutris: agni-village-of-calamity
+  steam:
+    id: 3151360
 Agony:
   cloud:
     gog: true
@@ -28450,6 +28457,8 @@ Alaskan Truck Simulator:
         - os: mac
   gog:
     id: 1892014768
+  id:
+    lutris: alba-a-wildlife-adventure
   installDir:
     Alba: {}
   launch:
@@ -52908,12 +52917,21 @@ Assemble with Care:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/ustwo games/AWC":
+    "<home>/Library/Containers/com.ustwo.awc/Data/Library/Application Support/com.ustwo.awc/CloudSave/Default/*.sav":
       tags:
-        - config
         - save
       when:
-        - os: windows
+        - os: mac
+    "<home>/Library/Containers/com.ustwo.awc/Data/Library/Preferences/com.ustwo.awc.plist":
+      tags:
+        - config
+      when:
+        - os: mac
+    "<root>/userdata/<storeUserId>/1202900/remote/<storeUserId>.json":
+      tags:
+        - save
+      when:
+        - store: steam
   id:
     lutris: assemble-with-care
     steamExtra:
@@ -52937,6 +52955,10 @@ Assemble with Care:
           - bit: 64
             os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/ustwo games/AWC:
+      tags:
+        - config
   steam:
     id: 1202900
 Assembly League:
@@ -81906,6 +81928,33 @@ BioForge:
     id: 1207659125
   id:
     lutris: bioforge
+BioGun:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/BioGun/User Data":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: biogun
+    steamExtra:
+      - 3498160
+  installDir:
+    Bio-Gun: {}
+  launch:
+    "<base>/BioGun":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/BioGun.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1219240
 BioMech:
   installDir:
     BioMech: {}
@@ -104158,10 +104207,24 @@ Broken of Darkness:
   steam:
     id: 3886200
 "BrokenLore: Follow":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Follow/Saved/SaveGames/**/*.sav":
+      when:
+        - store: steam
   id:
     lutris: brokenlore-follow--1
     steamExtra:
       - 2864770
+  installDir:
+    FOLLOW: {}
+  launch:
+    "<base>/Follow.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2846530
 "BrokenLore: Low":
@@ -197779,6 +197842,9 @@ Diorama Worlds:
     DioramaWorlds: {}
   steam:
     id: 602630
+Dioxide:
+  steam:
+    id: 4540840
 Diplomacy Is Not an Option:
   cloud:
     gog: true
@@ -227943,6 +228009,11 @@ Eden Star:
             store: steam
   steam:
     id: 259570
+"Eden's Frontier":
+  id:
+    lutris: edens-frontier
+  steam:
+    id: 3397010
 "Eden's Ritter: Paladins of Ecstasy":
   cloud:
     steam: true
@@ -257458,6 +257529,8 @@ Farm Frenzy Collection:
   steam:
     id: 511330
 Farm Machines Championships 2014:
+  id:
+    lutris: farm-machines-championships-2014
   installDir:
     FMC 2014: {}
   launch:
@@ -260721,6 +260794,9 @@ Feed Eve:
     Feed Eve: {}
   steam:
     id: 790950
+Feed It:
+  steam:
+    id: 4370990
 "Feed and Grow: Fish":
   files:
     "<base>/SavesDir/*.sav":
@@ -323400,7 +323476,12 @@ Hatred:
       when:
         - os: windows
         - os: linux
+  gog:
+    id: 2069488821
   id:
+    gogExtra:
+      - 1425605808
+      - 1695976085
     lutris: hatred
     steamExtra:
       - 1171890
@@ -323627,6 +323708,11 @@ Haunted:
         workingDir: "<base>/bin/release_optimized"
   steam:
     id: 260550
+Haunted Bloodlines:
+  id:
+    lutris: haunted-bloodlines
+  steam:
+    id: 2725610
 Haunted Dream House:
   installDir:
     Hunted Dream House: {}
@@ -346564,6 +346650,11 @@ How to be Best Russian Game Developer:
           - store: steam
   steam:
     id: 880550
+How to kill a fly H2KAF:
+  id:
+    lutris: how-to-kill-a-fly
+  steam:
+    id: 4566700
 Howard Phillips Lovecar:
   installDir:
     Howard Phillips Lovecar: {}
@@ -353287,6 +353378,8 @@ IKO 39:
     SistineVR: {}
   steam:
     id: 1165850
+IL-2 Korea:
+  alias: Korea. IL-2 Series
 IL-2 Sturmovik:
   files:
     "<base>/Users":
@@ -388701,6 +388794,11 @@ Kira:
         - save
   steam:
     id: 801120
+Kirk Mephisto:
+  id:
+    lutris: kirk-mephisto
+  steam:
+    id: 4605490
 Kisaragi no Hougyoku:
   installDir:
     Kisaragi no Hougyoku: {}
@@ -392001,6 +392099,9 @@ Koral:
           - store: steam
   steam:
     id: 896750
+Korea. IL-2 Series:
+  steam:
+    id: 247970
 "Korean Scary Folk Tales VR: The Forbidden Book":
   installDir:
     Korean Scary Folk Tales VR  The Forbidden Book: {}
@@ -455529,6 +455630,25 @@ Mixtape:
         - config
       when:
         - os: windows
+          store: microsoft
+    "<winLocalAppData>/NewMoon/Saved/Config/Windows/GameUserSettings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/NewMoon/Saved/SaveGames/Steam/<storeUserId>/DefaultSaveGame.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/NewMoon/Saved/SaveGames/Steam/<storeUserId>/SharedGameSettings.sav":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
     "<winLocalAppData>/Packages/AnnapurnaInteractive.BlueMoonLagoon_c96c51jf6wkvm/SystemAppData/wgs":
       tags:
         - save
@@ -459759,8 +459879,11 @@ Monster Train:
   gog:
     id: 1304291300
   id:
+    lutris: monster-train
     steamExtra:
+      - 1310440
       - 1319750
+      - 1359320
   installDir:
     Monster Train: {}
   launch:
@@ -459884,6 +460007,14 @@ Monster Train 2:
       when:
         - os: mac
           store: steam
+  id:
+    lutris: monster-train-2
+    steamExtra:
+      - 3296150
+      - 3580200
+      - 3580220
+      - 3993450
+      - 4739980
   installDir:
     Monster Train 2: {}
   launch:
@@ -518447,10 +518578,17 @@ Paranormal:
         - save
       when:
         - os: windows
+  id:
+    lutris: paranormal-activity-the-lost-soul
   installDir:
     Paranormal Activity The Lost Soul: {}
   steam:
     id: 467660
+"Paranormal Activity: Threshold":
+  id:
+    lutris: paranormal-activity-threshold
+  steam:
+    id: 3394030
 "Paranormal Detective: Escape from the 80's":
   installDir:
     "Paranormal Detective Escape from the 80's": {}
@@ -531936,6 +532074,11 @@ Pixel Survivors:
 Pixel War:
   steam:
     id: 697700
+Pixel Washer:
+  id:
+    lutris: pixel-washer
+  steam:
+    id: 2572060
 Pixel World:
   installDir:
     PixelWorldUnityChan: {}
@@ -545161,6 +545304,30 @@ Prison Escape:
             store: steam
   steam:
     id: 1035900
+"Prison Escape Simulator: Dig Out":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Digital Melody Games/Prison Escape Simulator/Save":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: prison-escape-simulator-dig-out
+  installDir:
+    Prison Escape Simulator Dig Out: {}
+  launch:
+    "<base>/Prison Escape Simulator.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Prison Escape Simulator.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3672720
 Prison Forever:
   installDir:
     Prison Forever: {}
@@ -564327,6 +564494,8 @@ Raise the Dead:
 "Raji: Kaliyuga":
   cloud:
     steam: true
+  id:
+    lutris: raji-kaliyuga
   steam:
     id: 4096880
 Rake:
@@ -630654,6 +630823,8 @@ Silver Pines:
     steam: true
   id:
     lutris: silver-pines
+    steamExtra:
+      - 4540100
   steam:
     id: 2333000
 Silver Tale:
@@ -681184,6 +681355,12 @@ Subnautica 2:
     epic: true
     steam: true
   files:
+    "<winLocalAppData>/Subnautica2/Saved/Config/WinGDK":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: microsoft
     "<winLocalAppData>/Subnautica2/Saved/Config/Windows":
       tags:
         - config
@@ -772796,6 +772973,10 @@ Torn:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: torn--1
+    steamExtra:
+      - 922160
   installDir:
     Torn: {}
   steam:
@@ -789675,6 +789856,11 @@ Twinkle Star Sprites:
           - store: steam
   steam:
     id: 366280
+Twinkle’s Galactic Tour:
+  id:
+    lutris: twinkles-galactic-tour
+  steam:
+    id: 3938440
 Twinora:
   steam:
     id: 1178770
@@ -828423,6 +828609,9 @@ What the Golf?:
   id:
     gogExtra:
       - 1894642988
+    steamExtra:
+      - 813330
+      - 1620450
   installDir:
     WHAT THE GOLF: {}
   launch:
@@ -831267,6 +831456,11 @@ Wild Assault:
             store: steam
   steam:
     id: 2827230
+Wild Blue Skies:
+  cloud:
+    steam: true
+  steam:
+    id: 1921490
 "Wild Buster: Heroes of Titan":
   steam:
     id: 681860
