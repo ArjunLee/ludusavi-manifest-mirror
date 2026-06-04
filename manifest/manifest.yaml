@@ -78234,11 +78234,6 @@ Berry Bury Berry:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Get(Color) Games/BerryBerryBerryBerryBerryBerryBerryBerryBerry":
-      tags:
-        - config
-      when:
-        - os: windows
     "<home>/AppData/LocalLow/Get(Color) Games/BerryBerryBerryBerryBerryBerryBerryBerryBerry/CloudSave":
       tags:
         - save
@@ -78254,6 +78249,10 @@ Berry Bury Berry:
           - bit: 64
             os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Get(Color) Games/BerryBerryBerryBerryBerryBerryBerryBerryBerry/CloudSave:
+      tags:
+        - config
   steam:
     id: 3370870
 Berry Pop Match:
@@ -212050,6 +212049,7 @@ DreadOut Remastered Collection:
         - os: windows
           store: steam
   id:
+    lutris: dreadout-remastered-collection
     steamExtra:
       - 3858020
   installDir:
@@ -215175,6 +215175,11 @@ Drop Duchy:
   cloud:
     steam: true
   files:
+    "<winLocalAppData>/DropDuchy/Config/Windows/GameUserSettings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/DropDuchy/Saved/SaveGames/Users/*.sav":
       tags:
         - save
@@ -258386,6 +258391,11 @@ Farragnarok:
           - store: steam
   steam:
     id: 1112760
+Farsight:
+  id:
+    lutris: farsight
+  steam:
+    id: 3080520
 Farstorm:
   installDir:
     Farstorm: {}
@@ -425898,6 +425908,11 @@ Machine Hunt:
             store: steam
   steam:
     id: 485390
+Machine Party:
+  id:
+    lutris: machine-party
+  steam:
+    id: 4108000
 Machine World 2:
   installDir:
     Machine World 2: {}
@@ -501575,6 +501590,24 @@ Once Again:
         - config
   steam:
     id: 2025610
+Once Alive:
+  id:
+    lutris: once-alive
+    steamExtra:
+      - 3394140
+  installDir:
+    Once Alive: {}
+  launch:
+    "<base>/Once_Alive.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/Once_Alive.sh":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 2336440
 "Once Bitten, Twice Dead!":
   installDir:
     "Once Bitten, Twice Dead!": {}
@@ -504031,6 +504064,12 @@ Onimod Land:
   steam:
     id: 761600
 "Onimusha: Way of the Sword":
+  files:
+    "<root>/userdata/<storeUserId>/3974650/remote/win64_save":
+      tags:
+        - save
+      when:
+        - store: steam
   id:
     lutris: onimusha-way-of-the-sword
   steam:
@@ -529821,6 +529860,11 @@ Pipistrello and the Cursed Yoyo:
       when:
         - os: windows
           store: steam
+    "<home>/AppData/LocalLow/Pocket Trap/Pipistrello/settings.json":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     steamExtra:
       - 3012330
@@ -529830,6 +529874,10 @@ Pipistrello and the Cursed Yoyo:
     "<base>/Pipistrello.exe":
       - when:
           - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Pocket Trap/Pipistrello:
+      tags:
+        - config
   steam:
     id: 2870350
 Piposh:
@@ -560327,19 +560375,6 @@ ROGO:
             store: steam
   steam:
     id: 965470
-ROGUE LIGHT DECK BUILDER:
-  id:
-    lutris: rogue-light-deck-builder
-  installDir:
-    ROGUE LIGHT DECK BUILDER: {}
-  launch:
-    "<base>/RLDB.exe":
-      - when:
-          - bit: 64
-            os: windows
-            store: steam
-  steam:
-    id: 3149370
 ROGUS - Kingdom of The Lost Souls:
   cloud:
     steam: true
@@ -575079,10 +575114,22 @@ Remnith:
 Remorses:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/RemorsesFull/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: remorses
     steamExtra:
       - 4694130
+  installDir:
+    RemorsesFull: {}
+  launch:
+    "<base>/RemorsesFull/Binaries/Win64/RemorsesFull-Win64-Shipping.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2292160
 "Remothered: Broken Porcelain":
@@ -590564,6 +590611,19 @@ Rogue Legacy 2:
         - config
   steam:
     id: 1253920
+Rogue Light Deck Builder:
+  id:
+    lutris: rogue-light-deck-builder
+  installDir:
+    ROGUE LIGHT DECK BUILDER: {}
+  launch:
+    "<base>/RLDB.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3149370
 Rogue Loops:
   files:
     "<home>/AppData/LocalLow/fubu games/rogue_loops/prefs.dat":
@@ -621497,9 +621557,14 @@ Shape of Dreams:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Lizard Smoothie/Shape of Dreams/QuickSave":
+    "<home>/AppData/LocalLow/Lizard Smoothie/Shape of Dreams/QuickSave/*.json":
       tags:
         - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/Lizard Smoothie/Shape of Dreams/QuickSave/r_platform.json":
+      tags:
+        - config
       when:
         - os: windows
   id:
@@ -621511,6 +621576,10 @@ Shape of Dreams:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Lizard Smoothie/Shape of Dreams:
+      tags:
+        - config
   steam:
     id: 2444750
 Shape of the World:
@@ -653456,6 +653525,29 @@ Space Robot Samurai Zombie Slayer:
             store: steam
   steam:
     id: 364100
+Space Rock Breaker:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/WAKAWAKA/SPACEROCKBREAKER":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: space-rock-breaker
+  installDir:
+    Space Rock Breaker: {}
+  launch:
+    "<base>/SPACEROCKBREAKER.exe":
+      - when:
+          - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/WAKAWAKA/SPACEROCKBREAKER:
+      tags:
+        - config
+  steam:
+    id: 4035270
 Space Rocket:
   installDir:
     Space Rocket: {}
@@ -680680,6 +680772,9 @@ StuntMania Reloaded:
     id: 324750
 "Stuntfest: World Tour":
   alias: Jected - Rivals
+"Stuntman: Hollywood":
+  steam:
+    id: 2487330
 Stupid Bat:
   installDir:
     Stupid Bat: {}
@@ -722059,6 +722154,13 @@ The Dark Tales of Katarina:
 "The Dark Veil: West Haven":
   steam:
     id: 1085620
+The Dark West:
+  cloud:
+    steam: true
+  id:
+    lutris: the-dark-west
+  steam:
+    id: 3574750
 The Dark Wish:
   steam:
     id: 1141540
@@ -767185,6 +767287,9 @@ Tiny Toast:
   steam:
     id: 587750
 Tiny Towers:
+  id:
+    steamExtra:
+      - 4613880
   steam:
     id: 4352900
 Tiny Town VR:
@@ -786877,6 +786982,7 @@ True Colors:
     id: 935580
 "True Fear: Forsaken Souls Part 3":
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -809727,9 +809833,15 @@ Village Rhapsody:
     steam: true
   files:
     "<base>/data/*.qt":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
+    "<base>/data/resolutionSize.txt":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     VillageRhapsody: {}
   launch:
