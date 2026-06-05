@@ -28844,6 +28844,8 @@ Alchemist Simulator:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: alchemist-simulator
   installDir:
     Alchemist Simulator: {}
   launch:
@@ -115778,6 +115780,9 @@ Car Dealer Simulator:
           store: steam
   id:
     lutris: car-dealer-simulator
+    steamExtra:
+      - 3413480
+      - 4046960
   installDir:
     Car Dealer Simulator: {}
   steam:
@@ -126295,6 +126300,7 @@ Chateau Garden:
     id: 636010
 Cheap Car Repair:
   id:
+    lutris: cheap-car-repair
     steamExtra:
       - 3323560
       - 3501610
@@ -143496,8 +143502,21 @@ Comanche 4:
 Comatose:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/Comatose/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
   id:
     lutris: comatose--1
+    steamExtra:
+      - 4297010
+      - 4502880
+  installDir:
+    Comatose: {}
+  launch:
+    "<base>/Comatose.exe":
+      - when:
+          - store: steam
   steam:
     id: 3301370
 Combat Air Patrol 2:
@@ -184470,18 +184489,8 @@ Deep Dark Labyrinth:
 Deep Dark L♂byrinth:
   alias: Deep Dark Labyrinth
 Deep Dish Dungeon:
-  files:
-    "<winLocalAppData>low/Behold Studios/Deep Dish Dungeon - Demo/SavedGames":
-      tags:
-        - save
-      when:
-        - os: windows
-    Computer/HKEY_CURRENT_USER/Software/Behold Studios/Deep Dish Dungeon - Demo:
-      tags:
-        - config
-      when:
-        - os: windows
   id:
+    lutris: deep-dish-dungeon
     steamExtra:
       - 3618740
   steam:
@@ -210340,6 +210349,8 @@ Dragon of Legends:
         - save
       when:
         - os: windows
+  id:
+    lutris: dragon-s-lair-3d-return-to-the-lair
 "Dragon's Lair II: Time Warp":
   cloud:
     gog: true
@@ -218853,6 +218864,9 @@ Dungeon Lords:
             store: steam
   steam:
     id: 322580
+Dungeon Lurker:
+  steam:
+    id: 4669960
 Dungeon Manager ZV:
   installDir:
     Dungeon Manager ZV: {}
@@ -223664,6 +223678,9 @@ E3.14CENTER:
             store: steam
   steam:
     id: 862240
+EA Sports College Football 27:
+  steam:
+    id: 4032350
 EA Sports FC 24:
   cloud:
     origin: true
@@ -260907,6 +260924,31 @@ Feed the Pets:
             store: steam
   steam:
     id: 936010
+Feed the Reactor:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Adam Travers/Feed the Reactor":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: feed-the-reactor
+  installDir:
+    Feed the Reactor: {}
+  launch:
+    "<base>/Feed the Reactor.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Adam Travers/Feed the Reactor:
+      tags:
+        - config
+  steam:
+    id: 4009730
 Feeding Frenzy:
   registry:
     HKEY_CURRENT_USER/Software/GameHouse/FeedingFrenzy:
@@ -267684,6 +267726,11 @@ Five Hearts Under One Roof:
   cloud:
     steam: true
   files:
+    "<home>/AppData/LocalLow/Storytaco/MilkGame":
+      tags:
+        - save
+      when:
+        - os: windows
     "<home>/AppData/LocalLow/Storytaco/MilkGame/GOGSave":
       tags:
         - save
@@ -324915,6 +324962,9 @@ Headcrab Frenzy!:
             store: steam
   steam:
     id: 354900
+Headcutter:
+  steam:
+    id: 4603230
 "Header Goal VR: Being Axel Rix":
   cloud:
     steam: true
@@ -345391,6 +345441,17 @@ House Flipper Remastered Collection:
     steamExtra:
       - 4005190
       - 4314250
+  installDir:
+    House Flipper Remastered Collection: {}
+  launch:
+    "<base>/HouseFlipper.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/HouseFlipper.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3710840
 House Flipper VR:
@@ -421600,6 +421661,23 @@ Lume and the Shifting Void:
     steam: true
   steam:
     id: 1133470
+"LumenTale: Memories of Trey":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Beehive Studios/LumenTale Memories of Trey/<storeUserId>/*.gd":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    LumenTale Memories of Trey: {}
+  launch:
+    "<base>/LumenTale Memories of Trey.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2261430
 Lumencraft:
   cloud:
     gog: true
@@ -435650,6 +435728,8 @@ Marvel Snap:
   steam:
     id: 1997040
 "Marvel Tōkon: Fighting Souls":
+  id:
+    lutris: marvel-tokon-fighting-souls
   steam:
     id: 3787240
 "Marvel vs. Capcom Fighting Collection: Arcade Classics":
@@ -507463,13 +507543,18 @@ Organized Inside:
   cloud:
     steam: true
   files:
-    "<home>/Library/Application Support/OrganizedInside/saves":
+    "<winAppData>/OrganizedInside":
+      tags:
+        - config
       when:
-        - os: mac
-          store: steam
+        - os: windows
     "<winAppData>/OrganizedInside/saves":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+  id:
+    lutris: organized-inside
   installDir:
     Organized Inside: {}
   launch:
@@ -596652,6 +596737,8 @@ Runaway VR:
         - os: windows
   gog:
     id: 1207658727
+  id:
+    lutris: runaway-a-road-adventure
   installDir:
     Runaway A Road Adventure: {}
   launch:
@@ -599641,6 +599728,30 @@ SC2VN - The eSports Visual Novel:
             store: steam
   steam:
     id: 404480
+SCAD:
+  files:
+    "<home>/AppData/LocalLow/NAISU/SCAD/*.json":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Library/Application Support/NAISU/SCAD/*.json":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    SCAD: {}
+  launch:
+    "<base>/SCAD.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/SCAD.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2854620
 SCAR Squadra Corse Alfa Romeo:
   files:
     "<base>/saves":
@@ -607277,6 +607388,23 @@ Satellite Command:
             store: steam
   steam:
     id: 514670
+"Satellite Odyssey: Jupiter":
+  id:
+    lutris: satellite-odyssey-jupiter
+  steam:
+    id: 3352140
+"Satellite Odyssey: Prologue":
+  id:
+    lutris: satellite-odyssey-prologue
+  installDir:
+    Satellite Odyssey Prologue: {}
+  launch:
+    "<base>/Satellite Odyssey Prologue.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2579270
 Satellite Reign:
   cloud:
     steam: true
@@ -646804,6 +646932,7 @@ Songs of Conquest:
   id:
     gogExtra:
       - 1099330640
+      - 1456022419
       - 1493194442
       - 1590674379
       - 1800138364
@@ -646817,6 +646946,7 @@ Songs of Conquest:
       - 2977430
       - 3260210
       - 3511790
+      - 4341060
   installDir:
     SongsOfConquest: {}
   launch:
@@ -648123,6 +648253,20 @@ Sonic the Hedgehog 2 (mobile decompilation):
         - os: windows
   id:
     lutris: sonics-schoolhouse
+"Sonki's Lagoon":
+  id:
+    lutris: sonkis-lagoon
+    steamExtra:
+      - 4369270
+  installDir:
+    "Sonki's Lagoon": {}
+  launch:
+    "<base>/MantaMadness.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3976150
 Sonny:
   cloud:
     steam: true
@@ -709008,6 +709152,9 @@ Temptation:
             store: steam
   steam:
     id: 825000
+Tempus Vitae:
+  steam:
+    id: 2360820
 Temtem:
   cloud:
     steam: true
@@ -713413,10 +713560,23 @@ The 7th Guest:
   steam:
     id: 255920
 The 7th Guest Remake:
+  cloud:
+    epic: true
+    steam: true
+  files:
+    "<winLocalAppData>/The7thGuestRemake/Saved/SaveGames/**/*.sav":
+      when:
+        - store: steam
   gog:
     id: 1457196421
   id:
     lutris: the-7th-guest-remake
+  installDir:
+    The 7th Guest Remake: {}
+  launch:
+    "<base>/The7thGuestVR.exe":
+      - when:
+          - store: steam
   steam:
     id: 4491360
 The 7th Guest VR:
@@ -762309,9 +762469,38 @@ Threes!:
   steam:
     id: 1818570
 Thrifty Business:
+  files:
+    "<home>/.config/unity3d/Spellgarden Games/Thrifty Business/Steam/Savegame_<storeUserId>/*.spell":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/Spellgarden Games/Thrifty Business/Steam/Savegame_<storeUserId>/*.spell":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Spellgarden Games/Thrifty Business/Steam/Savegame_<storeUserId>/*.spell":
+      when:
+        - os: mac
+          store: steam
   id:
     steamExtra:
       - 4091410
+  installDir:
+    Thrifty Business: {}
+  launch:
+    "<base>/ThriftyBusiness":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/ThriftyBusiness.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/ThriftyBusiness.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3693650
 Thrill Rollercoasters:
