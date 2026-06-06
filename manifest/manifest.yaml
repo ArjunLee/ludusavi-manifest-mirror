@@ -57227,6 +57227,9 @@ Attack on Titan 2:
         - config
   steam:
     id: 601050
+Attack on Titan 3:
+  steam:
+    id: 2916700
 Attack on Toys:
   cloud:
     steam: true
@@ -78252,7 +78255,7 @@ Berry Bury Berry:
             os: windows
             store: steam
   registry:
-    HKEY_CURRENT_USER/Software/Get(Color) Games/BerryBerryBerryBerryBerryBerryBerryBerryBerry/CloudSave:
+    HKEY_CURRENT_USER/Software/Get(Color) Games/BerryBerryBerryBerryBerryBerryBerryBerryBerry:
       tags:
         - config
   steam:
@@ -126531,6 +126534,25 @@ Chef:
     id: 886900
 Chef - A Restaurant Tycoon Game:
   alias: Chef
+Chef Knight:
+  cloud:
+    steam: true
+  files:
+    "<home>/.local/share/Cosmic Platypus/Chef Knight/save/<storeUserId>/*.sav":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/Cosmic Platypus/Chef Knight/save/<storeUserId>/*.sav":
+      when:
+        - store: steam
+  installDir:
+    Chef Knight: {}
+  launch:
+    "<base>/Chef Knight.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4304930
 Chef RPG:
   cloud:
     steam: true
@@ -159016,6 +159038,9 @@ Crosser:
     Crosser: {}
   steam:
     id: 1124510
+"Crossfire (That's No Moon)":
+  steam:
+    id: 4687500
 "Crossfire: Dungeons":
   cloud:
     steam: true
@@ -184719,7 +184744,8 @@ Deep Rock Galactic:
     Deep Rock Galactic RogueCore: {}
   launch:
     "<base>/RogueCore.exe":
-      - when:
+      - arguments: "-DefaultServiceOverride=Steam -serverlist=serverlist.ghostship.dk"
+        when:
           - bit: 64
             os: windows
             store: steam
@@ -191243,6 +191269,22 @@ Desktop Jumpscares:
             store: steam
   steam:
     id: 2084110
+Desktop Raid:
+  files:
+    "<home>/AppData/LocalLow/LeeStudio/Desktop Raid/**/*.es3":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Desktop Raid: {}
+  launch:
+    "<base>/Desktop Raid.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3122460
 Desktop Soccer:
   installDir:
     Desktop Soccer: {}
@@ -277239,6 +277281,23 @@ Fortune Avenue:
             store: steam
   steam:
     id: 1810050
+Fortune Mill:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Godot/app_userdata/Fortune Mill/*.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Fortune Mill: {}
+  launch:
+    "<base>/FortuneMill.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4731620
 "Fortune Summoners: Secret of the Elemental Stone":
   files:
     "<base>/user":
@@ -305892,6 +305951,13 @@ Gothic 1 Remake:
   cloud:
     gog: true
     steam: true
+  files:
+    "<base>/G1R/Saved/SaveGames/**/*.*":
+      when:
+        - store: steam
+    "<winLocalAppData>/G1R/Saved/SaveGames/**/*.*":
+      when:
+        - store: steam
   gog:
     id: 1537831577
   id:
@@ -305900,6 +305966,8 @@ Gothic 1 Remake:
     lutris: gothic-1-remake
     steamExtra:
       - 3448280
+  installDir:
+    Gothic 1 Remake: {}
   steam:
     id: 1297900
 Gothic 3:
@@ -313327,6 +313395,9 @@ Guild Wars 2:
             store: steam
   steam:
     id: 1284210
+Guild Wars 3:
+  steam:
+    id: 4743930
 Guild Wars Factions:
   alias: Guild Wars
 Guild Wars Nightfall:
@@ -314556,6 +314627,9 @@ Gundam Evolution:
             store: steam
   steam:
     id: 1816670
+Gundam Rogue Orbit:
+  steam:
+    id: 1963680
 GundeadliGne:
   cloud:
     steam: true
@@ -317975,6 +318049,9 @@ Haeven:
             store: steam
   steam:
     id: 508540
+Haex:
+  steam:
+    id: 3524720
 Hags Castle:
   installDir:
     Hags Castle: {}
@@ -380446,6 +380523,10 @@ Kamikaze Lassplanes:
         - config
       when:
         - os: windows
+  gog:
+    id: 1290088049
+  id:
+    lutris: kamikaze-lassplanes
   installDir:
     Kamikaze Lassplanes: {}
   launch:
@@ -392313,6 +392394,8 @@ Korwin The Game:
   steam:
     id: 375030
 "Koshmar: The Last Reverie":
+  id:
+    lutris: koshmar-the-last-reverie
   steam:
     id: 2882720
 Kosmokrats:
@@ -406469,6 +406552,11 @@ Lets Beats:
             store: steam
   steam:
     id: 880610
+Letter Lost:
+  id:
+    lutris: letter-lost
+  steam:
+    id: 3624790
 "Letter Quest: Grimm's Journey":
   cloud:
     steam: true
@@ -416005,6 +416093,8 @@ Lords of the Fallen (2023):
 Lords of the Fallen II:
   id:
     lutris: lords-of-the-fallen-ii
+  steam:
+    id: 4767480
 Lords of the Lockerroom:
   installDir:
     Lords Of The Lockerroom: {}
@@ -608513,6 +608603,9 @@ Saw:
           - store: steam
   steam:
     id: 27300
+"Saw: Genesis":
+  steam:
+    id: 2865960
 Say Goodbye:
   id:
     steamExtra:
@@ -691150,6 +691243,9 @@ Super X Chess:
             store: steam
   steam:
     id: 814990
+Super Yooka-Laylee Kart:
+  steam:
+    id: 3348210
 Super Zombie Arcade:
   installDir:
     Super Zombie Arcade: {}
@@ -698999,6 +699095,22 @@ TAYAL:
             store: steam
   steam:
     id: 818960
+"TBH: Task Bar Hero":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/TesseractStudio/TaskbarHero/*.es3":
+      when:
+        - store: steam
+  installDir:
+    TaskbarHero: {}
+  launch:
+    "<base>/TaskBarHero.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3678970
 TCG Card Shop Simulator:
   cloud:
     steam: true
@@ -709400,7 +709512,11 @@ TendyTrainer:
   steam:
     id: 983120
 Tenebris Somnia:
+  gog:
+    id: 2084941195
   id:
+    gogExtra:
+      - 1713102951
     lutris: tenebris-somnia
     steamExtra:
       - 2578120
@@ -831898,15 +832014,6 @@ Wild Assault:
   id:
     steamExtra:
       - 3639940
-  installDir:
-    WildAssaultEA: {}
-  launch:
-    "<base>/WildAssault.exe":
-      - arguments: "-session=1 -logintype=1 -PlatformService=Steam  -SavedVersion=20250411"
-        when:
-          - bit: 64
-            os: windows
-            store: steam
   steam:
     id: 2827230
 Wild Blue Skies:
@@ -849121,6 +849228,34 @@ You Have to Win the Game:
             store: steam
   steam:
     id: 286100
+You Know The Drill:
+  cloud:
+    steam: true
+  files:
+    "<home>/.local/share/godot/app_userdata/You Know The Drill!/saves/*.save":
+      when:
+        - os: linux
+          store: steam
+    "<winAppData>/Godot/app_userdata/You Know the Drill!/saves/*.save":
+      when:
+        - store: steam
+  id:
+    lutris: you-know-the-drill--1
+    steamExtra:
+      - 4596600
+  installDir:
+    You Know The Drill: {}
+  launch:
+    "<base>/yktd.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/yktd.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 3833760
 You Must Build a Boat:
   files:
     "<home>/AppData/LocalLow/EightyEightGames/*ymbab/save":
