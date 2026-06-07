@@ -2208,6 +2208,14 @@ $1 Ride:
 "16 Planes:Return":
   steam:
     id: 986770
+"1666: Amsterdam":
+  cloud:
+    steam: true
+  id:
+    steamExtra:
+      - 4519690
+  steam:
+    id: 3949550
 16bit Trader:
   cloud:
     steam: true
@@ -31250,6 +31258,9 @@ Alien invasion:
             store: steam
   steam:
     id: 214490
+"Alien: Isolation 2":
+  steam:
+    id: 4665290
 "Alien: Rogue Incursion":
   files:
     "<winLocalAppData>/Midnight/Saved/Config/Windows":
@@ -68003,6 +68014,9 @@ Barbie Horse Trails:
           - store: steam
   steam:
     id: 2786660
+Barbie Rewind:
+  steam:
+    id: 4082030
 Barbie Sparkling Ice Show:
   files:
     "<base>/Game.dat":
@@ -99811,6 +99825,7 @@ Brainy Joy:
     id: 732010
 "Bramble: The Mountain King":
   cloud:
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/Bramble_TMK/Saved/Config/WindowsNoEditor":
@@ -99829,9 +99844,17 @@ Brainy Joy:
       when:
         - os: windows
           store: microsoft
+  gog:
+    id: 1854721136
   id:
+    gogExtra:
+      - 1186616777
+      - 1566481816
+      - 1931101861
+    lutris: bramble-the-mountain-king
     steamExtra:
       - 2161880
+      - 2362250
       - 2362270
   installDir:
     Bramble The Mountain King: {}
@@ -111159,6 +111182,9 @@ Cabernet:
     Cabins Jigsaw Puzzles: {}
   steam:
     id: 884270
+Cable City:
+  steam:
+    id: 4658830
 Cactus Canyon:
   installDir:
     Cactus Canyon: {}
@@ -117949,6 +117975,12 @@ Carpet Bombing:
             store: steam
   steam:
     id: 1210970
+Carpet Cleaning Simulator:
+  id:
+    steamExtra:
+      - 4798550
+  steam:
+    id: 4634560
 Carreras de Velocidad:
   installDir:
     Carreras de Velocidad: {}
@@ -139275,6 +139307,9 @@ Clutch:
           - store: steam
   steam:
     id: 35310
+Clutch (2027):
+  steam:
+    id: 3061930
 Clutchball:
   installDir:
     clutchball: {}
@@ -185404,6 +185439,13 @@ Deepworld:
   steam:
     id: 340810
 Deer & Boy:
+  cloud:
+    epic: true
+    steam: true
+  id:
+    lutris: deer-and-boy
+    steamExtra:
+      - 4626870
   steam:
     id: 1803140
 Deer Hunt Legends:
@@ -189488,6 +189530,26 @@ DemonsAreCrazy:
     id: 861050
 DemonsTier:
   alias: "Demon's Tier"
+Demonschool:
+  cloud:
+    steam: true
+  installDir:
+    Demonschool: {}
+  launch:
+    "<base>/Demonschool.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Demonschool.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/Demonschool.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 1900250
 Den of Wolves:
   steam:
     id: 1818140
@@ -198637,6 +198699,54 @@ Discontinue:
     Discontinue: {}
   steam:
     id: 1061220
+Discounty:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/Chapter4Save0.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/Chapter4Save1.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/Chapter4Save2.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/Chapter4SaveState.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/Save0.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/Save1.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/Save2.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/SaveData0.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/SaveData1.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/SaveData2.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Crinkle Cut Games/Discounty/synched.json":
+      when:
+        - store: steam
+  gog:
+    id: 1078493913
+  installDir:
+    Discounty: {}
+  launch:
+    "<base>/Discounty.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2274620
 Discouraged Workers:
   cloud:
     steam: true
@@ -264437,6 +264547,10 @@ Final Fantasy VII (2020):
           store: microsoft
   gog:
     id: 1698970154
+  id:
+    steamExtra:
+      - 4270250
+      - 4425210
   installDir:
     FINAL FANTASY VII Steam Edition: {}
   launch:
@@ -267975,6 +268089,12 @@ Five Nations:
   steam:
     id: 732690
 "Five Nights at Freddy's: Help Wanted 2":
+  files:
+    "<winLocalAppData>/HW2/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     HW2: {}
   launch:
@@ -302870,6 +302990,9 @@ Godzilla Voxel Wars:
         - config
   steam:
     id: 2439780
+"Godzilla: Destroy All Monsters Melee Remastered":
+  steam:
+    id: 4251460
 Goetia:
   cloud:
     gog: true
@@ -305952,12 +306075,11 @@ Gothic 1 Remake:
     gog: true
     steam: true
   files:
-    "<base>/G1R/Saved/SaveGames/**/*.*":
+    "<winLocalAppData>/G1R/Saved/SaveGames/*.sav":
+      tags:
+        - save
       when:
-        - store: steam
-    "<winLocalAppData>/G1R/Saved/SaveGames/**/*.*":
-      when:
-        - store: steam
+        - os: windows
   gog:
     id: 1537831577
   id:
@@ -306445,6 +306567,11 @@ Graffiti Bombing:
     Graffiti-Bombing: {}
   steam:
     id: 561440
+Graft:
+  id:
+    lutris: graft
+  steam:
+    id: 3141390
 Grail to the Thief:
   installDir:
     Grail to the Thief: {}
@@ -339312,6 +339439,9 @@ Hitman World of Assassination:
           - store: steam
   steam:
     id: 6860
+"Hitman: Classic Trilogy Remastered":
+  steam:
+    id: 4716160
 "Hitman: Codename 47":
   cloud:
     steam: true
@@ -344569,6 +344699,11 @@ Hot Wheels World Race:
     HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Activision Value/Hot Wheels:
       tags:
         - config
+"Hot Wheels: Infinite Rush":
+  cloud:
+    steam: true
+  steam:
+    id: 2821390
 "Hot Wheels: Micro Racers":
   id:
     lutris: hot-wheels-micro-racers
@@ -365792,6 +365927,9 @@ Into the Core:
         workingDir: "<base>/into-the-dark"
   steam:
     id: 266050
+"Into the Dead: Crimson Heights":
+  steam:
+    id: 4638740
 "Into the Dead: Our Darkest Days":
   cloud:
     steam: true
@@ -462088,6 +462226,11 @@ Moonlight Minions:
             store: steam
   steam:
     id: 311170
+Moonlight Peaks:
+  cloud:
+    steam: true
+  steam:
+    id: 2209900
 Moonlight Warrior:
   installDir:
     MoonlightWarrior: {}
@@ -464096,6 +464239,8 @@ Moss Destruction:
 "Moss: The Forgotten Relic":
   cloud:
     steam: true
+  id:
+    lutris: moss-the-forgotten-relic
   steam:
     id: 3914860
 Most Correct Football Simulator:
@@ -552028,6 +552173,16 @@ Punch Club:
     origin: true
     steam: true
   files:
+    "<home>/.config/unity3d/Lazy Bear Games/Punch Club":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/.config/unity3d/Lazy Bear Games/Punch Club/settings.txt":
+      tags:
+        - config
+      when:
+        - os: linux
     "<home>/AppData/LocalLow/Lazy Bear Games/Punch Club":
       tags:
         - save
@@ -574725,6 +574880,13 @@ Relicta:
     Relicta: {}
   steam:
     id: 941570
+Relief:
+  id:
+    steamExtra:
+      - 4110890
+      - 4402910
+  steam:
+    id: 3929330
 Reliefs:
   installDir:
     Reliefs The Time of the Lemures: {}
@@ -577591,6 +577753,9 @@ Resident Evil Survivor:
         - save
       when:
         - os: windows
+Resident Evil Veronica:
+  steam:
+    id: 4824610
 Resident Evil Village:
   cloud:
     steam: true
@@ -597911,9 +598076,11 @@ Rush Rush Rally Reloaded:
   cloud:
     steam: true
   files:
-    "<base>/*.sav":
+    "<base>/rrrrelod.sav":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   installDir:
     Rush Rush Rally Reloaded: {}
   launch:
@@ -611317,6 +611484,11 @@ Screen VR:
     Screen VR: {}
   steam:
     id: 1114170
+Screenbound:
+  id:
+    lutris: screenbound
+  steam:
+    id: 2805070
 Screencheat:
   cloud:
     steam: true
@@ -627605,6 +627777,13 @@ Shrine of the God-Ape:
             store: steam
   steam:
     id: 1103930
+"Shrine: Circus Tycoon":
+  files:
+    "<base>/Saved Games":
+      tags:
+        - save
+      when:
+        - os: windows
 Shrines Of Sacred Essenсe:
   installDir:
     Shrines Of Sacred Essenсe: {}
@@ -635494,6 +635673,23 @@ Sky Noon:
             store: steam
   steam:
     id: 569530
+"Sky Oceans: Wings for Hire":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/OctetoStudios/Sky Oceans":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Sky Oceans Wings for Hire: {}
+  launch:
+    "<base>/Sky Oceans.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1691750
 Sky Pirates of Actorius:
   cloud:
     steam: true
@@ -636885,6 +637081,9 @@ Slap Fight:
             store: steam
   steam:
     id: 2022980
+Slap Out Of It!:
+  steam:
+    id: 3564410
 Slap The Fly:
   installDir:
     Slap The Fly: {}
@@ -665908,6 +666107,9 @@ Star Trek Timelines:
           - store: steam
   steam:
     id: 2653940
+"Star Trek: Shadow Frontier":
+  steam:
+    id: 4744030
 "Star Trek: Starfleet Academy":
   files:
     "<base>/options.cfg":
@@ -682337,6 +682539,16 @@ Successor of the Moon:
             store: steam
   steam:
     id: 1014020
+Succubless:
+  installDir:
+    Succubless: {}
+  launch:
+    "<base>/Succubless/Succubless.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4036540
 Succubus:
   cloud:
     gog: true
@@ -697079,6 +697291,11 @@ Swords of Gurrah:
     Gurrah: {}
   steam:
     id: 833090
+Swords of Legends:
+  id:
+    lutris: swords-of-legends
+  steam:
+    id: 4729320
 Swords of Legends Online:
   id:
     steamExtra:
@@ -751293,6 +751510,8 @@ The Sinking City 2:
     id: 1653226562
   id:
     lutris: the-sinking-city-2
+    steamExtra:
+      - 4684710
   steam:
     id: 2825860
 The Sinking City Remastered:
@@ -758476,6 +758695,9 @@ The Wolf Among Us:
             store: steam
   steam:
     id: 250320
+The Wolf Among Us Remastered:
+  steam:
+    id: 3884860
 "The Wolf's Bite":
   files:
     "<winAppData>/Eric Bernier, David Coughlin, Karen Teixeira, Fat Bard/WolfsBite":
@@ -768349,6 +768571,30 @@ Titanis:
             store: steam
   steam:
     id: 365060
+Titanium Court:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/AP Thomson/TitaniumCourt":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/AP Thomson/TitaniumCourt":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Titanium Court: {}
+  launch:
+    "<base>/TitaniumCourt.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/TitaniumCourt.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2364580
 Titans of Space 2.0:
   installDir:
     Titans of Space 2.0: {}
@@ -770903,6 +771149,20 @@ Toltec and the mysteries of the Secret Island:
     "Tom Clancy's The Division 2": {}
   steam:
     id: 2221490
+"Tom Clancy's The Division Resurgence":
+  cloud:
+    uplay: true
+  files:
+    "<winLocalAppData>/TheDivision/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/TheDivision/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
 "Tom Clancy's XDefiant":
   alias: XDefiant
 "Tom Clancy's ruthless.com":
