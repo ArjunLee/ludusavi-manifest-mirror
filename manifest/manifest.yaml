@@ -23865,6 +23865,7 @@ Age of Empires IV:
       - 3067190
       - 3144890
       - 3746540
+      - 4336170
   installDir:
     Age of Empires IV: {}
   steam:
@@ -117645,17 +117646,17 @@ Carnal:
     id: 1586290
 Carnal Instinct:
   files:
-    "C:/Users/USERNAME/AppData/Local/Carnal_Instinct":
+    "<winLocalAppData>/Carnal_Instinct":
       tags:
         - save
       when:
         - os: windows
-    "C:/Users/USERNAME/AppData/Local/Carnal_Instinct_UE5/Saved/Config":
+    "<winLocalAppData>/Carnal_Instinct_UE5/Saved/Config":
       tags:
         - config
       when:
         - os: windows
-    "C:/Users/USERNAME/AppData/Local/Carnal_Instinct_UE5/Saved/SaveGames":
+    "<winLocalAppData>/Carnal_Instinct_UE5/Saved/SaveGames":
       tags:
         - save
       when:
@@ -205931,6 +205932,7 @@ Doom of the Clawn:
   id:
     lutris: doom-the-dark-ages
     steamExtra:
+      - 3469450
       - 3698350
   installDir:
     DOOMTheDarkAges: {}
@@ -219396,6 +219398,7 @@ Dungeon Siege:
 Dungeon Siege II:
   cloud:
     gog: true
+    steam: true
   files:
     "<winDocuments>/My Games/Dungeon Siege 2 Broken World/DungeonSiege2BrokenWorld.ini":
       tags:
@@ -306075,9 +306078,19 @@ Gothic 1 Remake:
     gog: true
     steam: true
   files:
+    "<winLocalAppData>/G1R/Saved/Config/Windows/GameUserSettings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/G1R/Saved/SaveGames/*.sav":
       tags:
         - save
+      when:
+        - os: windows
+    "<winLocalAppData>/G1R/Saved/SaveGames/EnhancedInputUserSettings.sav":
+      tags:
+        - config
       when:
         - os: windows
   gog:
@@ -306087,6 +306100,7 @@ Gothic 1 Remake:
       - 1913243335
     lutris: gothic-1-remake
     steamExtra:
+      - 2671240
       - 3448280
   installDir:
     Gothic 1 Remake: {}
@@ -457191,6 +457205,14 @@ Mold on Pizza:
             store: steam
   steam:
     id: 387870
+Moldwasher:
+  cloud:
+    steam: true
+  id:
+    steamExtra:
+      - 4327990
+  steam:
+    id: 3688130
 Mole:
   id:
     lutris: mole--4
@@ -527964,6 +527986,30 @@ Pico Park:
             store: steam
   steam:
     id: 1509960
+Pico Park 2:
+  files:
+    "<home>/AppData/LocalLow/TECOPARK/PICO PARK 2/Steam/<storeUserId>/*.sav":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/TECOPARK/PICO PARK 2/Steam/<storeUserId>/*.sav":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    PICO PARK 2: {}
+  launch:
+    "<base>/pico_park_2.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/pico_park_2.exe":
+      - when:
+          - os: windows
+            store: steam
+          - os: linux
+            store: steam
+  steam:
+    id: 2644470
 "Pico Park: Classic Edition":
   installDir:
     PICO_PARK: {}
@@ -529572,15 +529618,14 @@ Pinball with a Gun:
   steam:
     id: 3566120
 Pinchcliffe Grand Prix:
-  installDir:
-    Flåklypa Grand Prix: {}
-  launch:
-    "<base>/FGP_Project.exe":
-      - when:
-          - os: windows
-            store: steam
-  steam:
-    id: 1668080
+  files:
+    "<base>/profiles":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: pinchcliffe-grand-prix
 Pine:
   cloud:
     epic: true
@@ -648058,6 +648103,9 @@ Sonic P-06:
         - config
       when:
         - os: windows
+Sonic Pico Park:
+  steam:
+    id: 4304060
 Sonic Project Hero:
   files:
     "<base>/Sonic - Project Hero_Data/hero_settings.bin":
@@ -692962,6 +693010,7 @@ Supreme Casino City:
 Supreme Commander:
   cloud:
     gog: true
+    steam: true
   files:
     "<winLocalAppData>/Gas Powered Games/SupremeCommander/Game.prefs":
       tags:
@@ -693034,6 +693083,7 @@ Supreme Commander 2:
 "Supreme Commander: Forged Alliance":
   cloud:
     gog: true
+    steam: true
   files:
     "<winDocuments>/My Games/Gas Powered Games/Supreme Commander Forged Alliance/savegames":
       tags:
@@ -748151,6 +748201,13 @@ The Road Trip:
             store: steam
   steam:
     id: 856320
+The Road of Dust and Sorrow:
+  id:
+    lutris: the-road-of-dust-and-sorrow
+    steamExtra:
+      - 4550910
+  steam:
+    id: 3895110
 The Road to Canterbury:
   cloud:
     steam: true
