@@ -3127,14 +3127,26 @@ $1 Ride:
   steam:
     id: 757950
 20 Minutes till Dawn:
-  cloud:
-    steam: true
   files:
     "<home>/AppData/LocalLow/Flanne/MinutesTillDawn/*.json":
       tags:
         - save
       when:
         - os: windows
+    "<home>/Library/Application Support/com.Flanne.MinutesTillDawn/gamedata.json":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<home>/Library/Preferences/com.Flanne.MinutesTillDawn.plist":
+      tags:
+        - config
+      when:
+        - os: mac
+  id:
+    lutris: 20-minutes-till-dawn
+    steamExtra:
+      - 1980790
   installDir:
     20MinuteTillDawn: {}
   launch:
@@ -39334,6 +39346,9 @@ Angvik:
             store: steam
   steam:
     id: 278890
+"Anhedonia: Sanctuary of Ash":
+  steam:
+    id: 4202540
 "Anicon - Animal Complex - Cat's Path":
   installDir:
     "Anicon - Animal Complex - Cat's Path": {}
@@ -74622,6 +74637,8 @@ Beast Quest:
   id:
     lutris: beast-wars-transformers
 Beast of Reincarnation:
+  cloud:
+    steam: true
   id:
     lutris: beast-of-reincarnation
   steam:
@@ -92597,12 +92614,16 @@ Bloons TD 5:
     id: 306020
 Bloons TD 6:
   files:
+    "<home>/Library/Preferences/com.ninjakiwi.bloonstd6.plist":
+      tags:
+        - config
+      when:
+        - os: mac
     "<root>/userdata/<storeUserId>/960090":
       tags:
         - save
       when:
-        - os: windows
-          store: steam
+        - store: steam
   id:
     lutris: bloons-td-6
     steamExtra:
@@ -113175,6 +113196,12 @@ Call of the Elder Gods:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/Kwalee.CalloftheElderGods_bm08s5vda6r86/SystemAppData/wgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
   id:
     lutris: call-of-the-elder-gods
     steamExtra:
@@ -116476,6 +116503,9 @@ Caravanserail:
 Carbon Steel:
   id:
     lutris: carbon-steel
+Carcass Clad:
+  steam:
+    id: 3327430
 Carcassonne:
   files:
     "<home>/AppData/LocalLow/Asmodee/Carcassonne/Default":
@@ -118972,6 +119002,11 @@ Cassette Beasts:
             store: steam
   steam:
     id: 1321440
+Cassette Beasts 2002:
+  cloud:
+    steam: true
+  steam:
+    id: 3802140
 Cassiodora:
   cloud:
     steam: true
@@ -134238,6 +134273,9 @@ City Car Driving:
         workingDir: "<base>/bin/win32"
   steam:
     id: 493490
+City Car Driving 2.0:
+  steam:
+    id: 2327720
 City Climber:
   installDir:
     City Climber: {}
@@ -136425,6 +136463,13 @@ Clea:
   steam:
     id: 981020
 Clean Up Earth:
+  installDir:
+    Clean Up Earth: {}
+  launch:
+    "<base>/Clean Up Earth.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3402720
 Clean VR:
@@ -146196,6 +146241,9 @@ Company of Heroes 3:
             store: steam
   steam:
     id: 1677280
+"Company of Heroes: Definitive Edition":
+  steam:
+    id: 4691270
 "Company of Heroes: Eastern Front":
   installDir:
     Company of Heroes Relaunch: {}
@@ -155634,6 +155682,9 @@ Crazy Taxi (Steam):
         - save
       when:
         - os: windows
+"Crazy Taxi: World Tour":
+  steam:
+    id: 2924540
 Crazy Toad:
   installDir:
     Crazy Toad: {}
@@ -156726,6 +156777,21 @@ Creepy Tale 2:
   id:
     steamExtra:
       - 3542280
+  installDir:
+    CreepyTaleSnowChild: {}
+  launch:
+    "<base>/CreepyTale5.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/CreepyTale5.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/CreepyTale5.x86_64":
+      - when:
+          - os: linux
+            store: steam
   steam:
     id: 3529690
 "Creepy Tale: Some Other Place":
@@ -157915,6 +157981,11 @@ Cris Tales:
         - config
       when:
         - os: windows
+  id:
+    lutris: crisis-core-final-fantasy-vii-reunion
+    steamExtra:
+      - 2066830
+      - 2131710
   installDir:
     CCFF7R: {}
   launch:
@@ -210725,6 +210796,26 @@ DragonStrike:
           - store: steam
   steam:
     id: 2350520
+"DragonSword : Awakening":
+  cloud:
+    steam: true
+  files:
+    "<base>/DS/Saved/Config/WindowsClient":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/DS/Saved/SaveGames":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 4575730
+  steam:
+    id: 4570720
 DragonWingsVR:
   cloud:
     steam: true
@@ -378309,6 +378400,18 @@ Jurassic World Evolution 3:
           - store: steam
   steam:
     id: 2958130
+Jurig Escape:
+  id:
+    lutris: jurig-escape
+  installDir:
+    Jurig Escape: {}
+  launch:
+    "<base>/Jurig.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2957940
 Juro Janosik:
   cloud:
     steam: true
@@ -429571,6 +429674,11 @@ Magicians Legacy:
     steam: true
   steam:
     id: 1173170
+"Magicians: The Devil's Deal":
+  cloud:
+    steam: true
+  steam:
+    id: 3299300
 Magicite:
   installDir:
     Magicite: {}
@@ -438893,6 +439001,11 @@ Maximum Override:
           - store: steam
   steam:
     id: 389220
+Maximum Thunderness:
+  cloud:
+    steam: true
+  steam:
+    id: 1037170
 May:
   installDir:
     May: {}
@@ -445268,6 +445381,9 @@ Message Quest:
             store: steam
   steam:
     id: 408280
+"Messenger of Death: Blood Bond":
+  steam:
+    id: 4213960
 Messiah:
   files:
     "<base>/SAVE":
@@ -600874,6 +600990,9 @@ SHATTER (2019):
             store: steam
   steam:
     id: 1181340
+SHE (Seraphim Helix Experiment):
+  steam:
+    id: 4686060
 SHEEP SLING:
   installDir:
     SHEEP SLING: {}
@@ -606451,17 +606570,7 @@ Sanctus Mortem:
   steam:
     id: 858490
 Sand:
-  files:
-    "<home>/AppData/LocalLow/Hologryph/Sand":
-      tags:
-        - config
-      when:
-        - os: windows
-  id:
-    steamExtra:
-      - 2981610
-  steam:
-    id: 1431300
+  alias: "Sand: Raiders of Sophie"
 Sand Is the Soul:
   steam:
     id: 716780
@@ -606500,6 +606609,19 @@ Sand Land:
           - store: steam
   steam:
     id: 1979440
+"Sand: Raiders of Sophie":
+  files:
+    "<home>/AppData/LocalLow/Hologryph/Sand":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: sand-raiders-of-sophie
+    steamExtra:
+      - 2981610
+  steam:
+    id: 1431300
 "Sand:box":
   files:
     "<base>/saves":
@@ -612395,7 +612517,13 @@ Sea of Stars:
       when:
         - os: windows
           store: microsoft
+  gog:
+    id: 1254594850
   id:
+    gogExtra:
+      - 1124662664
+      - 1628144748
+      - 1924927409
     steamExtra:
       - 2385060
       - 3457510
@@ -616648,6 +616776,11 @@ Sentry Knight Tactics:
             store: steam
   steam:
     id: 503210
+Senua:
+  cloud:
+    steam: true
+  steam:
+    id: 3676410
 "Senua's Saga: Hellblade II":
   cloud:
     steam: true
@@ -630827,6 +630960,17 @@ Silent Hunter III:
 Silent Night:
   steam:
     id: 893670
+Silent Night - A Christmas Delivery:
+  id:
+    lutris: silent-night-a-christmas-delivery
+  installDir:
+    Silent Night - A Christmas Delivery: {}
+  launch:
+    "<base>/silentNight.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1630740
 Silent Road:
   id:
     lutris: silent-road
@@ -638680,6 +638824,30 @@ Slice&Dice (VR):
             store: steam
   steam:
     id: 598450
+Slide - Animal Race:
+  id:
+    lutris: slide-animal-race
+    steamExtra:
+      - 1630150
+  installDir:
+    Slide: {}
+  launch:
+    "<base>/slide":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/slide.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/slide.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1345280
 Slide Furry Futanari:
   cloud:
     steam: true
@@ -645354,6 +645522,12 @@ Solarpunk:
         - save
       when:
         - os: windows
+  installDir:
+    Solarpunk: {}
+  launch:
+    "<base>/Solarpunk.exe":
+      - when:
+          - store: steam
   steam:
     id: 1805110
 Solas 128:
@@ -659608,26 +659782,18 @@ Spindle:
     gog: true
     steam: true
   files:
-    "<base>/app_userdata/Spindle/**/*.json":
-      when:
-        - store: steam
-    "<home>/.local/share/godot/app_userdata/Spindle/**/*.json":
-      when:
-        - os: linux
-          store: steam
-    "<home>/Library/Application Support/Godot/app_userdata/Spindle/**/*.json":
-      when:
-        - os: mac
-          store: steam
-    "<winAppData>/Godot/app_userdata/Spindle/**/*.json":
+    "<winAppData>/Godot/app_userdata/Spindle":
+      tags:
+        - config
+        - save
       when:
         - os: windows
-          store: steam
   gog:
     id: 1250926668
   id:
     gogExtra:
       - 1604506899
+    lutris: spindle
     steamExtra:
       - 1698620
   installDir:
@@ -661514,6 +661680,29 @@ Sponchies:
 SpookY2K:
   cloud:
     steam: true
+  files:
+    "<base>/game/saves":
+      when:
+        - store: steam
+    "<home>/Library/Renpy/SpookY2K-1756888761*":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    spookY2K: {}
+  launch:
+    "<base>/spookY2K.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/spookY2K.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/spookY2K.sh":
+      - when:
+          - os: linux
+            store: steam
   steam:
     id: 4097180
 Spookware:
@@ -662732,6 +662921,8 @@ Spyro Reignited Trilogy:
         - save
       when:
         - os: windows
+  id:
+    lutris: spyrotm-reignited-trilogy
   installDir:
     Spyro Reignited Trilogy: {}
   launch:
@@ -662740,6 +662931,9 @@ Spyro Reignited Trilogy:
           - store: steam
   steam:
     id: 996580
+"Spyro: A Realm Beyond":
+  steam:
+    id: 4245560
 Squad:
   cloud:
     steam: true
@@ -663824,6 +664018,9 @@ Stage Presence:
             store: steam
   steam:
     id: 391640
+Stage Tour:
+  steam:
+    id: 4452700
 Stage of Light:
   installDir:
     Stage of Light: {}
@@ -680669,6 +680866,9 @@ Stronghold 3:
             store: steam
   steam:
     id: 47400
+Stronghold 4:
+  steam:
+    id: 2153760
 Stronghold Crusader:
   cloud:
     gog: true
@@ -754613,6 +754813,8 @@ The Thing With Mistletoes:
         - os: windows
   gog:
     id: 1695904593
+  id:
+    lutris: the-thing-remastered
   installDir:
     The Thing Remastered: {}
   launch:
@@ -761234,6 +761436,15 @@ Thief Town:
           - store: steam
   steam:
     id: 211600
+"Thief: The Dark Project Remastered":
+  cloud:
+    steam: true
+  gog:
+    id: 1477689565
+  id:
+    lutris: thief-the-dark-project-remastered
+  steam:
+    id: 4200960
 Thievery:
   installDir:
     Thievery: {}
@@ -771511,29 +771722,7 @@ Tomb Raider - The Final Hours Digital Book:
   steam:
     id: 233410
 Tomb Raider Chronicles:
-  files:
-    "<base>/savegame.*":
-      tags:
-        - save
-      when:
-        - os: windows
-  gog:
-    id: 1207663523
-  id:
-    gogExtra:
-      - 1207659077
-    lutris: tomb-raider-v-chronicles
-  installDir:
-    Tomb Raider (V) Chronicles: {}
-  launch:
-    "<base>/PCTomb5.exe":
-      - when:
-          - store: steam
-      - arguments: Setup
-        when:
-          - store: steam
-  steam:
-    id: 225000
+  alias: "Tomb Raider: Chronicles"
 Tomb Raider I-III Remastered:
   cloud:
     epic: true
@@ -771690,6 +771879,30 @@ Tomb Raider IV-VI Remastered:
         - config
   steam:
     id: 8000
+"Tomb Raider: Chronicles":
+  files:
+    "<base>/savegame.*":
+      tags:
+        - save
+      when:
+        - os: windows
+  gog:
+    id: 1207663523
+  id:
+    gogExtra:
+      - 1207659077
+    lutris: tomb-raider-v-chronicles
+  installDir:
+    Tomb Raider (V) Chronicles: {}
+  launch:
+    "<base>/PCTomb5.exe":
+      - when:
+          - store: steam
+      - arguments: Setup
+        when:
+          - store: steam
+  steam:
+    id: 225000
 "Tomb Raider: Legacy of Atlantis":
   steam:
     id: 3558670
@@ -805516,6 +805729,7 @@ Vampire Survivors:
       - 3210350
       - 3451100
       - 3929770
+      - 4781330
   installDir:
     Vampire Survivors: {}
   launch:
@@ -805795,6 +806009,9 @@ Vampire of the Sands:
         - config
   steam:
     id: 1096410
+"Vampire: The Masquerade - Eternal Whispers":
+  steam:
+    id: 4102480
 "Vampire: The Masquerade - Justice":
   id:
     lutris: vampire-the-masquerade-justice
@@ -811893,6 +812110,9 @@ Virtually Real Life:
             store: steam
   steam:
     id: 1209610
+Virtue and a Sledgehammer:
+  steam:
+    id: 3743260
 Virtuelle Moorhuhn Jagd:
   files:
     "<base>/Moorhuhn.sav":
@@ -817848,6 +818068,16 @@ Wandersong:
         - os: windows
   gog:
     id: 1720779330
+  id:
+    gogExtra:
+      - 1534770795
+      - 1546202846
+      - 1567917125
+    lutris: wandersong
+    steamExtra:
+      - 949640
+      - 949641
+      - 949642
   installDir:
     Wandersong: {}
   launch:
@@ -820513,21 +820743,16 @@ Warhalla:
     epic: true
     steam: true
   files:
-    "<winDocuments>/Black Lab Games/Warhammer 40,000 Battlesector/*.txt":
+    "<winDocuments>/Black Lab Games/Warhammer 40,000 Battlesector":
+      tags:
+        - config
       when:
-        - store: steam
-    "<winDocuments>/Black Lab Games/Warhammer 40,000 Battlesector/Campaigns":
+        - os: windows
+    "<winDocuments>/Black Lab Games/Warhammer 40,000 Battlesector/Saves":
+      tags:
+        - config
       when:
-        - store: steam
-    "<winDocuments>/Black Lab Games/Warhammer 40,000 Battlesector/Maps":
-      when:
-        - store: steam
-    "<winDocuments>/Black Lab Games/Warhammer 40,000 Battlesector/Saves/*.bssave":
-      when:
-        - store: steam
-    "<winDocuments>/Black Lab Games/Warhammer 40,000 Battlesector/Skirmish":
-      when:
-        - store: steam
+        - os: windows
   gog:
     id: 1928462226
   id:
@@ -837745,6 +837970,9 @@ WizzBall:
     WizzBall: {}
   steam:
     id: 629780
+"Wo Long 2: Wings of Ember":
+  steam:
+    id: 4507990
 "Wo Long: Fallen Dynasty":
   cloud:
     steam: true
@@ -852929,6 +853157,27 @@ Zefira:
           - store: steam
   steam:
     id: 1078380
+"Zefyr: A Thief's Melody":
+  cloud:
+    steam: true
+  id:
+    lutris: zefyr-a-thiefs-melody
+    steamExtra:
+      - 3687840
+      - 3688940
+  installDir:
+    "A Thief's Melody": {}
+  launch:
+    "<base>/zefyr.exe":
+      - when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Oneiric Worlds/Zefyr:
+      tags:
+        - config
+  steam:
+    id: 1344990
 Zeitgeist:
   id:
     lutris: jupiter-strike
