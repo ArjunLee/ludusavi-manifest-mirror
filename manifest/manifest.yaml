@@ -66403,6 +66403,11 @@ Ballistics:
         - save
       when:
         - os: windows
+    "<base>/display_settings.txt":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: ballistics
 Balloon:
@@ -260971,6 +260976,9 @@ Fearmonium:
             store: steam
   steam:
     id: 1763050
+"Fears to Fathom: Scratch Creek":
+  steam:
+    id: 4121170
 "Fears to Fathom: Woodbury Getaway":
   installDir:
     Fears to Fathom - Woodbury Getaway: {}
@@ -264392,6 +264400,11 @@ Final Fantasy IX:
             store: steam
   steam:
     id: 377840
+Final Fantasy Resonance:
+  cloud:
+    steam: true
+  steam:
+    id: 3259780
 Final Fantasy Tactics - The Ivalice Chronicles:
   cloud:
     steam: true
@@ -301421,6 +301434,13 @@ Goals:
         - config
       when:
         - os: windows
+  installDir:
+    GOALS: {}
+  launch:
+    "<base>/GOALS.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2753000
 Goaltender VR:
@@ -345755,6 +345775,7 @@ House Flipper Remastered Collection:
       when:
         - os: windows
   id:
+    lutris: house-flipper-remastered-collection
     steamExtra:
       - 4005190
       - 4314250
@@ -364289,6 +364310,19 @@ Insincere:
           - store: steam
   steam:
     id: 467000
+"Insomnia: Chapter One":
+  id:
+    lutris: insomnia-chapter-one
+  installDir:
+    Insomnia: {}
+  launch:
+    "<base>/InsomniaP1.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3939100
 "Insomnia: The Ark":
   cloud:
     gog: true
@@ -385092,6 +385126,14 @@ Killer Backflip 999:
 Killer Bean:
   cloud:
     steam: true
+  installDir:
+    Killer Bean: {}
+  launch:
+    "<base>/Killer Bean.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 1597080
 Killer Chambers:
@@ -402628,6 +402670,23 @@ Legend of Traveller:
             store: steam
   steam:
     id: 1044330
+Legend of Ymir:
+  id:
+    steamExtra:
+      - 4520020
+      - 4520030
+      - 4520040
+  installDir:
+    Legend of YMIR: {}
+  launch:
+    "<base>/ProjectRE/Binaries/Win64/YmirSteam-Win64-Shipping.exe":
+      - arguments: "-unattended -NotInstalled -dx12"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4172530
 Legend of sword and Magic MMO:
   steam:
     id: 1161150
@@ -467985,6 +468044,9 @@ Mural:
             store: steam
   steam:
     id: 1060900
+"Muramasa: Revenant Blades":
+  steam:
+    id: 4253770
 Murasaki:
   cloud:
     steam: true
@@ -475231,6 +475293,22 @@ NBA Playgrounds:
             store: steam
   steam:
     id: 545270
+NBA The Run:
+  id:
+    steamExtra:
+      - 4695820
+      - 4799710
+  installDir:
+    NBATHERUN: {}
+  launch:
+    "<base>/start_protected_game.exe":
+      - arguments: "-OnlineBackendType=PragmaRetail"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2866670
 NBB.EXE:
   files:
     "<base>/NBB.EXE_Data/SaveData/*.sav":
@@ -528915,6 +528993,9 @@ Pikuniku:
         - config
   steam:
     id: 572890
+Pikuniku 2:
+  steam:
+    id: 2676350
 Pilam Sky:
   installDir:
     PilamSky: {}
@@ -529742,6 +529823,10 @@ Pinchcliffe Grand Prix:
         - os: windows
   id:
     lutris: pinchcliffe-grand-prix
+  registry:
+    HKEY_LOCAL_MACHINE/Software/WOW6432Node/CapricornuS AS/Flåklypa Grand Prix:
+      tags:
+        - config
 Pine:
   cloud:
     epic: true
@@ -587363,6 +587448,16 @@ Road to Empress I:
   steam:
     id: 3478050
 Road to Empress II:
+  id:
+    lutris: road-to-empress-ii
+  installDir:
+    roadtoempress2: {}
+  launch:
+    "<base>/sstx2.exe":
+      - arguments: "-windowed"
+        when:
+          - os: windows
+            store: steam
   steam:
     id: 4148240
 Road to Guangdong:
@@ -662162,7 +662257,7 @@ Sprawl:
     steamExtra:
       - 2533460
   installDir:
-    SPRAWL: {}
+    SPRAWL 1: {}
   launch:
     "<base>/Sprawl.exe":
       - when:
@@ -662172,6 +662267,8 @@ Sprawl:
 Sprawl Zero:
   id:
     lutris: sprawl-zero
+    steamExtra:
+      - 4247830
   steam:
     id: 3748520
 Spray Dynamite X Radioactive Insects:
@@ -666329,6 +666426,9 @@ Star Trek Timelines:
         - save
       when:
         - os: windows
+"Star Trek: Outposts Unknown":
+  steam:
+    id: 3469910
 "Star Trek: Resurgence":
   cloud:
     epic: true
@@ -722833,6 +722933,26 @@ The Dark Queen of Krynn:
       - 1444390670
   steam:
     id: 1904622
+The Dark Queen of Mortholme:
+  gog:
+    id: 1755345000
+  id:
+    lutris: the-dark-queen-of-mortholme
+  installDir:
+    The Dark Queen of Mortholme: {}
+  launch:
+    "<base>/The Dark Queen of Mortholme Linux/The Dark Queen of Mortholme.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/The Dark Queen of Mortholme Windows/The Dark Queen of Mortholme.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3587610
 The Dark Room:
   cloud:
     steam: true
@@ -808330,10 +808450,16 @@ Venture Seas:
   cloud:
     steam: true
   files:
-    "<winDocuments>/KoeiTecmo/Venus Vacation PRISM - DEAD OR ALIVE Xtreme -/Savedata/<storeUserId>":
+    "<winDocuments>/KoeiTecmo/Venus Vacation PRISM - DEAD OR ALIVE Xtreme -/Savedata":
+      tags:
+        - config
       when:
         - os: windows
-          store: steam
+    "<winDocuments>/KoeiTecmo/Venus Vacation PRISM - DEAD OR ALIVE Xtreme -/Savedata/<storeUserId>":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     Venus Vacation PRISM - DEAD OR ALIVE Xtreme -: {}
   steam:
