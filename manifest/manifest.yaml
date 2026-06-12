@@ -67322,6 +67322,7 @@ Banished Castle VR:
 "Banishers: Ghosts of New Eden":
   cloud:
     epic: true
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/Banishers Ghosts of New Eden/Saved/Config/Windows":
@@ -67342,7 +67343,12 @@ Banished Castle VR:
       when:
         - os: windows
           store: microsoft
+  gog:
+    id: 1929810705
   id:
+    gogExtra:
+      - 1296479691
+    lutris: banishers-ghosts-of-new-eden
     steamExtra:
       - 2317940
   installDir:
@@ -197730,7 +197736,6 @@ Dinoblade:
   id:
     lutris: dinoblade
     steamExtra:
-      - 3646400
       - 4106740
   steam:
     id: 3440070
@@ -202471,6 +202476,23 @@ Dog Jam:
             store: steam
   steam:
     id: 895120
+"Dog Man: Mission Impawsible":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Floor 84 Studio/Dog Man_ Mission Impawsible/<storeUserId>/*.dat":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Dog Man Mission Impawsible: {}
+  launch:
+    "<base>/Dog Man Mission Impawsible.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3112730
 Dog Sled Saga:
   installDir:
     DogSledSaga: {}
@@ -261058,6 +261080,14 @@ Fearmonium:
   steam:
     id: 1763050
 "Fears to Fathom: Scratch Creek":
+  id:
+    lutris: fears-to-fathom-scratch-creek
+  installDir:
+    Fears to Fathom - Scratch Creek: {}
+  launch:
+    "<base>/Fears to Fathom - Scratch Creek.exe":
+      - when:
+          - store: steam
   steam:
     id: 4121170
 "Fears to Fathom: Woodbury Getaway":
@@ -264823,6 +264853,9 @@ Final Fantasy VII Remake Intergrade:
             store: steam
   steam:
     id: 1462040
+Final Fantasy VII Revelation:
+  steam:
+    id: 4354570
 Final Fantasy VII Windows Edition:
   alias: Final Fantasy VII (2020)
 "Final Fantasy VII: Ever Crisis":
@@ -282036,6 +282069,12 @@ Frog Out!:
   steam:
     id: 921720
 Frog Sqwad:
+  installDir:
+    Frog Sqwad: {}
+  launch:
+    "<base>/Frog Sqwad.exe":
+      - when:
+          - store: steam
   steam:
     id: 3989960
 Frog Struggles:
@@ -375872,6 +375911,11 @@ Johns.game:
             store: steam
   steam:
     id: 597240
+Join Us:
+  cloud:
+    steam: true
+  steam:
+    id: 3401960
 "Joint Operations: Typhoon Rising":
   installDir:
     Joint Operations Combined Arms: {}
@@ -412816,9 +412860,12 @@ Little Nightmares III:
   id:
     lutris: little-nightmares-iii--1
     steamExtra:
+      - 2088781
       - 2088783
       - 2088785
       - 2088786
+      - 2088787
+      - 2088788
       - 2170190
   installDir:
     Little Nightmares III: {}
@@ -413003,6 +413050,11 @@ Little Rocket Lab:
           - store: steam
   steam:
     id: 2451100
+Little Samson:
+  cloud:
+    steam: true
+  steam:
+    id: 4008910
 Little Savior / リトルセイバー:
   files:
     "<winAppData>/Sorceryforce/LittleSavior01/App/1/5/**/*.save":
@@ -425075,6 +425127,7 @@ MINImax Tinyverse:
 "MIO: Memories in Orbit":
   cloud:
     epic: true
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/Packages/FocusHomeInteractiveSA.MioMemoriesinOrbit_4hny5m903y3g0/SystemAppData/wgs":
@@ -425083,6 +425136,8 @@ MINImax Tinyverse:
       when:
         - os: windows
           store: microsoft
+  gog:
+    id: 1785970306
   id:
     lutris: mio-memories-in-orbit
   installDir:
@@ -481545,6 +481600,11 @@ Nekojishi:
             store: steam
   steam:
     id: 570840
+"Nekome: Nazi Hunter":
+  cloud:
+    steam: true
+  steam:
+    id: 4200110
 "Nekomew's Potty Trouble":
   files:
     "<winDocuments>/PikewinGames/NekomewsPottyTrouble/*.dat":
@@ -636096,6 +636156,11 @@ Sky Noon:
   cloud:
     steam: true
   files:
+    "<base>/Sky Oceans_Data/StreamingAssets/settings.json":
+      tags:
+        - config
+      when:
+        - os: windows
     "<home>/AppData/LocalLow/OctetoStudios/Sky Oceans":
       tags:
         - save
@@ -730987,6 +731052,19 @@ The Green Fairy VR:
     Green Fairy VR: {}
   steam:
     id: 1600970
+The Green Light:
+  gog:
+    id: 2137859649
+  id:
+    lutris: the-green-light
+  installDir:
+    The Green Light: {}
+  launch:
+    "<base>/TheGreenLight.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1962950
 The Greenskins:
   steam:
     id: 705980
@@ -771708,6 +771786,8 @@ Toltec and the mysteries of the Secret Island:
         - save
       when:
         - os: windows
+  steam:
+    id: 3749720
 "Tom Clancy's XDefiant":
   alias: XDefiant
 "Tom Clancy's ruthless.com":
