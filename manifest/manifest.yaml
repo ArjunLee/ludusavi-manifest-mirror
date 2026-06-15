@@ -23133,6 +23133,13 @@ Against the Storm:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/HoodedHorse.AgainsttheStorm_znaey1dw2bdpr/SystemAppData":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: microsoft
   gog:
     id: 1460447406
   id:
@@ -74733,6 +74740,22 @@ Beastmancer:
             store: steam
   steam:
     id: 562250
+Beastro:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Spinel_02/Saved/SaveGames/SpinelSaveSlot.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Beastro: {}
+  launch:
+    "<base>/Spinel_02.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2417470
 Beasts Battle:
   cloud:
     steam: true
@@ -75706,6 +75729,25 @@ Beatcrash:
     Beatcrash: {}
   steam:
     id: 1064360
+Beatdown City Survivors:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/NuChallenger/BDC Survivors/Options.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/NuChallenger/BDC Survivors/Save.json":
+      when:
+        - store: steam
+  installDir:
+    Beatdown City Survivors: {}
+  launch:
+    "<base>/BDC Survivors.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3383040
 Beater Spirit:
   steam:
     id: 482120
@@ -104289,6 +104331,10 @@ Broken of Darkness:
   steam:
     id: 1199610
 "BrokenLore: Ascend":
+  id:
+    lutris: brokenlore-ascend
+    steamExtra:
+      - 4596120
   steam:
     id: 4051470
 "BrokenLore: Dark Dawn":
@@ -104296,6 +104342,11 @@ Broken of Darkness:
     lutris: brokenlore-dark-dawn--1
   steam:
     id: 2283250
+"BrokenLore: Don't Lie":
+  id:
+    lutris: brokenlore-dont-lie
+  steam:
+    id: 3886200
 "BrokenLore: Don't Play":
   steam:
     id: 4549480
@@ -104321,10 +104372,7 @@ Broken of Darkness:
   steam:
     id: 2351330
 "BrokenLore: Don’t Lie":
-  id:
-    lutris: brokenlore-dont-lie
-  steam:
-    id: 3886200
+  alias: "BrokenLore: Don't Lie"
 "BrokenLore: Follow":
   cloud:
     steam: true
@@ -188986,6 +189034,24 @@ Demon Lord Reincarnation:
             store: steam
   steam:
     id: 2395150
+"Demon Lord: Just a Block":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/YuWave/DemonLordJustABlock/Saves":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    DemonLordJustABlock: {}
+  launch:
+    "<base>/DemonLordJustABlock.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3720420
 "Demon Mark: A Russian Saga":
   cloud:
     steam: true
@@ -210017,6 +210083,11 @@ Dragon Quest III HD-2D Remake:
     DRAGON QUEST MONSTERS 3: {}
   steam:
     id: 2175540
+"Dragon Quest Monsters: The Withered World":
+  cloud:
+    steam: true
+  steam:
+    id: 3681610
 Dragon Quest Rivals Ace:
   installDir:
     DRAGON QUEST RIVALS: {}
@@ -265140,12 +265211,47 @@ Final Fantasy XIV Online (2010):
       when:
         - os: windows
   id:
+    lutris: final-fantasy-xiv-online
     steamExtra:
-      - 262341
-      - 262342
-      - 267511
-      - 267512
-      - 1016870
+      - 312060
+      - 2649240
+      - 3372220
+      - 3372240
+      - 3372250
+      - 3372260
+      - 3372270
+      - 3372280
+      - 3372290
+      - 3372300
+      - 3372310
+      - 3372320
+      - 3372330
+      - 3951080
+      - 3951100
+      - 3951110
+      - 3951120
+      - 3951130
+      - 3951140
+      - 4164960
+      - 4164970
+      - 4165050
+      - 4165070
+      - 4165090
+      - 4165140
+      - 4167010
+      - 4167030
+      - 4167060
+      - 4167100
+      - 4167130
+      - 4167170
+      - 4167220
+      - 4167760
+      - 4167790
+      - 4167800
+      - 4167810
+      - 4167820
+      - 4425350
+      - 4491290
   installDir:
     FINAL FANTASY XIV Online: {}
   launch:
@@ -278863,6 +278969,9 @@ Foxus:
 Foxy Dumplings:
   cloud:
     steam: true
+  id:
+    steamExtra:
+      - 4731190
   steam:
     id: 4184130
 FoxyLand:
@@ -337583,6 +337692,13 @@ High on Life 2:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/2637SquanchGamesInc.HighOnLife2_mh7dg3tfmz2cj/SystemAppData":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: microsoft
   id:
     lutris: high-on-life-2
   installDir:
@@ -351364,12 +351480,22 @@ Hypnospace Outlaw:
         - save
       when:
         - os: mac
-    "<home>/Tendershoot/HypnOS":
+    "<home>/Tendershoot/HypnOS/Enforcer*.sav":
       tags:
         - save
       when:
         - os: windows
     "<home>/Tendershoot/HypnOS/GlobalSettings.sav":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winAppData>/Tendershoot/HypnOS/Enforcer*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Tendershoot/HypnOS/GlobalSettings.sav":
       tags:
         - config
       when:
@@ -378255,6 +378381,11 @@ JunkerBot:
             store: steam
   steam:
     id: 730270
+Junkster:
+  cloud:
+    steam: true
+  steam:
+    id: 1675860
 Junkyard Simulator:
   files:
     "<winLocalAppData>/JunkYard/Saved/SaveGames/*.sav":
@@ -493683,7 +493814,7 @@ Nosferatu Lilinor:
       - when:
           - store: steam
   registry:
-    HKEY_LOCAL_MACHINE/SOFTWARE/WOW6432Node/Idol FX/Nosferatu:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Idol FX/Nosferatu:
       tags:
         - config
   steam:
@@ -535067,6 +535198,12 @@ Planet of Lana:
         - config
       when:
         - os: windows
+    "<winLocalAppData>/Packages/Thunderful.PlanetofLana_8j53pwgd019sy/SystemAppData":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: microsoft
     "<winLocalAppData>/Packages/Thunderful.PlanetofLana_8j53pwgd019sy/SystemAppData/wgs/<storeUserId>":
       tags:
         - save
@@ -535105,6 +535242,13 @@ Planet of Lana II:
         - config
       when:
         - os: windows
+    "<winLocalAppData>/Packages/Thunderful.4612712B15870_8j53pwgd019sy/SystemAppData":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: microsoft
   gog:
     id: 1486363776
   id:
@@ -587000,6 +587144,21 @@ River City Melee Mach!!:
             store: steam
   steam:
     id: 422810
+"River City Saga: Journey to the West":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/RiverCitySagaJTTW/Saved/SaveGames/<storeUserId>/*.sav":
+      when:
+        - store: steam
+  installDir:
+    RiverCitySagaJTTW: {}
+  launch:
+    "<base>/RcsJTTW.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4164020
 "River City Saga: Three Kingdoms":
   cloud:
     steam: true
@@ -587017,6 +587176,22 @@ River City Melee Mach!!:
           - store: steam
   steam:
     id: 1013220
+"River City Saga: Three Kingdoms Next":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/ARC SYSTEM WORKS/River City Saga Three Kingdoms Next/Save/**/SaveData.dat":
+      when:
+        - store: steam
+  installDir:
+    River City Saga Three Kingdoms Next: {}
+  launch:
+    "<base>/River City Saga Three Kingdoms Next.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2881520
 "River City Super Sports Challenge: All Stars Special":
   cloud:
     steam: true
@@ -591888,6 +592063,28 @@ Rogue Trooper Redux:
         workingDir: "<base>/Launcher"
   steam:
     id: 529490
+Rogue Voltage:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/HorizontComputergrafik/RogueVoltage/Main":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Rogue Voltage: {}
+  launch:
+    "<base>/RogueVoltage.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/RogueVoltage.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 1494560
 Rogue Warrior:
   cloud:
     steam: true
@@ -599149,6 +599346,9 @@ Rustler:
             store: steam
   steam:
     id: 844260
+Rustmourne:
+  steam:
+    id: 3775210
 Rusty Hearts:
   installDir:
     Rusty Hearts: {}
@@ -601953,6 +602153,16 @@ STARBOY:
         workingDir: "<base>/STARBOY"
   steam:
     id: 963980
+"STARSEEKER: Astroneer Expeditions":
+  installDir:
+    Starseeker: {}
+  launch:
+    "<base>/Starseeker.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1454370
 STATIONflow:
   cloud:
     steam: true
@@ -648648,6 +648858,8 @@ Sonic P-06:
       when:
         - os: windows
 Sonic Pico Park:
+  id:
+    lutris: sonic-pico-park
   steam:
     id: 4304060
 Sonic Project Hero:
@@ -691581,6 +691793,24 @@ Super Switch:
             store: steam
   steam:
     id: 521430
+"Super Technos World: River City & Technos Arcade Classics":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/ARC SYSTEM WORKS/Super Technos World/Database/*.bin":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Super Technos World: {}
+  launch:
+    "<base>/Super Technos World.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1053510
 Super Tennis Blast:
   cloud:
     steam: true
@@ -718513,6 +718743,17 @@ The Blackwell Legacy:
             store: steam
   steam:
     id: 80330
+The Blackwood Project:
+  installDir:
+    TheBlackwoodProject: {}
+  launch:
+    "<base>/TheBlackwoodProject.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4566920
 The Blight:
   steam:
     id: 954900
@@ -757352,6 +757593,9 @@ The Walking Dead Onslaught:
             store: steam
   steam:
     id: 261030
+"The Walking Dead: Streets of Survival":
+  steam:
+    id: 3777850
 "The Walking Dead: Survival Instinct":
   cloud:
     steam: true
@@ -845839,11 +846083,39 @@ XEYYEX:
   steam:
     id: 1085990
 XF Extreme Formula:
+  cloud:
+    steam: true
   files:
-    "<base>/XF ExtremeFormula_Data/*.gs":
+    "<base>/XF ExtremeFormula_Data/ChalProgress.gs":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
+    "<base>/XF ExtremeFormula_Data/ChalProgressSTORY.gs":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/XF ExtremeFormula_Data/Graphic Settings.gs":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/XF ExtremeFormula_Data/Records.gs":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/XF ExtremeFormula_Data/Save.gs":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/XF ExtremeFormula_Data/Settings.gs":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     XF Extreme Formula: {}
   launch:
