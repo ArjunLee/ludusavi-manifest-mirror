@@ -3862,6 +3862,11 @@ $1 Ride:
         - config
       when:
         - os: windows
+"3-D Ultra Pinball: Thrillride":
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Sierra On-Line/3D Ultra Pinball Thrillride/Settings:
+      tags:
+        - config
 3-in-1 Bundle Brain Trainings:
   cloud:
     steam: true
@@ -55517,6 +55522,9 @@ Atari Vault:
           - store: steam
   steam:
     id: 1502980
+"Atelier Karia: The Night Kingdom & the Guide of Memories":
+  steam:
+    id: 4532500
 "Atelier Lulua: The Scion of Arland":
   cloud:
     steam: true
@@ -58043,6 +58051,17 @@ Austin Cooper S Racing:
         - save
       when:
         - os: windows
+Austin Powers Pinball:
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wildfire Studios/Austin Powers Pinball:
+      tags:
+        - config
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wildfire Studios/Austin Powers Pinball/Display profile:
+      tags:
+        - config
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wildfire Studios/Austin Powers Pinball/High scores:
+      tags:
+        - save
 Australia Did It:
   steam:
     id: 2396130
@@ -158491,6 +158510,10 @@ Croakwood:
 Croc 2:
   id:
     lutris: croc-2
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Argonaut Software/Croc2/1.00:
+      tags:
+        - config
 "Croc's World Construction Kit":
   installDir:
     "Croc's World Construction Kit": {}
@@ -211465,6 +211488,10 @@ Drake of the 99 Dragons:
     "<base>/drakeshell.exe":
       - when:
           - store: steam
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Idol FX/Drake Demo:
+      tags:
+        - config
   steam:
     id: 755630
 Drakeling Labs:
@@ -228646,6 +228673,10 @@ Edgar - Bokbok in Boulzac:
         - save
       when:
         - os: windows
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Deibus/MotoX2000:
+      tags:
+        - config
 "Edgar Torronteras' eXtreme Biker":
   files:
     "<base>/Profiles/<storeUserId>.prf":
@@ -228653,6 +228684,10 @@ Edgar - Bokbok in Boulzac:
         - save
       when:
         - os: windows
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Deibus/Extreme Biker:
+      tags:
+        - config
 Edge:
   cloud:
     steam: true
@@ -259251,7 +259286,7 @@ Fast Lanes Bowling:
           - os: windows
             store: steam
   registry:
-    HKEY_LOCAL_MACHINE/SOFTWARE/Lab Rats Bowling:
+    HKEY_LOCAL_MACHINE/SOFTWARE/LAB Rats Bowling:
       tags:
         - config
   steam:
@@ -261321,6 +261356,10 @@ Feed Eve:
   steam:
     id: 790950
 Feed It:
+  id:
+    lutris: feed-it
+    steamExtra:
+      - 4627870
   steam:
     id: 4370990
 "Feed and Grow: Fish":
@@ -273231,6 +273270,10 @@ Football Generation:
         - save
       when:
         - os: windows
+  registry:
+    HKEY_LOCAL_MACHINE/Trecision/fgen/1.00:
+      tags:
+        - config
 "Football Girls: Dream Team":
   installDir:
     Football Girls Dream Team: {}
@@ -295887,6 +295930,10 @@ Get Medieval:
         - config
       when:
         - os: windows
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Monolith Productions/Get Medieval/1.0:
+      tags:
+        - config
 Get Off My Lawn!:
   installDir:
     Get Off My Lawn: {}
@@ -329015,6 +329062,12 @@ Hellbender:
     gog: true
     steam: true
   files:
+    "<winLocalAppData>/HellbladeGame/Saved/Config/WinGDK":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: microsoft
     "<winLocalAppData>/HellbladeGame/Saved/Config/WindowsNoEditor":
       tags:
         - config
@@ -329025,12 +329078,6 @@ Hellbender:
         - save
       when:
         - os: windows
-    "<winLocalAppData>/Packages/NinjaTheoryLtd.HellbladeSenuasSacrifice_nkbnxvch6z38g/LocalState/HellbladeGame/Saved/Config/UWP":
-      tags:
-        - config
-      when:
-        - os: windows
-          store: microsoft
     "<winLocalAppData>/Packages/NinjaTheoryLtd.HellbladeSenuasSacrifice_nkbnxvch6z38g/SystemAppData/wgs":
       tags:
         - save
@@ -363894,6 +363941,13 @@ Inquisition:
         - os: windows
   id:
     lutris: inquisition
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wanadoo Edition/Inquisition:
+      tags:
+        - config
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wanadoo Edition/Inquisition/GameEnginePrefs:
+      tags:
+        - config
 Inquisitor:
   cloud:
     gog: true
@@ -366402,17 +366456,19 @@ Into the Maze:
   steam:
     id: 1186300
 Into the Necrovale:
+  cloud:
+    steam: true
   files:
-    "<home>/Necrovale/slot*.sav":
+    "<winLocalAppData>/Necrovale":
+      tags:
+        - save
       when:
-        - store: steam
-        - os: linux
-          store: steam
-    "<winLocalAppData>/Necrovale/slot*.sav":
-      when:
-        - store: steam
         - os: windows
-          store: steam
+    "<winLocalAppData>/Necrovale/settings.sav":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1756098576
   installDir:
@@ -389603,6 +389659,17 @@ Kismet:
         workingDir: "<base>/2D"
   steam:
     id: 463290
+Kiss Pinball:
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wildfire Studios/KISS Pinball:
+      tags:
+        - config
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wildfire Studios/KISS Pinball/Display profile:
+      tags:
+        - config
+    HKEY_LOCAL_MACHINE/SOFTWARE/Wildfire Studios/KISS Pinball/High scores:
+      tags:
+        - save
 Kiss or Kill VR:
   installDir:
     VR Trivia Battle: {}
@@ -451934,6 +452001,12 @@ Mina the Hollower:
     gog: true
     steam: true
   files:
+    "<home>/Library/Application Support/Yacht Club Games/Mina the Hollower":
+      tags:
+        - config
+        - save
+      when:
+        - os: mac
     "<winAppData>/Yacht Club Games/Mina the Hollower":
       tags:
         - config
@@ -464755,6 +464828,8 @@ Moss Destruction:
     steam: true
   id:
     lutris: moss-the-forgotten-relic
+    steamExtra:
+      - 4607010
   steam:
     id: 3914860
 Most Correct Football Simulator:
@@ -511581,6 +511656,10 @@ Outlaw Golf:
         - save
       when:
         - os: windows
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Hypnotix/Outlaw Golf:
+      tags:
+        - config
 Outlaws:
   cloud:
     steam: true
@@ -511620,6 +511699,12 @@ Outlaws:
     id: 1536913668
   installDir:
     Outlaws Remastered: {}
+  launch:
+    "<base>/OutlawsAHOM.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3366780
 Outlaws of the Old West:
@@ -540316,7 +540401,7 @@ Pool Shark 2:
       when:
         - os: windows
   registry:
-    HKEY_LOCAL_MACHINE/Software/WOW6432Node/ZooDigital/Poolshark 2/startup:
+    HKEY_LOCAL_MACHINE/SOFTWARE/ZooDigital/Poolshark 2/startup:
       tags:
         - config
 Pool of Death:
@@ -579923,6 +580008,8 @@ RetroRealms Arcade:
 RetroSpace:
   id:
     lutris: retrospace
+    steamExtra:
+      - 2783450
   steam:
     id: 2067820
 RetroVamp:
@@ -692319,6 +692406,8 @@ Super X Chess:
   steam:
     id: 814990
 Super Yooka-Laylee Kart:
+  id:
+    lutris: super-yooka-laylee-kart
   steam:
     id: 3348210
 Super Zombie Arcade:
@@ -700856,6 +700945,10 @@ TNN Outdoors Pro Hunter 2:
         - save
       when:
         - os: windows
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/ASC Games/TNN Pro Hunter 2/1.0:
+      tags:
+        - config
 TNT!:
   steam:
     id: 1086430
@@ -739926,8 +740019,18 @@ The Lift:
   steam:
     id: 843160
 "The Lift: Supernatural Handyman Simulator":
+  files:
+    "<home>/AppData/LocalLow/Fantastic Signals/The Lift/*.save":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: the-lift--1
+  registry:
+    HKEY_CURRENT_USER/Software/Fantastic Signals/The Lift:
+      tags:
+        - config
   steam:
     id: 3283240
 The Light:
@@ -774726,6 +774829,8 @@ Tormentum II:
     steam: true
   id:
     lutris: tormentum-ii
+    steamExtra:
+      - 4733980
   steam:
     id: 931060
 "Tormentum: Dark Sorrow":
@@ -806769,6 +806874,13 @@ Vampire of the Sands:
             store: steam
   steam:
     id: 1290270
+"Vampire: The Masquerade - Oaths & Ashes":
+  id:
+    lutris: vampire-the-masquerade-oaths-and-ashes
+    steamExtra:
+      - 4746430
+  steam:
+    id: 4191110
 "Vampire: The Masquerade - Out for Blood":
   cloud:
     steam: true
