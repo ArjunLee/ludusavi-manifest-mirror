@@ -87014,6 +87014,7 @@ Blades of Avernum:
 Blades of Fire:
   cloud:
     epic: true
+    gog: true
     steam: true
   files:
     "<winDocuments>/MercurySteam/Blades of Fire/<storeUserId>":
@@ -87029,6 +87030,11 @@ Blades of Fire:
       when:
         - os: windows
   id:
+    gogExtra:
+      - 1830309026
+      - 1957031584
+      - 2099920760
+      - 2129676738
     lutris: blades-of-fire
     steamExtra:
       - 4335780
@@ -134437,6 +134443,27 @@ City Car Driving:
   steam:
     id: 493490
 City Car Driving 2.0:
+  files:
+    "<winLocalAppData>/Forward Development/CityCarDriving2/Saved/Bindings/Presets/**/*.xml":
+      when:
+        - store: steam
+    "<winLocalAppData>/Forward Development/CityCarDriving2/Saved/SaveGames/**/*.ini":
+      when:
+        - store: steam
+    "<winLocalAppData>/Forward Development/CityCarDriving2/Saved/SaveGames/**/*.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Forward Development/CityCarDriving2/Saved/SaveGames/**/*.xml":
+      when:
+        - store: steam
+  installDir:
+    City Car Driving 2.0: {}
+  launch:
+    "<base>/CityCarDriving2.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2327720
 City Climber:
@@ -160053,9 +160080,13 @@ Cruelty:
     id: 3011850
 Cruelty Squad:
   files:
-    "<winAppData>/Godot/app_userdata/Cruelty Squad":
+    "<winAppData>/Godot/app_userdata/Cruelty Squad/*.save":
       tags:
         - config
+      when:
+        - os: windows
+    "<winAppData>/Godot/app_userdata/Cruelty Squad/settings.save":
+      tags:
         - save
       when:
         - os: windows
@@ -164134,6 +164165,9 @@ Cuit:
             store: steam
   steam:
     id: 614890
+Culdcept The First:
+  steam:
+    id: 3825600
 "Culina: Hands in the Kitchen":
   cloud:
     steam: true
@@ -179954,6 +179988,8 @@ Dead or Alive 6:
   steam:
     id: 838380
 Dead or Alive 6 Last Round:
+  cloud:
+    steam: true
   steam:
     id: 4144680
 Dead or Alive Xtreme Venus Vacation:
@@ -276253,8 +276289,13 @@ Forgiveness:
     id: 971120
 Forgotlings:
   cloud:
+    gog: true
     steam: true
+  gog:
+    id: 1886673828
   id:
+    gogExtra:
+      - 1390429908
     lutris: forgotlings
     steamExtra:
       - 2475580
@@ -299071,6 +299112,13 @@ Gizmo:
 GlaZ:
   steam:
     id: 391300
+Glace:
+  files:
+    "<base>/Data/*.gsl":
+      tags:
+        - save
+      when:
+        - os: windows
 Glacial:
   installDir:
     Glacial: {}
@@ -351486,7 +351534,7 @@ HypnoTiles:
   cloud:
     steam: true
   files:
-    "<base>/*.sav":
+    "<base>/HypnoTiles.sav":
       tags:
         - save
       when:
@@ -508318,6 +508366,15 @@ Order of War:
 Order of the Assassin:
   steam:
     id: 851690
+Order of the Sinking Star:
+  cloud:
+    steam: true
+  id:
+    lutris: order-of-the-sinking-star
+    steamExtra:
+      - 4597250
+  steam:
+    id: 499170
 "Order of the Thorne: The King's Challenge":
   files:
     "<base>/acsetup.cfg":
@@ -526120,6 +526177,9 @@ Persona 5 Tactica:
         - config
   steam:
     id: 3061570
+Persona 6:
+  steam:
+    id: 2649560
 Personal Disco VR:
   installDir:
     Personal Disco VR: {}
@@ -715541,6 +715601,15 @@ The Adventures of Elena Temple:
         - os: windows
   id:
     lutris: the-adventures-of-elliot-the-millennium-tales
+    steamExtra:
+      - 4031020
+      - 4126310
+  installDir:
+    The Adventures of Elliot_The Millennium Tales: {}
+  launch:
+    "<base>/Elliot.exe":
+      - when:
+          - store: steam
   steam:
     id: 3483510
 The Adventures of Fatman:
@@ -731722,6 +731791,11 @@ The Grim and I:
 The Grinch:
   id:
     lutris: the-grinch
+"The Grinch 2: Saving Christmas":
+  cloud:
+    steam: true
+  steam:
+    id: 3470930
 "The Grinch: Christmas Adventures":
   installDir:
     The Grinch: {}
@@ -772390,6 +772464,8 @@ Toltec and the mysteries of the Secret Island:
         - save
       when:
         - os: windows
+  id:
+    lutris: tom-clancys-the-division-resurgence
   steam:
     id: 3749720
 "Tom Clancy's XDefiant":
@@ -802095,6 +802171,9 @@ Until Then:
     id: 1930246738
   id:
     lutris: until-then
+    steamExtra:
+      - 2296400
+      - 3902750
   installDir:
     Until Then: {}
   launch:
