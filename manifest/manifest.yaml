@@ -104383,6 +104383,8 @@ Broken of Darkness:
 "BrokenLore: Don't Lie":
   id:
     lutris: brokenlore-dont-lie
+    steamExtra:
+      - 4005770
   steam:
     id: 3886200
 "BrokenLore: Don't Play":
@@ -485077,6 +485079,8 @@ Nevermind This:
 Neverness to Everness:
   id:
     lutris: neverness-to-everness/
+    steamExtra:
+      - 4706890
   steam:
     id: 4508340
 Neverout:
@@ -626746,6 +626750,11 @@ Shiver:
         - config
   steam:
     id: 727730
+Shiver (Team Nocebo):
+  id:
+    lutris: shiver--1
+  steam:
+    id: 3330890
 "Shiver: Poltergeist":
   installDir:
     "Shiver Poltergeist Collector's Edition": {}
@@ -792598,9 +792607,12 @@ Two Point Museum:
     steamExtra:
       - 2999840
       - 2999850
+      - 3457760
+      - 3550890
       - 3592600
       - 3804850
       - 4114070
+      - 4511680
   installDir:
     Two Point Museum: {}
   launch:
