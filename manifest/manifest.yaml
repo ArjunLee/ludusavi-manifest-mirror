@@ -32748,7 +32748,7 @@ Alone in the Dark:
       when:
         - os: dos
   gog:
-    id: 1207658923
+    id: 1207660923
   id:
     lutris: alone-in-the-dark-1
   steam:
@@ -85316,6 +85316,9 @@ Black Swan:
             store: steam
   steam:
     id: 560230
+"Black Tides Draga's Wake":
+  steam:
+    id: 4810650
 "Black Viper: Sophia's Fate":
   installDir:
     "Black Viper Sophia's Fate": {}
@@ -211271,8 +211274,10 @@ Dragons of Flame:
       when:
         - os: dos
   gog:
-    id: 1830158979
+    id: 1321890219
   id:
+    gogExtra:
+      - 1830158979
     steamExtra:
       - 2350512
   installDir:
@@ -213215,6 +213220,8 @@ Dream Tactics:
         - save
       when:
         - os: windows
+  gog:
+    id: 1381541022
   installDir:
     Dream Tactics: {}
   launch:
@@ -231657,6 +231664,13 @@ Elemental War 2:
   steam:
     id: 216390
 "Elemental: Reforged":
+  files:
+    "<winDocuments>/my games/ElementalReforged/Saves/**/*.EleSav":
+      when:
+        - store: steam
+    "<winDocuments>/my games/ElementalReforged/Saves/Campaign/*.EleSav":
+      when:
+        - store: steam
   installDir:
     Elemental Reforged: {}
   launch:
@@ -334993,8 +335007,10 @@ Heroes of the Lance:
       when:
         - os: dos
   gog:
-    id: 1830158979
+    id: 2125877931
   id:
+    gogExtra:
+      - 1830158979
     steamExtra:
       - 2350511
   installDir:
@@ -344724,6 +344740,8 @@ Hostile User Interface:
         - os: windows
   gog:
     id: 1207658670
+  id:
+    lutris: hostile-waters-antaeus-rising
   installDir:
     Hostile Waters Antaeus Rising: {}
   launch:
@@ -371110,6 +371128,30 @@ Iterform:
             store: steam
   steam:
     id: 873210
+"Ithya: Magic Studies":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Blue Turtle/Magic Studies":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Blue Turtle/Magic Studies":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Ithya Magic Studies: {}
+  launch:
+    "<base>/Magic Studies.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Magic Studies.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3330250
 Itineris:
   steam:
     id: 582580
@@ -378877,6 +378919,8 @@ Jurassic World Evolution 3:
     steamExtra:
       - 3651190
       - 3651200
+      - 4131660
+      - 4131670
   installDir:
     Jurassic World Evolution 3: {}
   launch:
@@ -411645,6 +411689,16 @@ Link the animals:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Zelda_LA/SaveFiles":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Zelda_LA/settings":
+      tags:
+        - config
+      when:
+        - os: windows
     "<xdgData>/Zelda_LA/SaveFiles":
       tags:
         - save
@@ -411652,7 +411706,7 @@ Link the animals:
         - os: linux
     "<xdgData>/Zelda_LA/settings":
       tags:
-        - save
+        - config
       when:
         - os: linux
 "Link: The Unleashed Nexus":
@@ -534912,6 +534966,10 @@ Planet Coaster 2:
     steamExtra:
       - 3091180
       - 3091190
+      - 3337040
+      - 3902620
+      - 4129920
+      - 4492160
   installDir:
     Planet Coaster 2: {}
   launch:
@@ -620357,8 +620415,10 @@ Shadow Sorcerer:
       when:
         - os: dos
   gog:
-    id: 1830158979
+    id: 1779703219
   id:
+    gogExtra:
+      - 1830158979
     steamExtra:
       - 2350510
   installDir:
@@ -624372,9 +624432,16 @@ Shelldiver:
   cloud:
     steam: true
   files:
-    "<winAppData>/Shelldiver":
+    "<winAppData>/Shelldiver/save/Game.json":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+    "<winAppData>/Shelldiver/save/Settings.json":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: shelldiver
     steamExtra:
@@ -646396,13 +646463,27 @@ Solarpower:
   steam:
     id: 852870
 Solarpunk:
+  cloud:
+    steam: true
   files:
-    "<base>/Solarpunk/Saved/Config/Windows":
+    "<winLocalAppData>/Packages/rokapublish.Solarpunk_6q4vfhsywtz4j/SystemAppData/wgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
+    "<winLocalAppData>/Solarpunk/Saved/Config/WinGDK":
       tags:
         - config
       when:
         - os: windows
-    "<base>/Solarpunk/Saved/SaveGames":
+          store: microsoft
+    "<winLocalAppData>/Solarpunk/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Solarpunk/Saved/SaveGames":
       tags:
         - save
       when:
@@ -672488,6 +672569,8 @@ State of Decay 2:
   steam:
     id: 495420
 State of Decay 3:
+  id:
+    lutris: state-of-decay-3
   steam:
     id: 1340720
 "State of Decay: Year-One Survival Edition":
@@ -744783,6 +744866,7 @@ The Night of Fire Stealing:
     id: 899290
 The Night of the Rabbit:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/Library/Application Support/Daedalic Entertainment/The Night of the Rabbit/Savegames":
@@ -772783,6 +772867,11 @@ Tomb Raider I-III Remastered:
     "<winAppData>/TRX/<storeUserId>/savegame.dat":
       tags:
         - config
+      when:
+        - os: windows
+    "<winAppData>/TRX_EGS/<storeUserId>/savegame.dat":
+      tags:
+        - save
       when:
         - os: windows
   gog:
@@ -820423,8 +820512,10 @@ War of the Lance:
   cloud:
     steam: true
   gog:
-    id: 1830158979
+    id: 1485235422
   id:
+    gogExtra:
+      - 1830158979
     steamExtra:
       - 2350513
   installDir:
