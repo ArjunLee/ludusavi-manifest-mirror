@@ -14702,13 +14702,18 @@ ARC:
     id: 1124550
 ARC Raiders:
   files:
+    "<winLocalAppData>/PioneerGame/Saved":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/PioneerGame/Saved/Config/WinGDKClient":
       tags:
         - config
       when:
         - os: windows
           store: microsoft
-    "<winLocalAppData>/PioneerGame/Saved/Config/WindowsClient":
+    "<winLocalAppData>/PioneerGame_Entrophy/Saved":
       tags:
         - config
       when:
@@ -36473,6 +36478,10 @@ Among Us 3D:
   steam:
     id: 3168600
 "Among Us Story: On Guard":
+  id:
+    lutris: among-us-story-on-guard
+    steamExtra:
+      - 4793370
   steam:
     id: 2842310
 Among Us VR:
@@ -65062,6 +65071,28 @@ Bail or Jail:
             store: steam
   steam:
     id: 1715980
+Baionlenja:
+  files:
+    "<winLocalAppData>/BAIONLENJA/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/BAIONLENJA/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    BAIONLENJA: {}
+  launch:
+    "<base>/BAIONLENJA.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3509160
 "Bake 'n Switch":
   cloud:
     steam: true
@@ -81339,6 +81370,8 @@ Big Tower Tiny Square:
   steam:
     id: 751250
 Big Walk:
+  id:
+    lutris: big-walk
   steam:
     id: 1478500
 BigBoy - Visual Crime Novel:
@@ -147543,6 +147576,16 @@ Congo Merc:
             store: steam
   steam:
     id: 510550
+Congratulations On Your Purchase:
+  installDir:
+    Congratulations On Your Purchase: {}
+  launch:
+    "<base>/COYP.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4693030
 Congresswolf:
   cloud:
     steam: true
@@ -150469,6 +150512,10 @@ Corn Kidz 64:
     "<base>/Corn Kidz 64.exe":
       - when:
           - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/BogoSoft/Corn Kidz 64:
+      tags:
+        - config
   steam:
     id: 2575900
 Corn Maze:
@@ -299066,6 +299113,9 @@ Give Up The Dupe:
             store: steam
   steam:
     id: 1163470
+Give Us A Sign:
+  steam:
+    id: 4119710
 Give an Imp a Chance!:
   steam:
     id: 1076520
@@ -309716,6 +309766,8 @@ Gray Matter:
         - os: windows
   gog:
     id: 1207664743
+  id:
+    lutris: gray-matter
   installDir:
     Gray Matter: {}
   launch:
@@ -508428,6 +508480,13 @@ Order of the Assassin:
 Order of the Sinking Star:
   cloud:
     steam: true
+  files:
+    "<home>/Saved Games/Order of the Sinking Star":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   id:
     lutris: order-of-the-sinking-star
     steamExtra:
@@ -782840,6 +782899,11 @@ Transference:
       - arguments: "-Retail Steam -uplay_steam_mode"
         when:
           - store: steam
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/Ubisoft/Transference:
+      tags:
+        - config
+        - save
   steam:
     id: 647570
 Transformation Tycoon:
@@ -835404,6 +835468,15 @@ WindSoul:
   steam:
     id: 631960
 Windblown:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Motion Twin/Windblown/Steam_<storeUserId>/*.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Motion Twin/Windblown/Steam_<storeUserId>/*.sav":
+      when:
+        - store: steam
   id:
     lutris: windblown
     steamExtra:
