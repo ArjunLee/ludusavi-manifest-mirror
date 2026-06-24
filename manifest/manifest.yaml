@@ -31623,6 +31623,13 @@ Aliens&Asteroids:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/FocusHomeInteractiveSA.AliensDarkDescent-Windows_4hny5m903y3g0/SystemAppData/wgs":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: microsoft
   id:
     lutris: aliens-dark-descent
     steamExtra:
@@ -66817,6 +66824,21 @@ Ballz Royale:
             store: steam
   steam:
     id: 705670
+Balrog:
+  id:
+    lutris: balrog
+    steamExtra:
+      - 1338440
+      - 1721190
+  installDir:
+    Balrog: {}
+  launch:
+    "<base>/Balrog.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1326290
 Balrum:
   files:
     "<base>/files/saves":
@@ -110247,6 +110269,15 @@ CCCP Calls!:
           - store: steam
   steam:
     id: 857060
+CD-ROM:
+  installDir:
+    CD-ROM: {}
+  launch:
+    "<base>/CD-ROM.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3968100
 CD-RUN:
   installDir:
     CD-RUN: {}
@@ -161191,6 +161222,13 @@ Crypt Custodian:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/TopHatStudiosInc.CryptCustodian_93vj94f8vfryy/SystemAppData/wgs":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: microsoft
   gog:
     id: 1705561922
   id:
@@ -185783,10 +185821,22 @@ Deer & Boy:
   cloud:
     epic: true
     steam: true
+  files:
+    "<home>/AppData/LocalLow/LIFELINE/DeerAndBoy/Saves":
+      when:
+        - store: steam
   id:
     lutris: deer-and-boy
     steamExtra:
+      - 4588480
+      - 4613120
       - 4626870
+  installDir:
+    Deer & Boy: {}
+  launch:
+    "<base>/DeerAndBoy.exe":
+      - when:
+          - store: steam
   steam:
     id: 1803140
 Deer Hunt Legends:
@@ -246353,6 +246403,10 @@ Evil Tonight:
         - config
       when:
         - os: windows
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/UbiSoft/Evil Twin:
+      tags:
+        - config
 Evil West:
   cloud:
     gog: true
@@ -325632,17 +325686,13 @@ He is Coming:
     gog: true
     steam: true
   files:
-    "<home>/.config/unity3d/Chronocle/He Is Coming/*.txt":
+    "<winLocalAppData>/Packages/HoodedHorse.HeisComing_znaey1dw2bdpr/SystemAppData/wgs":
+      tags:
+        - config
+        - save
       when:
-        - os: linux
-          store: steam
-    "<home>/AppData/LocalLow/Chronocle/He Is Coming/*.txt":
-      when:
-        - store: steam
-    "<home>/Library/Application Support/unity.Chronocle.He Is Coming/*.txt":
-      when:
-        - os: mac
-          store: steam
+        - os: windows
+          store: microsoft
   gog:
     id: 1889700436
   id:
@@ -341254,12 +341304,6 @@ Hollow Knight:
       when:
         - os: windows
         - os: linux
-    "<home>/AppData/LocalLow/Team Cherry/Hollow Knight":
-      tags:
-        - save
-      when:
-        - os: windows
-          store: microsoft
     "<home>/AppData/LocalLow/Team Cherry/Hollow Knight/*.bak":
       tags:
         - save
@@ -341280,9 +341324,10 @@ Hollow Knight:
         - config
       when:
         - os: mac
-    "<winProgramData>/Packages/TeamCherry.HollowKnightPC_y4jvztpgccj42":
+    "<winProgramData>/Packages/TeamCherry.15373CD61C66B_y4jvztpgccj42/SystemAppData/wgs":
       tags:
         - config
+        - save
       when:
         - os: windows
           store: microsoft
@@ -364413,6 +364458,13 @@ Inscryption:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/DevolverDigital.Inscryption_6kzv4j18v0c96/SystemAppData/wgs":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: microsoft
   gog:
     id: 1224800338
   id:
@@ -389154,6 +389206,13 @@ Kingdom-Heroes:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/RawFury.0a615e32-96fb-4bd7-a194-f1dc1fdb4f1f_9s0pnehqffj7t/SystemAppData/wgs":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: microsoft
     "<xdgConfig>/unity3d/noio/KingdomTwoCrowns/Release/global-v35":
       tags:
         - save
@@ -392224,6 +392283,11 @@ Koboomballs:
             store: steam
   steam:
     id: 983040
+"KochiKame: Ryo-san's Billion-yen Beat":
+  cloud:
+    steam: true
+  steam:
+    id: 4201590
 Kochiya Sanae no Kamikaze to Tomo ni:
   id:
     lutris: kochiya-sanae-no-kamikaze-to-tomo-ni
@@ -470896,6 +470960,19 @@ My Creampie Heaven:
             store: steam
   steam:
     id: 1356710
+My Cute Commissar:
+  files:
+    "<home>/AppData/LocalLow/AppData/LocalLow/CUTE ANIME GIRLS/My Cute Commissar/*.txt":
+      when:
+        - store: steam
+  installDir:
+    My Cute Commissar: {}
+  launch:
+    "<base>/My Cute Commissar.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1383740
 My Days with the Demoness:
   steam:
     id: 1114640
@@ -481458,6 +481535,13 @@ Nefarious:
     Nefertari Journey to Eternity: {}
   steam:
     id: 861400
+Negative Atmosphere:
+  cloud:
+    steam: true
+  id:
+    lutris: negative-atmosphere
+  steam:
+    id: 1116390
 Negative Space:
   steam:
     id: 1017990
@@ -592483,6 +592567,10 @@ Rogue Voltage:
       - when:
           - os: linux
             store: steam
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/HorizontComputergrafik/RogueVoltage:
+      tags:
+        - config
   steam:
     id: 1494560
 Rogue Warrior:
@@ -733321,6 +733409,7 @@ The House in Fata Morgana:
     id: 804700
 The House of Da Vinci:
   cloud:
+    epic: true
     gog: true
   files:
     "<home>/AppData/LocalLow/Blue Brain Games/The House of da Vinci/Profiles":
@@ -733340,6 +733429,14 @@ The House of Da Vinci:
         - os: mac
   gog:
     id: 1554935533
+  id:
+    gogExtra:
+      - 1622300938
+      - 1878164348
+    lutris: the-house-of-da-vinci
+    steamExtra:
+      - 1347740
+      - 1440830
   installDir:
     The House of Da Vinci: {}
   launch:
