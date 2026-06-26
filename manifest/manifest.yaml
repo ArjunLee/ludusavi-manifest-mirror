@@ -175149,6 +175149,23 @@ Darkstone:
   steam:
     id: 320320
 Darkstone Restoration:
+  files:
+    "<base>/config/option.txt;keyboard.txt;seed.txt;quest.txt":
+      when:
+        - store: steam
+    "<base>/gamepad_settings.ini":
+      when:
+        - store: steam
+    "<base>/save/**":
+      when:
+        - store: steam
+  installDir:
+    DarkStone Restoration: {}
+  launch:
+    "<base>/DarkStone64.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4557490
 Darkwater:
@@ -217642,6 +217659,21 @@ Duel Arms:
 Duel Corp.:
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Dreameffect/Duel Corp/**/*.bak":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Dreameffect/Duel Corp/**/*.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Duel Corp: {}
+  launch:
+    "<base>/Duel Corp.exe":
+      - when:
+          - store: steam
   steam:
     id: 1804470
 Duel Girl:
@@ -241747,6 +241779,8 @@ Escape the Backrooms:
         - config
       when:
         - os: windows
+  id:
+    lutris: escape-the-backrooms
   installDir:
     EscapeTheBackrooms: {}
   launch:
@@ -272857,15 +272891,20 @@ Flynn and Freckles:
     gog: true
     steam: true
   files:
-    "<winLocalAppData>/Flynn_Son_of_Crimson/Data":
+    "<winAppData>/Local/Flynn_Son_of_Crimson/Data":
       tags:
         - save
       when:
         - os: windows
+    "<winAppData>/Packages/HumbleBundle.FlynnSonofCrimson_q2mcdwmzx4qja/LocalCache/Local/Flynn_Son_of_Crimson/Data":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
     "<winLocalAppData>/Packages/HumbleBundle.FlynnSonofCrimson_q2mcdwmzx4qja/LocalCache/Local/Flynn_Son_of_Crimson/Data":
       tags:
         - config
-        - save
       when:
         - os: windows
           store: microsoft
@@ -277243,6 +277282,7 @@ Formula Legends:
       - 1494837394
       - 1496854299
       - 1562896824
+      - 1669519209
       - 1861956202
       - 1871598025
       - 2067177842
@@ -277256,6 +277296,7 @@ Formula Legends:
       - 4216430
       - 4222670
       - 4362310
+      - 4362320
   installDir:
     Formula Legends: {}
   launch:
@@ -356503,6 +356544,24 @@ Idol Showdown:
         - config
   steam:
     id: 1742020
+Idols of Ash:
+  installDir:
+    IdolsOfAsh: {}
+  launch:
+    "<base>/Idols Of Ash.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/idols_of_ash.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/idols_of_ash.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 4450800
 Idolzzz:
   steam:
     id: 743410
@@ -368674,10 +368733,21 @@ Iron Sea Defenders:
   steam:
     id: 431750
 "Iron Sky: Invasion":
+  cloud:
+    gog: true
+  gog:
+    id: 2125520369
   id:
+    gogExtra:
+      - 1224274567
+      - 1675286861
+      - 1710225016
+      - 1911159206
     steamExtra:
       - 234860
       - 234880
+      - 547430
+      - 4216720
   installDir:
     Iron Sky Invasion: {}
   launch:
@@ -371824,6 +371894,7 @@ JDM Tuner Racing:
       - 1250900179
       - 1601175939
       - 1891590752
+      - 1946788969
     lutris: jdm-japanese-drift-master
     steamExtra:
       - 3749550
@@ -491290,6 +491361,7 @@ No Mans Land:
     id: 666560
 No More Heroes:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/Saved Games/NMH":
@@ -491302,6 +491374,8 @@ No More Heroes:
         - save
       when:
         - os: windows
+  gog:
+    id: 1952635766
   id:
     lutris: no-more-heroes
   installDir:
@@ -491319,6 +491393,7 @@ No More Heroes:
     id: 1420290
 "No More Heroes 2: Desperate Struggle":
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/Saved Games/NMH2":
@@ -491331,6 +491406,8 @@ No More Heroes:
         - save
       when:
         - os: windows
+  gog:
+    id: 2123918043
   installDir:
     No More Heroes 2 Desperate Struggle: {}
   launch:
@@ -491346,6 +491423,7 @@ No More Heroes:
     id: 1420300
 No More Heroes 3:
   cloud:
+    gog: true
     steam: true
   files:
     "<winAppData>/No More Heroes 3/Settings.plist":
@@ -491363,6 +491441,8 @@ No More Heroes 3:
         - save
       when:
         - os: windows
+  gog:
+    id: 1608160993
   installDir:
     No More Heroes 3: {}
   launch:
@@ -607403,6 +607483,7 @@ Sanabi:
         - os: windows
   id:
     steamExtra:
+      - 2610780
       - 3996620
   installDir:
     SANABI: {}
@@ -607712,6 +607793,8 @@ Sand Land:
     lutris: sand-raiders-of-sophie
     steamExtra:
       - 2981610
+  installDir:
+    Sand: {}
   steam:
     id: 1431300
 "Sand:box":
@@ -656489,6 +656572,14 @@ SpaceCorn:
   steam:
     id: 380580
 SpaceCraft:
+  alias: SpaceCraft (2026)
+SpaceCraft (2026):
+  installDir:
+    SpaceCraft: {}
+  launch:
+    "<base>/SpaceCraft.exe":
+      - when:
+          - store: steam
   steam:
     id: 3276050
 SpaceDweller:
@@ -825890,6 +825981,9 @@ Warzone VR:
 Warzone-X:
   steam:
     id: 678590
+Wasabi:
+  steam:
+    id: 4148910
 Washed Up Wizard:
   installDir:
     Washed Up Wizard: {}
