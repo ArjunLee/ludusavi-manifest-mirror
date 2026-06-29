@@ -55207,6 +55207,7 @@ Asylum:
   gog:
     id: 1418166671
   id:
+    lutris: asylum--1
     steamExtra:
       - 1311020
   installDir:
@@ -55222,8 +55223,7 @@ Asylum:
             store: steam
     "<base>/Asylum.sh":
       - when:
-          - bit: 64
-            os: linux
+          - os: linux
             store: steam
   steam:
     id: 230210
@@ -176294,11 +176294,17 @@ Dave the Diver:
   cloud:
     steam: true
   files:
+    "<home>/AppData/LocalLow/mintrocket/DAVE THE DIVER/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
     "<home>/AppData/LocalLow/nexon/DAVE THE DIVER/SteamSData/<storeUserId>":
       tags:
         - save
       when:
         - os: windows
+          store: steam
     "<home>/Library/Application Support/com.nexon.dave/DAVE THE DIVER/SData":
       tags:
         - save
@@ -180590,6 +180596,17 @@ Deadhold:
   steam:
     id: 346930
 Deadhunt:
+  files:
+    "<base>/GtEngine.ini":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/Profiles":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Deadhunt: {}
   launch:
@@ -352033,6 +352050,30 @@ Hypnospace Outlaw:
             store: steam
   steam:
     id: 844590
+Hypogea:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Charlie Wagner/Hypogea":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: hypogea
+  installDir:
+    Hypogea: {}
+  launch:
+    "<base>/Hypogea.exe":
+      - when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Charlie Wagner/Hypogea:
+      tags:
+        - config
+  steam:
+    id: 2980260
 Hyposphere:
   files:
     "<winLocalAppData>/HyposphereOne/Saved/Config/WindowsNoEditor":
@@ -383560,6 +383601,11 @@ Kaya:
 Kayalina:
   steam:
     id: 714000
+"Kayf-Life: Complete Edition":
+  cloud:
+    steam: true
+  steam:
+    id: 1950750
 Kaz Ball:
   installDir:
     Kaz Ball: {}
@@ -471844,6 +471890,16 @@ My Island:
             store: steam
   steam:
     id: 1004270
+My Kingdom for the Princess:
+  installDir:
+    My Kingdom for the Princess: {}
+  launch:
+    "<base>/MKFTP.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2347120
 My Lady:
   files:
     "<base>/game/saves":
@@ -484644,6 +484700,12 @@ NetherWorld:
 "Nethergate: Resurrection":
   cloud:
     gog: true
+  files:
+    Uses file explorer for first save.:
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 1243419675
   installDir:
@@ -650142,8 +650204,6 @@ Sonic the Hedgehog 2 (mobile decompilation):
   steam:
     id: 202530
 "Sonic the Hedgehog 4: Episode II":
-  cloud:
-    steam: true
   files:
     "<base>/Config":
       tags:
