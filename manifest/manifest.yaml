@@ -36904,6 +36904,13 @@ Amygdala:
 An Abyss of Dreams:
   gog:
     id: 1190512807
+  id:
+    gogExtra:
+      - 1454004095
+    lutris: an-abyss-of-dreams
+    steamExtra:
+      - 4089130
+      - 4423300
   installDir:
     DansLAbimeDuReve: {}
   launch:
@@ -478924,6 +478931,15 @@ Nanuleu:
             store: steam
   steam:
     id: 511500
+Naomi’s End:
+  files:
+    "<winLocalAppData>/NaomiEnd/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  steam:
+    id: 4863030
 Napoleon 1813:
   installDir:
     Napoleon 1813: {}
@@ -485071,16 +485087,6 @@ Neva:
         - config
       when:
         - os: windows
-    "<home>/Library/Application Support/com.Company.ProductName/<storeUserId>/Save01":
-      tags:
-        - save
-      when:
-        - os: mac
-    "<home>/Library/Application Support/com.Company.ProductName/<storeUserId>/Save01/Config.gs":
-      tags:
-        - config
-      when:
-        - os: mac
     "<home>/Library/Application Support/com.devolverdigital.neva/<storeUserId>/Save01":
       tags:
         - save
@@ -529527,6 +529533,16 @@ Picross Hansel and Gretel - Nonograms:
   steam:
     id: 1044950
 Picross Touch:
+  cloud:
+    steam: true
+  id:
+    lutris: picross-touch
+    steamExtra:
+      - 644960
+      - 644961
+      - 644962
+      - 645910
+      - 645911
   installDir:
     Picross Touch: {}
   launch:
@@ -577034,9 +577050,16 @@ Remorses:
             store: steam
   steam:
     id: 1142390
+"Remothered: Broken Porcelain Remastered":
+  gog:
+    id: 1467668812
+  steam:
+    id: 4461560
 "Remothered: Red Nun's Legacy":
   gog:
     id: 1933416452
+  id:
+    lutris: remothered-red-nuns-legacy
   steam:
     id: 3335310
 "Remothered: Tormented Fathers":
@@ -577075,6 +577098,11 @@ Remorses:
             store: steam
   steam:
     id: 633360
+"Remothered: Tormented Fathers Remastered":
+  gog:
+    id: 1391035419
+  steam:
+    id: 4457050
 Remuage - MeltySensation:
   installDir:
     Remuage - MeltySensation: {}
