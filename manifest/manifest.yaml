@@ -75645,6 +75645,14 @@ Beat Saber:
       - 4185710
       - 4185720
       - 4374210
+      - 4463920
+      - 4550600
+      - 4550610
+      - 4550620
+      - 4550630
+      - 4550640
+      - 4550650
+      - 4756020
   installDir:
     Beat Saber: {}
   steam:
@@ -93415,12 +93423,12 @@ Blue Estate The Game:
   cloud:
     steam: true
   files:
-    "<winDocuments>/My Games/BlueEstate/BEGame/Config":
+    "<winDocuments>/My Games/BlueEstate/BEGame/Config/.ini":
       tags:
         - config
       when:
         - os: windows
-    "<winDocuments>/My Games/BlueEstate/BEGame/SaveData":
+    "<winDocuments>/My Games/BlueEstate/BEGame/SaveData/Steam.sav":
       tags:
         - save
       when:
@@ -133302,6 +133310,10 @@ Cineris Somnia:
     "<home>/AppData/LocalLow/Nayuta Studio/Cineris Somnia/save/*.sav":
       when:
         - store: steam
+  id:
+    lutris: cineris-somnia
+    steamExtra:
+      - 903610
   installDir:
     CINERIS SOMNIA: {}
   launch:
@@ -185391,7 +185403,7 @@ Deep Rock Galactic:
     Deep Rock Galactic RogueCore: {}
   launch:
     "<base>/RogueCore.exe":
-      - arguments: "-DefaultServiceOverride=Steam -serverlist=serverlist.ghostship.dk"
+      - arguments: "-serverlist=serverlist.ghostship.dk"
         when:
           - bit: 64
             os: windows
@@ -273577,6 +273589,14 @@ Fool!:
   steam:
     id: 1080250
 Foolish Mortals:
+  files:
+    "<home>/Library/Application Support/Inklingwood Studios/Foolish Mortals/Savegames/*.dat":
+      when:
+        - os: mac
+          store: steam
+    "<winLocalAppData>/Inklingwood Studios/Foolish Mortals/Savegames/*.dat":
+      when:
+        - store: steam
   gog:
     id: 1432087047
   id:
@@ -353108,6 +353128,7 @@ I Have No Change:
     id: 3426150
 "I Have No Mouth, and I Must Scream":
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -367513,6 +367534,9 @@ Intrusion 2:
         - save
       when:
         - store: steam
+  id:
+    steamExtra:
+      - 217470
   installDir:
     Intrusion 2: {}
   launch:
@@ -437182,6 +437206,14 @@ Marvel Snap:
         - os: windows
   id:
     lutris: marvel-snap
+    steamExtra:
+      - 4465130
+      - 4465140
+      - 4465150
+      - 4465160
+      - 4465170
+      - 4465180
+      - 4465190
   installDir:
     MARVEL SNAP: {}
   launch:
@@ -487234,6 +487266,8 @@ Nexus 5X:
   steam:
     id: 1983990
 "Nexus: The Jupiter Incident":
+  cloud:
+    steam: true
   files:
     "<base>/save":
       tags:
@@ -523922,10 +523956,6 @@ Payday 2:
           - bit: 64
             os: linux
             store: steam
-    "<base>/payday2_win32_release.exe":
-      - when:
-          - os: windows
-            store: steam
   steam:
     id: 218620
 Payday 3:
@@ -528001,7 +528031,7 @@ Phantom Brigade:
     epic: true
     steam: true
   files:
-    "<winLocalAppData>/PhantomBrigade/Saves":
+    "<winLocalAppData>/PhantomBrigade/SavedGames":
       tags:
         - save
       when:
@@ -562659,6 +562689,23 @@ RUNRUNRUN:
             store: steam
   steam:
     id: 712210
+RV There Yet?:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Ride/Saved/SaveGames/<storeUserId>/*.sav":
+      when:
+        - store: steam
+  installDir:
+    Ride: {}
+  launch:
+    "<base>/Ride.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3949040
 RWBY Deckbuilding Game:
   installDir:
     RWBY Deck Builder: {}
@@ -577038,6 +577085,7 @@ Remorses:
   gog:
     id: 1272977612
   id:
+    lutris: remothered-broken-porcelain
     steamExtra:
       - 1427750
   installDir:
@@ -577084,6 +577132,7 @@ Remorses:
       - 1312734826
       - 1375737309
       - 1994977416
+    lutris: remothered-tormented-fathers
     steamExtra:
       - 748290
       - 748291
@@ -836537,6 +836586,26 @@ Windrose:
             store: steam
   steam:
     id: 3041230
+"Winds Of Arcana: Ruination":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Brewed Games/Winds Of Arcana/Main":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Brewed Games/Winds Of Arcana/Main":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Winds Of Arcana Ruination: {}
+  launch:
+    "<base>/Winds Of Arcana.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2201910
 Winds of Change:
   cloud:
     steam: true
