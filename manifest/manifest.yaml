@@ -52664,6 +52664,15 @@ Asphyxia:
 "Assassin's Creed: Black Flag Resynced":
   id:
     lutris: assassins-creed-black-flag-resynced
+  installDir:
+    "Assassin's Creed Black Flag Resynced": {}
+  launch:
+    "<base>/ACBlackFlag.exe":
+      - arguments: "-uplay_steam_mode"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3751950
 "Assassin's Creed: Brotherhood":
@@ -62887,6 +62896,17 @@ BR Logic Pack:
   steam:
     id: 35800
 "BRAZILIAN DRUG DEALER 3: I OPENED A PORTAL TO HELL IN THE FAVELA TRYING TO REVIVE MIT AIA I NEED TO CLOSE IT":
+  files:
+    "<home>/Saved Games/Aviao":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Aviao/config.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: brazilian-drug-dealer-3-i-opened-a-portal-to-hell-
     steamExtra:
@@ -112884,7 +112904,7 @@ Call of Duty Black Ops Cold War:
       when:
         - os: windows
   installDir:
-    Call of Duty HQ: {}
+    Call of Duty Black Ops 6: {}
   launch:
     "<base>/bootstrapper.exe":
       - arguments: cod.exe
@@ -112893,7 +112913,7 @@ Call of Duty Black Ops Cold War:
             os: windows
             store: steam
   steam:
-    id: 1938090
+    id: 4384550
 "Call of Duty: Black Ops 7":
   files:
     "<winAppData>/Local/Activision/Call of Duty/players":
@@ -308657,6 +308677,9 @@ Grape Jelly:
             store: steam
   steam:
     id: 716940
+Graphite:
+  steam:
+    id: 3080560
 Grapple:
   installDir:
     Grapple: {}
@@ -385818,6 +385841,35 @@ Kiitsu:
             store: steam
   steam:
     id: 1205140
+KilaFlow:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Godot/app_userdata/Kilaflow":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<xdgData>/godot/app_userdata/Kilaflow":
+      tags:
+        - save
+      when:
+        - os: linux
+  id:
+    lutris: kilaflow
+  installDir:
+    KilaFlow: {}
+  launch:
+    "<base>/KilaFlow Beta/KilaFlow.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/KilaFlow Beta/KilaFlow.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 2927510
 Kilcount:
   installDir:
     Kilcount: {}
@@ -408778,6 +408830,32 @@ Libra of the Vampire Princess:
             store: steam
   steam:
     id: 644680
+"Librarian: Tidy Up the Arcane Library!":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Librarian/Saved/SaveGames/Sav.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Librarian/Saved/SaveGames/SystemSetting.sav":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: librarian-tidy-up-the-arcane-library
+  installDir:
+    Librarian Tidy Up the Arcane Library!: {}
+  launch:
+    "<base>/Librarian.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4197610
 Library:
   installDir:
     LIBRARY: {}
@@ -458662,9 +458740,22 @@ Mold on Pizza:
 Moldwasher:
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/RubelGames":
+      when:
+        - os: windows
+          store: steam
   id:
     steamExtra:
       - 4327990
+  installDir:
+    Moldwasher: {}
+  launch:
+    "<base>/Moldwasher.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3688130
 Mole:
@@ -536346,6 +536437,7 @@ Planet of Lana:
     id: 1608230
 Planet of Lana II:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/Wishfully/Planet of Lana 2/*.sav":
@@ -551531,17 +551623,17 @@ Project Zomboid:
         when:
           - os: mac
             store: steam
-    "<base>/ProjectZomboid32.exe":
-      - when:
-          - bit: 32
-            os: windows
-            store: steam
     "<base>/ProjectZomboid64.bat":
       - when:
           - bit: 64
             os: windows
             store: steam
     "<base>/ProjectZomboid64.exe":
+      - arguments: "-safemode"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
       - when:
           - bit: 64
             os: windows
@@ -711400,6 +711492,7 @@ Tempest Rising:
       - 2570840
       - 3478250
       - 3478280
+      - 4764990
   installDir:
     Tempest Rising: {}
   launch:
@@ -747898,6 +747991,8 @@ The Pinball Arcade:
   steam:
     id: 238260
 The Pinball Wizard:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/FrostyPop/Pinball Wizard/*.json":
       when:
@@ -789834,6 +789929,11 @@ Truck the System:
             store: steam
   steam:
     id: 1081200
+Truck-Kun is Supporting Me from Another World?!:
+  cloud:
+    steam: true
+  steam:
+    id: 3642010
 Trucker:
   installDir:
     Trucker: {}
