@@ -42912,8 +42912,18 @@ Ants! Mission of the salvation:
   steam:
     id: 853260
 Antz Extreme Racing:
+  files:
+    "<base>/antz.sav":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: antz-extreme-racing
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Empire Interactive/Antz Extreme Racing:
+      tags:
+        - config
 Anubis Dungeon:
   steam:
     id: 756870
@@ -252224,6 +252234,17 @@ FORT:
   steam:
     id: 1103250
 FPS Chess:
+  files:
+    "<winLocalAppData>/FPSChess/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/FPSChess/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     FPS Chess: {}
   launch:
@@ -269319,10 +269340,14 @@ FixFox:
     gog: true
     steam: true
   files:
-    "<home>/AppData/LocalLow/Rendlike/FixFox/Vix":
+    "<home>/AppData/LocalLow/Rendlike/FixFox/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/Rendlike/FixFox/Unity":
       tags:
         - config
-        - save
       when:
         - os: windows
   gog:
@@ -304759,6 +304784,7 @@ Golden Krone Hotel:
     id: 497800
 Golden Lap:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/My Games/Golden Lap/Saves/*.json":
@@ -401924,6 +401950,9 @@ Leaf it Alone:
           - store: steam
   steam:
     id: 3981100
+Leafborn:
+  steam:
+    id: 4247440
 Leaflet Love Story:
   files:
     "<base>/savedata":
@@ -424135,6 +424164,8 @@ Lunar Lander Beyond:
   steam:
     id: 979410
 Lunar Remastered Collection:
+  cloud:
+    steam: true
   installDir:
     LUNAR Remastered Collection: {}
   launch:
@@ -465453,6 +465484,8 @@ Mortal Shell:
   steam:
     id: 1110910
 Mortal Shell II:
+  id:
+    lutris: mortal-shell-ii
   steam:
     id: 2584270
 Mortal Sin:
@@ -485270,6 +485303,15 @@ Neuro Hunter:
         - save
       when:
         - os: windows
+  installDir:
+    Neuro Hunter: {}
+  launch:
+    "<base>/Neurohunter.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4899790
 NeuroVoider:
   cloud:
     gog: true
@@ -485997,6 +486039,16 @@ Neverness to Everness:
     lutris: neverness-to-everness/
     steamExtra:
       - 4706890
+  installDir:
+    Neverness to Everness: {}
+  launch:
+    "<base>/NTEGlobal/NTEGlobalLauncher.exe":
+      - arguments: " /launcher"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+        workingDir: "<base>/NTEGlobal"
   steam:
     id: 4508340
 Neverout:
@@ -592586,23 +592638,21 @@ Rogue Empire:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Portal Entertainment/Rogue-Empire/Saves/**/*.*":
-      when:
-        - store: steam
-    "<home>/AppData/LocalLow/Portal Entertainment/Rogue-Empire/Saves/*.*":
+    "<home>/AppData/LocalLow/Portal Entertainment/Rogue-Empire/Saves":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
-    "<home>/Library/Application Support/unity.DefaultCompany.Rogue-Empire/Saves/**/*.*":
+    "<xdgConfig>/unity3d/Portal Entertainment/Rogue-Empire/Saves":
+      tags:
+        - save
       when:
-        - store: steam
-    "<home>/Library/Application Support/unity.DefaultCompany.Rogue-Empire/Saves/*.*":
+        - os: linux
+    "<xdgConfig>/unity3d/Portal Entertainment/Rogue-Empire/prefs":
+      tags:
+        - config
       when:
-        - os: mac
-          store: steam
-    "<xdgData>/unity3d/Portal Entertainment/Rogue-Empire/saves/**/*.*":
-      when:
-        - store: steam
+        - os: linux
   installDir:
     Rogue Empire: {}
   launch:
@@ -592624,6 +592674,10 @@ Rogue Empire:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Portal Entertainment/Rogue-Empire:
+      tags:
+        - config
   steam:
     id: 650940
 Rogue Fable III:
@@ -643032,6 +643086,9 @@ Smogpunk 湮霾之地:
     steam: true
   steam:
     id: 918160
+Smoke Town:
+  steam:
+    id: 4624100
 Smoke and Sacrifice:
   cloud:
     steam: true
