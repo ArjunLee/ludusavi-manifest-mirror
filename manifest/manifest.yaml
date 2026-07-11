@@ -23168,6 +23168,7 @@ Against the Storm:
       - 1440688316
       - 1604559678
       - 2029824167
+    lutris: against-the-storm
     steamExtra:
       - 1400860
       - 2712950
@@ -68793,11 +68794,6 @@ Barony:
     id: 3671880
 Barotrauma:
   files:
-    /home/USER/.local/share/Daedalic Entertainment GmbH/Barotrauma:
-      tags:
-        - save
-      when:
-        - os: linux
     "<base>/config_player.xml":
       tags:
         - config
@@ -68818,6 +68814,11 @@ Barotrauma:
         - save
       when:
         - os: windows
+    "<xdgData>/Daedalic Entertainment GmbH/Barotrauma":
+      tags:
+        - save
+      when:
+        - os: linux
     "<xdgData>/Daedalic Entertainment GmbH/Barotrauma/config_player.xml":
       tags:
         - config
@@ -105846,6 +105847,7 @@ Bubsy Two-Fur:
   files:
     "<home>/Saved Games/Atari/Bubsy in The Purrfect Collection":
       tags:
+        - config
         - save
       when:
         - os: windows
@@ -124257,6 +124259,9 @@ Cellz:
 Celsius:
   steam:
     id: 1130640
+Celsius Strays:
+  steam:
+    id: 4271620
 Celtabula:
   installDir:
     Celtabula: {}
@@ -126280,6 +126285,31 @@ Chapeau:
             store: steam
   steam:
     id: 1139880
+"Chapel 3-D: The Ascent":
+  files:
+    "<base>/chapel-3d.config.json":
+      tags:
+        - config
+      when:
+        - os: windows
+  gog:
+    id: 1267603268
+  id:
+    gogExtra:
+      - 1547831446
+    lutris: chapel-3-d-the-ascent
+    steamExtra:
+      - 4392410
+  installDir:
+    Chapel 3-D The Ascent: {}
+  launch:
+    "<base>/chapel-3d.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1904680
 Charge:
   installDir:
     Charge: {}
@@ -228601,6 +228631,14 @@ Echoes of Aincrad:
     lutris: echoes-of-aincrad
     steamExtra:
       - 4148250
+  installDir:
+    Echoes of Aincrad: {}
+  launch:
+    "<base>/EchoesofAincrad.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2244210
 "Echoes of War: The Last Heartbeat":
@@ -228640,6 +228678,8 @@ Echoes of the End:
         - save
       when:
         - os: windows
+  gog:
+    id: 1674598037
   id:
     lutris: echoes-of-the-end
   installDir:
@@ -235655,6 +235695,12 @@ Empulse:
         - config
       when:
         - os: windows
+  installDir:
+    EMPULSE: {}
+  launch:
+    "<base>/launcher.exe":
+      - when:
+          - store: steam
   steam:
     id: 4323990
 "Empyre: Lords of the Sea Gates":
@@ -339678,6 +339724,15 @@ Hillsfar:
       - 1436871302
   steam:
     id: 1904525
+Hillthorn:
+  cloud:
+    steam: true
+  id:
+    lutris: hillthorn
+    steamExtra:
+      - 3615330
+  steam:
+    id: 3504050
 Him and I:
   installDir:
     Him & I: {}
@@ -361786,12 +361841,6 @@ Indivisible:
     gog: true
     steam: true
   files:
-    /Indivisible/SaveData_GOG:
-      tags:
-        - config
-        - save
-      when:
-        - os: linux
     "<root>/userdata/<storeUserId>/421170/remote":
       tags:
         - config
@@ -361806,6 +361855,12 @@ Indivisible:
         - os: windows
         - os: windows
           store: microsoft
+    "<xdgData>/Indivisible/SaveData_GOG":
+      tags:
+        - config
+        - save
+      when:
+        - os: linux
   gog:
     id: 2086192498
   id:
@@ -379864,6 +379919,7 @@ Just Bones:
 Just Cause:
   cloud:
     gog: true
+    steam: true
   files:
     "<winDocuments>/JustCause/Saves/JCSaves":
       tags:
@@ -409505,12 +409561,12 @@ Life Is Strange Remastered:
   cloud:
     steam: true
   files:
-    /Documents/My Games/LifeisStrangeReunion/Steam/Saved:
+    "<winDocuments>/My Games/LifeisStrangeReunion/Steam/Saved":
       tags:
         - save
       when:
         - os: windows
-    /Iris/Saved_Steam_/Config/Windows:
+    "<winLocalAppData>/Iris/Saved_Steam_<storeUserId>]]/Config/Windows":
       tags:
         - config
       when:
@@ -431319,16 +431375,18 @@ Magicka 2:
     id: 247580
 Magicmaker:
   files:
-    /steamapps/common/Magicmaker/saves:
+    "<root>/steamapps/common/Magicmaker/saves":
       tags:
         - save
       when:
         - os: windows
-    /steamapps/common/Magicmaker/saves/SETTINGS:
+          store: steam
+    "<root>/steamapps/common/Magicmaker/saves/SETTINGS":
       tags:
         - config
       when:
         - os: windows
+          store: steam
   gog:
     id: 1207665973
   installDir:
@@ -447733,6 +447791,16 @@ Metal Slug:
         - save
       when:
         - os: windows
+    "<xdgData>/SNK/mslug":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<xdgData>/SNK/mslug/OPTIONS":
+      tags:
+        - config
+      when:
+        - os: linux
   gog:
     id: 1136471182
   installDir:
@@ -474521,18 +474589,16 @@ Mysterium:
   steam:
     id: 50980
 "Mystery Case Files: Ravenhearst":
-  files:
-    /HKEY_CURRENT_USER/Software/Big Fish Games/Games/Mystery Case Files - Ravenhearst:
-      tags:
-        - save
-      when:
-        - os: windows
   installDir:
     Mystery Case Files Ravenhearst: {}
   launch:
     "<base>/Ravenhearst.exe":
       - when:
           - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Big Fish Games/Games/Mystery Case Files - Ravenhearst:
+      tags:
+        - config
   steam:
     id: 50990
 "Mystery Case Files: Ravenhearst Unlocked":
@@ -518265,6 +518331,8 @@ Palworld:
         - os: windows
   id:
     lutris: palworld
+    steamExtra:
+      - 2771110
   installDir:
     Palworld: {}
   launch:
@@ -525298,7 +525366,7 @@ Penkura:
   cloud:
     steam: true
   files:
-    /home/$USERNAME/Library/Preferences/unity.TinkerHouse Games.PAA 3.plist:
+    "<home>/Library/Preferences/unity.TinkerHouse Games.PAA 3.plist":
       tags:
         - save
       when:
@@ -553199,11 +553267,12 @@ Psycho Starship Rampage:
   cloud:
     steam: true
   files:
-    /SteamLib/steamapps/common/PsychoStarshipRampage/saves:
+    "<root>/steamapps/common/PsychoStarshipRampage/saves":
       tags:
         - config
       when:
         - os: windows
+          store: steam
   installDir:
     PsychoStarshipRampage: {}
   launch:
@@ -565775,7 +565844,7 @@ Rail Route:
     gog: true
     steam: true
   files:
-    /.config/unity3d/bitrich/Rail Route:
+    "<home>/.config/unity3d/bitrich/Rail Route":
       tags:
         - config
       when:
@@ -588858,7 +588927,7 @@ Road 96:
         - config
       when:
         - os: windows
-    "<root>/compatdata/1466640/remote/pfx":
+    "<root>/steamapps/compatdata/1466640/remote/pfx":
       tags:
         - config
         - save
@@ -630751,29 +630820,6 @@ SiNKR 3:
             store: steam
   steam:
     id: 1705580
-SiNiSistar 2:
-  cloud:
-    steam: true
-  files:
-    "<home>/AppData/LocalLow/Uu/SiNiSistar2/SaveData_S":
-      tags:
-        - config
-        - save
-      when:
-        - os: windows
-  installDir:
-    SiNiSistar 2: {}
-  launch:
-    "<base>/SiNiSistar2.app":
-      - when:
-          - os: mac
-            store: steam
-    "<base>/SiNiSistar2.exe":
-      - when:
-          - os: windows
-            store: steam
-  steam:
-    id: 4466620
 Siam Twinstick:
   installDir:
     Siam Twinstick: {}
@@ -635079,6 +635125,35 @@ Singularity Roller:
             store: steam
   steam:
     id: 962220
+Sinisistar 2:
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Uu/SiNiSistar2/SaveData_S":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  gog:
+    id: 1948328636
+  id:
+    gogExtra:
+      - 1124524122
+  installDir:
+    SiNiSistar 2: {}
+  launch:
+    "<base>/SiNiSistar2.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/SiNiSistar2.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4466620
 "Sinistar: Unleashed":
   files:
     "<base>/save":
@@ -688820,6 +688895,15 @@ Super Bomb Rush!:
 Super Bomberman Collection:
   cloud:
     steam: true
+  files:
+    "<root>/userdata/<storeUserId>/3756010/remote":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: super-bomberman-collection
   installDir:
     Super Bomberman Collection: {}
   launch:
@@ -688828,6 +688912,10 @@ Super Bomberman Collection:
           - bit: 64
             os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Konami/SUPER BOMBERMAN COLLECTION:
+      tags:
+        - config
   steam:
     id: 3756010
 Super Bomberman R:
@@ -798956,7 +799044,7 @@ Uncraft World:
     id: 339910
 Uncrewed:
   files:
-    /Documents/Uncrewed Game/User/campaigns:
+    "<winDocuments>/Uncrewed Game/User/campaigns":
       tags:
         - save
       when:
@@ -830358,12 +830446,6 @@ Welcome Above:
   steam:
     id: 912660
 Welcome Back Daddy:
-  files:
-    "/Software/Chilla's Art/Welcome back Daddy":
-      tags:
-        - config
-      when:
-        - os: windows
   installDir:
     Welcome Back Daddy: {}
   launch:
@@ -830371,6 +830453,10 @@ Welcome Back Daddy:
       - when:
           - os: windows
             store: steam
+  registry:
+    "HKEY_CURRENT_USER/Software/Software/Chilla's Art/Welcome back Daddy":
+      tags:
+        - config
   steam:
     id: 810510
 Welcome Back to 2007:
@@ -858927,7 +859013,7 @@ Zombie Panic! Source:
   cloud:
     steam: true
   files:
-    "<root>Steam/steamapps/common/Zombie Panic Source/zps/cfg/config_default.cfg":
+    "<root>/steamapps/common/Zombie Panic Source/zps/cfg/config_default.cfg":
       tags:
         - config
       when:
