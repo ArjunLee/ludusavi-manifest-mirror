@@ -25186,6 +25186,13 @@ Age of Wushu:
 Age-Old Cities VR:
   steam:
     id: 1025500
+"Agefield High: Rock the School":
+  cloud:
+    steam: true
+  id:
+    lutris: agefield-high-rock-the-school
+  steam:
+    id: 3562580
 Ageless:
   files:
     "<home>/AppData/LocalLow/OneMoreDream Studios/Ageless":
@@ -164664,6 +164671,13 @@ Cucumber Defense VR:
     MotionGame: {}
   steam:
     id: 1142510
+Cue Club:
+  files:
+    "<base>/save":
+      tags:
+        - save
+      when:
+        - os: windows
 Cue Club 2:
   installDir:
     Cue Club 2: {}
@@ -337157,6 +337171,13 @@ Hexxon:
             store: steam
   steam:
     id: 779920
+Hexzen:
+  cloud:
+    steam: true
+  id:
+    lutris: hexzen
+  steam:
+    id: 4886450
 "Hi-5: Create, Paint and Play":
   files:
     "<base>/Hi5.ini":
@@ -441776,6 +441797,15 @@ Meaty McSkinBones:
 Meawja:
   steam:
     id: 679910
+Meccha Chameleon:
+  installDir:
+    MECCHA CHAMELEON: {}
+  launch:
+    "<base>/PenguinHotel.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4704690
 Mech Academy:
   files:
     "<winAppData>/RenPy/MechaAcademy<storeUserId>":
@@ -454635,6 +454665,12 @@ Minesweeper:
         - config
       when:
         - os: windows
+Minesweeper (XP):
+  registry:
+    HKEY_CURRENT_USER/Software/Microsoft/winmine:
+      tags:
+        - config
+        - save
 Minesweeper Peak VR:
   installDir:
     Minesweeper peak VR: {}
@@ -717840,6 +717876,7 @@ The Alternative Age:
     lutris: touhou-shifuujou-the-alternative-age
 The Alters:
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -717907,6 +717944,7 @@ The Alters:
       - 2130218964
     lutris: the-alters
     steamExtra:
+      - 3237520
       - 3773900
   installDir:
     The Alters: {}
@@ -797946,7 +797984,20 @@ Uma Musume Pretty Derby:
   alias: "Umamusume: Pretty Derby"
 "Umamusume: Pretty Derby":
   files:
+    "<home>/AppData/LocalLow/Cygames/UmamusumePrettyDerby_Jpn/d/SaveData.db":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
     "<home>/AppData/LocalLow/Cygames/umamusume/d/SaveData.db":
+      tags:
+        - save
+      when:
+        - os: windows
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/KomoeGame/komoeumamusume/d/SaveData.db":
       tags:
         - save
       when:
@@ -797972,6 +798023,9 @@ Uma Musume Pretty Derby:
         - config
       when:
         - store: steam
+    HKEY_CURRENT_USER/SOFTWARE/KomoeGame/komoeumamusume:
+      tags:
+        - config
   steam:
     id: 3224770
 "Umamusume: Pretty Derby - Party Dash":
