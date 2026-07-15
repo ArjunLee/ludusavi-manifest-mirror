@@ -8852,6 +8852,17 @@ A Fine Mess:
     "A Fisherman's Tale": {}
   steam:
     id: 559330
+"A Fisherman's Tale 2":
+  files:
+    "<winLocalAppData>/Theseus/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
+  id:
+    lutris: a-fishermans-tale-2
+  installDir:
+    "Another Fisherman's Tale": {}
+  steam:
+    id: 2096570
 A Fistful of Gun:
   files:
     "<base>/*.ini":
@@ -33844,6 +33855,8 @@ Alternativa:
         - save
       when:
         - os: windows
+  id:
+    lutris: alternativa
   installDir:
     Alternativa: {}
   launch:
@@ -172222,8 +172235,12 @@ Dark Earth:
         - save
       when:
         - os: windows
+  gog:
+    id: 1355561964
   id:
     lutris: dark-earth
+  steam:
+    id: 4834830
 Dark Echo:
   cloud:
     steam: true
@@ -182398,9 +182415,12 @@ Death Howl:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/The Outer Zone/Death Howl/saves_v_1_0/*.save":
+    "<home>/AppData/LocalLow/The Outer Zone/Death Howl/saves_v_1_0":
+      tags:
+        - config
+        - save
       when:
-        - store: steam
+        - os: windows
   installDir:
     Death Howl: {}
   launch:
@@ -190531,6 +190551,8 @@ Denshattack!:
     lutris: denshattack
     steamExtra:
       - 4142750
+      - 4609680
+      - 4719220
   steam:
     id: 2524850
 Deorum Online:
@@ -229129,6 +229151,10 @@ Ecstatica:
       when:
         - os: dos
         - os: windows
+  gog:
+    id: 1333226285
+  steam:
+    id: 4834840
 Ecstatica II:
   files:
     "<base>/saved":
@@ -229138,6 +229164,10 @@ Ecstatica II:
       when:
         - os: dos
         - os: windows
+  gog:
+    id: 1434747230
+  steam:
+    id: 4834850
 Ectolibrium:
   files:
     "<home>/AppData/LocalLow/Void Calls/Ectolibrium/*.dat":
@@ -319516,6 +319546,8 @@ Haeven:
   steam:
     id: 508540
 Haex:
+  id:
+    lutris: haex
   steam:
     id: 3524720
 Hags Castle:
@@ -347470,6 +347502,30 @@ Housekeeping VR:
     Housekeeping VR: {}
   steam:
     id: 556520
+Housemates:
+  files:
+    "<base>/save":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Housemates: {}
+  launch:
+    "<base>/Housemates.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Housemates.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/Housemates.sh":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 2820220
 "Houston, We Have Spinach!":
   files:
     "<home>/AppData/LocalLow/Acme Nerd Games/Houston,We Have Spinach!/*.hwhssave":
@@ -386214,33 +386270,6 @@ Kill Him! Online Wars:
             store: steam
   steam:
     id: 817250
-Kill It With Fire 2:
-  cloud:
-    steam: true
-  files:
-    "<home>/AppData/LocalLow/Kani/Saved/SaveGames/KIWF2_0*.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winAppData>/Kani/Saved/SaveGames/KIWF2_0*.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/Kani/Saved/SaveGames/KIWF2_0*.sav":
-      when:
-        - os: windows
-          store: steam
-  id:
-    steamExtra:
-      - 2926730
-  installDir:
-    Kill It With Fire 2: {}
-  launch:
-    "<base>/Kani.exe":
-      - when:
-          - store: steam
-  steam:
-    id: 2357000
 Kill It with Fire:
   cloud:
     steam: true
@@ -386279,6 +386308,33 @@ Kill It with Fire:
             store: steam
   steam:
     id: 1179210
+Kill It with Fire 2:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Kani/Saved/SaveGames/KIWF2_0*.sav":
+      when:
+        - os: windows
+          store: steam
+    "<winAppData>/Kani/Saved/SaveGames/KIWF2_0*.sav":
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/Kani/Saved/SaveGames/KIWF2_0*.sav":
+      when:
+        - os: windows
+          store: steam
+  id:
+    steamExtra:
+      - 2926730
+  installDir:
+    Kill It With Fire 2: {}
+  launch:
+    "<base>/Kani.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2357000
 Kill Knight:
   files:
     "<home>/AppData/LocalLow/PlaySide Studios/KILL KNIGHT":
@@ -443375,6 +443431,11 @@ Mega Coin Squad:
       - when:
           - os: linux
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Big Pixel Studios/Mega Coin Squad:
+      tags:
+        - config
+        - save
   steam:
     id: 312510
 Mega Hasan:
@@ -515598,6 +515659,9 @@ PASKA BATTLE STYLE!:
           - store: steam
   steam:
     id: 979760
+PAW Patrol Dino World:
+  steam:
+    id: 3525790
 "PAW Patrol Rescue Wheels: Championship":
   cloud:
     steam: true
@@ -541886,6 +541950,10 @@ Pool of Radiance:
         - save
       when:
         - os: windows
+  gog:
+    id: 1405279681
+  steam:
+    id: 4834760
 Pools:
   cloud:
     gog: true
@@ -592929,6 +592997,16 @@ Rogue Empire:
         - save
       when:
         - os: windows
+    "<home>/Library/Application Support/Portal Entertainment/Rogue-Empire/Saves":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<home>/Library/Preferences/unity.Portal Entertainment.Rogue-Empire.plist":
+      tags:
+        - config
+      when:
+        - os: mac
     "<xdgConfig>/unity3d/Portal Entertainment/Rogue-Empire/Saves":
       tags:
         - save
@@ -632390,6 +632468,8 @@ Sigil:
   steam:
     id: 1063940
 Sigils of Elohim:
+  id:
+    lutris: sigils-of-elohim
   installDir:
     Sigils of Elohim: {}
   launch:
@@ -648098,6 +648178,11 @@ Soldiers Lost Forever (1914-1918):
             store: steam
   steam:
     id: 508630
+Soldiers at War:
+  gog:
+    id: 1731348684
+  steam:
+    id: 4834810
 Soldiers of Freedom:
   installDir:
     Soldiers Of Freedom: {}
@@ -825681,10 +825766,14 @@ Warlords III:
         - save
       when:
         - os: windows
+  gog:
+    id: 1462962180
   registry:
     HKEY_CURRENT_USER/Software/Ubi Soft/Warlords IV/Options:
       tags:
         - config
+  steam:
+    id: 4834780
 Warlords.IO:
   installDir:
     Warlords.IO: {}
