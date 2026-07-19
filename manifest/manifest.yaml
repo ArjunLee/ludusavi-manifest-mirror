@@ -1991,6 +1991,11 @@ $1 Ride:
       - when:
           - os: windows
             store: steam
+  registry:
+    "HKEY_CURRENT_USER/Software/Impulse Game Studios, LLC/123 Slaughter Me Street":
+      tags:
+        - config
+        - save
   steam:
     id: 405180
 123 Slaughter Me Street 2:
@@ -2261,6 +2266,17 @@ $1 Ride:
   steam:
     id: 1305450
 "171":
+  files:
+    "<winLocalAppData>/BGG/Saved/SaveGames/171Save*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/BGG/Saved/SaveGames/Configuration*.sav":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     "171": {}
   launch:
@@ -7499,6 +7515,12 @@ $1 Ride:
   steam:
     id: 1890120
 9.03m:
+  files:
+    "<base>/UDKGame/Config":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     903m: {}
   launch:
@@ -9256,7 +9278,7 @@ A Golden Wake:
         - save
       when:
         - os: linux
-    "<home>/Library Application Support/A Golden Wake":
+    "<home>/Library/Application Support/A Golden Wake":
       tags:
         - save
       when:
@@ -50782,6 +50804,22 @@ Ascend (2015):
     HKEY_CURRENT_USER/Software/rose-engine/Ascend:
       tags:
         - config
+Ascend to ZERO:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/MementoMori/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Ascend to ZERO: {}
+  launch:
+    "<base>/AscendtoZERO.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2697940
 "Ascend: Hand of Kul":
   alias: "Ascend: Reborn"
 "Ascend: Reborn":
@@ -126735,6 +126773,8 @@ Charpi:
   steam:
     id: 694670
 Charrua Soccer:
+  cloud:
+    steam: true
   files:
     "<home>/.config/unity3d/Batovi Games Studio/Charrua Soccer*":
       when:
@@ -128422,6 +128462,8 @@ Chicken Farm 2K17:
   steam:
     id: 746910
 Chicken Invaders:
+  cloud:
+    steam: true
   installDir:
     Chicken Invaders 1: {}
   launch:
@@ -154196,8 +154238,24 @@ Cozy Grove:
   steam:
     id: 1458100
 "Cozy Grove: Camp Spirit":
+  files:
+    "<home>/AppData/LocalLow/Spry Fox/Cozy Grove_ Camp Spirit/SpryFoxSteam/local/*.jpg":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Spry Fox/Cozy Grove_ Camp Spirit/SpryFoxSteam/local/*.sf":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: cozy-grove-camp-spirit
+  installDir:
+    Cozy Grove - Camp Spirit: {}
+  launch:
+    "<base>/CozyGrove_CampSpirit.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2021960
 Crab Cakes Rescue:
@@ -155902,14 +155960,6 @@ Crazy Chicken X:
         - save
       when:
         - os: windows
-  installDir:
-    "Moorhuhn Jump and Run 'Traps and Treasures'": {}
-  launch:
-    "<base>/Moorhuhn Jump and Run 'Traps and Treasures'.exe":
-      - when:
-          - store: steam
-  steam:
-    id: 2316960
 "Crazy Chicken: Wanted":
   files:
     "<base>/HighScore.txt":
@@ -173778,6 +173828,17 @@ Dark Scavenger:
   steam:
     id: 293880
 Dark Scrolls:
+  files:
+    "<winLocalAppData>/Vladius":
+      when:
+        - store: steam
+  installDir:
+    Project Vladius: {}
+  launch:
+    "<base>/darkscrolls.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2912550
 Dark Sector:
@@ -193879,6 +193940,7 @@ Detective Girl of the Steam City:
 Detective Grimoire:
   cloud:
     gog: true
+    steam: true
   files:
     "<winAppData>/air.com.sfbgames.DetectiveGrimoire/Local Store/#SharedObjects/DetectiveGrimoireDesktopSteam.swf/DetectiveGrimoireSave.sol":
       tags:
@@ -193888,6 +193950,9 @@ Detective Grimoire:
   gog:
     id: 2087170042
   id:
+    gogExtra:
+      - 1431464523
+    lutris: detective-grimoire
     steamExtra:
       - 421950
   installDir:
@@ -205816,14 +205881,16 @@ Don Bradman Cricket 17:
     id: 868760
 "Don't Stop, Girlypop!":
   files:
-    "<base>/INCOLATUS/*.ini":
+    "<winLocalAppData>/INCOLATUS/Saved/Config/Windows/GameUserSettings.ini":
+      tags:
+        - config
       when:
         - os: windows
-          store: steam
-    "<winLocalAppData>/INCOLATUS/Saved/SaveGames/*.sav":
+    "<winLocalAppData>/INCOLATUS/Saved/SaveGames":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
   installDir:
     Incolatus: {}
   launch:
@@ -262819,14 +262886,6 @@ Fellowship:
     steamExtra:
       - 4082970
       - 4082980
-  installDir:
-    Fellowship: {}
-  launch:
-    "<base>/fellowship.exe":
-      - when:
-          - bit: 64
-            os: windows
-            store: steam
   steam:
     id: 2352620
 "Felt That: Boxing":
@@ -269703,6 +269762,56 @@ Fix Race:
             store: steam
   steam:
     id: 818240
+FixForce:
+  cloud:
+    steam: true
+  files:
+    "<home>/.local/share/steam/steamapps/compatdata/3933150/pfx/drive_c/users/steamuser/appdata/local/FixForce/savegames/FixForce/Saved/SaveGames/Challenges.sav":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/steam/steamapps/compatdata/3933150/pfx/drive_c/users/steamuser/appdata/local/FixForce/savegames/FixForce/Saved/SaveGames/EnhancedInputUserSettings.sav":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/steam/steamapps/compatdata/3933150/pfx/drive_c/users/steamuser/appdata/local/FixForce/savegames/FixForce/Saved/SaveGames/HostSaveData1.sav":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/steam/steamapps/compatdata/3933150/pfx/drive_c/users/steamuser/appdata/local/FixForce/savegames/FixForce/Saved/SaveGames/HostSaveData2.sav":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/steam/steamapps/compatdata/3933150/pfx/drive_c/users/steamuser/appdata/local/FixForce/savegames/FixForce/Saved/SaveGames/HostSaveData3.sav":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/steam/steamapps/compatdata/3933150/pfx/drive_c/users/steamuser/appdata/local/FixForce/savegames/FixForce/Saved/SaveGames/PlayerCosmetics.sav":
+      when:
+        - os: linux
+          store: steam
+    "<winLocalAppData>/FixForce/Saved/SaveGames/Challenges.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/FixForce/Saved/SaveGames/EnhancedInputUserSettings.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/FixForce/Saved/SaveGames/HostSaveData1.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/FixForce/Saved/SaveGames/HostSaveData2.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/FixForce/Saved/SaveGames/HostSaveData3.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/FixForce/Saved/SaveGames/PlayerCosmetics.sav":
+      when:
+        - store: steam
+  installDir:
+    FixForce: {}
+  steam:
+    id: 3933150
 FixFox:
   cloud:
     gog: true
@@ -273845,6 +273954,43 @@ Fog of War:
             store: steam
   steam:
     id: 1069820
+Fogpiercer:
+  cloud:
+    steam: true
+  files:
+    "<home>/.local/share/godot/app_userdata/Fogpiercer/*.json":
+      when:
+        - os: linux
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Fogpiercer/*.json":
+      when:
+        - os: mac
+          store: steam
+    "<home>/snap/steam/common/.local/share/godot/app_userdata/Fogpiercer/*.json":
+      when:
+        - os: linux
+          store: steam
+    "<winAppData>/Godot/app_userdata/Fogpiercer/*.json":
+      when:
+        - store: steam
+  installDir:
+    Fogpiercer: {}
+  launch:
+    "<base>/Fogpiercer-full.app/Contents/MacOS/Fogpiercer":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Fogpiercer-full.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/Fogpiercer-full.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 3219010
 Fold:
   cloud:
     steam: true
@@ -295062,6 +295208,26 @@ Gems Kingdom:
             store: steam
   steam:
     id: 972620
+"Gems of Destiny: Homeless Dwarf":
+  files:
+    "<home>/AppData/LocalLow/Graphium_Studio/Gems_Of_Destiny/SaveData/Player.dat":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/Graphium_Studio/Gems_Of_Destiny/SaveData/Settings.dat":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Gems_of_Destiny_Homeless_Dwarf: {}
+  launch:
+    "<base>/Gems_Of_Destiny.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1899290
 "Gems of Magic: Lost Family":
   installDir:
     Gems of Magic Lost Family: {}
@@ -402507,6 +402673,10 @@ Leaf it Alone:
     "<base>/Leaf it Alone.exe":
       - when:
           - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Eternity/Leaf it Alone:
+      tags:
+        - config
   steam:
     id: 3981100
 Leafborn:
@@ -426500,6 +426670,19 @@ MAV:
             store: steam
   steam:
     id: 280440
+MAVRIX by Matt Jones:
+  cloud:
+    steam: true
+  installDir:
+    Mavrix: {}
+  launch:
+    "<base>/MtbClient.exe":
+      - arguments: "-NOVERIFYGC -ExecCmds=\"DisableAllScreenMessages\""
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2926900
 MAX MOZART:
   cloud:
     steam: true
@@ -478898,6 +479081,21 @@ Namaste Virtual Yoga Retreat:
 Namco Legendary Mountains:
   cloud:
     steam: true
+  files:
+    "<base>/SavesDir/*.sav":
+      when:
+        - store: steam
+  installDir:
+    NAMCOLEGENDARYMountains: {}
+  launch:
+    "<base>/NAMCOLEGENDARYMountains.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/NAMCOLEGENDARYMountains.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4459850
 Namco Museum 50th Anniversary:
@@ -480916,6 +481114,11 @@ Nature Treks VR:
 Nature Zen:
   steam:
     id: 1080960
+Nature of Dread:
+  id:
+    lutris: nature-of-dread
+  steam:
+    id: 4022950
 "Nature's Wrath VR":
   cloud:
     steam: true
@@ -491364,9 +491567,43 @@ Ninja Gaiden Σ2:
   cloud:
     steam: true
   files:
+    "<home>/AppData/LocalLow/The Game Kitchen/NINJA GAIDEN Ragebound/*.bin":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/The Game Kitchen/NINJA GAIDEN Ragebound/GOGUser_<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: gog
+    "<home>/AppData/LocalLow/The Game Kitchen/NINJA GAIDEN Ragebound/GOGUser_<storeUserId>/systems.bin":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: gog
+    "<home>/AppData/LocalLow/The Game Kitchen/NINJA GAIDEN Ragebound/Savegames":
+      tags:
+        - save
+      when:
+        - os: windows
     "<home>/AppData/LocalLow/The Game Kitchen/NINJA GAIDEN Ragebound/SteamUser_<storeUserId>":
       tags:
         - save
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/The Game Kitchen/NINJA GAIDEN Ragebound/SteamUser_<storeUserId>/systems.bin":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/The Game Kitchen/NINJA GAIDEN Ragebound/systems.bin":
+      tags:
+        - config
       when:
         - os: windows
   gog:
@@ -516034,6 +516271,25 @@ PBA Pro Bowling:
             store: steam
   steam:
     id: 1126990
+PBA Pro Bowling 2026:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/PBABowling4/Saved/Config/Windows/*.ini":
+      when:
+        - store: steam
+    "<winLocalAppData>/PBABowling4/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
+  installDir:
+    PBA Pro Bowling 2026: {}
+  launch:
+    "<base>/PBABowling4.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3127230
 PBA Tour Bowling 2:
   registry:
     HKEY_LOCAL_MACHINE/SOFTWARE/Bethesda Softworks/PBA Bowling 2:
@@ -516553,19 +516809,6 @@ POPGOES Arcade:
           - store: steam
   steam:
     id: 1986840
-POPUCOM:
-  files:
-    "<base>/Save/<storeUserId>":
-      when:
-        - store: steam
-  installDir:
-    POPUCOM: {}
-  launch:
-    "<base>/Popucom.exe":
-      - when:
-          - store: steam
-  steam:
-    id: 2543180
 POPixel:
   installDir:
     POPixel: {}
@@ -542523,6 +542766,21 @@ Poptropica:
             store: steam
   steam:
     id: 1813270
+Popucom:
+  cloud:
+    steam: true
+  files:
+    "<base>/Save/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    POPUCOM: {}
+  launch:
+    "<base>/Popucom.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2543180
 "Population: One":
   installDir:
     PopulationONE: {}
@@ -543649,6 +543907,8 @@ Postal:
         - save
       when:
         - os: windows
+  gog:
+    id: 1207658754
   id:
     lutris: postal
 Postal (2013):
@@ -568375,11 +568635,13 @@ Raptor Valley:
         - save
       when:
         - os: dos
+        - os: windows
     "<base>/SETUP.INI":
       tags:
         - config
       when:
         - os: dos
+        - os: windows
   installDir:
     Raptor Call of the Shadows: {}
   launch:
@@ -664447,6 +664709,11 @@ Sponchies:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Ghost/Saved/Config/Windows/GameUserSettings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1564930022
   id:
@@ -708110,6 +708377,13 @@ Tangle Tower:
         - os: windows
   gog:
     id: 1136365627
+  id:
+    gogExtra:
+      - 1469252016
+    lutris: tangle-tower
+    steamExtra:
+      - 1178040
+      - 1224100
   installDir:
     Tangle Tower: {}
   launch:
@@ -745024,6 +745298,34 @@ The Mercury Man:
             store: steam
   steam:
     id: 740200
+The Mermaid Mask:
+  cloud:
+    steam: true
+  files:
+    "<base>/Saves/*.sav":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/SFB Games/The Mermaid Mask/*.sav":
+      when:
+        - os: mac
+          store: steam
+  id:
+    lutris: the-mermaid-mask--1
+    steamExtra:
+      - 2556770
+  installDir:
+    The Mermaid Mask: {}
+  launch:
+    "<base>/The Mermaid Mask.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/The Mermaid Mask.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1696770
 The Messenger:
   cloud:
     epic: true
