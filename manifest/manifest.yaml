@@ -3552,6 +3552,17 @@ $1 Ride:
   steam:
     id: 1668310
 25 Cadre of Death:
+  files:
+    "<base>/TheSin/Saved/Config":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/TheSin/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     IGS: {}
   launch:
@@ -7123,6 +7134,17 @@ $1 Ride:
   steam:
     id: 487040
 8AM:
+  files:
+    "<winLocalAppData>/am/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/am/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: 8am
   installDir:
@@ -9128,6 +9150,17 @@ A Game of Dwarves:
   steam:
     id: 200370
 A Game of Thrones - Genesis:
+  files:
+    "<winDocuments>/Agot/Config.xml":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winDocuments>/Agot/Save":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     A Game Of Thrones: {}
   launch:
@@ -102384,6 +102417,8 @@ Breathedge:
   steam:
     id: 738520
 Breathedge 2:
+  cloud:
+    steam: true
   id:
     lutris: breathedge-2
   steam:
@@ -106277,6 +106312,12 @@ Buckshot Roulette:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/Packages/CRITICALREFLEX.BuckshotRoulette_20ymd9g5r2c54/SystemAppData/wgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
     "<xdgData>/godot/app_userdata/Buckshot Roulette":
       tags:
         - config
@@ -106300,6 +106341,12 @@ Buckshot Roulette:
           - bit: 64
             os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Critical Reflex/BuckshotRoulette:
+      tags:
+        - config
+      when:
+        - store: microsoft
   steam:
     id: 2835570
 Bud Blitz:
@@ -186535,8 +186582,15 @@ Deer & Boy:
     steam: true
   files:
     "<home>/AppData/LocalLow/LIFELINE/DeerAndBoy/Saves":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+    "<home>/AppData/LocalLow/LIFELINE/DeerAndBoy/Settings.data":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: deer-and-boy
     steamExtra:
@@ -446802,6 +446856,17 @@ Meow-Jong:
             store: steam
   steam:
     id: 879090
+Meowgic:
+  installDir:
+    Meowgic: {}
+  launch:
+    "<base>/Meowgic.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4252290
 Meowk and Frocco:
   installDir:
     Meowk and Frocco: {}
@@ -466711,12 +466776,16 @@ Moss Destruction:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/MossCollection/Saved/SaveGames/*Game_*.sav":
+    "<winLocalAppData>/MossCollection/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
       when:
-        - store: steam
-    "<winLocalAppData>/MossCollection/Saved/SaveGames/*Global.sav":
+        - os: windows
+    "<winLocalAppData>/MossCollection/Saved/SaveGames":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   id:
     lutris: moss-the-forgotten-relic
     steamExtra:
@@ -480684,6 +480753,8 @@ Naruto Online:
         - config
       when:
         - os: windows
+  id:
+    lutris: naruto-to-boruto-shinobi-striker
   installDir:
     Naruto To Boruto: {}
   launch:
@@ -576034,12 +576105,12 @@ Redout:
     gog: true
     steam: true
   files:
-    "<base>/redout/Saved/Config/WindowsNoEditor":
+    "<winLocalAppData>/redout/Saved/Config/WindowsNoEditor":
       tags:
         - config
       when:
         - os: windows
-    "<base>/redout/Saved/SaveGames":
+    "<winLocalAppData>/redout/Saved/SaveGames":
       tags:
         - save
       when:
@@ -577056,6 +577127,9 @@ Regular Human Basketball:
             store: steam
   steam:
     id: 661940
+Rehaunted:
+  steam:
+    id: 4538140
 Rehtona:
   cloud:
     steam: true
@@ -726320,6 +726394,8 @@ The Dark West:
     steam: true
   id:
     lutris: the-dark-west
+    steamExtra:
+      - 4751830
   steam:
     id: 3574750
 The Dark Wish:
@@ -742714,10 +742790,30 @@ The Lewd Knight:
 The Life and Suffering of Prince Jerian:
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Schisma/The Life and Suffering of Prince Jerian/Saves/**/*.dat":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Schisma/The Life and Suffering of Prince Jerian/Saves/**/*.txt":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: the-life-and-suffering-of-prince-jerian
     steamExtra:
       - 3131940
+      - 4873870
+      - 4892150
+      - 4892160
+  installDir:
+    The Life and Suffering of Prince Jerian: {}
+  launch:
+    "<base>/The Life and Suffering of Prince Jerian.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2936290
 The Life and Suffering of Sir Brante:
@@ -780604,6 +780700,35 @@ Toukiden 2:
         - config
   steam:
     id: 363130
+Tour de France 2026:
+  cloud:
+    epic: true
+    steam: true
+  files:
+    "<winAppData>/Tour de France 2026":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Tour de France 2026/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 4502380
+      - 4502390
+  installDir:
+    Tour de France 2026: {}
+  launch:
+    "<base>/TDF.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3936520
 Touring Karts:
   cloud:
     steam: true
@@ -858374,6 +858499,14 @@ ZeroRanger:
 ZeroSpace:
   cloud:
     steam: true
+  installDir:
+    ZeroSpace: {}
+  launch:
+    "<base>/RTS.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 1605850
 ZeroZone2020:
