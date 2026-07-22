@@ -7394,10 +7394,12 @@ $1 Ride:
         - os: windows
   gog:
     id: 1875095393
+  id:
+    lutris: 9-kings
   installDir:
     9 Kings: {}
   launch:
-    "<base>/9Kings.app/Contents/MacOS/9Kings":
+    "<base>/9Kings.app":
       - when:
           - os: mac
             store: steam
@@ -64699,6 +64701,26 @@ Bad Day L.A.:
         - save
       when:
         - os: windows
+"Bad Dream: Afterlife":
+  cloud:
+    steam: true
+  files:
+    "<base>/*.ini":
+      when:
+        - store: steam
+  id:
+    lutris: bad-dream-afterlife
+    steamExtra:
+      - 4071740
+  installDir:
+    Bad Dream Afterlife: {}
+  launch:
+    "<base>/Bad Dream Afterlife.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3202410
 "Bad Dream: Coma":
   cloud:
     gog: true
@@ -64763,6 +64785,30 @@ Bad Day L.A.:
             store: steam
   steam:
     id: 769970
+"Bad Dream: Purgatory":
+  id:
+    lutris: bad-dream-purgatory
+  installDir:
+    Bad Dream Purgatory: {}
+  launch:
+    "<base>/Bad_Dream_Purgatory.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2313780
+"Bad Dream: Stories":
+  id:
+    lutris: bad-dream-stories
+  installDir:
+    Bad Dream Stories: {}
+  launch:
+    "<base>/Bad Dream Stories.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1692060
 Bad Dudes (2021):
   alias: Bad Dudes (Retro Classix)
 Bad Dudes (Retro Classix):
@@ -81410,6 +81456,35 @@ Big Fish Legend:
             store: steam
   steam:
     id: 376560
+Big Helmet Heroes:
+  cloud:
+    steam: true
+  files:
+    "<root>/userdata/<storeUserId>/2397250/ac/WinAppDataLocal/BigHelmetHeroes":
+      tags:
+        - config
+      when:
+        - store: steam
+    "<winLocalAppData>/BigHelmetHeroes/Saved/Config":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/BigHelmetHeroes/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: big-helmet-heroes
+  installDir:
+    Big Helmet Heroes: {}
+  launch:
+    "<base>/BigHelmetHeroes.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2397250
 Big Hit VR Baseball:
   installDir:
     Big Hit VR Baseball: {}
@@ -190766,26 +190841,11 @@ Denshattack!:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/Denshattack_Proto/Saved/SaveGames/<storeUserId>/DA_InputUserSettings.sav":
+    "<winLocalAppData>/Denshattack_Proto/Saved/SaveGames":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
-    "<winLocalAppData>/Denshattack_Proto/Saved/SaveGames/<storeUserId>/DA_Main_RELEASE.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/Denshattack_Proto/Saved/SaveGames/<storeUserId>/DA_Main_RELEASE_SLOT2.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/Denshattack_Proto/Saved/SaveGames/<storeUserId>/DA_Main_RELEASE_SLOT3.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/Denshattack_Proto/Saved/SaveGames/<storeUserId>/DA_Screenshots.sav":
-      when:
-        - os: windows
-          store: steam
   id:
     lutris: denshattack
     steamExtra:
@@ -205935,6 +205995,11 @@ Don Bradman Cricket 17:
     id: 868760
 "Don't Stop, Girlypop!":
   files:
+    "<base>/INCOLATUS/*.ini":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/INCOLATUS/Saved/Config/Windows/GameUserSettings.ini":
       tags:
         - config
@@ -274012,21 +274077,31 @@ Fogpiercer:
   cloud:
     steam: true
   files:
-    "<home>/.local/share/godot/app_userdata/Fogpiercer/*.json":
+    "<home>/.local/share/godot/app_userdata/Fogpiercer":
+      tags:
+        - save
       when:
         - os: linux
-          store: steam
-    "<home>/Library/Application Support/Godot/app_userdata/Fogpiercer/*.json":
+    "<home>/Library/Application Support/Godot/app_userdata/Fogpiercer":
+      tags:
+        - save
       when:
         - os: mac
-          store: steam
-    "<home>/snap/steam/common/.local/share/godot/app_userdata/Fogpiercer/*.json":
+    "<home>/snap/steam/common/.local/share/godot/app_userdata/Fogpiercer":
+      tags:
+        - save
       when:
         - os: linux
-          store: steam
     "<winAppData>/Godot/app_userdata/Fogpiercer/*.json":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+  gog:
+    id: 2045025106
+  id:
+    steamExtra:
+      - 3350900
   installDir:
     Fogpiercer: {}
   launch:
@@ -279789,6 +279864,20 @@ Foundry:
             store: steam
   steam:
     id: 983870
+Four Color Jump:
+  installDir:
+    Four color jumps: {}
+  launch:
+    "<base>/Four Color Jump.exe":
+      - when:
+          - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/No. 25/Four Color Jump:
+      tags:
+        - config
+        - save
+  steam:
+    id: 1656640
 Four Horsemen:
   installDir:
     Four Horsemen: {}
@@ -292271,6 +292360,21 @@ Gamer Career Tycoon:
             store: steam
   steam:
     id: 567750
+Gamer Girls (18 ):
+  installDir:
+    Gamer Girls (18+): {}
+  launch:
+    "<base>/Gamer Girls.exe":
+      - when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Romantic Room/Gamer Girls:
+      tags:
+        - config
+        - save
+  steam:
+    id: 1565220
 "Gamer Girls: Cyberpunk 2069":
   installDir:
     Gamer Girls Cyberpunk 2069: {}
@@ -363923,6 +364027,20 @@ Infinite Horizon:
     steam: true
   steam:
     id: 726770
+Infinite Jump:
+  installDir:
+    Infinite jump: {}
+  launch:
+    "<base>/Infinite Jump.exe":
+      - when:
+          - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/No. 25/Infinite Jump:
+      tags:
+        - config
+        - save
+  steam:
+    id: 1547160
 Infinite Mario 64:
   files:
     "<winAppData>/Godot/app_userdata/Infinite Mario 64/infinite_mario_save.dat":
@@ -398625,6 +398743,9 @@ Ladykiller in a Bind:
             store: steam
   steam:
     id: 857690
+Lagsters:
+  id:
+    lutris: lagsters
 Laid-Back Camp - Virtual - Fumoto Campsite:
   cloud:
     steam: true
@@ -404589,12 +404710,20 @@ Legend of Mana:
     gog: true
     steam: true
   files:
+    "<winDocuments>/My Games/Legend of Mana/GOG/<storeUserId>":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+          store: gog
     "<winDocuments>/My Games/Legend of Mana/Steam/<storeUserId>":
       tags:
         - config
         - save
       when:
         - os: windows
+          store: steam
   gog:
     id: 1868111779
   installDir:
@@ -422508,6 +422637,20 @@ Lovecraft Tales:
 Loveless cat:
   steam:
     id: 946190
+Lovely Crush:
+  installDir:
+    Lovely Crush: {}
+  launch:
+    "<base>/Lovely Crush.exe":
+      - when:
+          - store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Tutevych/Lovely Crush:
+      tags:
+        - config
+        - save
+  steam:
+    id: 2248580
 Lovely Fox:
   installDir:
     Lovely Fox: {}
@@ -564105,7 +564248,7 @@ RV There Yet?:
   files:
     "<winLocalAppData>/Packages/NuggetsEntertainmentAB.RVThereYet_4kh8ecef8wxy6/SystemAppData/wgs":
       tags:
-        - config
+        - save
       when:
         - os: windows
           store: microsoft
@@ -586185,6 +586328,24 @@ Riding Star 3:
             store: steam
   steam:
     id: 276360
+Riding to Bounce City:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Trigon fan/Riding to Bounce City":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Riding to Bounce City: {}
+  launch:
+    "<base>/Riding to Bounce City.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1892370
 Riff Racer:
   cloud:
     steam: true
@@ -678763,11 +678924,13 @@ Sticky Business:
     gogExtra:
       - 1133597262
       - 1423705561
+      - 1610198761
       - 1770714952
     steamExtra:
       - 2667860
       - 3100090
       - 3639630
+      - 4556920
   installDir:
     Sticky Business: {}
   launch:
@@ -758537,6 +758700,18 @@ The Thing:
     HKEY_CURRENT_USER/SOFTWARE/WOW6432Node/Computer Artworks/The Thing/1.0:
       tags:
         - config
+The Thing That Happened:
+  id:
+    lutris: the-thing-that-happened
+  installDir:
+    The Thing That Happened: {}
+  launch:
+    "<base>/TheThingThatHappened.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2906500
 The Thing With Mistletoes:
   files:
     "<base>/game/saves":
@@ -820645,6 +820820,9 @@ WWF in Your House:
 WWII - TD:
   steam:
     id: 913960
+WWII Tank Commander:
+  id:
+    lutris: wwii-tank-commander
 WWII英雄列伝 最強の虎 クルト・クニスペル:
   installDir:
     WWIIKnispel: {}
