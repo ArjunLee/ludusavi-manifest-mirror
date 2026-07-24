@@ -17581,6 +17581,12 @@ Ace Attorney Investigations Collection:
     steam: true
   steam:
     id: 2288340
+"Ace Combat Zero: The Belkan War":
+  id:
+    steamExtra:
+      - 3635880
+  steam:
+    id: 2288340
 "Ace Combat: Assault Horizon - Enhanced Edition":
   cloud:
     steam: true
@@ -23986,6 +23992,7 @@ Age of Empires III:
       - 2154361
       - 2154362
       - 2477660
+      - 4308600
   installDir:
     AoE3DE: {}
   launch:
@@ -59309,6 +59316,12 @@ Avast Ye:
   steam:
     id: 1064170
 "Avatar Legends: The Fighting Game":
+  installDir:
+    Avatar Legends The Fighting Game: {}
+  launch:
+    "<base>/Atla.exe":
+      - when:
+          - store: steam
   steam:
     id: 2424420
 Avatar of the Wolf:
@@ -68629,6 +68642,10 @@ Barbie in the 12 Dancing Princesses:
         - os: windows
   id:
     lutris: barbie-in-the-12-dancing-princesses--1
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/Mattel/Barbie (TM)/Barbie (TM) In The 12 Dancing Princesses:
+      tags:
+        - config
 "Barbie: Project Friendship":
   cloud:
     epic: true
@@ -121767,6 +121784,11 @@ Cataclismo:
         - os: windows
   gog:
     id: 1966220998
+  id:
+    gogExtra:
+      - 1992101679
+    steamExtra:
+      - 4396100
   installDir:
     Cataclismo: {}
   launch:
@@ -152123,6 +152145,29 @@ Corsair Cove:
     lutris: corsair-cove
   steam:
     id: 1368140
+Corsairs Legacy:
+  files:
+    "<home>/AppData/LocalLow/Mauris/Corsairs Legacy/Saves":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Library/Application Support/Mauris/Corsairs Legacy/Saves":
+      when:
+        - os: mac
+          store: steam
+    "<xdgData>/unity3d/Mauris/Corsairs Legacy/Saves":
+      when:
+        - os: linux
+          store: steam
+  installDir:
+    Corsairs Legacy: {}
+  launch:
+    "<base>/Corsairs Legacy.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1594880
 "Corsairs: Battle of the Caribbean":
   cloud:
     gog: true
@@ -164524,6 +164569,8 @@ Cubic Odyssey:
         - config
       when:
         - os: windows
+  gog:
+    id: 1715513898
   installDir:
     Cubic Odyssey: {}
   launch:
@@ -165225,6 +165272,8 @@ Cultic:
   id:
     lutris: cultic
     steamExtra:
+      - 1714870
+      - 2176420
       - 3918090
   installDir:
     CULTIC: {}
@@ -175943,15 +175992,55 @@ Darkstone:
     id: 320320
 Darkstone Restoration:
   files:
-    "<base>/config/option.txt;keyboard.txt;seed.txt;quest.txt":
+    "<base>/Quest/*.mtf":
+      when:
+        - store: steam
+    "<base>/config/glyphcache.bin":
+      when:
+        - store: steam
+    "<base>/config/keyboard.txt":
+      when:
+        - store: steam
+    "<base>/config/quest.txt":
+      when:
+        - store: steam
+    "<base>/config/seed.txt":
+      when:
+        - store: steam
+    "<base>/config/tactics/*.js":
+      when:
+        - store: steam
+    "<base>/config/user_keyboard.txt":
+      when:
+        - store: steam
+    "<base>/config/user_prefs.txt":
       when:
         - store: steam
     "<base>/gamepad_settings.ini":
       when:
         - store: steam
-    "<base>/save/**":
+    "<base>/save/characters/*.lpl":
       when:
         - store: steam
+    "<base>/save/games/*.sav":
+      when:
+        - store: steam
+    "<base>/skin/**/*.tga":
+      when:
+        - store: steam
+    "<base>/temp/**/*.MLV":
+      when:
+        - store: steam
+    "<base>/temp/**/*.SAV":
+      when:
+        - store: steam
+  gog:
+    id: 1180637450
+  id:
+    gogExtra:
+      - 1185833168
+    steamExtra:
+      - 4716570
   installDir:
     DarkStone Restoration: {}
   launch:
@@ -198927,10 +199016,23 @@ DinoTrek:
   steam:
     id: 925170
 Dinoblade:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/DinobladeGame/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: dinoblade
     steamExtra:
       - 4106740
+  installDir:
+    DinobladeGame: {}
+  launch:
+    "<base>/DinobladeGame.exe":
+      - when:
+          - store: steam
   steam:
     id: 3440070
 Dinobreak:
@@ -200470,6 +200572,15 @@ Disgaea 6 Complete:
   steam:
     id: 2250600
 Disgaea Mayhem:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Nippon Ichi Software, Inc/Disgaea Mayhem/<storeUserId>":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   steam:
     id: 4402250
 Disgaea PC:
@@ -212148,6 +212259,14 @@ DragonStrike:
   id:
     steamExtra:
       - 4575730
+  installDir:
+    DragonSword  Awakening: {}
+  launch:
+    "<base>/DSClient.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4570720
 DragonWingsVR:
@@ -312710,6 +312829,7 @@ Grim Dawn:
       - 1353691821
       - 1536648751
       - 1551979801
+      - 1700702378
       - 1812959072
       - 1842678741
       - 2004748256
@@ -322039,6 +322159,12 @@ Halo Online:
   steam:
     id: 459220
 "Halo: Campaign Evolved":
+  installDir:
+    Halo Campaign Evolved: {}
+  launch:
+    "<base>/Meteorite/Binaries/Win64/HaloCampaignEvolved.exe":
+      - when:
+          - store: steam
   steam:
     id: 2806050
 "Halo: Combat Evolved":
@@ -368411,6 +368537,9 @@ Intravenous 2:
             store: steam
   steam:
     id: 2651330
+Intravenous 3:
+  steam:
+    id: 4383190
 Intrepid Izzy:
   cloud:
     steam: true
@@ -387646,6 +387775,13 @@ Killing Floor 3:
         - os: windows
   id:
     lutris: killing-floor-3
+    steamExtra:
+      - 2843460
+      - 2843470
+      - 3271050
+      - 3374910
+      - 3526590
+      - 3547480
   installDir:
     Nightfall: {}
   launch:
@@ -448605,6 +448741,8 @@ Metal Gear Survive:
   steam:
     id: 543900
 "Metal Gear: Ghost Babel - Master Collection Version":
+  cloud:
+    steam: true
   id:
     steamExtra:
       - 3859630
@@ -450028,6 +450166,48 @@ Metro Gravity:
           - store: steam
   steam:
     id: 2986450
+Metro Quester:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/KEMCO/METRO QUESTER/Steam/<storeUserId>":
+      when:
+        - os: windows
+          store: steam
+  gog:
+    id: 1396720145
+  id:
+    lutris: metro-quester
+  installDir:
+    METRO QUESTER: {}
+  launch:
+    "<base>/METRO QUESTER.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4402650
+"Metro Quester: Osaka":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/KEMCO/METRO QUESTER OSAKA/Steam/<storeUserId>":
+      when:
+        - os: windows
+          store: steam
+  gog:
+    id: 1418418312
+  id:
+    lutris: metro-quester-osaka
+  installDir:
+    METRO QUESTER  OSAKA: {}
+  launch:
+    "<base>/METRO QUESTER OSAKA.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4402660
 Metro Sim Hustle:
   cloud:
     steam: true
@@ -535652,6 +535832,8 @@ Pixel War:
 Pixel Washer:
   id:
     lutris: pixel-washer
+    steamExtra:
+      - 3145410
   steam:
     id: 2572060
 Pixel World:
@@ -576386,16 +576568,27 @@ Redout:
     gog: true
     steam: true
   files:
+    "<base>/Saved/SaveGames/RC_RedoutCareer_<storeUserId>.sav":
+      tags:
+        - save
+      when:
+        - store: steam
     "<winLocalAppData>/redout/Saved/Config/WindowsNoEditor":
       tags:
         - config
       when:
         - os: windows
-    "<winLocalAppData>/redout/Saved/SaveGames":
+    "<winLocalAppData>/redout/Saved/SaveGames/GameOptions.sav":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/redout/Saved/SaveGames/Profile/RC_RedoutCareer.sav":
       tags:
         - save
       when:
         - os: windows
+          store: gog
   gog:
     id: 1844570543
   installDir:
@@ -596553,6 +596746,8 @@ Romancing SaGa 3:
         - save
       when:
         - os: windows
+  gog:
+    id: 1771131491
   installDir:
     RomancingSaGa3: {}
   launch:
@@ -605540,6 +605735,8 @@ SaGa Frontier Remastered:
     "<winDocuments>/My Games/SaGa Frontier Remastered/Steam/<storeUserId>/SaveData":
       when:
         - store: steam
+  gog:
+    id: 1285067447
   installDir:
     SaGa Frontier Remastered: {}
   launch:
@@ -778166,10 +778363,41 @@ Tormentor X Punisher:
 Tormentum II:
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/OhNoo Studio/Tormentum II/*.jpg":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/OhNoo Studio/Tormentum II/*.save":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/OhNoo Studio/Tormentum II/*.jpg":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/OhNoo Studio/Tormentum II/*.save":
+      when:
+        - os: mac
+          store: steam
   id:
     lutris: tormentum-ii
     steamExtra:
       - 4733980
+  installDir:
+    Tormentum II: {}
+  launch:
+    "<base>/Tormentum II.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Tormentum II.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/Tormentum II.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
   steam:
     id: 931060
 "Tormentum: Dark Sorrow":
@@ -783756,6 +783984,11 @@ Trails in the Sky 1st Chapter:
             store: steam
   steam:
     id: 3375780
+Trails in the Sky 2nd Chapter:
+  cloud:
+    steam: true
+  steam:
+    id: 4225980
 Trails of the Black Sun:
   installDir:
     Trails of the Black Sun: {}
@@ -821004,6 +821237,17 @@ WWII - TD:
   steam:
     id: 913960
 WWII Tank Commander:
+  files:
+    "<base>/data/profiles":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/data/settings":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: wwii-tank-commander
 WWII英雄列伝 最強の虎 クルト・クニスペル:
@@ -855422,6 +855666,35 @@ Ys Seven:
           - store: steam
   steam:
     id: 3949290
+"Ys vs. Trails in the Sky: Alternative Saga":
+  cloud:
+    epic: true
+    gog: true
+    steam: true
+  files:
+    "<home>/Saved Games/Falcom/YsVsSora/**/*.dat":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Saved Games/Falcom/YsVsSora/**/*.png":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Saved Games/Falcom/YsVsSora/**/*.txt":
+      when:
+        - os: windows
+          store: steam
+  gog:
+    id: 1566737619
+  installDir:
+    Ys vs. Trails in the Sky Alternative Saga: {}
+  launch:
+    "<base>/ys_vs_ed.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1794880
 "Ys: Memories of Celceta":
   cloud:
     gog: true
