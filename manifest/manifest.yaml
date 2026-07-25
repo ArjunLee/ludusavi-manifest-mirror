@@ -48140,6 +48140,17 @@ Arma Tactics:
   steam:
     id: 65790
 "Arma: Cold War Assault Remastered":
+  files:
+    "<home>/AppData/Roaming/CWR":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<home>/AppData/Roaming/CWR/Users":
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 1207658661
   installDir:
@@ -53198,6 +53209,18 @@ Assault Suit Leynos:
             store: steam
   steam:
     id: 441350
+Assault Trooper:
+  files:
+    "<base>/Assault.cfg":
+      tags:
+        - config
+      when:
+        - os: dos
+    "<base>/Assault.sav":
+      tags:
+        - save
+      when:
+        - os: dos
 Assault of the Robots:
   installDir:
     Assault of the Robots: {}
@@ -89942,6 +89965,9 @@ Blink the Bulb:
     steam: true
   steam:
     id: 991290
+"Blinx: The Time Sweeper":
+  id:
+    lutris: blinx-the-time-sweeper
 Blippo+:
   cloud:
     steam: true
@@ -201359,6 +201385,8 @@ Disparity:
   steam:
     id: 715460
 Dispatch:
+  alias: Dispatch (2020)
+Dispatch (2020):
   steam:
     id: 1208740
 Dispatch (2025):
@@ -214312,6 +214340,17 @@ Dream Pets VR:
   steam:
     id: 738350
 Dream Pinball 3D:
+  files:
+    "<winAppData>/dp3d/res.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winAppData>/dp3d/score*.dat":
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 1207658899
   id:
@@ -343029,10 +343068,30 @@ Hollywood Animal:
       when:
         - os: windows
           store: steam
+    "<home>/AppData/LocalLow/Weappy/Hollywood Animal/Saves":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Weappy/Holly/Saves":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/com.Weappy.Hollywood-Animal/Saves":
+      when:
+        - os: mac
+          store: steam
   gog:
     id: 1384360709
   installDir:
     Hollywood Animal: {}
+  launch:
+    "<base>/Hollywood Animal.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Hollywood Animal.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2680550
 Hollywood Visionary:
@@ -438684,6 +438743,8 @@ Marvel Snap:
   steam:
     id: 1997040
 "Marvel Tōkon: Fighting Souls":
+  cloud:
+    steam: true
   id:
     lutris: marvel-tokon-fighting-souls
   steam:
@@ -473357,6 +473418,24 @@ My Futanari Stepmom Impregnated Me:
     id: 2152090
 My Game City:
   alias: 911 FR
+My Garage:
+  files:
+    "<home>/AppData/LocalLow/Viking/My Garage":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    My Garage: {}
+  launch:
+    "<base>/My Garage.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1578390
 My Giant Friend:
   alias: Giant Wishes
 My Girlfriend is a Futanari:
@@ -563498,6 +563577,18 @@ REDO!:
   steam:
     id: 950300
 REDRIVER 2:
+  alias: REDriver2
+REDVIIL:
+  installDir:
+    Redvil: {}
+  launch:
+    "<base>/Redvil.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1013410
+REDriver2:
   files:
     "<base>/config.ini":
       tags:
@@ -563509,16 +563600,6 @@ REDRIVER 2:
         - save
       when:
         - os: windows
-REDVIIL:
-  installDir:
-    Redvil: {}
-  launch:
-    "<base>/Redvil.exe":
-      - when:
-          - os: windows
-            store: steam
-  steam:
-    id: 1013410
 REFUGE:
   installDir:
     REFUGE: {}
@@ -576578,11 +576659,18 @@ Redout:
         - config
       when:
         - os: windows
+    "<winLocalAppData>/redout/Saved/Options/GameOptions.sav":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
     "<winLocalAppData>/redout/Saved/SaveGames/GameOptions.sav":
       tags:
         - config
       when:
         - os: windows
+          store: gog
     "<winLocalAppData>/redout/Saved/SaveGames/Profile/RC_RedoutCareer.sav":
       tags:
         - save
@@ -736991,6 +737079,17 @@ The Immortal:
             store: steam
   steam:
     id: 1539080
+The Imperial Capital Burns - Muv-Luv Alternative Total Eclipse:
+  installDir:
+    The Imperial Capital Burns: {}
+  launch:
+    "<base>/tm-win64vc14-release.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2630300
 The Imperial Gatekeeper:
   cloud:
     gog: true
@@ -752841,6 +752940,8 @@ The Room:
         - config
       when:
         - store: steam
+  id:
+    lutris: the-room--1
   installDir:
     TheRoom: {}
   launch:
@@ -752939,6 +753040,8 @@ The Room Two:
         - save
       when:
         - os: windows
+  id:
+    lutris: the-room-two
   installDir:
     TheRoomTwo: {}
   launch:
@@ -776220,6 +776323,9 @@ Tomb Raider I–III Remastered:
         - config
   steam:
     id: 8000
+"Tomb Raider: Catalyst":
+  id:
+    lutris: tomb-raider-catalyst
 "Tomb Raider: Chronicles":
   files:
     "<base>/savegame.*":
@@ -834552,6 +834658,12 @@ Wheels of Aurelia:
   steam:
     id: 508740
 Wheely:
+  files:
+    "<winAppData>/com.manapotionstudios.WheelySteam/Local Store/#SharedObjects":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Wheely: {}
   launch:
