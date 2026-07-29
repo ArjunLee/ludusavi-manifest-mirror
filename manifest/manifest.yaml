@@ -20585,6 +20585,17 @@ Adventure Land - The Code MMORPG:
   steam:
     id: 777150
 Adventure Park:
+  files:
+    "<winDocuments>/b-alive/Adventure Park/Save":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winDocuments>/b-alive/Adventure Park/Settings":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: adventure-park
   installDir:
@@ -104858,6 +104869,17 @@ Broken Reality:
 Broken Reality 2000:
   id:
     lutris: broken-reality-2000
+  installDir:
+    Broken Reality 2000: {}
+  launch:
+    "<base>/Broken Reality 2000.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Broken Reality 2000.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2133850
 Broken Roads:
@@ -140308,9 +140330,11 @@ Clue/Cluedo:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Marmalade Game Studio/Cluedo/<storeUserId>/**/*.c2":
+    "<home>/AppData/LocalLow/Marmalade Game Studio/Cluedo":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   installDir:
     ClueCluedo: {}
   launch:
@@ -176176,49 +176200,34 @@ Darkstone:
   steam:
     id: 320320
 Darkstone Restoration:
+  cloud:
+    steam: true
   files:
-    "<base>/Quest/*.mtf":
+    "<base>/config/*.txt":
+      tags:
+        - config
       when:
-        - store: steam
+        - os: windows
     "<base>/config/glyphcache.bin":
+      tags:
+        - config
       when:
-        - store: steam
-    "<base>/config/keyboard.txt":
-      when:
-        - store: steam
-    "<base>/config/quest.txt":
-      when:
-        - store: steam
-    "<base>/config/seed.txt":
-      when:
-        - store: steam
-    "<base>/config/tactics/*.js":
-      when:
-        - store: steam
-    "<base>/config/user_keyboard.txt":
-      when:
-        - store: steam
-    "<base>/config/user_prefs.txt":
-      when:
-        - store: steam
+        - os: windows
     "<base>/gamepad_settings.ini":
+      tags:
+        - config
       when:
-        - store: steam
-    "<base>/save/characters/*.lpl":
-      when:
-        - store: steam
+        - os: windows
     "<base>/save/games/*.sav":
+      tags:
+        - save
       when:
-        - store: steam
-    "<base>/skin/**/*.tga":
+        - os: windows
+    "<base>/temp/*.SAV":
+      tags:
+        - save
       when:
-        - store: steam
-    "<base>/temp/**/*.MLV":
-      when:
-        - store: steam
-    "<base>/temp/**/*.SAV":
-      when:
-        - store: steam
+        - os: windows
   gog:
     id: 1180637450
   id:
@@ -273187,11 +273196,6 @@ Flower:
         - config
       when:
         - os: windows
-    "<winDocuments>/Flower/SAVEGAME.BIN":
-      tags:
-        - save
-      when:
-        - os: windows
     "<winLocalAppData>/GOG.com/Galaxy/Applications/51964741675694916/Storage/Shared/Files/SAVEGAME.BIN":
       tags:
         - save
@@ -322481,6 +322485,12 @@ Halo Online:
         - save
       when:
         - os: windows
+  id:
+    lutris: halo-campaign-evolved
+    steamExtra:
+      - 4073600
+      - 4192200
+      - 4485640
   installDir:
     Halo Campaign Evolved: {}
   launch:
@@ -376056,6 +376066,8 @@ Jay Walker:
   steam:
     id: 937320
 "Jay and Silent Bob: Chronic Blunt Punch":
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/Interabang Entertainment/Jay and Silent Bob_ Chronic Blunt Punch/*.jasbs":
       when:
@@ -376289,6 +376301,10 @@ Jekyll & Hyde:
         - save
       when:
         - os: windows
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/Cryo/Jekyll:
+      tags:
+        - config
 Jelly Blocks:
   installDir:
     Jelly Blocks: {}
@@ -574493,6 +574509,11 @@ Recompile:
         - config
   steam:
     id: 986310
+Reconfigure:
+  id:
+    lutris: reconfigure
+  steam:
+    id: 3989530
 Reconquest:
   installDir:
     reconquest: {}
@@ -576047,6 +576068,9 @@ Red Ocean:
   steam:
     id: 498630
 "Red Recon: 1944":
+  id:
+    steamExtra:
+      - 4711560
   steam:
     id: 3170130
 Red Riding Hood - Star Crossed Lovers:
@@ -628746,13 +628770,12 @@ Shift At Midnight:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Kwalee/ShiftAtMidnight/*.data":
+    "<winLocalAppData>Low/Kwalee/ShiftAtMidnight":
+      tags:
+        - config
+        - save
       when:
-        - store: steam
-    "<xdgData>/Kwalee/ShiftAtMidnight/*.data":
-      when:
-        - os: linux
-          store: steam
+        - os: windows
   id:
     lutris: shift-at-midnight
     steamExtra:
@@ -670852,6 +670875,8 @@ Star Trek Timelines:
     steamExtra:
       - 4054540
       - 4063520
+      - 4861560
+      - 4873370
   installDir:
     Star Trek Voyager - Across the Unknown: {}
   launch:
@@ -728621,6 +728646,12 @@ The Dew:
   steam:
     id: 692950
 The Diamond Mystery of Rosemond Valley:
+  files:
+    "<base>/sg_*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
   registry:
     HKEY_LOCAL_MACHINE/SOFTWARE/Liquid/RVP:
       tags:
@@ -741902,6 +741933,17 @@ The Last Starship:
   cloud:
     gog: true
     steam: true
+  files:
+    "<winLocalAppData>/Introversion/LastStarship/saves":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Introversion/LastStarship/ships":
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 1883654816
   installDir:
@@ -755434,6 +755476,10 @@ The Shadow of Zorro:
         - config
       when:
         - os: windows
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/Cryo/Zorro:
+      tags:
+        - config
 The Shadowland:
   installDir:
     The Shadowland: {}
@@ -782649,6 +782695,7 @@ Tower of Guns:
     id: 266110
 Tower of Kalemonvo:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/osur/Tower of Kalemonvo/*.dat":
@@ -782656,6 +782703,8 @@ Tower of Kalemonvo:
         - save
       when:
         - os: windows
+  gog:
+    id: 1186556064
   id:
     lutris: tower-of-kalemonvo
   installDir:
