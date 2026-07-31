@@ -23955,6 +23955,7 @@ Age of Empires II (2013):
       - 3080080
       - 3219700
       - 3793540
+      - 4376980
   installDir:
     AoE2DE: {}
   launch:
@@ -74947,6 +74948,15 @@ Beanotown Racing:
             store: steam
   steam:
     id: 549240
+Bear Bovver:
+  installDir:
+    Bear Bovver: {}
+  launch:
+    "<base>/game.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2094200
 Bear Football:
   installDir:
     Bear Football: {}
@@ -79198,6 +79208,7 @@ Besiege:
     steamExtra:
       - 2165710
       - 2959970
+      - 3639470
   installDir:
     Besiege: {}
   launch:
@@ -82453,15 +82464,13 @@ Bills Must Be Paid:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Rike Games/Bills Must Be Paid/FullGame/save.json":
+    "<home>/AppData/LocalLow/Rike Games/Bills Must Be Paid/FullGame":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
-    "<home>/Library/Application Support/Rike Games/Bills Must Be Paid/FullGame/save.json":
-      when:
-        - os: mac
-          store: steam
   id:
+    lutris: bills-must-be-paid
     steamExtra:
       - 4577620
   installDir:
@@ -147490,6 +147499,7 @@ Company of Heroes 3:
       - 3469800
       - 4095900
       - 4523380
+      - 4836540
   installDir:
     Company of Heroes 3: {}
   launch:
@@ -159698,6 +159708,13 @@ Croc 2:
     HKEY_LOCAL_MACHINE/SOFTWARE/Argonaut Software/Croc2/1.00:
       tags:
         - config
+"Croc 2: Kingdom of the Gobbos":
+  cloud:
+    steam: true
+  gog:
+    id: 1402283956
+  steam:
+    id: 4198360
 "Croc's World Construction Kit":
   installDir:
     "Croc's World Construction Kit": {}
@@ -198989,6 +199006,11 @@ Dino Crisis:
   cloud:
     gog: true
   files:
+    "<base>/*/SAVE*.dns":
+      tags:
+        - save
+      when:
+        - store: steam
     "<base>/SAVE*.dno":
       tags:
         - save
@@ -212556,6 +212578,8 @@ DragonStrike:
   steam:
     id: 2350520
 "DragonSword : Awakening":
+  alias: "DragonSword: Awakening"
+"DragonSword: Awakening":
   cloud:
     steam: true
   files:
@@ -212571,6 +212595,7 @@ DragonStrike:
       when:
         - os: windows
   id:
+    lutris: dragonsword-awakening
     steamExtra:
       - 4575730
   installDir:
@@ -286636,6 +286661,12 @@ Fumes:
         - config
       when:
         - os: windows
+  id:
+    lutris: fumes
+    steamExtra:
+      - 2255190
+      - 3868400
+      - 3868660
   installDir:
     FUMES: {}
   launch:
@@ -287000,11 +287031,11 @@ Funky Karts:
             store: steam
   steam:
     id: 872690
-Funnel runners:
+Funnel Runners:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/StormEscape/Saved/Config/Windows/GameUserSettings.ini":
+    "<winLocalAppData>/StormEscape/Saved/Config/Windows":
       tags:
         - config
       when:
@@ -315934,6 +315965,7 @@ Guild Wars:
       - 29700
       - 29710
       - 4103450
+      - 4103460
   installDir:
     Guild Wars: {}
   launch:
@@ -408820,6 +408852,7 @@ Lessaria:
     steamExtra:
       - 3976470
       - 4075280
+      - 4915900
   installDir:
     Lessaria: {}
   launch:
@@ -416264,6 +416297,8 @@ Live for Speed:
         - config
       when:
         - os: windows
+  id:
+    lutris: live-for-speed
 Live the Guitar:
   installDir:
     Live the Guitar: {}
@@ -429456,6 +429491,19 @@ Machine Hunt:
 Machine Party:
   id:
     lutris: machine-party
+  installDir:
+    party project: {}
+  launch:
+    "<base>/Machine Party_Linux/Machine Party.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/Machine Party_Windows/Machine Party.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4108000
 Machine World 2:
@@ -443305,15 +443353,17 @@ Meawja:
   steam:
     id: 679910
 Meccha Chameleon:
+  cloud:
+    steam: true
   files:
-    "<winLocalAppData>/Chameleon/Config/Windows":
-      tags:
-        - config
-      when:
-        - os: windows
     "<winLocalAppData>/Chameleon/SaveGames":
       tags:
         - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Chameleon/Saved/Config/Windows":
+      tags:
+        - config
       when:
         - os: windows
   installDir:
@@ -459099,6 +459149,17 @@ Mistfal:
 Mistfall Hunter:
   id:
     lutris: mistfall-hunter
+    steamExtra:
+      - 4572310
+  installDir:
+    Mistfall Hunter: {}
+  launch:
+    "<base>/MistfallHunter.exe":
+      - arguments: "-steam"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3282300
 Mistmare:
@@ -500072,6 +500133,7 @@ OTTTD:
     id: 312630
 OTXO:
   cloud:
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/OTXO_Release/Save*":
@@ -611106,6 +611168,8 @@ Sandy Path:
   id:
     lutris: sandys-circus-adventure
 "Sang-Froid: Tales of Werewolves":
+  cloud:
+    steam: true
   files:
     "<winProgramData>/sangFroidData":
       tags:
@@ -731221,6 +731285,9 @@ The Even More Incredible Machine:
   id:
     gogExtra:
       - 1207658799
+The Eventide:
+  steam:
+    id: 4038610
 The Evil Party:
   installDir:
     The Evil Party: {}
@@ -766678,6 +766745,9 @@ Thimbleweed Park:
             store: steam
   steam:
     id: 569860
+Thimbleweed Park 2:
+  steam:
+    id: 4932120
 Thin Judgment:
   installDir:
     Thin Judgment: {}
@@ -802716,6 +802786,8 @@ UnderMine:
       when:
         - os: windows
           store: microsoft
+  gog:
+    id: 1171949848
   installDir:
     UnderMine: {}
   launch:
