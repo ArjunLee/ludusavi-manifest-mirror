@@ -14307,6 +14307,16 @@ AKAI NOROI:
 ALARA Prime:
   steam:
     id: 971700
+"ALFA: Antiterror":
+  installDir:
+    ALFA Antiterror: {}
+  launch:
+    "<base>/run.CMD":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4566780
 "ALIA's CARNIVAL！":
   alias: "Alia's Carnival!"
 ALIEN FIELD:
@@ -27704,6 +27714,27 @@ Airport Tycoon 3:
   steam:
     id: 317250
 Airship Asunder:
+  files:
+    "<winLocalAppData>/Airship_Asunder/*.ccm":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Airship_Asunder/*.cpd":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Airship_Asunder/aa_options.cdd":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Airship_Asunder/aa_server.csd":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Airship Asunder: {}
   launch:
@@ -31249,6 +31280,11 @@ Alien Shooter TD:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/SigmaTeam/AlienShooterDefencePC:
+      tags:
+        - config
+        - save
   steam:
     id: 541230
 Alien Shooter in Space Cradle - Virtual Reality:
@@ -32282,6 +32318,22 @@ All Is Dust:
   steam:
     id: 373330
 All My Gods:
+  files:
+    "<winAppData>/Realore All My Gods/*.dat":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Realore All My Gods/*.ini":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Realore All My Gods/profile.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     All My Gods: {}
   launch:
@@ -36854,6 +36906,8 @@ Among the Sleep:
         - os: linux
   gog:
     id: 1207664603
+  id:
+    lutris: among-the-sleep
   installDir:
     Among the Sleep: {}
   launch:
@@ -94279,6 +94333,18 @@ Blue Reflection:
 Blue Reflection Quartet:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/KoeiTecmo/BLUE REFLECTION Quartet":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    BLUE REFLECTION Quartet: {}
+  launch:
+    "<base>/BLUE REFLECTION Quartet.exe":
+      - when:
+          - store: steam
   steam:
     id: 3825390
 "Blue Reflection: Second Light":
@@ -152372,9 +152438,29 @@ Corruption of Champions II:
     id: 1292690
 Corsair Cove:
   cloud:
+    epic: true
     steam: true
+  files:
+    "<winLocalAppData>/CorsairCove/Saved/SaveGames/SteamMain_<storeUserId>/*.ccgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/CorsairCove/Saved/SaveGames/SteamMain_<storeUserId>/*.ccprof":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: corsair-cove
+  installDir:
+    CorsairCove: {}
+  launch:
+    "<base>/CorsairCove.exe":
+      - when:
+          - store: steam
   steam:
     id: 1368140
 Corsairs Legacy:
@@ -262026,6 +262112,8 @@ Fates of Ort:
 Father:
   id:
     lutris: father--2
+    steamExtra:
+      - 4033200
   steam:
     id: 2588830
 Father Xmas:
@@ -264819,18 +264907,29 @@ Fields of Mistria:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/FieldsOfMistria":
-      tags:
-        - config
-      when:
-        - os: windows
     "<winLocalAppData>/FieldsOfMistria/saves":
       tags:
         - save
       when:
         - os: windows
+    "<winLocalAppData>/FieldsOfMistria/settings.json":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     Fields of Mistria: {}
+  launch:
+    "<base>/FieldsOfMistria":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/FieldsOfMistria.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2142790
 Fiend:
@@ -313289,6 +313388,11 @@ Grim Dawn:
   installDir:
     Grim Dawn: {}
   launch:
+    "<base>/compat/grim dawn.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
     "<base>/grim dawn.exe":
       - when:
           - os: windows
@@ -384507,9 +384611,11 @@ Kardboard Kings:
     gog: true
     steam: true
   files:
-    "<home>/AppData/LocalLow/Henry's House/Kardboard Kings/*.game":
+    "<home>/AppData/LocalLow/Henry's House/Kardboard Kings":
+      tags:
+        - config
       when:
-        - store: steam
+        - os: windows
   gog:
     id: 1590022488
   id:
@@ -471883,6 +471989,13 @@ Muri:
             store: steam
   steam:
     id: 267360
+"Muri: Wildwoods":
+  id:
+    lutris: muri-wildwoods
+    steamExtra:
+      - 4159740
+  steam:
+    id: 3284200
 Murica:
   steam:
     id: 779000
@@ -477107,6 +477220,17 @@ Mystic Melee:
             store: steam
   steam:
     id: 454770
+"Mystic Midway: Rest in Pieces":
+  installDir:
+    Mystic Midway - Rest in Pieces: {}
+  launch:
+    "<base>/DOSBox.exe":
+      - arguments: "-conf \"RIP.conf\" -noconsole"
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1382890
 Mystic Miracles:
   installDir:
     Mystic Miracles - Strategy card board game: {}
@@ -543614,6 +543738,31 @@ Pool 2D - Poolians:
             store: steam
   steam:
     id: 891040
+Pool Blitz:
+  files:
+    "<winLocalAppData>/Pool/Saved/Config/WinGDK":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: microsoft
+    "<winLocalAppData>/PoolBlitz/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Pool Blitz: {}
+  launch:
+    "<base>/Pool.exe":
+      - arguments: "-CPGDir=PoolBlitz"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3942580
 Pool Cleaning Simulator:
   id:
     lutris: pool-cleaning-simulator
@@ -635266,6 +635415,17 @@ Silent Hunter 2:
   steam:
     id: 15200
 "Silent Hunter 5: Battle of the Atlantic":
+  files:
+    "<winDocuments>/SH5/data/cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winDocuments>/SH5/data/cfg/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Silent Hunter 5: {}
   launch:
@@ -646927,6 +647087,8 @@ Sniper Elite VR:
         - config
       when:
         - os: windows
+        - os: windows
+          store: microsoft
     "<winLocalAppData>/Sniper Elite Resistance/PC_ProfileSaves":
       tags:
         - save
@@ -687706,6 +687868,15 @@ Suchawira World Traveler:
   steam:
     id: 1574270
 Sudden Attack Zero Point:
+  installDir:
+    SAZ: {}
+  launch:
+    "<base>/SAZLauncher.exe":
+      - arguments: "--AppID=3576070"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3576070
 Sudden Strike:
@@ -731263,6 +731434,12 @@ The Eternal Cylinder:
 The Eternal Life of Goldman:
   steam:
     id: 2254950
+The Eternal Woods:
+  id:
+    steamExtra:
+      - 4669500
+  steam:
+    id: 4509630
 The Even More Incredible Machine:
   files:
     "<base>/*.TIM":
@@ -753057,8 +753234,22 @@ The Relentless:
   steam:
     id: 695910
 "The Relic: First Guardian":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/ProjectCloudGame/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
   id:
     lutris: the-relic-first-guardian
+    steamExtra:
+      - 4891540
+  installDir:
+    The Relic The First Guardian: {}
+  launch:
+    "<base>/ProjectCloudGame.exe":
+      - when:
+          - store: steam
   steam:
     id: 2827820
 The Renegades of Orion 2.0:
@@ -772728,6 +772919,8 @@ Tiny Bunny:
   steam:
     id: 1421250
 Tiny Chills - Not From Ear:
+  id:
+    lutris: tiny-chills-not-from-ear
   steam:
     id: 3878740
 Tiny Combat Arena:
@@ -835161,6 +835354,9 @@ What if George Washington was a Girl?:
             store: steam
   steam:
     id: 2098470
+What the Buck?!:
+  steam:
+    id: 4832970
 What the Car?:
   cloud:
     steam: true
