@@ -33334,6 +33334,10 @@ Along the Edge:
         - config
       when:
         - os: windows
+  gog:
+    id: 1604204642
+  id:
+    lutris: along-the-edge
   installDir:
     Along the Edge: {}
   launch:
@@ -80087,7 +80091,8 @@ Beware Planet Earth:
     Beware Planet Earth!: {}
   launch:
     "<base>/BewarePlanetEarth_Steam.exe":
-      - when:
+      - arguments: "-NoLinks"
+        when:
           - store: steam
   steam:
     id: 267340
@@ -100471,6 +100476,24 @@ Boxes Inc.:
             store: steam
   steam:
     id: 851820
+"Boxes: Lost Fragments":
+  files:
+    "<home>/AppData/LocalLow/Big Loop Studios/Boxes Lost Fragments/*.dat":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: boxes
+    steamExtra:
+      - 2300500
+  installDir:
+    Boxes: {}
+  launch:
+    "<base>/Boxes Lost Fragments.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2019810
 BoxesWithGuns:
   installDir:
     "Indie-Dev\\BoxesWithGuns\\": {}
@@ -317950,6 +317973,8 @@ Gunmetal Arcadia Zero:
   steam:
     id: 555610
 Gunmetal Gothic:
+  id:
+    lutris: gunmetal-gothic
   steam:
     id: 2248150
 GunnRunner:
@@ -322953,7 +322978,12 @@ Halo Online:
     id: 459220
 "Halo: Campaign Evolved":
   files:
-    "<winLocalAppData>/Meteorite/Saved/Config":
+    "<winLocalAppData>/Meteorite/Saved/Config/<storeUserId>":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Meteorite/Saved/Config/Windows/GameUserSettings.ini":
       tags:
         - config
       when:
@@ -734764,6 +734794,30 @@ The Gameshow:
             store: steam
   steam:
     id: 960610
+The Gap:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/TheGap/Saved/Config":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/TheGap/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    The Gap: {}
+  launch:
+    "<base>/TheGap.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1458300
 The Garbage Man:
   steam:
     id: 770570
