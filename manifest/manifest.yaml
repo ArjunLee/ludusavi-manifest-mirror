@@ -4774,9 +4774,8 @@ $1 Ride:
   installDir:
     3on3 FreeStyle Rebound: {}
   launch:
-    "<base>/xldr_3on3FreeStyle_ST_loader_x64.exe":
-      - arguments: "DoubleClutch\\Binaries\\Win64\\DoubleClutch-Win64-Shipping.exe"
-        when:
+    "<base>/DoubleClutch.exe":
+      - when:
           - bit: 64
             os: windows
             store: steam
@@ -75469,80 +75468,21 @@ Beast of Reincarnation:
   cloud:
     steam: true
   files:
-    "<base>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotConfig.sav":
+    "<winAppData>/BeastOfReincarnation/Saved/Config/Windows":
+      tags:
+        - config
       when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotConfigSystem.sav":
+        - os: windows
+    "<winAppData>/BeastOfReincarnation/Saved/SaveGames":
+      tags:
+        - config
+        - save
       when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotMeta.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotMetabup*.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotNormal_*.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotNormal_AutoSave_*.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/borSaveDataConfig.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/borSaveDataConfigSystem.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/borSaveDataMeta.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/borSaveDataMetabup*.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/borSaveDataNormal_*.sav":
-      when:
-        - store: steam
-    "<base>/BeastOfReincarnation/Saved/SaveGames/borSaveDataNormal_AutoSave_*.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotConfig.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotConfigSystem.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotMeta.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotMetabup*.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotNormal_*.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/AibouSaveDataSlotNormal_AutoSave_*.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/borSaveDataConfig.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/borSaveDataConfigSystem.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/borSaveDataMeta.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/borSaveDataMetabup*.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/borSaveDataNormal_*.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames/borSaveDataNormal_AutoSave_*.sav":
-      when:
-        - store: steam
+        - os: windows
   id:
     lutris: beast-of-reincarnation
+    steamExtra:
+      - 4146830
   installDir:
     BeastOfReincarnation: {}
   launch:
@@ -82297,8 +82237,26 @@ Big Tower Tiny Square:
   steam:
     id: 751250
 Big Walk:
+  files:
+    "<home>/AppData/LocalLow/House House/Big Walk":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: big-walk
+  installDir:
+    Big Walk: {}
+  launch:
+    "<base>/Big Walk.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Big Walk.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 1478500
 BigBoy - Visual Crime Novel:
@@ -153232,6 +153190,29 @@ Cosmo story:
 CosmoLands:
   steam:
     id: 445880
+Cosmobreeder Yiffai:
+  cloud:
+    steam: true
+  files:
+    "<base>/cosmo.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/cosmobreeder_options.json":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    Cosmobreeder Yiffai: {}
+  launch:
+    "<base>/CosmobreederYiffai.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3548000
 Cosmochoria:
   cloud:
     steam: true
@@ -238104,11 +238085,6 @@ Endless Legend 2:
   installDir:
     ENDLESS Legend 2: {}
   launch:
-    "<base>/Endless Legend 2.cmd":
-      - when:
-          - bit: 64
-            os: windows
-            store: steam
     "<base>/Endless Legend 2.exe":
       - when:
           - bit: 64
@@ -252716,89 +252692,6 @@ FANTAVISION 202X:
         workingDir: "<base>/fv/Binaries/Win64"
   steam:
     id: 2353280
-"FAR: Changing Tides":
-  cloud:
-    epic: true
-    steam: true
-  files:
-    "<home>/AppData/LocalLow/Okomotive/FarChangingTides":
-      tags:
-        - save
-      when:
-        - os: windows
-    "<winLocalAppData>/Packages/FrontierDevelopmentsPlc.FARChangingTidesWindowsEdi_ft442cafaz8hg/SystemAppData/wgs/<storeUserId>":
-      tags:
-        - save
-      when:
-        - os: windows
-          store: microsoft
-  id:
-    lutris: far-changing-tides
-    steamExtra:
-      - 1684390
-  installDir:
-    FAR Changing Tides: {}
-  launch:
-    "<base>/FarChangingTides.exe":
-      - arguments: "-platform-steam"
-        when:
-          - os: windows
-            store: steam
-  registry:
-    HKEY_CURRENT_USER/Software/Okomotive/FarChangingTides:
-      tags:
-        - config
-  steam:
-    id: 1570010
-"FAR: Lone Sails":
-  cloud:
-    gog: true
-    steam: true
-  files:
-    "<home>/AppData/LocalLow/Okomotive/FarLoneSails":
-      tags:
-        - save
-      when:
-        - os: windows
-    "<home>/Library/Application Support/Okomotive/FarLoneSails":
-      tags:
-        - config
-        - save
-      when:
-        - os: mac
-    "<root>/userdata/<storeUserId>/609320/remote":
-      tags:
-        - save
-      when:
-        - store: steam
-  gog:
-    id: 1736537203
-  id:
-    gogExtra:
-      - 1601925106
-      - 1617205711
-    steamExtra:
-      - 837840
-      - 837841
-  installDir:
-    FAR Lone Sails: {}
-  launch:
-    "<base>/Game/FarLoneSails.app/Contents/MacOS/FarLoneSails":
-      - arguments: "-platform-steam"
-        when:
-          - os: mac
-            store: steam
-    "<base>/Game/FarLoneSails.exe":
-      - arguments: "-platform-steam"
-        when:
-          - os: windows
-            store: steam
-  registry:
-    HKEY_CURRENT_USER/Software/Okomotive/FarLoneSails:
-      tags:
-        - config
-  steam:
-    id: 609320
 "FARIA: Ghosts of the Stream":
   installDir:
     FARIA Ghosts of the Stream: {}
@@ -259464,6 +259357,91 @@ Far-Out:
       - 503850
   steam:
     id: 389860
+"Far: Changing Tides":
+  cloud:
+    epic: true
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Okomotive/FarChangingTides":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Packages/FrontierDevelopmentsPlc.FARChangingTidesWindowsEdi_ft442cafaz8hg/SystemAppData/wgs/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
+  id:
+    lutris: far-changing-tides
+    steamExtra:
+      - 1684390
+  installDir:
+    FAR Changing Tides: {}
+  launch:
+    "<base>/FarChangingTides.exe":
+      - arguments: "-platform-steam"
+        when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Okomotive/FarChangingTides:
+      tags:
+        - config
+  steam:
+    id: 1570010
+"Far: Lone Sails":
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Okomotive/FarLoneSails":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/Library/Application Support/Okomotive/FarLoneSails":
+      tags:
+        - config
+        - save
+      when:
+        - os: mac
+    "<root>/userdata/<storeUserId>/609320/remote":
+      tags:
+        - save
+      when:
+        - store: steam
+  gog:
+    id: 1736537203
+  id:
+    gogExtra:
+      - 1601925106
+      - 1617205711
+    lutris: far-lone-sails
+    steamExtra:
+      - 837840
+      - 837841
+      - 1390550
+  installDir:
+    FAR Lone Sails: {}
+  launch:
+    "<base>/Game/FarLoneSails.app/Contents/MacOS/FarLoneSails":
+      - arguments: "-platform-steam"
+        when:
+          - os: mac
+            store: steam
+    "<base>/Game/FarLoneSails.exe":
+      - arguments: "-platform-steam"
+        when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Okomotive/FarLoneSails:
+      tags:
+        - config
+  steam:
+    id: 609320
 FarSky:
   files:
     "<home>/.FarSky":
@@ -296385,6 +296363,9 @@ Gemstone Keeper:
             store: steam
   steam:
     id: 522080
+Gen Atlas:
+  id:
+    lutris: gen-atlas
 Gender Bender:
   installDir:
     Gender Bender: {}
@@ -315384,6 +315365,13 @@ Growbot:
             store: steam
   steam:
     id: 661680
+Growing My Manhole:
+  id:
+    lutris: growing-my-manhole
+    steamExtra:
+      - 4487700
+  steam:
+    id: 4415120
 Growing Pains:
   cloud:
     steam: true
@@ -387487,7 +387475,13 @@ Kiborg:
       when:
         - os: linux
           store: steam
+  gog:
+    id: 2050916447
   id:
+    gogExtra:
+      - 1089097517
+      - 1379840164
+      - 1882717012
     lutris: kiborg
     steamExtra:
       - 3590420
@@ -418911,6 +418905,13 @@ Loop Hero:
             store: steam
   steam:
     id: 1282730
+Loop Miner:
+  id:
+    lutris: loop-miner
+    steamExtra:
+      - 4765590
+  steam:
+    id: 4715320
 LoopCraft:
   steam:
     id: 871160
@@ -584257,6 +584258,13 @@ Retrowave:
   steam:
     id: 1239690
 Retrowave 2:
+  id:
+    lutris: retrowave-2
+    steamExtra:
+      - 3350730
+      - 3357760
+      - 3420350
+      - 5018950
   installDir:
     Retrowave 2: {}
   launch:
@@ -591549,6 +591557,24 @@ Riverhill Trials:
             store: steam
   steam:
     id: 810460
+"Riviera: The Promised Land":
+  cloud:
+    steam: true
+  files:
+    "<winDocuments>/sting/Riviera/savedata/*.*":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Riviera: {}
+  launch:
+    "<base>/Riviera.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2891280
 Rize of the Summonds:
   installDir:
     RotS: {}
@@ -595933,7 +595959,19 @@ Rogue Point:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/Tango/Saved/SaveGames/*.sav":
+    "<winLocalAppData>/Tango/Saved/SaveGames/CampaignSaveData.sav":
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/Tango/Saved/SaveGames/EULASaveData.sav":
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/Tango/Saved/SaveGames/OperatorProfile.sav":
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/Tango/Saved/SaveGames/TutorialSaveData.sav":
       when:
         - os: windows
           store: steam
@@ -595946,7 +595984,7 @@ Rogue Point:
     Rogue Point: {}
   launch:
     "<base>/Tango.exe":
-      - arguments: splash
+      - arguments: "-dx11"
         when:
           - bit: 64
             os: windows
@@ -610105,6 +610143,17 @@ Sam & Max Hit the Road:
   steam:
     id: 355170
 Sam & Max Save the World:
+  files:
+    "<base>/*.save":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<base>/prefs.prop":
+      tags:
+        - config
+      when:
+        - store: steam
   gog:
     id: 1207659065
   id:
@@ -610147,6 +610196,17 @@ Sam & Max Save the World (2020):
   steam:
     id: 1440440
 "Sam & Max: Beyond Time and Space":
+  files:
+    "<base>/*.save":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<base>/prefs.prop":
+      tags:
+        - config
+      when:
+        - store: steam
   gog:
     id: 1207659064
   id:
@@ -614175,8 +614235,15 @@ Scarlet Deer Inn:
     steam: true
   files:
     "<home>/AppData/LocalLow/Attu Games/Scarlet Deer Inn/SaveData/*.attu":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+    "<home>/Library/Application Support/Attu Games/Scarlet Deer Inn/SaveData":
+      tags:
+        - save
+      when:
+        - os: mac
   id:
     lutris: scarlet-deer-inn
     steamExtra:
@@ -614188,6 +614255,10 @@ Scarlet Deer Inn:
     "<base>/Scarlet Deer Inn.exe":
       - when:
           - os: windows
+            store: steam
+    "<base>/ScarletDeerInn.app/Contents/MacOS/Scarlet Deer Inn":
+      - when:
+          - os: mac
             store: steam
   steam:
     id: 1553260
@@ -645088,6 +645159,11 @@ Sloppy Goat:
     Slordax The Unknown Enemy: {}
   steam:
     id: 1601900
+Slot Grind:
+  id:
+    lutris: slot-grind
+  steam:
+    id: 4619420
 Sloth Quest:
   files:
     "<base>/Lumatap/SlothQuest/*.sav":
@@ -780199,13 +780275,31 @@ Torrente:
         - os: windows
   id:
     lutris: torrente
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Virtual Toys/Torrente Gold USA:
+      tags:
+        - config
 "Torrente 3: The Protector":
   files:
-    "<base>/datos/profiles":
+    "<base>/GAMEOPTIONS.OPT":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/INPUT.CFG":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/datos/profiles/<storeUserId>.T3":
       tags:
         - save
       when:
         - os: windows
+  registry:
+    "HKEY_CURRENT_USER/Virgin Play/Torrente 3: El Protector":
+      tags:
+        - config
 Torsion:
   steam:
     id: 522050
@@ -835856,6 +835950,9 @@ What if George Washington was a Girl?:
   steam:
     id: 2098470
 What the Buck?!:
+  id:
+    steamExtra:
+      - 5006340
   steam:
     id: 4832970
 What the Car?:
