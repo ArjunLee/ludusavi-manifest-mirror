@@ -63160,6 +63160,29 @@ BORIS the Mutant Bear with a Gun:
             store: steam
   steam:
     id: 879060
+"BOSSGAME: The Final Boss Is My Heart":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/LilycoreGamesLLC/Bossgame":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    BOSSGAME The Final Boss Is My Heart: {}
+  launch:
+    "<base>/Bossgame.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/release/Bossgame.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2075160
 BOSSGARD:
   cloud:
     steam: true
@@ -75468,12 +75491,12 @@ Beast of Reincarnation:
   cloud:
     steam: true
   files:
-    "<winAppData>/BeastOfReincarnation/Saved/Config/Windows":
+    "<winLocalAppData>/BeastOfReincarnation/Saved/Config/Windows":
       tags:
         - config
       when:
         - os: windows
-    "<winAppData>/BeastOfReincarnation/Saved/SaveGames":
+    "<winLocalAppData>/BeastOfReincarnation/Saved/SaveGames":
       tags:
         - config
         - save
@@ -82237,10 +82260,17 @@ Big Tower Tiny Square:
   steam:
     id: 751250
 Big Walk:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/House House/Big Walk":
       tags:
         - config
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/House House/Big Walk/user_data/save_games":
+      tags:
+        - save
       when:
         - os: windows
   id:
@@ -220124,6 +220154,13 @@ Dummy!:
   steam:
     id: 754480
 Dumpy & Bumpy:
+  files:
+    "<home>/AppData/Local/DumpyAndBumpy":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   id:
     steamExtra:
       - 1716680
@@ -295368,6 +295405,17 @@ Gear Gauntlet:
             store: steam
   steam:
     id: 486890
+Gear Grinder:
+  id:
+    lutris: sledgehammer-gear-grinder
+  installDir:
+    Sledgehammer: {}
+  launch:
+    "<base>/GearGrinder.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 285520
 Gear Path:
   cloud:
     steam: true
@@ -295511,16 +295559,7 @@ GearCity:
   steam:
     id: 285110
 GearGrinder:
-  id:
-    lutris: sledgehammer-gear-grinder
-  installDir:
-    Sledgehammer: {}
-  launch:
-    "<base>/GearGrinder.exe":
-      - when:
-          - store: steam
-  steam:
-    id: 285520
+  alias: Gear Grinder
 GearGrit:
   steam:
     id: 2298250
@@ -307101,6 +307140,8 @@ GolfTopia:
         - config
       when:
         - os: windows
+  gog:
+    id: 1924813316
   installDir:
     GolfTopia: {}
   launch:
@@ -388130,6 +388171,29 @@ Kill The Monster:
 Kill The Moon:
   steam:
     id: 1093180
+Kill The Music:
+  files:
+    "<winAppData>/Godot/app_userdata/Kill The Music":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Godot/app_userdata/Kill The Music/settings.save":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 3858970
+  installDir:
+    Kill The Music: {}
+  launch:
+    "<base>/KTM.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3093050
 Kill The Plumber:
   installDir:
     Kill The Plumber: {}
@@ -415426,6 +415490,13 @@ Little Cells:
   steam:
     id: 352210
 Little Comet:
+  files:
+    "<home>/AppData/LocalLow/Outgunned Games/Little Comet":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   installDir:
     Little Comet: {}
   launch:
@@ -523925,6 +523996,8 @@ Parkasaurus:
   id:
     steamExtra:
       - 1931130
+      - 2388590
+      - 2435170
   installDir:
     Parkasaurus: {}
   launch:
@@ -688923,9 +688996,34 @@ Suicideville:
   steam:
     id: 787240
 Suika Game:
+  files:
+    "<home>/AppData/LocalLow/AladdinX/SuikaGame":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    スイカゲーム: {}
+  launch:
+    "<base>/SuikaGame.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4572790
 Suika Game Planet:
+  files:
+    "<home>/AppData/LocalLow/AladdinX/WatermelonPlanet":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    スイカゲーム ぷらねっと: {}
+  launch:
+    "<base>/SuikaGame Planet.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4650440
 Suikoden I & II HD Remaster Gate Rune and Dunan Unification Wars:
@@ -720759,7 +720857,10 @@ The Alien Cube:
     id: 1099220
 "The Alighieri Circle: Dante's Bloodline":
   cloud:
+    epic: true
     steam: true
+  gog:
+    id: 1716484150
   id:
     lutris: the-alighieri-circle-dantes-bloodline
     steamExtra:
@@ -777354,6 +777455,9 @@ Toltec and the mysteries of the Secret Island:
     "Tom Clancy's The Division 2": {}
   steam:
     id: 2221490
+"Tom Clancy's The Division 3":
+  id:
+    lutris: tom-clancys-the-division-3
 "Tom Clancy's The Division Resurgence":
   cloud:
     uplay: true
@@ -777370,6 +777474,13 @@ Toltec and the mysteries of the Secret Island:
         - os: windows
   id:
     lutris: tom-clancys-the-division-resurgence
+  installDir:
+    The Division Resurgence: {}
+  launch:
+    "<base>/TheDivision.exe":
+      - arguments: "-uplay_steam_mode -upc_steam_free_package_id 67778"
+        when:
+          - store: steam
   steam:
     id: 3749720
 "Tom Clancy's XDefiant":
