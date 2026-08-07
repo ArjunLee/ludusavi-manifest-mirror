@@ -75851,6 +75851,11 @@ Beat Cop:
         - save
       when:
         - os: mac
+    "<home>/Library/Preferences/unity.Pixel Crow.Beat Cop.plist":
+      tags:
+        - config
+      when:
+        - os: mac
   gog:
     id: 1584866499
   id:
@@ -106178,6 +106183,8 @@ Brutal Japan:
   steam:
     id: 2025830
 Brutal John:
+  alias: Brutal John 2
+Brutal John 2:
   files:
     "<home>/AppData/LocalLow/OldSchool Laws Team/BJ2":
       when:
@@ -184518,6 +184525,30 @@ Death is better than Hell:
 Death of Desert:
   steam:
     id: 1022670
+Death of a Wish:
+  files:
+    "<home>/AppData/LocalLow/melessthanthree/DeathOfAWish/savedGames.gd":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Death of a Wish: {}
+  launch:
+    "<base>/Death of a Wish.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Death of a Wish.x86_64":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/Death of a Wish/DeathOfAWish.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2302080
 Death of the Reprobate:
   cloud:
     gog: true
@@ -205624,6 +205655,38 @@ Dominions 5 - Warriors of the Faith:
         workingDir: "<base>/win64"
   steam:
     id: 722060
+"Dominions II: The Ascension Wars":
+  installDir:
+    Dominions2: {}
+  launch:
+    "<base>/Dominions2.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/dom2_amd64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 3533600
+"Dominions: Priests, Prophets & Pretenders":
+  installDir:
+    Dominions: {}
+  launch:
+    "<base>/Dominions1.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/dom_amd64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 3520220
 Dominique Pamplemousse:
   id:
     steamExtra:
@@ -265181,6 +265244,10 @@ Fields of Mistria:
         - config
       when:
         - os: windows
+  id:
+    lutris: fields-of-mistria
+    steamExtra:
+      - 3015670
   installDir:
     Fields of Mistria: {}
   launch:
@@ -371107,6 +371174,14 @@ Iron Meat:
   steam:
     id: 1157740
 "Iron Nest: Heavy Turret Simulator":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Iron Nest/Iron Nest_ Heavy Turret Simulator/Live":
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 1162687982
   id:
@@ -371116,6 +371191,17 @@ Iron Meat:
     steamExtra:
       - 4300490
       - 4300500
+  installDir:
+    Iron Nest Heavy Turret Simulator: {}
+  launch:
+    "<base>/Iron Nest Heavy Turret Simulator.exe":
+      - when:
+          - os: windows
+            store: steam
+  registry:
+    "HKEY_CURRENT_USER/Software/Iron Nest/Iron Nest: Heavy Turret Simulator":
+      tags:
+        - config
   steam:
     id: 2950790
 Iron Rebellion:
@@ -371761,6 +371847,7 @@ Is It Wrong to Try to Pick Up Girls in a Dungeon? Infinite Combate:
     id: 1187940
 Is This Seat Taken?:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/PotiPoti/Is This Seat Taken/GraphicsSettings.save":
@@ -371813,6 +371900,8 @@ Is This Seat Taken?:
         - config
       when:
         - os: linux
+  gog:
+    id: 1370376493
   id:
     lutris: is-this-seat-taken
   installDir:
@@ -395954,6 +396043,21 @@ Koral:
   steam:
     id: 896750
 Korea. IL-2 Series:
+  id:
+    steamExtra:
+      - 5026020
+      - 5026030
+      - 5026460
+  installDir:
+    IL2Series: {}
+  launch:
+    "<base>/bin/game/IL2Series.exe":
+      - arguments: or_enable=0
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+        workingDir: "<base>/bin/game"
   steam:
     id: 247970
 "Korean Scary Folk Tales VR: The Forbidden Book":
@@ -439772,8 +439876,29 @@ Marvel Snap:
 "Marvel Tōkon: Fighting Souls":
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/MTFSSteam/Saved/SAVE/<storeUserId>":
+      when:
+        - store: steam
   id:
     lutris: marvel-tokon-fighting-souls
+    steamExtra:
+      - 4839960
+      - 4848500
+      - 4848520
+      - 4848530
+      - 4848540
+      - 4848580
+      - 4848590
+      - 4848600
+      - 5030920
+      - 5030930
+  installDir:
+    MTFS: {}
+  launch:
+    "<base>/start_protected_game.exe":
+      - when:
+          - store: steam
   steam:
     id: 3787240
 "Marvel vs. Capcom Fighting Collection: Arcade Classics":
@@ -572668,10 +572793,30 @@ ReSizE:
 "ReStory: Chill Electronics Repairs":
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Mandragora/Restory/SaveData":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Mandragora/Restory/SaveData":
+      when:
+        - os: mac
+          store: steam
   id:
     steamExtra:
       - 4146670
       - 4146680
+      - 5034500
+  installDir:
+    Restory: {}
+  launch:
+    "<base>/Restory.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Restory.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3812600
 ReThink:
@@ -653756,6 +653901,21 @@ Sonic Triple Trouble 16-bit:
         - os: windows
 Sonic Unleashed (Unleashed Recompiled):
   alias: Unleashed Recompiled
+Sonic Wings Reunion:
+  files:
+    "<home>/Saved Games/SUCCESS Corp/SONIC WINGS REUNION/<storeUserId>/*.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    SONIC WINGS REUNION: {}
+  launch:
+    "<base>/SONIC WINGS REUNION.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3477860
 Sonic X Shadow Generations:
   cloud:
     steam: true
@@ -704109,6 +704269,17 @@ Synth Riders:
     SynthRiders: {}
   steam:
     id: 885000
+Synthaly Universe:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/SynthalyUniverse/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
+      when:
+        - os: windows
+  steam:
+    id: 4757750
 Synther:
   steam:
     id: 752960
@@ -757859,10 +758030,23 @@ The Skies:
   steam:
     id: 337950
 The Skin Stapler:
+  gog:
+    id: 1755267062
   id:
+    gogExtra:
+      - 1609487216
     lutris: the-skin-stapler
     steamExtra:
       - 4343530
+      - 4919810
+      - 4919860
+  installDir:
+    TheSkinStapler: {}
+  launch:
+    "<base>/TheSkinStapler/TheSkinStapler.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4310610
 The Sky Climber:
@@ -762927,6 +763111,10 @@ The Walking Dead Onslaught:
   steam:
     id: 261030
 "The Walking Dead: Streets of Survival":
+  id:
+    lutris: the-walking-dead-streets-of-survival--1
+    steamExtra:
+      - 4718570
   steam:
     id: 3777850
 "The Walking Dead: Survival Instinct":
@@ -790025,6 +790213,13 @@ Treehouse Riddle:
     Treeker The Lost Glasses: {}
   steam:
     id: 369640
+Trees Hate You:
+  id:
+    lutris: trees-hate-you
+    steamExtra:
+      - 4307190
+  steam:
+    id: 4171850
 Treis Zoes:
   steam:
     id: 1202430
@@ -817085,6 +817280,30 @@ Village Rhapsody:
 Village Story:
   steam:
     id: 601280
+Village in the Shade:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Nippon Ichi Software, Inc/Honogurashinoniwa/**/.systemsave":
+      when:
+        - os: windows
+          store: steam
+    "<winAppData>/Nippon Ichi Software, Inc/Honogurashinoniwa/**/save.*":
+      when:
+        - os: windows
+          store: steam
+    "<winAppData>/Nippon Ichi Software, Inc/Honogurashinoniwa/**/save.lst":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Village in the Shade: {}
+  launch:
+    "<base>/village.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3934250
 Village of Adventurers 2:
   files:
     "<base>/savedata":
