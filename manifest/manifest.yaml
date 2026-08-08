@@ -113049,6 +113049,11 @@ Caladria Chronicles:
             store: steam
   steam:
     id: 997530
+"Caladrius 2: Dark Element":
+  cloud:
+    steam: true
+  steam:
+    id: 4655000
 Caladrius Blaze:
   cloud:
     steam: true
@@ -125045,8 +125050,21 @@ Cellar:
   steam:
     id: 449060
 Cellar Keeper:
+  files:
+    "<home>/AppData/LocalLow/EgoTrampoline/Cellar Keeper/*.cellar":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: cellar-keeper
+  installDir:
+    Cellar Keeper: {}
+  launch:
+    "<base>/Cellar Keeper.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4935510
 "Cellfactor: Revolution":
@@ -140349,6 +140367,8 @@ Clouzy!:
     "<winLocalAppData>/Clouzy/Saved/SaveGames/*.sav":
       when:
         - store: steam
+  gog:
+    id: 1542061104
   id:
     steamExtra:
       - 1587520
@@ -199637,10 +199657,16 @@ Dinoblade:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/DinobladeGame/Saved/SaveGames/*.sav":
+    "<winLocalAppData>/DinobladeGame/Saved/Config/Windows/GameUserSettings.ini":
+      tags:
+        - config
       when:
         - os: windows
-          store: steam
+    "<winLocalAppData>/DinobladeGame/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: dinoblade
     steamExtra:
@@ -223684,6 +223710,7 @@ Duskfade:
     lutris: duskfade--1
     steamExtra:
       - 4023080
+      - 4934950
   steam:
     id: 2542020
 "Duskless: The Clockwork Army":
@@ -255617,12 +255644,23 @@ Fairy Tail 2:
     "<home>/AppData/LocalLow/ginolabo/FAIRY TAIL DUNGEONS/*.es3":
       when:
         - store: steam
+    "<home>/Library/Application Support/ginolabo/FAIRY TAIL DUNGEONS/*.es3":
+      when:
+        - os: mac
+          store: steam
   installDir:
     FAIRY TAIL DUNGEONS: {}
   launch:
+    "<base>/FAIRY TAIL DUNGEONS.app/Contents/MacOS/FAIRY TAIL DUNGEONS":
+      - when:
+          - os: mac
+            store: steam
     "<base>/FAIRY TAIL DUNGEONS.exe":
       - when:
-          - store: steam
+          - os: windows
+            store: steam
+          - os: linux
+            store: steam
   steam:
     id: 2305500
 "Fairy Tale About Father Frost, Ivan and Nastya":
@@ -295842,6 +295880,12 @@ Gears of War 4:
       when:
         - os: windows
 "Gears of War: E-Day":
+  files:
+    "<winLocalAppData>/FairlightConcept/Saved/Config":
+      tags:
+        - config
+      when:
+        - os: windows
   steam:
     id: 3010850
 "Gears of War: Reloaded":
@@ -374199,6 +374243,9 @@ Izeriya:
             store: steam
   steam:
     id: 463830
+"Izzy's Arcade":
+  steam:
+    id: 3560870
 I・S・U:
   cloud:
     steam: true
@@ -412525,6 +412572,10 @@ Light Apprentice:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Amazu Media/Light Apprentice:
+      tags:
+        - save
   steam:
     id: 569570
 Light Bearers:
@@ -430109,6 +430160,11 @@ Machine Party:
             store: steam
     "<base>/Machine Party_Windows/Machine Party.exe":
       - when:
+          - bit: 64
+            os: windows
+            store: steam
+      - arguments: "--rendering-driver d3d12"
+        when:
           - bit: 64
             os: windows
             store: steam
@@ -470424,6 +470480,9 @@ Mowteor:
         - config
       when:
         - os: windows
+Moylo:
+  steam:
+    id: 4877950
 Moysenland:
   files:
     "<home>/AppData/LocalLow/Marianne Hellberg/Moysenland/*.":
@@ -515396,6 +515455,8 @@ Outerverse:
       when:
         - os: windows
           store: steam
+  gog:
+    id: 2076435096
   installDir:
     Outerverse: {}
   launch:
@@ -574698,7 +574759,20 @@ Reanimal:
   gog:
     id: 1209105161
   id:
+    gogExtra:
+      - 1087283537
+      - 1265251347
+      - 1432983998
+      - 1740138148
+      - 2106070936
     lutris: reanimal
+    steamExtra:
+      - 3954470
+      - 4019420
+      - 4112550
+      - 4351720
+      - 4430060
+      - 4733900
   installDir:
     REANIMAL: {}
   launch:
@@ -627811,6 +627885,8 @@ Shark Dating Simulator XL:
   steam:
     id: 666020
 Shark Dentist:
+  id:
+    lutris: shark-dentist
   steam:
     id: 3423280
 Shark Simulator:
@@ -645380,6 +645456,17 @@ Sloppy Goat:
 Slot Grind:
   id:
     lutris: slot-grind
+  installDir:
+    Slot Grind: {}
+  launch:
+    "<base>/SlotGrind.app/Contents/MacOS/SlotGrind":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/SlotGrind.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4619420
 Sloth Quest:
@@ -655224,6 +655311,10 @@ Soul Searching:
           - bit: 64
             os: linux
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Kayabros/Soul Searching:
+      tags:
+        - save
   steam:
     id: 586240
 Soul Shards:
@@ -748785,6 +748876,7 @@ The Mortuary Assistant:
   id:
     lutris: the-mortuary-assistant
     steamExtra:
+      - 1295940
       - 2080860
   installDir:
     The Mortuary Assistant: {}
@@ -756053,6 +756145,13 @@ The Secret of Tremendous Corporation:
             store: steam
   steam:
     id: 380140
+The Secret of Weepstone:
+  id:
+    lutris: the-secret-of-weepstone
+    steamExtra:
+      - 3876150
+  steam:
+    id: 3702100
 The Secrets of Jesus:
   installDir:
     The Secrets of Jesus: {}
