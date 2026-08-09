@@ -125050,6 +125050,8 @@ Cellar:
   steam:
     id: 449060
 Cellar Keeper:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/EgoTrampoline/Cellar Keeper/*.cellar":
       when:
@@ -149091,6 +149093,29 @@ Conquer the Tower:
         - os: dos
   gog:
     id: 2110944433
+Conquest Dark:
+  cloud:
+    steam: true
+  files:
+    "<base>/SaveData.data":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/Settings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    Conquest Dark: {}
+  launch:
+    "<base>/Conquest Dark.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3238670
 Conquest of Champions:
   id:
     steamExtra:
@@ -168387,6 +168412,8 @@ Cyberpunk SFX:
           store: steam
   gog:
     id: 1638321975
+  id:
+    lutris: cyberpunk-sfx
   installDir:
     Cyberpunk SFX: {}
   launch:
@@ -223707,7 +223734,7 @@ Duskfade:
   cloud:
     steam: true
   id:
-    lutris: duskfade--1
+    lutris: duskfade
     steamExtra:
       - 4023080
       - 4934950
@@ -244115,12 +244142,11 @@ Esoteric Ebb:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Christoffer Bodegard/Esoteric Ebb/SaveFiles/*.es3":
+    "<home>/AppData/LocalLow/Christoffer Bodegard/Esoteric Ebb/SaveFiles":
+      tags:
+        - save
       when:
-        - store: steam
-    "<home>/AppData/LocalLow/Christoffer Bodegard/Esoteric Ebb/SaveFiles/*.jpg":
-      when:
-        - store: steam
+        - os: windows
   id:
     lutris: esoteric-ebb
     steamExtra:
@@ -254111,13 +254137,6 @@ Fabledom:
         - os: windows
   id:
     lutris: fabledom
-  installDir:
-    Fabledom: {}
-  launch:
-    "<base>/Fabledom.exe":
-      - when:
-          - os: windows
-            store: steam
   registry:
     HKEY_CURRENT_USER/Software/Grenaa Games/Fabledom:
       tags:
@@ -343355,6 +343374,31 @@ Hocus 2:
             store: steam
   steam:
     id: 1460610
+Hocus Focus:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Stuck In Attic/Hocus Focus/*.dat":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: hocus-focus--1
+  installDir:
+    Hocus Focus: {}
+  launch:
+    "<base>/Hocus Focus.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/HocusFocus.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 4202710
 Hocus Pocus:
   cloud:
     gog: true
@@ -466579,6 +466623,10 @@ Moonlighter:
         - os: windows
   id:
     lutris: moonlighter-2-the-endless-vault
+    steamExtra:
+      - 3670000
+      - 4036250
+      - 4935250
   installDir:
     Moonlighter 2 The Endless Vault: {}
   launch:
@@ -533983,6 +534031,9 @@ Pimiko Plus:
 Pimp Tight:
   steam:
     id: 555100
+"Pinata Smash: Incremental Circus":
+  steam:
+    id: 4918810
 Pinball:
   installDir:
     Pinball: {}
@@ -639474,6 +639525,8 @@ Skate Story:
   gog:
     id: 1322527974
   id:
+    gogExtra:
+      - 1264697411
     lutris: skate-story
     steamExtra:
       - 4213570
@@ -833116,13 +833169,15 @@ We Are the Dwarves:
   installDir:
     We Are The Dwarves: {}
   launch:
+    "<base>/WATDLauncher.exe":
+      - arguments: "%command%"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
     "<base>/watd.app":
       - when:
           - os: mac
-            store: steam
-    "<base>/watd.exe":
-      - when:
-          - os: windows
             store: steam
     "<base>/watd.x86_64":
       - arguments: "-force-opengl"
