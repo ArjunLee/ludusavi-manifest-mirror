@@ -160854,6 +160854,8 @@ Crosser:
   steam:
     id: 1124510
 "Crossfire (That's No Moon)":
+  id:
+    lutris: crossfire--8
   steam:
     id: 4687500
 "Crossfire: Dungeons":
@@ -230368,6 +230370,18 @@ Eclipsed:
     Eclipsed: {}
   steam:
     id: 439740
+Eclipsium:
+  id:
+    lutris: eclipsium
+  installDir:
+    Eclipsium: {}
+  launch:
+    "<base>/Eclipsium.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2419670
 Eco:
   files:
     "<base>/Eco_Data/Server/Configs":
@@ -273448,6 +273462,11 @@ Floor Massacre:
     Floor Plan: {}
   steam:
     id: 673060
+"Floor Plan: Slap Out Of It!":
+  id:
+    lutris: slap-out-of-it
+  steam:
+    id: 3564410
 Floor by Floor:
   installDir:
     Floor By Floor: {}
@@ -376479,6 +376498,35 @@ Japan Stigmatized Property 2:
         - config
   steam:
     id: 4193270
+Japan Stigmatized Property 3:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Loxarc/jsp3/savedata.dat":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/Library/Application Support/Loxarc/jsp3/savedata.dat":
+      tags:
+        - save
+      when:
+        - os: mac
+  id:
+    lutris: japan-stigmatized-property-3
+  installDir:
+    日本事故物件監視協会3 -Japan Stigmatized Property-: {}
+  launch:
+    "<base>/Steam/jsp3.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Steam/jsp3.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4611990
 "Japanese Rail Sim: Hakone Town of Natural Beauty and Hot Springs":
   cloud:
     steam: true
@@ -397827,6 +397875,26 @@ KurtzPel:
     KurtzPel: {}
   steam:
     id: 844870
+"Kusan : city of wolves":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/CircleFromDot/Kusan":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: kusan-city-of-wolves
+  installDir:
+    Kusan City of Wolves: {}
+  launch:
+    "<base>/Kusan.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1714510
 Kuso:
   files:
     "<base>/keyConfig.cfg, <base>/2pkeyConfig.cfg":
@@ -425581,6 +425649,12 @@ Lula 3D:
     id: 1443433575
   id:
     lutris: lula-the-sexy-empire
+"Lull: Rest After Crying":
+  id:
+    steamExtra:
+      - 4370700
+  steam:
+    id: 3557060
 Lulu & Ennoi - Sacred Suit Girls:
   files:
     "<home>/AppData/LocalLow/SmallSqurriel Co_, Ltd/Lulu & Ennoi - Sacred Suit Girls":
@@ -442188,10 +442262,25 @@ Matchbox Driving Adventures:
   steam:
     id: 1345760
 "Matchstick: Cosmic Flame":
+  files:
+    "<home>/AppData/LocalLow/TechnoMyth/Matchstick/Saves":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/TechnoMyth/Matchstick/Settings":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: matchstick-cosmic-flame
-    steamExtra:
-      - 3384160
+  installDir:
+    Matchstick Cosmic Flame: {}
+  launch:
+    "<base>/Matchstick.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3182950
 Matchville:
@@ -610508,6 +610597,13 @@ Sam & Max Save the World:
       - 8230
       - 8240
       - 8250
+  installDir:
+    Sam and Max Episode 1: {}
+    Sam and Max Episode 2: {}
+    Sam and Max Episode 3: {}
+    Sam and Max Episode 4: {}
+    Sam and Max Episode 5: {}
+    Sam and Max Episode 6: {}
   steam:
     id: 901660
 Sam & Max Save the World (2020):
@@ -610560,6 +610656,12 @@ Sam & Max Save the World (2020):
       - 8280
       - 8290
       - 8300
+  installDir:
+    Sam and Max Season 2 Episode 1: {}
+    Sam and Max Season 2 Episode 2: {}
+    Sam and Max Season 2 Episode 3: {}
+    Sam and Max Season 2 Episode 4: {}
+    Sam and Max Season 2 Episode 5: {}
   steam:
     id: 901663
 "Sam & Max: Beyond Time and Space (2021)":
@@ -610650,6 +610752,12 @@ Sam & Max Save the World (2020):
       - 31240
       - 31250
       - 31260
+  installDir:
+    Sam and Max 301: {}
+    Sam and Max 302: {}
+    Sam and Max 303: {}
+    Sam and Max 304: {}
+    Sam and Max 305: {}
   steam:
     id: 901399
 "Sam & Max: The Devil's Playhouse (2024)":
@@ -642711,8 +642819,7 @@ Slap Fight:
   steam:
     id: 2022980
 Slap Out Of It!:
-  steam:
-    id: 3564410
+  alias: "Floor Plan: Slap Out Of It!"
 Slap The Fly:
   installDir:
     Slap The Fly: {}
@@ -686633,6 +686740,8 @@ Stronghold Crusader 2:
       - 3030340
       - 3030350
       - 4227730
+      - 4483530
+      - 4483540
   installDir:
     Stronghold Crusader Definitive Edition: {}
   launch:
