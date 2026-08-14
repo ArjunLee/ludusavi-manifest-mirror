@@ -25383,8 +25383,30 @@ Age-Old Cities VR:
 "Agefield High: Rock the School":
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/Project_HighSchool/Saved/SaveGames/Autosave.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Project_HighSchool/Saved/SaveGames/PlayerSlot1.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Project_HighSchool/Saved/SaveGames/PlayerSlot2.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Project_HighSchool/Saved/SaveGames/PlayerSlot3.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Project_HighSchool/Saved/SaveGames/SaveData_PlayerData.sav":
+      when:
+        - store: steam
   id:
     lutris: agefield-high-rock-the-school
+  installDir:
+    Agefield High Rock the School: {}
+  launch:
+    "<base>/Project_HighSchool.exe":
+      - when:
+          - store: steam
   steam:
     id: 3562580
 Ageless:
@@ -42707,6 +42729,22 @@ Anthology of Fear:
             store: steam
   steam:
     id: 1092530
+Anthology of the Killer:
+  installDir:
+    Anthology Of The Killer: {}
+  launch:
+    "<base>/Anthology of the Killer.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/Anthology of the Killer.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 3212530
 Anthropomachy:
   installDir:
     Anthropomachy: {}
@@ -66297,7 +66335,7 @@ Baldr Sky:
         - save
       when:
         - store: steam
-    "<winLocalAppData>/Larian Studios/Baldur's Gate 3/PlayerProfiles":
+    "<winLocalAppData>/Lari'an Studios/Baldur's Gate 3/PlayerProfiles":
       tags:
         - config
       when:
@@ -188019,8 +188057,24 @@ Defender of the Crown:
   steam:
     id: 326590
 "Defender of the Crown: The Legend Returns":
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Black Tower Basement/Defender of the Crown Collection/<storeUserId>/*.sav/<home>/AppData/LocalLow/Black Tower Basement/Defender of the Crown Collection/<storeUserId>/*.jpg":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1587851209
+  installDir:
+    Defender of the Crown Legend Returns: {}
+  launch:
+    "<base>/Defender of the Crown Collection.exe":
+      - when:
+          - store: steam
   steam:
     id: 4208140
 "Defender's Quest II: Mists of Ruin":
@@ -223790,11 +223844,23 @@ Duskers:
 Duskfade:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/Duskfade/Saved/SaveGames/DFSlot*":
+      when:
+        - store: steam
   id:
     lutris: duskfade
     steamExtra:
       - 4023080
       - 4934950
+  installDir:
+    Duskfade: {}
+  launch:
+    "<base>/Duskfade.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2542020
 "Duskless: The Clockwork Army":
@@ -226286,7 +226352,7 @@ E3.14CENTER:
   steam:
     id: 862240
 EA SPORTS™ Madden NFL 27:
-  alias: EA Sports Madden NFL 27
+  alias: Madden NFL 27
 EA Sports College Football 27:
   installDir:
     College Football 27: {}
@@ -226356,8 +226422,7 @@ EA Sports FC 26:
   steam:
     id: 3405690
 EA Sports Madden NFL 27:
-  steam:
-    id: 3940610
+  alias: Madden NFL 27
 EA Sports PGA Tour:
   cloud:
     origin: true
@@ -260658,11 +260723,14 @@ Farming Giant:
   steam:
     id: 259910
 Farming Incremental But With Guns:
+  cloud:
+    steam: true
   files:
-    "<home>/AppData/LocalLow/Clementine Wolf Games/Farming Incremental But With Guns/**/*.es3":
+    "<home>/AppData/LocalLow/Clementine Wolf Games/Farming Incremental But With Guns":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
   id:
     lutris: farming-incremental-but-with-guns
   installDir:
@@ -269866,6 +269934,12 @@ Fish Fillets 2:
           - store: steam
   steam:
     id: 33950
+Fish Lab:
+  id:
+    steamExtra:
+      - 4601570
+  steam:
+    id: 4221990
 Fish Lake:
   installDir:
     FISH LAKE: {}
@@ -295995,6 +296069,8 @@ Gears of War 4:
         - config
       when:
         - os: windows
+  id:
+    lutris: gears-of-war-e-day
   steam:
     id: 3010850
 "Gears of War: Reloaded":
@@ -312937,8 +313013,33 @@ Greedy Dungeons:
   steam:
     id: 765020
 Greedy Greedy Gnomes:
+  files:
+    "<home>/Documents/Greedy_Greedy_Gnomes/*.json":
+      when:
+        - os: mac
+          store: steam
+        - os: linux
+          store: steam
+    "<winDocuments>/Greedy_Greedy_Gnomes/**/*.json":
+      when:
+        - store: steam
   id:
     lutris: greedy-greedy-gnomes
+  installDir:
+    Greedy_Greedy_Gnomes: {}
+  launch:
+    "<base>/Greedy Greedy Gnomes":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/Greedy Greedy Gnomes.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Greedy Greedy Gnomes.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4356400
 Greedy Guns:
@@ -322793,10 +322894,7 @@ Hallowed Encounter:
   steam:
     id: 724900
 Halloween:
-  id:
-    lutris: halloween-the-game
-  steam:
-    id: 3219630
+  alias: "Halloween: The Game"
 Halloween Arkanoid 2:
   installDir:
     Halloween Arkanoid 2: {}
@@ -322910,6 +323008,11 @@ Halloween with Veronica:
             store: steam
   steam:
     id: 720600
+"Halloween: The Game":
+  id:
+    lutris: halloween-the-game
+  steam:
+    id: 3219630
 HalloweenStory:
   installDir:
     HalloweenStory: {}
@@ -331461,6 +331564,18 @@ Hell Let Loose:
 "Hell Let Loose: Vietnam":
   id:
     lutris: hell-let-loose-vietnam
+    steamExtra:
+      - 4447970
+      - 4447980
+      - 4448010
+  installDir:
+    Hell Let Loose - Vietnam: {}
+  launch:
+    "<base>/Launch_HLL.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3079210
 Hell Maiden:
@@ -340348,6 +340463,9 @@ High Octane Drift:
             store: steam
   steam:
     id: 457330
+High On Life VR:
+  steam:
+    id: 3951190
 High On Racing:
   installDir:
     High On Racing: {}
@@ -391535,6 +391653,11 @@ Kingdom Rush:
             store: steam
   steam:
     id: 246420
+"Kingdom Rush 5: Alliance TD":
+  cloud:
+    steam: true
+  steam:
+    id: 34004563
 "Kingdom Rush: Frontiers":
   cloud:
     steam: true
@@ -420817,7 +420940,7 @@ Lost Castle:
           - os: windows
             store: steam
   registry:
-    HKEY_CURRENT_USER/Software/Hunter Studio/Lost Castle:
+    HKEY_CURRENT_USER/Software/Hunter Studio/Lost_Castle:
       tags:
         - config
         - save
@@ -424705,6 +424828,24 @@ Low Magic Age:
   steam:
     id: 576770
 Low-Budget Repairs:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/gray2rgb/LowBudgetRepairs/Saves/<storeUserId>/**/*.lbr":
+      when:
+        - store: steam
+  id:
+    lutris: low-budget-repairs
+    steamExtra:
+      - 3642880
+      - 4948230
+      - 5021470
+  installDir:
+    Low-Budget Repairs: {}
+  launch:
+    "<base>/LowBudgetRepairs.exe":
+      - when:
+          - store: steam
   steam:
     id: 3167920
 LowPoly 3D Art Paint by Number:
@@ -431497,6 +431638,11 @@ Madden NFL 26:
     Madden NFL 26: {}
   steam:
     id: 3230400
+Madden NFL 27:
+  installDir:
+    Madden NFL 27: {}
+  steam:
+    id: 3940610
 Maddening Euphoria:
   installDir:
     Maddening Euphoria: {}
@@ -458403,7 +458549,7 @@ Minit:
   installDir:
     Minit: {}
   launch:
-    "<base>/Minit.app/Contents/MacOS/Mac_Runner":
+    "<base>/Minit.app":
       - when:
           - os: mac
             store: steam
@@ -486271,6 +486417,11 @@ Neo Atlas 1469:
             store: steam
   steam:
     id: 532690
+Neo Berlin 2087:
+  id:
+    lutris: neo-berlin-2087
+  steam:
+    id: 2326200
 Neo Cab:
   cloud:
     steam: true
@@ -527482,16 +527633,6 @@ Payday 2:
       - 468410
   installDir:
     PAYDAY 2: {}
-  launch:
-    "<base>/payday2.app":
-      - when:
-          - os: mac
-            store: steam
-    "<base>/payday2_release":
-      - when:
-          - bit: 64
-            os: linux
-            store: steam
   steam:
     id: 218620
 Payday 3:
@@ -561812,7 +561953,8 @@ Quake:
     Quake: {}
   launch:
     "<base>/rerelease/Quake_x64_steam.exe":
-      - when:
+      - arguments: +d3d11_compileShaders 1
+        when:
           - store: steam
   steam:
     id: 2310
@@ -561922,7 +562064,8 @@ Quake Enhanced:
     Quake: {}
   launch:
     "<base>/rerelease/Quake_x64_steam.exe":
-      - when:
+      - arguments: +d3d11_compileShaders 1
+        when:
           - store: steam
   steam:
     id: 2310
@@ -597677,6 +597820,16 @@ RollerCoaster Legends:
     id: 854690
 RollerCoaster Tycoon:
   files:
+    "<base>/Data/CUSTOM.TXT":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/Data/Game.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
     "<base>/Saved Games":
       tags:
         - save
@@ -597698,7 +597851,12 @@ RollerCoaster Tycoon 2:
   cloud:
     gog: true
   files:
-    "<base>/Data":
+    "<base>/Data/CUSTOM.TXT":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/Data/Game.cfg":
       tags:
         - config
       when:
@@ -604316,6 +604474,8 @@ Rustler:
   steam:
     id: 844260
 Rustmourne:
+  id:
+    lutris: rustmourne
   steam:
     id: 3775210
 Rusty Hearts:
@@ -612378,6 +612538,22 @@ Sandustry:
   id:
     steamExtra:
       - 3490390
+  installDir:
+    Sandustry: {}
+  launch:
+    "<base>/Sandustry.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Sandustry.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/sandustry":
+      - arguments: "--no-sandbox"
+        when:
+          - os: linux
+            store: steam
   steam:
     id: 2764460
 Sandwalkers:
@@ -623571,10 +623747,29 @@ Servant of The People:
   steam:
     id: 1146600
 Servant of the Lake:
+  files:
+    "<home>/AppData/LocalLow/RustyLake/ServantOfTheLake/Serialization/SaveFiles/**/*.json":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/RustyLake/ServantOfTheLake/Serialization/SaveFiles/*.json":
+      when:
+        - os: mac
+          store: steam
   id:
     lutris: servant-of-the-lake
     steamExtra:
       - 3996940
+  installDir:
+    Servant of the Lake: {}
+  launch:
+    "<base>/ServantOfTheLake.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/ServantOfTheLake.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3636770
 Servo:
@@ -705186,6 +705381,9 @@ System Shock 2 Enhanced Edition:
             store: steam
   steam:
     id: 866570
+System Shock VR:
+  steam:
+    id: 5036490
 "System Shock: Enhanced Edition":
   files:
     "<winAppData>/Nightdive Studios/System Shock EE/kexengine.cfg":
@@ -725857,12 +726055,12 @@ The Case of the Golden Idol:
     gog: true
     steam: true
   files:
-    "<winAppData>/Godot/app_userdata/The Case of The Golden Idol/local_savegame.save":
+    "<winAppData>/Godot/app_userdata/The Case of The Golden Idol/<storeUserId>_savegame.save":
       tags:
         - save
       when:
         - os: windows
-    "<winAppData>/Godot/app_userdata/The Case of The Golden Idol/local_settings.cfg":
+    "<winAppData>/Godot/app_userdata/The Case of The Golden Idol/<storeUserId>_settings.cfg":
       tags:
         - config
       when:
@@ -762632,9 +762830,15 @@ The Unbreakable Gumball:
     steam: true
   files:
     "<winDocuments>/My Games/The Uncertain Light At The End":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
+    "<winDocuments>/My Games/The Uncertain Light At The End/Settings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1272776844
   installDir:
@@ -839765,6 +839969,17 @@ Wild Assault:
 Wild Blue Skies:
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Chuhai Labs/Wild Blue Skies/*.dat":
+      when:
+        - store: steam
+  installDir:
+    Wild Blue Skies: {}
+  launch:
+    "<base>/Wild Blue Skies.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 1921490
 "Wild Buster: Heroes of Titan":
