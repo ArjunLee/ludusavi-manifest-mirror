@@ -168615,6 +168615,17 @@ Cyborg Tower Defense:
             store: steam
   steam:
     id: 606940
+Cyborg3003:
+  installDir:
+    Cyborg3003: {}
+  launch:
+    "<base>/CYB.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2516430
 Cybrus:
   files:
     "<home>/.config/unity3d/ThatGuyGilby/Cybrus/*.csav":
@@ -184651,12 +184662,19 @@ Death of Desert:
   steam:
     id: 1022670
 Death of a Wish:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/melessthanthree/DeathOfAWish/savedGames.gd":
       tags:
         - save
       when:
         - os: windows
+  id:
+    lutris: death-of-a-wish
+    steamExtra:
+      - 2563830
+      - 3089970
   installDir:
     Death of a Wish: {}
   launch:
@@ -223845,9 +223863,21 @@ Duskfade:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/Duskfade/Saved/SaveGames/DFSlot*":
+    "<winLocalAppData>/Duskfade/Saved/Config/Windows":
+      tags:
+        - config
       when:
-        - store: steam
+        - os: windows
+    "<winLocalAppData>/Duskfade/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Duskfade/Saved/SaveGames/settings.sav":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: duskfade
     steamExtra:
@@ -230149,6 +230179,26 @@ Echoes of Aincrad:
             store: steam
   steam:
     id: 2244210
+Echoes of Mystralia:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Borealys Games/Echoes/save/*.dat":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: echoes-of-mystralia
+  installDir:
+    Echoes of Mystralia: {}
+  launch:
+    "<base>/Echoes.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 974480
 "Echoes of War: The Last Heartbeat":
   installDir:
     Echoes of War The Last Heartbeat: {}
@@ -295804,6 +295854,9 @@ Gear.Club Unlimited 2 Ultimate Edition:
         - config
   steam:
     id: 1557860
+Gear.Club Unlimited 3:
+  steam:
+    id: 3659460
 GearCity:
   gog:
     id: 1801948692
@@ -317761,6 +317814,13 @@ GunWorld:
     steamExtra:
       - 3184660
       - 3470360
+  installDir:
+    GUNZ THE DUEL: {}
+  launch:
+    "<base>/start_protected_game.exe":
+      - arguments: STEAM|use1.masangsoft.com|5200|3139440
+        when:
+          - store: steam
   steam:
     id: 3139440
 Gunball:
@@ -340463,9 +340523,6 @@ High Octane Drift:
             store: steam
   steam:
     id: 457330
-High On Life VR:
-  steam:
-    id: 3951190
 High On Racing:
   installDir:
     High On Racing: {}
@@ -340715,6 +340772,9 @@ High on Life 2:
           - store: steam
   steam:
     id: 2069250
+High on Life VR:
+  steam:
+    id: 3951190
 HighFleet:
   cloud:
     steam: true
@@ -382707,6 +382767,9 @@ Just King:
             store: steam
   steam:
     id: 1059980
+"Just Madness: Earth Apocalypse 1979":
+  steam:
+    id: 3652470
 Just N:
   installDir:
     Just N: {}
@@ -388632,7 +388695,9 @@ Kill The Music:
       when:
         - os: windows
   id:
+    lutris: kill-the-music
     steamExtra:
+      - 3269370
       - 3858970
   installDir:
     Kill The Music: {}
@@ -397244,7 +397309,14 @@ Krunker.io:
   id:
     lutris: kknd-krush-kill-n-destroy
 "Krush Kill 'N Destroy 2: Krossfire":
+  cloud:
+    steam: true
   files:
+    "<base>/Campaign":
+      tags:
+        - save
+      when:
+        - store: steam
     "<base>/Options.cfg":
       tags:
         - config
@@ -397254,36 +397326,42 @@ Krunker.io:
       tags:
         - save
       when:
+        - store: steam
         - os: windows
   gog:
     id: 1207659196
   installDir:
-    Krush Kill ‘N Destroy 2 Krossfire: {}
+    KKND 2 Krossfire: {}
   launch:
-    "<base>/KKND2.exe":
+    "<base>/launcher.exe":
       - when:
-          - os: windows
-            store: steam
+          - store: steam
   steam:
     id: 1292180
 "Krush Kill 'N Destroy Xtreme":
+  cloud:
+    steam: true
   files:
     "<base>/game*.sav":
       tags:
         - save
       when:
         - os: windows
+    "<base>/savegame":
+      tags:
+        - save
+      when:
+        - store: steam
   gog:
     id: 1207659107
   id:
     lutris: kknd-krush-kill-n-destroy-xtreme
   installDir:
-    "Krush Kill 'N Destroy Xtreme": {}
+    KKND Xtreme: {}
   launch:
-    "<base>/KKNDgame.exe":
+    "<base>/launcher.exe":
       - when:
-          - os: windows
-            store: steam
+          - store: steam
   steam:
     id: 1292170
 KryptCrawler:
@@ -418175,18 +418253,23 @@ Logic Missile:
   steam:
     id: 448300
 Logic Town:
+  cloud:
+    steam: true
   files:
-    "<home>/.config/com/dividetheplunder/logictown/*.sav":
+    "<home>/AppData/LocalLow/Divide The Plunder Limited/Logic Town":
+      tags:
+        - save
       when:
-        - os: linux
-          store: steam
-    "<home>/AppData/LocalLow/Divide The Plunder Limited/Logic Town/*.sav":
-      when:
-        - store: steam
-    "<home>/Library/Application Support/com.dividetheplunder.logictown/*.sav":
-      when:
-        - os: mac
-          store: steam
+        - os: windows
+  id:
+    lutris: logic-town
+    steamExtra:
+      - 2405240
+      - 2703380
+      - 2763580
+      - 2829390
+      - 3244260
+      - 4742980
   installDir:
     Logic Town: {}
   launch:
@@ -523846,6 +523929,17 @@ Parallax:
             store: steam
   steam:
     id: 325060
+Parallel:
+  installDir:
+    Parallel: {}
+  launch:
+    "<base>/Parallel.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1388350
 Parallel Arena:
   steam:
     id: 889460
@@ -525499,11 +525593,15 @@ Pass The Time 2:
   steam:
     id: 715230
 Pass the Fear:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/PlayMudStudio/Pass the fear/GameData/*.dat":
       when:
         - os: windows
           store: steam
+  id:
+    lutris: pass-the-fear
   installDir:
     Pass The Fear: {}
   launch:
@@ -528151,6 +528249,21 @@ Pegasus Door:
   steam:
     id: 794030
 Pegfinity:
+  files:
+    "<winAppData>/Godot/app_userdata/Pegfinity":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: pegfinity
+  installDir:
+    Pegfinity: {}
+  launch:
+    "<base>/Pegfinity.exe":
+      - when:
+          - store: steam
   steam:
     id: 3947040
 Peggle:
@@ -763769,6 +763882,10 @@ The Walking Dead Onslaught:
         - save
       when:
         - os: windows
+  id:
+    lutris: the-walking-dead-saints-and-sinners
+    steamExtra:
+      - 1237830
   installDir:
     TWDSaintsAndSinners: {}
   steam:
@@ -763781,6 +763898,8 @@ The Walking Dead Onslaught:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: the-walking-dead-saints-sinners-chapter-2-retribut
   installDir:
     The Walking Dead Saints & Sinners - Chapter 2 Retribution: {}
   steam:
@@ -785126,6 +785245,12 @@ TownCraft:
 Townopolis:
   cloud:
     steam: true
+  files:
+    "<winAppData>/Lonely Troops/Townopolis":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Townopolis: {}
   launch:
@@ -853937,6 +854062,25 @@ Xion:
             store: steam
   steam:
     id: 1064440
+Xmas Apocalypse:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/gypynkt games/Xmas Apocalypse/save.json":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Xmas Apocalypse: {}
+  launch:
+    "<base>/Xmas Apocalypse.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2197050
 Xmas Shooting - Scramble!!:
   cloud:
     steam: true
