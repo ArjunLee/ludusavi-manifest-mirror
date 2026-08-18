@@ -158064,6 +158064,11 @@ Creature in the Well:
             store: steam
   steam:
     id: 852300
+Creature kitchen:
+  cloud:
+    gog: true
+  gog:
+    id: 1765156887
 Creatures:
   files:
     "<winDocuments>/Creatures/Creatures":
@@ -196153,6 +196158,31 @@ Devil Guns - Demon Bullet Hell Arena:
           - store: steam
   steam:
     id: 6550
+Devil May Cry 4:
+  files:
+    "<winDocuments>/CAPCOM/DEVILMAYCRY4":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/CAPCOM/DEVILMAYCRY4/config.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: devil-may-cry-4
+  installDir:
+    Devil May Cry 4: {}
+  launch:
+    "<base>/DevilMayCry4_DX10.exe":
+      - when:
+          - store: steam
+    "<base>/DevilMayCry4_DX9.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 45700
 Devil May Cry 4 Special Edition:
   alias: "Devil May Cry 4: Special Edition"
 "Devil May Cry 4: Special Edition":
@@ -377353,6 +377383,9 @@ Jazz Jackrabbit 2:
   gog:
     id: 1917711239
   id:
+    gogExtra:
+      - 1351891846
+      - 1597842603
     lutris: jazz-jackrabbit-2
 "Jazz Lightning : Castle Dungeons":
   installDir:
@@ -521536,6 +521569,9 @@ Pale Echoes:
           - store: steam
   steam:
     id: 377190
+Pale Hunt:
+  steam:
+    id: 4316480
 Pale Lands VR:
   installDir:
     PaleLandsVR: {}
@@ -654620,6 +654656,8 @@ Sonic P-06:
         - config
       when:
         - os: windows
+  id:
+    lutris: sonic-p-06
 Sonic Pico Park:
   id:
     lutris: sonic-pico-park
@@ -691952,6 +691990,11 @@ Sunless Sea:
   installDir:
     SunlessSea: {}
   launch:
+    "<base>/Sunless Sea":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
     "<base>/Sunless Sea.app":
       - when:
           - os: mac
@@ -691963,11 +692006,6 @@ Sunless Sea:
     "<base>/Sunless Sea.x86":
       - when:
           - bit: 32
-            os: linux
-            store: steam
-    "<base>/Sunless Sea.x86_64":
-      - when:
-          - bit: 64
             os: linux
             store: steam
   registry:
@@ -742785,8 +742823,20 @@ The Language of Love:
   steam:
     id: 1027620
 The Lantern of the Laughless Saint:
+  files:
+    "<winLocalAppData>/The_Holy_Fool/Saved":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: the-lantern-of-the-laughless-saint
+  installDir:
+    The Lantern of the Laughless Saint: {}
+  launch:
+    "<base>/The_Holy_Fool.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3849000
 The Lar:
@@ -747446,6 +747496,7 @@ The Lord of the Rings Online:
   files:
     "<winLocalAppData>/Aspyr/War in the North/*.sav":
       tags:
+        - config
         - save
       when:
         - os: windows
