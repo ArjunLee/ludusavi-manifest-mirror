@@ -146524,6 +146524,8 @@ Command & Conquer Remastered Collection:
         - save
       when:
         - os: windows
+  id:
+    lutris: command-conquertm-renegade
   installDir:
     Command & Conquer Renegade: {}
   launch:
@@ -154139,6 +154141,18 @@ Cotton Reboot!:
             store: steam
   steam:
     id: 1364760
+"Cotton Rock With You: Oriental Night Dreams":
+  cloud:
+    steam: true
+  installDir:
+    COTTOn RockWithYou -ORIENTAL NIGHT DREAMS-: {}
+  launch:
+    "<base>/game.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3453070
 "Cotton Rock'n'Roll":
   alias: "Cotton Rock 'n' Roll: Superlative Night Dreams"
 Couch Party Game Night:
@@ -263862,10 +263876,47 @@ Feed Eve:
   steam:
     id: 790950
 Feed It:
+  files:
+    "<home>/.config/unity3d/Games On A Chair/FEED IT/RewiredSaveData.json":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/unity3d/Games On A Chair/FEED IT/SaveFile.es3":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/Games On A Chair/FEED IT/RewiredSaveData.json":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Games On A Chair/FEED IT/SaveFile.es3":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Library/Application Support/Games On A Chair/FEED IT/RewiredSaveData.json":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Games On A Chair/FEED IT/SaveFile.es3":
+      when:
+        - os: mac
+          store: steam
   id:
     lutris: feed-it
     steamExtra:
       - 4627870
+  installDir:
+    FEED IT: {}
+  launch:
+    "<base>/FEED IT.app/Contents/MacOS/FEED IT":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/FEED IT.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4370990
 "Feed and Grow: Fish":
@@ -343137,6 +343188,10 @@ Hitman World of Assassination:
           - os: mac
             store: steam
     "<base>/Launcher.exe":
+      - arguments: "-SKIP_LAUNCHER"
+        when:
+          - os: windows
+            store: steam
       - when:
           - os: windows
             store: steam
@@ -356906,6 +356961,17 @@ I ♥ You!:
   steam:
     id: 307230
 I-Fluid:
+  files:
+    "<base>/Res/DriverFonc.dlu":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/Res/driverEvas.dlu":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     I-Fluid: {}
   launch:
@@ -360609,6 +360675,52 @@ Immortal Heroes:
             store: steam
   steam:
     id: 741450
+Immortal Immanuel:
+  cloud:
+    steam: true
+  files:
+    "<base>/userdata/database/}":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/userdata/replay":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/userdata/save":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/userdata/setting":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/userdata/setting.json":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/userdata/snapshot":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: immortal-immanuel
+    steamExtra:
+      - 3276850
+  installDir:
+    dong1-fang1-zi1-zhi4-shu1: {}
+  launch:
+    "<base>/game.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2861740
 "Immortal Legacy: The Jade Cipher":
   cloud:
     steam: true
@@ -379742,6 +379854,19 @@ Jomp the Jumper:
             store: steam
   steam:
     id: 241000
+Jonah Lomu Rugby Challenge 4:
+  cloud:
+    steam: true
+  installDir:
+    Jonah Lomu Rugby Challenge 4: {}
+  launch:
+    "<base>/Rugby.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3251300
 "Jonah's Path":
   installDir:
     JonahsPath: {}
@@ -439440,6 +439565,24 @@ Mark After Dark:
             store: steam
   steam:
     id: 713980
+Mark of the Deep:
+  cloud:
+    steam: true
+  files:
+    "<base>/MarkOfTheDeep/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/MarkOfTheDeep/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
+  installDir:
+    Mark of the Deep: {}
+  launch:
+    "<base>/MarkOfTheDeep.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1933370
 Mark of the Ninja:
   cloud:
     steam: true
@@ -468744,10 +468887,31 @@ Mortal Shell:
   steam:
     id: 1110910
 Mortal Shell II:
+  files:
+    "<base>/MortalShell2/Saved/SaveGames/MetaSaveGame.sav":
+      when:
+        - store: steam
+    "<base>/MortalShell2/Saved/SaveGames/WorldState_*.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/MortalShell2/Saved/SaveGames/MetaSaveGame.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/MortalShell2/Saved/SaveGames/WorldState_*.sav":
+      when:
+        - store: steam
   id:
     lutris: mortal-shell-ii
     steamExtra:
       - 4711740
+  installDir:
+    Sparta: {}
+  launch:
+    "<base>/MortalShell2.exe":
+      - arguments: "-ExecCmds=\"S.Sep24Playtest 0\""
+        when:
+          - os: windows
+            store: steam
   steam:
     id: 2584270
 Mortal Sin:
@@ -670667,6 +670831,10 @@ Stamp Boy:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Sumo Digital Ltd/Stampede Racing Royale:
+      tags:
+        - config
   steam:
     id: 1851350
 "Stand Out: VR Battle Royale":
@@ -675123,6 +675291,8 @@ StarLancer:
         - config
       when:
         - os: windows
+  id:
+    lutris: starlancer
 "StarLightRiders: HyperJump":
   installDir:
     StarLightRiders HyperJump: {}
@@ -733268,9 +733438,20 @@ The Eternal Life of Goldman:
   steam:
     id: 2254950
 The Eternal Woods:
+  files:
+    "<home>/AppData/LocalLow/James Sutton/The Eternal Woods":
+      when:
+        - os: windows
+          store: steam
   id:
     steamExtra:
       - 4669500
+  installDir:
+    Eternal Woods: {}
+  launch:
+    "<base>/The Eternal Woods.exe":
+      - when:
+          - store: steam
   steam:
     id: 4509630
 The Even More Incredible Machine:
@@ -762844,12 +763025,23 @@ The Triumphant Return of Diabolos:
   steam:
     id: 1342070
 The Troma Project:
+  cloud:
+    gog: true
   files:
     "<base>/Save":
       tags:
         - save
       when:
         - os: windows
+  gog:
+    id: 2078057020
+  id:
+    gogExtra:
+      - 1285440151
+      - 1289196571
+      - 1836480766
+    steamExtra:
+      - 4959150
   installDir:
     Troma: {}
   steam:
@@ -798663,13 +798855,31 @@ Twisted Sails:
   steam:
     id: 782630
 Twisted Tower:
+  cloud:
+    steam: true
   files:
+    "<home>/AppData/LocalLow/Atmos Games, LLC/Twisted Tower":
+      tags:
+        - save
+      when:
+        - os: windows
     "<home>/AppData/LocalLow/Atmos Games, LLC/Twisted Tower Demo":
       tags:
         - save
       when:
         - os: windows
+  installDir:
+    Twisted Tower: {}
+  launch:
+    "<base>/Twisted Tower.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   registry:
+    "HKEY_CURRENT_USER/Software/Atmos Games, LLC/Twisted Tower":
+      tags:
+        - config
     "HKEY_CURRENT_USER/Software/Atmos Games, LLC/Twisted Tower Demo":
       tags:
         - config
@@ -857389,6 +857599,8 @@ Yotsunoha:
   steam:
     id: 880150
 You Are Empty:
+  cloud:
+    steam: true
   files:
     "<winDocuments>/My Games/YaE":
       tags:
@@ -857400,6 +857612,8 @@ You Are Empty:
         - save
       when:
         - os: windows
+  steam:
+    id: 4760480
 You Are God:
   installDir:
     You Are God: {}
