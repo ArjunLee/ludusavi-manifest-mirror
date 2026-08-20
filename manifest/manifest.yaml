@@ -124166,6 +124166,22 @@ Caver (TrainStory):
             store: steam
   steam:
     id: 1224710
+Cavern Adventurers:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    Cavern Adventurers: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2848360
 Cavern Craze VR:
   steam:
     id: 1020580
@@ -175945,6 +175961,7 @@ Darkest Dungeon:
       - 1128594953
       - 1452238359
       - 1452693347
+      - 1589545552
       - 1902657506
       - 1957260232
     steamExtra:
@@ -175953,6 +175970,7 @@ Darkest Dungeon:
       - 702540
       - 735730
       - 1117860
+      - 4964110
   installDir:
     DarkestDungeon: {}
   launch:
@@ -190784,6 +190802,22 @@ Demon Blade VR:
     Demon Blade VR: {}
   steam:
     id: 603340
+Demon Castle Story:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    DemonCastleStory: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4212210
 Demon Gaze Extra:
   cloud:
     steam: true
@@ -225327,6 +225361,8 @@ Dynasty Feud:
   steam:
     id: 493180
 "Dynasty Warriors 3: Complete Edition Remastered":
+  cloud:
+    steam: true
   steam:
     id: 3841510
 "Dynasty Warriors 4: Hyper":
@@ -267998,6 +268034,22 @@ Final Frontier:
             store: steam
   steam:
     id: 1157830
+Final Frontier Story:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    FinalFrontierStory: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3936590
 Final Hope:
   files:
     "<base>/SavesDir/*.sav":
@@ -331074,6 +331126,22 @@ Hei:
             store: steam
   steam:
     id: 1026940
+Heian City Story:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    HeianCityStory: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3132250
 Heiankyo Alien:
   installDir:
     HeiankyoAlien: {}
@@ -375742,6 +375810,15 @@ Jack the Barbarian:
             store: steam
   steam:
     id: 852160
+Jack the Nipper:
+  installDir:
+    Jack the Nipper: {}
+  launch:
+    "<base>/Jack.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2072680
 Jack troubles:
   installDir:
     Jack troubles: {}
@@ -397982,6 +398059,8 @@ Kulzas Tomb:
   steam:
     id: 942920
 "Kumarn: The Wandering Spirit":
+  id:
+    lutris: kumarn-the-wandering-spirit
   steam:
     id: 3888420
 Kumo:
@@ -407337,6 +407416,22 @@ Legends of Ethernal:
             store: steam
   steam:
     id: 908480
+Legends of Heropolis DX:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    LegendsOfHeropolisDX: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3042830
 Legends of Iona RPG:
   cloud:
     steam: true
@@ -442749,6 +442844,17 @@ Match Connect Challenge:
             store: steam
   steam:
     id: 839820
+Match Day & International Match Day:
+  cloud:
+    steam: true
+  installDir:
+    Match Day: {}
+  launch:
+    "<base>/game.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2231000
 Match It!:
   installDir:
     Match It!: {}
@@ -468887,19 +468993,19 @@ Mortal Shell:
   steam:
     id: 1110910
 Mortal Shell II:
+  cloud:
+    steam: true
   files:
-    "<base>/MortalShell2/Saved/SaveGames/MetaSaveGame.sav":
+    "<winLocalAppData>/MortalShell2/Config/Windows":
+      tags:
+        - config
       when:
-        - store: steam
-    "<base>/MortalShell2/Saved/SaveGames/WorldState_*.sav":
+        - os: windows
+    "<winLocalAppData>/MortalShell2/Saved/SaveGames":
+      tags:
+        - save
       when:
-        - store: steam
-    "<winLocalAppData>/MortalShell2/Saved/SaveGames/MetaSaveGame.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/MortalShell2/Saved/SaveGames/WorldState_*.sav":
-      when:
-        - store: steam
+        - os: windows
   id:
     lutris: mortal-shell-ii
     steamExtra:
@@ -494086,6 +494192,11 @@ Ninja Avenger Dragon Blade:
             store: steam
   steam:
     id: 603790
+"Ninja Baseball League-Man: Bases Loaded":
+  cloud:
+    steam: true
+  steam:
+    id: 3418870
 Ninja Blade:
   files:
     "<winDocuments>/NinjaBlade":
@@ -546668,12 +546779,16 @@ Possessor(s):
     gog: true
     steam: true
   files:
-    "<base>/Pose/Saved/SaveGames/<storeUserId>/*.sav":
+    "<winLocalAppData>/Pose/Saved/Config":
+      tags:
+        - config
       when:
-        - store: steam
+        - os: windows
     "<winLocalAppData>/Pose/Saved/SaveGames/<storeUserId>/*.sav":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   gog:
     id: 1839377078
   id:
@@ -550538,6 +550653,11 @@ Prince of Persia 3D:
         - save
       when:
         - os: windows
+    "<base>/gog.toml":
+      tags:
+        - config
+      when:
+        - store: gog
   gog:
     id: 1207658747
   id:
@@ -552627,6 +552747,22 @@ Pro Strategy Football 2020:
             store: steam
   steam:
     id: 1099920
+Pro Wrestler Story:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    ProWrestlerStory: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3334710
 Pro Wrestling X:
   installDir:
     ProWrestlingX: {}
@@ -554696,10 +554832,92 @@ Project OutFox:
   steam:
     id: 1751820
 Project P.I.T.T.:
+  files:
+    "<home>/Library/Application Support/Godot/app_userdata/Project P.I.T.T/*.save":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Project P.I.T.T/*.save.bak":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Project P.I.T.T/keybindings.cfg":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Project P.I.T.T/locale.cfg":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Project P.I.T.T/profile.cfg":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Project P.I.T.T/settings.cfg":
+      when:
+        - os: mac
+          store: steam
+    "<winAppData>/Godot/app_userdata/Project P.I.T.T/*.save":
+      when:
+        - store: steam
+    "<winAppData>/Godot/app_userdata/Project P.I.T.T/*.save.bak":
+      when:
+        - store: steam
+    "<winAppData>/Godot/app_userdata/Project P.I.T.T/keybindings.cfg":
+      when:
+        - store: steam
+    "<winAppData>/Godot/app_userdata/Project P.I.T.T/locale.cfg":
+      when:
+        - store: steam
+    "<winAppData>/Godot/app_userdata/Project P.I.T.T/profile.cfg":
+      when:
+        - store: steam
+    "<winAppData>/Godot/app_userdata/Project P.I.T.T/settings.cfg":
+      when:
+        - store: steam
+    "<xdgData>/godot/app_userdata/Project P.I.T.T/*.save":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/godot/app_userdata/Project P.I.T.T/*.save.bak":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/godot/app_userdata/Project P.I.T.T/keybindings.cfg":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/godot/app_userdata/Project P.I.T.T/locale.cfg":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/godot/app_userdata/Project P.I.T.T/profile.cfg":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/godot/app_userdata/Project P.I.T.T/settings.cfg":
+      when:
+        - os: linux
+          store: steam
   id:
     lutris: project-pitt
     steamExtra:
       - 4636730
+  installDir:
+    Project P.I.T.T: {}
+  launch:
+    "<base>/projectpitt.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/projectpitt.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/projectpitt.x86_64":
+      - when:
+          - os: linux
+            store: steam
   steam:
     id: 4026250
 Project Pastorate:
@@ -640761,6 +640979,22 @@ Skater XL:
     Skater XL: {}
   steam:
     id: 962730
+Skating Rink Story:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    SkatingRinkStory: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3601190
 Skaut Kwatermaster:
   files:
     "<base>/AVALON.INI":
@@ -643309,6 +643543,22 @@ Skyscraper Simulator:
             store: steam
   steam:
     id: 367600
+Skyship Quest Story:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    SkyshipQuestStory: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4424950
 Skystrider:
   cloud:
     steam: true
@@ -680778,6 +681028,17 @@ Steins;Gate Elite:
   steam:
     id: 819030
 "Steins;Gate Re:Boot":
+  files:
+    "<winDocuments>/My Games/mages_steam/STEINS;GATE REBOOT/<storeUserId>/*.bin":
+      when:
+        - os: windows
+          store: steam
+    "<winDocuments>/My Games/mages_steam/STEINS;GATE REBOOT/<storeUserId>/*.txt":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    SGRE: {}
   steam:
     id: 4012810
 "Steins;Gate: Linear Bounded Phenogram":
@@ -707890,6 +708151,22 @@ TUTUTUTU - Tea party:
             store: steam
   steam:
     id: 326590
+TV Studio Story:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves/<storeUserId>":
+      when:
+        - store: steam
+  installDir:
+    TV Studio Story: {}
+  launch:
+    "<base>/KairoGames.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2732020
 TV Trouble:
   installDir:
     TV Trouble: {}
@@ -744074,6 +744351,16 @@ The Last NightMary - A Lenda do Cabeça de Cuia:
           - store: steam
   steam:
     id: 407300
+The Last Ninja Collection + Bonus Games:
+  installDir:
+    The Last Ninja Collection: {}
+  launch:
+    "<base>/Last Ninja Collection.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3501570
 The Last One:
   installDir:
     The Last One: {}
@@ -759216,6 +759503,7 @@ The Sinking City:
     id: 750130
 The Sinking City 2:
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -759226,8 +759514,16 @@ The Sinking City 2:
   gog:
     id: 1653226562
   id:
+    gogExtra:
+      - 1207836582
+      - 1310231644
+      - 1320520340
+      - 1571927298
+      - 2062079148
     lutris: the-sinking-city-2
     steamExtra:
+      - 4265340
+      - 4265420
       - 4265460
       - 4684710
   installDir:
@@ -760825,6 +761121,8 @@ The Suffering:
         - os: windows
   gog:
     id: 1268478205
+  id:
+    lutris: the-suffering
 The Suffering of Larina:
   steam:
     id: 690090
