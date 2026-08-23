@@ -6995,7 +6995,7 @@ $1 Ride:
     id: 772470
 80 Days:
   files:
-    80 Days/setup.ini:
+    "<base>/setup.ini":
       tags:
         - config
       when:
@@ -60896,6 +60896,9 @@ Awe of Despair:
             store: steam
   steam:
     id: 739730
+Awesome Cop:
+  id:
+    lutris: polda-2
 Awesome Machine:
   files:
     "<home>/AppData/LocalLow/Bellosoft/Awesome Machine/awesomeData.json":
@@ -93403,8 +93406,6 @@ Bloodthief:
   steam:
     id: 2533600
 Bloodville:
-  cloud:
-    steam: true
   id:
     lutris: bloodville
   steam:
@@ -114276,6 +114277,22 @@ Call of Duty Black Ops Cold War:
   steam:
     id: 10180
 "Call of Duty: Modern Warfare 2 Campaign Remastered":
+  files:
+    "<base>/players2/<storeUserId>/config.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/players2/<storeUserId>/settings_c.zip.h2":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/players2/<storeUserId>/settings_s.zip.h2":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: call-of-duty-modern-warfare-2-campaign-remastered
 "Call of Duty: Modern Warfare 3":
@@ -150757,6 +150774,14 @@ ContractVille:
           - os: windows
             store: steam
       - arguments: "-dx11"
+        when:
+          - os: windows
+            store: steam
+      - arguments: "-ngxdisableota -ngxdisable"
+        when:
+          - os: windows
+            store: steam
+      - arguments: "-dx11 -ngxdisableota -ngxdisable"
         when:
           - os: windows
             store: steam
@@ -295148,6 +295173,8 @@ Garrison Gauntlet:
         - save
       when:
         - os: windows
+  id:
+    lutris: garrys-mod
   installDir:
     GarrysMod: {}
   launch:
@@ -371745,6 +371772,13 @@ Iron Blade:
           - store: steam
   steam:
     id: 1087730
+Iron Blight:
+  id:
+    lutris: iron-blight
+    steamExtra:
+      - 4129130
+  steam:
+    id: 4001350
 Iron Blood VR:
   installDir:
     Iron Blood VR: {}
@@ -450991,8 +451025,9 @@ Metal Gear Solid - Master Collection Version:
   id:
     steamExtra:
       - 3859630
+      - 4184400
   steam:
-    id: 4184400
+    id: 2492670
 "Metal Gear Solid Delta: Snake Eater":
   alias: "Metal Gear Solid Δ: Snake Eater"
 "Metal Gear Solid V: Ground Zeroes":
@@ -451109,8 +451144,9 @@ Metal Gear Solid - Master Collection Version:
   id:
     steamExtra:
       - 3859630
+      - 4184360
   steam:
-    id: 4184360
+    id: 2492660
 Metal Gear Survive:
   cloud:
     steam: true
@@ -451142,8 +451178,9 @@ Metal Gear Survive:
   id:
     steamExtra:
       - 3859630
+      - 4184420
   steam:
-    id: 4184420
+    id: 3036720
 Metal Heads:
   installDir:
     Metal Heads: {}
@@ -469239,6 +469276,7 @@ Mortal Shell II:
   id:
     lutris: mortal-shell-ii
     steamExtra:
+      - 4711720
       - 4711740
   installDir:
     Sparta: {}
@@ -528937,6 +528975,13 @@ Peepo Island:
 Peer Gynt the Game:
   steam:
     id: 1175370
+Peg Champ:
+  id:
+    lutris: peg-champ
+    steamExtra:
+      - 4949410
+  steam:
+    id: 4936660
 Pegasus Door:
   installDir:
     Pegasus Door: {}
@@ -546574,6 +546619,11 @@ Portal 2 Sixense Perceptual Pack:
     "<base>/portal2_dlc2/cfg":
       tags:
         - config
+      when:
+        - os: windows
+    "<base>/portal2_sixense/SAVE/<storeUserId>":
+      tags:
+        - save
       when:
         - os: windows
     "<base>/portal2_sixense/cfg":
@@ -742520,12 +742570,12 @@ The Journey to Fairytales:
     id: 385410
 "The Journeyman Project 2: Buried in Time":
   files:
-    "&*42;.btg":
+    "<base>/*.btg":
       tags:
         - save
       when:
         - os: windows
-    "&*42;.sav":
+    "<base>/*.sav":
       tags:
         - save
       when:
@@ -807445,6 +807495,8 @@ United Force of Osiris (pre Alpha):
   steam:
     id: 958290
 United Heist:
+  cloud:
+    steam: true
   files:
     "<winLocalAppData>/CoopPuzzle/Saved/Config/Windows":
       tags:
