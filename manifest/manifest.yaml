@@ -30668,6 +30668,15 @@ Alien Breed:
           - store: steam
   steam:
     id: 22650
+Alien Breed 35th Anniversary Collection:
+  cloud:
+    epic: true
+    gog: true
+    steam: true
+  gog:
+    id: 1236856891
+  steam:
+    id: 4870460
 "Alien Breed 3: Descent":
   cloud:
     gog: true
@@ -49056,6 +49065,8 @@ Armored Fist 3:
         - save
       when:
         - os: windows
+  id:
+    lutris: armored-fist-3
   installDir:
     Armored Fist 3: {}
   launch:
@@ -86155,6 +86166,8 @@ Black Moon Chronicles:
         - os: windows
   gog:
     id: 1432715627
+  id:
+    lutris: black-moon-chronicles
   installDir:
     Black Moon Chronicles: {}
   launch:
@@ -158253,6 +158266,8 @@ Creatures 2:
 Creatures 3:
   gog:
     id: 1207658812
+  id:
+    lutris: creatures-3
   steam:
     id: 1797350
 Creatures Docking Station:
@@ -205479,6 +205494,26 @@ Doki Doki Ragnarok:
             store: steam
   steam:
     id: 1578330
+Dokimon Quest:
+  files:
+    "<winLocalAppData>/dokimon/*.sav":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: dokimon
+    steamExtra:
+      - 3236490
+      - 3314520
+  installDir:
+    Dokimon: {}
+  launch:
+    "<base>/Dokimon.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2019300
 Dokkaebi Hentai Adventures:
   id:
     steamExtra:
@@ -235434,6 +235469,9 @@ Elona:
             store: steam
   steam:
     id: 1069290
+Elroy Goes Bugzerk:
+  steam:
+    id: 5093680
 Elroy and the Aliens:
   cloud:
     steam: true
@@ -331954,6 +331992,13 @@ Hell Cleaners:
     lutris: hell-cleaners
     steamExtra:
       - 4784910
+  installDir:
+    HellCleaners: {}
+  launch:
+    "<base>/HellCleaners.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4554270
 Hell Clock:
@@ -371800,6 +371845,13 @@ Iron Blight:
     lutris: iron-blight
     steamExtra:
       - 4129130
+  installDir:
+    Iron Blight: {}
+  launch:
+    "<base>/Iron Blight.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4001350
 Iron Blood VR:
@@ -378776,6 +378828,8 @@ Jetrunner:
         - save
       when:
         - os: windows
+  id:
+    lutris: jetsnguns-gold
   installDir:
     JnG Gold: {}
   launch:
@@ -415943,6 +415997,8 @@ Links E6:
 "Links LS: 1998 Edition":
   gog:
     id: 1151948886
+  id:
+    lutris: links-ls-1998-edition
 "Links: The Challenge of Golf":
   cloud:
     gog: true
@@ -426997,6 +427053,32 @@ Lumina:
             store: steam
   steam:
     id: 1063050
+Lumina Veil:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/EternalTerror/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/EternalTerror/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: lumina-veil
+  installDir:
+    Lumina Veil: {}
+  launch:
+    "<base>/Lumina Veil.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2840000
 Luminary:
   cloud:
     steam: true
@@ -432384,6 +432466,13 @@ Madden NFL 25:
   steam:
     id: 2582560
 Madden NFL 26:
+  files:
+    "<winDocuments>/Madden NFL 26":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   installDir:
     Madden NFL 26: {}
   steam:
@@ -524644,6 +524733,8 @@ Paragon:
   steam:
     id: 1531430
 Paralives:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/Paralives/Paralives/MyOptions.mod":
       tags:
@@ -529002,10 +529093,22 @@ Peer Gynt the Game:
   steam:
     id: 1175370
 Peg Champ:
+  files:
+    "<winAppData>/Godot/app_userdata/peg_champ/*.pegc":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: peg-champ
     steamExtra:
       - 4949410
+  installDir:
+    Peg Champ: {}
+  launch:
+    "<base>/peg_champ_beta.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4936660
 Pegasus Door:
@@ -550971,6 +551074,8 @@ Prince of Persia 3D:
   steam:
     id: 2751000
 "Prince of Persia: The Sands of Time":
+  cloud:
+    gog: true
   files:
     "<base>/Hardware.ini":
       tags:
@@ -563139,8 +563244,9 @@ Quake II Enhanced:
         - save
       when:
         - os: windows
-  gog:
-    id: 1443696817
+  id:
+    gogExtra:
+      - 1947927225
   installDir:
     Quake 2: {}
   launch:
@@ -584821,6 +584927,18 @@ Resonance of Fate 4K/HD Edition:
 "Resonance: A Plague Tale Legacy":
   cloud:
     steam: true
+  files:
+    "<root>/userdata/<storeUserId>/2713000/remote":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<winAppData>/Resonance A Plague Tale Legacy/ENGINESETTINGS":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: resonance-a-plague-tale-legacy
   steam:
@@ -598502,6 +598620,8 @@ Roguebreaker:
   steam:
     id: 731420
 Roguecraft DX:
+  gog:
+    id: 1196903604
   steam:
     id: 3674680
 Roguelands:
@@ -647929,9 +648049,43 @@ Smasher:
   steam:
     id: 989230
 Smashing Bottles:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Godot/app_userdata/Smashing Bottles/SmashingBottlesSaveData.dat":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Godot/app_userdata/Smashing Bottles/settings.dat":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     steamExtra:
       - 4675800
+      - 4995180
+      - 4995210
+  installDir:
+    Smashing Bottles: {}
+  launch:
+    "<base>/Linux/SmashingBottles.x86_64":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/Mac/Smashing Bottles.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/SmashingBottles/SmashingBottles.exe":
+      - when:
+          - os: windows
+            store: steam
+      - arguments: "--rendering-driver opengl3"
+        when:
+          - os: windows
+            store: steam
   steam:
     id: 4637870
 Smashing the Battle:
@@ -719367,6 +719521,13 @@ Terramancer:
           - store: steam
   steam:
     id: 1050170
+Terranigma:
+  cloud:
+    steam: true
+  gog:
+    id: 1344650022
+  steam:
+    id: 4193690
 Terraria:
   cloud:
     steam: true
@@ -767000,6 +767161,9 @@ The Witcher Adventure Game:
         - config
   steam:
     id: 303800
+The Witcher IV:
+  id:
+    lutris: the-witcher-iv
 "The Witches' Tea Party":
   installDir:
     "The Witches' Tea Party": {}
@@ -768613,6 +768777,10 @@ Theocracy:
         - save
       when:
         - os: windows
+  gog:
+    id: 1355762673
+  steam:
+    id: 4834790
 Theocracy (2022):
   files:
     "<base>/DATA/options.dat":
@@ -779065,8 +779233,13 @@ Toltec and the mysteries of the Secret Island:
       tags:
         - save
       when:
-        - os: windows
-          store: uplay
+        - store: uplay
+    "<root>/savegames/<storeUserId>/62412":
+      tags:
+        - save
+      when:
+        - store: steam
+        - store: uplay
     "<winDocuments>/My Games/Ghost Recon Breakpoint":
       tags:
         - config
@@ -817973,16 +818146,21 @@ Vexius:
     id: 757190
 Vholume:
   files:
-    "<winLocalAppData>/VHOLUME/Saved/Ghosts/**/*.json.gz":
+    "<winLocalAppData>/VHOLUME/Saved/Config/Windows":
+      tags:
+        - config
       when:
-        - store: steam
+        - os: windows
     "<winLocalAppData>/VHOLUME/Saved/SaveGames":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   id:
     lutris: vholume
     steamExtra:
       - 4245250
+      - 5133400
   installDir:
     VHOLUME: {}
   launch:
