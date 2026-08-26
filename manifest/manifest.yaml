@@ -2222,10 +2222,24 @@ $1 Ride:
 "1666: Amsterdam":
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/Amsterdam/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: 1666-amsterdam
     steamExtra:
       - 4519690
+      - 5101950
+  installDir:
+    1666Amsterdam: {}
+  launch:
+    "<base>/Amsterdam/Binaries/Win64/1666Amsterdam.exe":
+      - when:
+          - os: windows
+            store: steam
+        workingDir: "<base>/Amsterdam/Binaries/Win64"
   steam:
     id: 3949550
 16bit Trader:
@@ -32085,6 +32099,20 @@ Aliens&Asteroids:
   steam:
     id: 1549970
 "Aliens: Fireteam Elite 2":
+  files:
+    "<winLocalAppData>/AFE2/Saved/SaveGames/<storeUserId>/**/*.sav":
+      when:
+        - store: steam
+  id:
+    steamExtra:
+      - 4941380
+      - 4941390
+  installDir:
+    Aliens Fireteam Elite 2: {}
+  launch:
+    "<base>/AFE2.exe":
+      - when:
+          - store: steam
   steam:
     id: 3448650
 Alight:
@@ -92164,6 +92192,30 @@ Blood Drift:
             store: steam
   steam:
     id: 798140
+Blood Dungeon:
+  cloud:
+    steam: true
+  files:
+    "<home>/Library/Application Support/com.messhof.blooddungeon/blood.sav":
+      when:
+        - os: mac
+          store: steam
+    "<winLocalAppData>/blooddungeon/**/blood.sav":
+      when:
+        - store: steam
+  installDir:
+    Blood Dungeon: {}
+  launch:
+    "<base>/BloodDungeon.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/blooddungeon.app":
+      - when:
+          - os: mac
+            store: steam
+  steam:
+    id: 2431080
 Blood Feed:
   installDir:
     Blood Feed: {}
@@ -99483,6 +99535,8 @@ Botfestation:
         - save
       when:
         - os: windows
+  gog:
+    id: 2062297091
   installDir:
     BotiByteland: {}
   steam:
@@ -112763,6 +112817,14 @@ Cabernet:
         - os: windows
   gog:
     id: 1333742671
+  id:
+    gogExtra:
+      - 1446164689
+      - 1986065499
+      - 2050610206
+    steamExtra:
+      - 3283960
+      - 3545650
   installDir:
     Cabernet: {}
   launch:
@@ -121859,6 +121921,18 @@ Castlevania Dominus Collection:
             store: steam
   steam:
     id: 239250
+"Castlevania: Symphony of Horrors":
+  files:
+    "<winLocalAppData>/CastlevaniaSOH/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/CastlevaniaSOH/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
 Castra:
   cloud:
     steam: true
@@ -135206,6 +135280,35 @@ Circus Empire:
         - os: windows
   id:
     lutris: circus-empire
+Cirno! Lifts a Boulder:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Godot/app_userdata/Cirno! Lifts a Boulder/fairysave.icecold":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winAppData>/Godot/app_userdata/Cirno! Lifts a Boulder/levelsave.icecold":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Cirno! Lifts a Boulder: {}
+  launch:
+    "<base>/Cirno! Lifts a Boulder.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/Cirno! Lifts a Boulder.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 4173110
 "Cirno's Perfect Summer Vacation":
   installDir:
     "Cirno's Perfect Summer Vacation": {}
@@ -138632,6 +138735,7 @@ Click the Button:
     lutris: click-the-button
     steamExtra:
       - 4805850
+      - 5110650
   steam:
     id: 3946950
 Click to Continue:
@@ -184049,6 +184153,8 @@ Death Rally:
         - config
       when:
         - os: windows
+  id:
+    lutris: death-rally
   installDir:
     Death Rally: {}
   launch:
@@ -184076,6 +184182,8 @@ Death Rally (2012):
         - save
       when:
         - os: windows
+  id:
+    lutris: death-rally-classic
   installDir:
     DeathRally: {}
   launch:
@@ -219983,6 +220091,9 @@ Duel Jousting:
             store: steam
   steam:
     id: 751540
+Duel Princess:
+  gog:
+    id: 1387622228
 Duel Survival:
   installDir:
     Duel Survival: {}
@@ -229580,6 +229691,8 @@ Easy Delivery Co.:
         - save
       when:
         - os: windows
+  gog:
+    id: 1186701134
   installDir:
     Easy Delivery Co: {}
   launch:
@@ -286985,6 +287098,8 @@ Fruitbus:
         - save
       when:
         - os: windows
+  gog:
+    id: 1969775197
   installDir:
     Fruitbus: {}
   steam:
@@ -337912,10 +338027,18 @@ Heroes of Might and Magic III:
     gogExtra:
       - 1718139055
     lutris: heroes-of-might-and-magic-iii
+  installDir:
+    Heroes Of Might And Magic III: {}
+  launch:
+    "<base>/Heroes3.exe":
+      - when:
+          - store: steam
   registry:
     HKEY_LOCAL_MACHINE/Software/WOW6432Node/New World Computing/Heroes of Might and Magic® III/1.0:
       tags:
         - config
+  steam:
+    id: 4921760
 Heroes of Might and Magic III - HD Edition:
   files:
     "<winDocuments>/Ubisoft/Heroes of Might & Magic III - HD Edition":
@@ -337938,6 +338061,9 @@ Heroes of Might and Magic III - HD Edition:
           - store: steam
   steam:
     id: 297000
+Heroes of Might and Magic III Remake:
+  steam:
+    id: 3809850
 Heroes of Might and Magic IV:
   cloud:
     gog: true
@@ -407590,6 +407716,8 @@ Legends of Aethereus:
         - save
       when:
         - os: windows
+  gog:
+    id: 1849781464
   installDir:
     Legends of Amberland II: {}
   launch:
@@ -462555,6 +462683,8 @@ Mokoko X:
         - save
       when:
         - os: windows
+  gog:
+    id: 1688255471
   id:
     steamExtra:
       - 2175140
@@ -467391,6 +467521,8 @@ Moon Landing VR:
   steam:
     id: 651080
 Moon Mystery:
+  gog:
+    id: 1263921885
   id:
     lutris: moon-mystery
     steamExtra:
@@ -494974,6 +495106,11 @@ Ninja Guy:
     id: 1195070
 "Ninja JaJaMaru: The Great Yokai Battle Hell":
   alias: "Ninja JaJaMaru: The Great Yokai Battle + Hell"
+"Ninja JaJaMaru: Yokai Night Parade":
+  cloud:
+    steam: true
+  steam:
+    id: 4173010
 Ninja Jump:
   installDir:
     Ninja jump: {}
@@ -502407,6 +502544,28 @@ Oaken:
             store: steam
   steam:
     id: 1348690
+Oaken Tower:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/autoWeapons/**/*.ini":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: oaken-tower
+    steamExtra:
+      - 3692220
+      - 4596710
+  installDir:
+    Oaken Tower: {}
+  launch:
+    "<base>/oakenTower.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3400960
 Oakwood:
   files:
     "<home>/AppData/LocalLow/Breaking Dimensions/Oakwood/saveGame.dat":
@@ -522085,6 +522244,18 @@ Pakicetus:
             store: steam
   steam:
     id: 1105240
+Pako:
+  files:
+    "<base>/Pako.hi":
+      tags:
+        - save
+      when:
+        - os: dos
+    "<base>/Pako.sav":
+      tags:
+        - save
+      when:
+        - os: dos
 Palace of Cards:
   installDir:
     Palace-of-Cards: {}
@@ -544385,6 +544556,8 @@ Police Patrol:
   steam:
     id: 607120
 Police Simulator Patrol Officers:
+  cloud:
+    steam: true
   files:
     "<winLocalAppData>/Boston/Saved/Config/WindowsNoEditor":
       tags:
@@ -584927,18 +585100,6 @@ Resonance of Fate 4K/HD Edition:
 "Resonance: A Plague Tale Legacy":
   cloud:
     steam: true
-  files:
-    "<root>/userdata/<storeUserId>/2713000/remote":
-      tags:
-        - save
-      when:
-        - store: steam
-    "<winAppData>/Resonance A Plague Tale Legacy/ENGINESETTINGS":
-      tags:
-        - config
-      when:
-        - os: windows
-          store: steam
   id:
     lutris: resonance-a-plague-tale-legacy
   steam:
@@ -599108,6 +599269,11 @@ RollerCoaster Tycoon Classic:
             store: steam
   steam:
     id: 683900
+RollerCoaster Tycoon Wonderworks:
+  cloud:
+    steam: true
+  steam:
+    id: 4734550
 RollerCoaster Tycoon World:
   cloud:
     steam: true
@@ -613980,6 +614146,11 @@ Sanitarium:
         - config
   steam:
     id: 284050
+Sanitarium Enhanced:
+  gog:
+    id: 1517593592
+  steam:
+    id: 4980620
 Sanitarium Rush:
   installDir:
     Sanitarium Rush: {}
@@ -626860,6 +627031,12 @@ Shadow Warrior 3:
     id: 1650413893
   id:
     lutris: shadow-warrior-3
+    steamExtra:
+      - 677366
+      - 677367
+      - 1876260
+      - 1895090
+      - 1913640
   installDir:
     Shadow Warrior 3: {}
   launch:
@@ -667533,6 +667710,7 @@ Spirit Arena:
       when:
         - os: windows
   id:
+    lutris: spirit-city-lofi-sessions--2
     steamExtra:
       - 2374850
       - 3210380
@@ -779389,6 +779567,9 @@ Toltec and the mysteries of the Secret Island:
         - config
       when:
         - os: windows
+"Tom Clancy's Rainbow 6 Tactics":
+  steam:
+    id: 3621390
 "Tom Clancy's Rainbow Six":
   files:
     "<base>/data/save":
@@ -831525,6 +831706,11 @@ Warlock Revenge:
             store: steam
   steam:
     id: 530370
+"Warlock: Dungeons & Dragons":
+  id:
+    lutris: warlock-dungeons-and-dragons
+  steam:
+    id: 3714800
 "Warlock: Master of the Arcane":
   installDir:
     Warlock - Master of the Arcane: {}
@@ -831613,8 +831799,9 @@ Warlords:
       when:
         - os: dos
         - os: windows
-  gog:
-    id: 1972111803
+  id:
+    gogExtra:
+      - 1484514614
   installDir:
     Warlords I + II: {}
   launch:
@@ -831705,8 +831892,9 @@ Warlords II:
       when:
         - os: dos
         - os: windows
-  gog:
-    id: 1972111803
+  id:
+    gogExtra:
+      - 1421600680
   installDir:
     Warlords I + II: {}
   launch:
