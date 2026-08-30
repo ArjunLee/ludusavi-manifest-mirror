@@ -32897,6 +32897,26 @@ Allspace:
             store: steam
   steam:
     id: 1000860
+Allumeria:
+  cloud:
+    steam: true
+  files:
+    "<winDocuments>/My Games/Allumeria":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    Allumeria: {}
+  launch:
+    "<base>/Allumeria.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3516590
 Allumette:
   installDir:
     Allumette: {}
@@ -122360,12 +122380,17 @@ Cat Quest III:
   cloud:
     steam: true
   files:
-    "<winDocuments>/Cat Quest III/cq3_save*.dat":
+    "<winLocalAppData>/Cat Quest III/cq3_autosave*.dat":
       tags:
         - save
       when:
         - os: windows
-    "<winDocuments>/Cat Quest III/cq3_settings.dat":
+    "<winLocalAppData>/Cat Quest III/cq3_save*.dat":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Cat Quest III/cq3_settings.dat":
       tags:
         - config
       when:
@@ -138777,10 +138802,15 @@ Click the Business:
   steam:
     id: 959980
 Click the Button:
+  cloud:
+    steam: true
   files:
-    "<base>/SavesDir/*.sav":
+    "<winAppData>/Godot/app_userdata/ClickTheButton/save.json":
+      tags:
+        - config
+        - save
       when:
-        - store: steam
+        - os: windows
   id:
     lutris: click-the-button
     steamExtra:
@@ -138790,8 +138820,23 @@ Click the Button:
     Click the Button: {}
   launch:
     "<base>/Click the Button.exe":
-      - when:
-          - store: steam
+      - arguments: "--rendering-method forward_plus --rendering-driver vulkan"
+        when:
+          - os: windows
+            store: steam
+      - arguments: "--rendering-method gl_compatibility --rendering-driver opengl3"
+        when:
+          - os: windows
+            store: steam
+    "<base>/ClickTheButton.x86_64":
+      - arguments: "--rendering-method forward_plus --rendering-driver vulkan"
+        when:
+          - os: linux
+            store: steam
+      - arguments: "--rendering-method gl_compatibility --rendering-driver opengl3"
+        when:
+          - os: linux
+            store: steam
   steam:
     id: 3946950
 Click to Continue:
@@ -149156,6 +149201,8 @@ Conflict Zone:
   steam:
     id: 8100
 "Conflict: Desert Storm":
+  cloud:
+    steam: true
   files:
     "<winDocuments>/SCi/DesertStorm":
       tags:
@@ -200728,6 +200775,19 @@ Diplomacy Is Not an Option:
           - store: steam
   steam:
     id: 1272320
+Dire Echo:
+  id:
+    lutris: dire-echo
+  installDir:
+    Dire Echo: {}
+  launch:
+    "<base>/Dire_Echo.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3743180
 Direct:
   installDir:
     Direct: {}
@@ -387450,6 +387510,9 @@ Kebab It Up!:
       when:
         - os: windows
           store: steam
+  id:
+    steamExtra:
+      - 800020
   installDir:
     Kebab it Up!: {}
   launch:
@@ -422607,6 +422670,8 @@ Lost In Dungeon:
   steam:
     id: 1159590
 Lost In Maze:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/Vertexity Studio/Lost In Maze/*.dat":
       when:
@@ -429779,6 +429844,25 @@ MAKE IT as an Artist:
             store: steam
   steam:
     id: 577390
+MAMIYA:
+  files:
+    "<base>/*.sav":
+      when:
+        - store: steam
+  installDir:
+    Mamiya: {}
+  launch:
+    "<base>/MAMIYA.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/MAMIYA.exe":
+      - arguments: "--in-process-gpu --disable-direct-composition"
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1394930
 MAN STANDING:
   installDir:
     Man Standing: {}
@@ -695136,6 +695220,15 @@ Super Chicken Catchers:
   steam:
     id: 869750
 "Super Chipflake Ü: Quest for the Uncooked Schnitzel":
+  cloud:
+    steam: true
+  files:
+    "<home>/.config/unity3d/SalsaShark Studios/ChipflakeOZA/Save/*.sf":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/SalsaShark Studios/ChipflakeOZA/Save/*.sf":
+      when:
+        - store: steam
   id:
     lutris: super-chipflake-u-quest-for-the-uncooked-schnitzel
   installDir:
@@ -730590,6 +730683,10 @@ The Curse of Womanland:
         - os: windows
         - os: windows
           store: steam
+  id:
+    lutris: the-curse-of-womanland
+    steamExtra:
+      - 4186990
   installDir:
     The Curse of Womanland: {}
   launch:
@@ -733821,6 +733918,7 @@ The Elementalist:
     id: 973410
 The Elephant Collection:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/Library/Application Support/ElephantCollection/**/*.sol":
