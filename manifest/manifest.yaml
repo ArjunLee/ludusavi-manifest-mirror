@@ -44110,6 +44110,17 @@ Apico:
             store: steam
   steam:
     id: 1390190
+"Apidya' Special":
+  installDir:
+    "Apidya' Special": {}
+  launch:
+    "<base>/apidya.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3956980
 Aplestia:
   installDir:
     Aplestia: {}
@@ -90731,6 +90742,33 @@ Blitzkrieg:
         workingDir: "<base>/Rolling Thunder"
   steam:
     id: 313480
+Blitzkrieg 2:
+  gog:
+    id: 1207664013
+  id:
+    gogExtra:
+      - 1207659119
+    lutris: blitzkrieg-2
+  installDir:
+    Blitzkrieg 2 Anthology: {}
+  launch:
+    "<base>/Blitzkrieg 2 - Fall of the Reich/bin/game.exe":
+      - when:
+          - os: windows
+            store: steam
+        workingDir: "<base>/Blitzkrieg 2 - Fall of the Reich/bin"
+    "<base>/Blitzkrieg 2 - Liberation/bin/game.exe":
+      - when:
+          - os: windows
+            store: steam
+        workingDir: "<base>/Blitzkrieg 2 - Liberation/bin"
+    "<base>/Blitzkrieg 2/bin/game.exe":
+      - when:
+          - os: windows
+            store: steam
+        workingDir: "<base>/Blitzkrieg 2/bin"
+  steam:
+    id: 313500
 Blitzkrieg 3:
   cloud:
     steam: true
@@ -112842,6 +112880,13 @@ Cabal Online:
         - os: windows
   id:
     lutris: cabelas-outdoor-adventures
+"Cabela's Sportsman's Challenge":
+  files:
+    "<base>/csc.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 Cabernet:
   cloud:
     epic: true
@@ -123683,6 +123728,36 @@ Catsby:
             store: steam
   steam:
     id: 590270
+"Cattails: Wildwood Story":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Cattails_Wildwood_Story/saves":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Cattails_Wildwood_Story/settings.dat":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 2004330
+  installDir:
+    Cattails Wildwood Story: {}
+  launch:
+    "<base>/Cattails - Wildwood Story.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/CattailsWildwoodStory.app":
+      - when:
+          - os: mac
+            store: steam
+  steam:
+    id: 1882500
 Cattle Admission Challenge:
   installDir:
     Cattle Admission Challenge: {}
@@ -240390,9 +240465,14 @@ Enola:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/Enotria/Saved/SaveGames/*.sav":
+    "<winLocalAppData>/Enotria/Saved/Config/Windows/GameUserSettings.ini":
       tags:
         - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Enotria/Saved/SaveGames/*.sav":
+      tags:
+        - save
       when:
         - os: windows
   id:
@@ -308726,6 +308806,17 @@ GooCubelets 2:
 GooHuebelets:
   steam:
     id: 712220
+Gooba Ball:
+  id:
+    lutris: gooba-ball
+  installDir:
+    Gooba Ball: {}
+  launch:
+    "<base>/Gooba Ball.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2878140
 Gooberries:
   installDir:
     Gooberries: {}
@@ -351000,6 +351091,10 @@ How to Cope with Boredom and Loneliness:
   steam:
     id: 797390
 How to Fish:
+  id:
+    lutris: how-to-fish
+    steamExtra:
+      - 4539520
   installDir:
     How to Fish: {}
   launch:
@@ -417957,20 +418052,11 @@ Little Rocket Lab:
   cloud:
     steam: true
   files:
-    "<home>/.config/unity3d/TeenageAstronauts/LittleRocketLab/*.backup":
-      when:
-        - os: linux
-          store: steam
-    "<home>/.config/unity3d/TeenageAstronauts/LittleRocketLab/*.save":
-      when:
-        - os: linux
-          store: steam
-    "<home>/AppData/LocalLow/TeenageAstronauts/LittleRocketLab/*.backup":
-      when:
-        - store: steam
     "<home>/AppData/LocalLow/TeenageAstronauts/LittleRocketLab/*.save":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   installDir:
     Little Rocket Lab: {}
   launch:
@@ -474255,6 +474341,33 @@ Murders in Space:
         workingDir: "<base>/dosbox_windows"
   steam:
     id: 1255420
+Murders on the Yangtze River:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/OMESCAPE/山河旅探/SaveData":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: murders-on-the-yangtze-river
+    steamExtra:
+      - 2068780
+      - 2808420
+  installDir:
+    山河旅探: {}
+  launch:
+    "<base>/shanhelvtan.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/shanhelvtan.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1746030
 "Murderwave: Digital Slaughter":
   installDir:
     Murderwave - Digital Slaughter: {}
@@ -484492,6 +484605,16 @@ National Park Girls:
         - save
       when:
         - os: windows
+    "<home>/.renpy/NationalParkGirlsLOPE":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/Library/RenPy/NationalParkGirlsLOPE":
+      tags:
+        - save
+      when:
+        - os: mac
     "<winAppData>/RenPy/NationalParkGirls-1531944291":
       tags:
         - save
@@ -502655,6 +502778,7 @@ OTTTD:
     id: 312630
 OTXO:
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -552836,6 +552960,15 @@ Prixel:
             store: steam
   steam:
     id: 961110
+"PrizeFighter: Heavyweight Edition":
+  installDir:
+    PrizeFighter - Heavyweight Edition: {}
+  launch:
+    "<base>/PrizeFighter - Heavyweight Edition.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2919760
 Pro Basketball Manager 2016:
   files:
     "<winDocuments>/Umix Studios/Pro Basketball Manager 2016":
@@ -585422,6 +585555,12 @@ Resonance of Fate 4K/HD Edition:
           store: microsoft
         - os: windows
           store: steam
+    "<winLocalAppData>/Packages/FocusHomeInteractiveSA.APlagueTaleFelons_4hny5m903y3g0/SystemAppData/wgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
   id:
     lutris: resonance-a-plague-tale-legacy
     steamExtra:
@@ -664661,6 +664800,8 @@ Spartan Survivors:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: spartan-survivors--1
   installDir:
     Spartan Survivors: {}
   launch:
@@ -667903,7 +668044,7 @@ Spiral Knights:
         - config
       when:
         - os: linux
-    "<winAppData>/Spiral Knights":
+    Computer/HKEY_CURRENT_USER/Software/JavaSoft/Prefs/projectx:
       tags:
         - config
       when:
