@@ -36450,6 +36450,9 @@ American Truck Simulator:
       - 3025440
       - 3146090
       - 3272290
+      - 3749870
+      - 3793190
+      - 3793200
       - 3872930
       - 4348660
   installDir:
@@ -59802,6 +59805,8 @@ Avast Ye:
   steam:
     id: 1064170
 "Avatar Legends: The Fighting Game":
+  cloud:
+    steam: true
   installDir:
     Avatar Legends The Fighting Game: {}
   launch:
@@ -156949,8 +156954,18 @@ Crate Punks:
   steam:
     id: 517960
 Craving Wisps:
+  files:
+    "<home>/AppData/LocalLow/FireExit/Craving Wisps":
+      when:
+        - store: steam
   id:
     lutris: craving-wisps
+  installDir:
+    Craving Wisps: {}
+  launch:
+    "<base>/Craving Wisps.exe":
+      - when:
+          - store: steam
   steam:
     id: 4334910
 Crawl:
@@ -159888,6 +159903,16 @@ Crimson Desert:
   cloud:
     steam: true
   files:
+    "<home>/Library/Application Support/Pearl Abyss/CD/save":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<home>/Library/Application Support/Pearl Abyss/CD/save/user_engine_option_save.xml":
+      tags:
+        - config
+      when:
+        - os: mac
     "<home>/Library/Containers/com.pearlabyss.CrimsonDesert/Data/Library/Application Support/Pearl Abyss/CD/save":
       tags:
         - save
@@ -198316,7 +198341,12 @@ Dice A Million:
   launch:
     "<base>/dice a million.exe":
       - when:
-          - store: steam
+          - os: windows
+            store: steam
+    "<base>/diceamillion2.app":
+      - when:
+          - os: mac
+            store: steam
   steam:
     id: 3430340
 Dice Defenders:
@@ -319000,6 +319030,8 @@ Gundam Evolution:
   steam:
     id: 1816670
 Gundam Rogue Orbit:
+  id:
+    lutris: gundam-rogue-orbit
   steam:
     id: 1963680
 GundeadliGne:
@@ -324063,8 +324095,26 @@ Halloween with Veronica:
   steam:
     id: 720600
 "Halloween: The Game":
+  cloud:
+    steam: true
+  files:
+    "<base>/Ravage/Saved/SaveGames/STEAM/Campaign*.sav":
+      when:
+        - store: steam
+    "<base>/Ravage/Saved/SaveGames/STEAM/UserSettings*.sav":
+      when:
+        - store: steam
   id:
     lutris: halloween-the-game
+  installDir:
+    Halloween: {}
+  launch:
+    "<base>/start_protected_game.exe":
+      - arguments: "-steam"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3219630
 HalloweenStory:
@@ -363118,6 +363168,11 @@ In Celebration of Violence:
     id: 509570
 In Cold Blood:
   files:
+    "<base>/engine/icb.ini":
+      tags:
+        - config
+      when:
+        - os: windows
     "<base>/engine/linc/saves":
       tags:
         - save
@@ -428768,6 +428823,9 @@ Lupinball:
       when:
         - os: mac
           store: steam
+  id:
+    steamExtra:
+      - 705190
   installDir:
     Lupinball: {}
   launch:
@@ -441921,8 +441979,11 @@ Marvel Snap:
     steam: true
   files:
     "<winLocalAppData>/MTFSSteam/Saved/SAVE/<storeUserId>":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+          store: steam
   id:
     lutris: marvel-tokon-fighting-souls
     steamExtra:
@@ -511243,6 +511304,8 @@ Onimod Land:
   steam:
     id: 761600
 "Onimusha: Way of the Sword":
+  cloud:
+    steam: true
   files:
     "<root>/userdata/<storeUserId>/3974650/remote/win64_save":
       tags:
@@ -554468,6 +554531,13 @@ Professional Baseball Spirits 2024-2025:
             store: steam
   steam:
     id: 2051010
+Professional Bull Rider:
+  files:
+    "<base>/PBR.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 Professional Bull Rider 2:
   files:
     "<base>/PBR.ini":
@@ -684311,6 +684381,9 @@ Still Wakes the Deep:
 "Still Wakes the Deep: Siren’s Rest":
   steam:
     id: 3465690
+Stillmere:
+  steam:
+    id: 3149450
 Stilt Fella:
   cloud:
     steam: true
@@ -709133,6 +709206,11 @@ TOEM:
             store: steam
   steam:
     id: 1307580
+TOEM 2:
+  id:
+    lutris: toem-2
+  steam:
+    id: 2900640
 TOGETHER - TO GET HER:
   alias: Together
 TOGETHER BnB:
@@ -727100,12 +727178,22 @@ The Blood of Dawnwalker:
     gog: true
     steam: true
   files:
+    "<winLocalAppData>/Dawnwalker/Saved/Config/Windows/*.ini":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/Dawnwalker/Saved/GOGSaveGames":
       tags:
         - save
       when:
         - os: windows
           store: gog
+    "<winLocalAppData>/Dawnwalker/Saved/SaveGames/*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 1889754300
   id:
@@ -769795,6 +769883,19 @@ Theme Park Inc.:
         - os: windows
   id:
     lutris: theme-park-manager-simcoaster-theme-park-inc
+Theme Park Mystery:
+  gog:
+    id: 1852729690
+  installDir:
+    ThemeParkMystery: {}
+  launch:
+    "<base>/dosbox_windows/dosbox.exe":
+      - arguments: "\"TPARK.COM\" -conf \"dosbox_themeparkmystery.conf\" -noconsole"
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1518370
 Theme Park Simulator:
   installDir:
     Theme Park Simulator: {}
@@ -840008,6 +840109,8 @@ Wheel of Fate:
 WheelMates:
   id:
     lutris: wheelmates
+    steamExtra:
+      - 5108990
   installDir:
     WheelMates: {}
   launch:
@@ -841622,6 +841725,7 @@ White Knuckle:
     "<home>/AppData/LocalLow/Dark Machine/White Knuckle":
       tags:
         - config
+        - save
       when:
         - os: windows
   installDir:
@@ -844723,6 +844827,22 @@ Windrose:
             store: steam
   steam:
     id: 2201910
+Winds Rhapsody:
+  id:
+    lutris: winds-rhapsody
+  installDir:
+    Winds Rhapsody: {}
+  launch:
+    "<base>/Game.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Game.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1390370
 Winds of Change:
   cloud:
     steam: true
@@ -847055,8 +847175,20 @@ With Loneliness:
   steam:
     id: 516230
 Withering Realms:
+  files:
+    "<home>/AppData/LocalLow/Moonless Formless/Withering Realms/<storeUserId>/save*":
+      when:
+        - store: steam
+        - os: windows
+          store: steam
   id:
     lutris: withering-realms
+  installDir:
+    Withering Realms: {}
+  launch:
+    "<base>/Withering Realms.exe":
+      - when:
+          - store: steam
   steam:
     id: 3441990
 Withering Rooms:
@@ -848929,6 +849061,9 @@ Wolfpack:
             store: steam
   steam:
     id: 490920
+Wolfschanze:
+  id:
+    lutris: wolfschanze
 Wolfsong:
   installDir:
     Wolfsong: {}
@@ -858442,6 +858577,16 @@ Ye Fenny - Revenge of the Evil Good Shepherd:
             store: steam
   steam:
     id: 633930
+Yeah Yeah Beebiss II:
+  installDir:
+    Yeah Yeah Beebiss II: {}
+  launch:
+    "<base>/Yeah Yeah Beebiss II.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1871700
 Year Walk:
   files:
     "<home>/AppData/LocalLow/Simogo/Year Walk/gamedata.bin":
