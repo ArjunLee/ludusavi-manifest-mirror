@@ -48916,6 +48916,8 @@ Armies of Riddle E.X. (Extreme):
   steam:
     id: 968190
 Armikrog:
+  cloud:
+    gog: true
   files:
     "<home>/.config/unity3d/PencilTestStudios/Armikrog/*.dat":
       tags:
@@ -95958,6 +95960,8 @@ Boiling Bolt:
         - os: windows
   gog:
     id: 1866033492
+  id:
+    lutris: boiling-point-road-to-hell
   installDir:
     Boiling Point Road to Hell: {}
   launch:
@@ -101036,9 +101040,28 @@ Boxplosion:
 Boxroom:
   cloud:
     steam: true
+  files:
+    "<home>/.config/unity3d/NestedLoop/BOXROOM/Saves":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/NestedLoop/BOXROOM/Saves":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Library/Application Support/NestedLoop/BOXROOM/Saves":
+      when:
+        - os: mac
+          store: steam
   id:
     steamExtra:
       - 4385060
+  installDir:
+    My Game Room: {}
+  launch:
+    "<base>/BOXROOM.exe":
+      - when:
+          - store: steam
   steam:
     id: 4335460
 Boxville:
@@ -181621,6 +181644,8 @@ Dead Rising Deluxe Remaster:
         - save
       when:
         - store: steam
+  id:
+    lutris: dead-rising-deluxe-remaster
   installDir:
     DEAD RISING DELUXE REMASTER: {}
   launch:
@@ -194542,6 +194567,8 @@ Despera Drops:
         - os: windows
   gog:
     id: 1207658985
+  id:
+    lutris: desperados-2-coopers-revenge
   installDir:
     Desperados 2: {}
   launch:
@@ -201207,6 +201234,12 @@ Dirty Jobs Simulator:
 Dirty Laundry:
   id:
     lutris: dirty-laundry
+  installDir:
+    Dirty Laundry: {}
+  launch:
+    "<base>/Dirty Laundry.exe":
+      - when:
+          - store: steam
   steam:
     id: 4610590
 Dis Pontibus:
@@ -326082,6 +326115,9 @@ Happy Wars:
             store: steam
   steam:
     id: 246280
+Happy Wheels:
+  steam:
+    id: 4705510
 Happy Words:
   installDir:
     HappyWords: {}
@@ -424373,6 +424409,17 @@ Lost in Random:
   cloud:
     gog: true
     steam: true
+  files:
+    "<root>/userdata/<storeUserId>/2564520/remote":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<root>/userdata/<storeUserId>/2564520/remote/settingsSave":
+      tags:
+        - save
+      when:
+        - store: steam
   gog:
     id: 1792486781
   id:
@@ -511505,6 +511552,7 @@ Onimod Land:
     id: 761600
 "Onimusha: Way of the Sword":
   cloud:
+    epic: true
     steam: true
   files:
     "<root>/userdata/<storeUserId>/3974650/remote/win64_save":
@@ -511512,6 +511560,12 @@ Onimod Land:
         - save
       when:
         - store: steam
+    "<winAppData>/Capcom/OnimushaWotS/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: epic
   id:
     lutris: onimusha-way-of-the-sword
   installDir:
@@ -546145,6 +546199,19 @@ Poly Bridge 3:
 Poly Defense:
   steam:
     id: 1031160
+Poly Fighter:
+  files:
+    "<home>/AppData/LocalLow/HeartLoop Games/Poly Fighter":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 4398040
+  steam:
+    id: 3977340
 Poly Fishing:
   cloud:
     steam: true
@@ -552287,7 +552354,7 @@ Prince of Persia 3D:
     Prince of Persia The Lost Crown: {}
   launch:
     "<base>/TheLostCrown.exe":
-      - arguments: "-uplay_steam_mode EnableAlternateAppId"
+      - arguments: "-upc_ucs_mode -uplay_steam_mode EnableAlternateAppId"
         when:
           - os: windows
             store: steam
@@ -670934,10 +671001,31 @@ Sprawl:
   steam:
     id: 1549690
 Sprawl Zero:
+  files:
+    "<winLocalAppData>/Silas/Saved/SaveGames/*_CHECKPOINT.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Silas/Saved/SaveGames/Achievements.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Silas/Saved/SaveGames/Profiles.sav":
+      when:
+        - store: steam
   id:
     lutris: sprawl-zero
     steamExtra:
       - 4247830
+      - 4993840
+      - 5059870
+  installDir:
+    SPRAWL 0: {}
+  launch:
+    "<base>/Silas.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+        workingDir: "<base>/Silas/Binaries/Win64"
   steam:
     id: 3748520
 Spray Dynamite X Radioactive Insects:
@@ -685110,12 +685198,7 @@ Stoneshard:
         - save
       when:
         - os: linux
-    "<home>/AppData/Local/StoneShard/characters_v1/*.map":
-      tags:
-        - save
-      when:
-        - os: windows
-    "<home>/AppData/Local/StoneShard/characters_v1/*.sav":
+    "<home>/AppData/Local/StoneShard/characters_v1":
       tags:
         - save
       when:
@@ -809781,6 +809864,14 @@ Unknown:
         - save
       when:
         - os: windows
+  id:
+    lutris: unknown-9-awakening
+    steamExtra:
+      - 2280170
+      - 2385220
+      - 2385221
+      - 2385222
+      - 2385223
   installDir:
     Unknown 9 - Awakening: {}
   launch:
@@ -815364,7 +815455,7 @@ Valheim:
   installDir:
     Valheim: {}
   launch:
-    "<base>/Valheim.app":
+    "<base>/valheim.app":
       - when:
           - os: mac
             store: steam
@@ -828274,6 +828365,27 @@ WanderLust (2021):
         - config
   steam:
     id: 1507420
+Wanderburg:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Randwerk/Wanderburg":
+      when:
+        - store: steam
+  id:
+    lutris: wanderburg
+    steamExtra:
+      - 3624200
+      - 4268810
+      - 5026240
+  installDir:
+    Wanderburg Game: {}
+  launch:
+    "<base>/Wanderburg.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3624140
 Wanderer of Teandria:
   files:
     "<winLocalAppData>/Wanderer/*.wndr":
