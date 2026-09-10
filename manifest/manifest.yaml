@@ -167864,6 +167864,11 @@ Curvy:
             store: steam
   steam:
     id: 699360
+Custom Hobo:
+  cloud:
+    steam: true
+  steam:
+    id: 1865270
 "Custom Order Maid 3D2 It's a Night Magic":
   installDir:
     "CUSTOM ORDER MAID 3D2 It's a Night Magic": {}
@@ -168310,11 +168315,14 @@ Cyanide & Happiness - Freakpocalypse:
   steam:
     id: 928840
 Cyber Agent:
+  cloud:
+    steam: true
   files:
-    "<home>/AppData/LocalLow/BambuseaeGames/CyberAgent/*.es3":
+    "<home>/AppData/LocalLow/BambuseaeGames/CyberAgent/SaveData.es3":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
   installDir:
     Cyber Agent: {}
   launch:
@@ -209895,6 +209903,24 @@ Dopamine:
         - save
       when:
         - os: windows
+"Dora the Explorer: World Adventure!":
+  files:
+    "<base>/SAVED":
+      tags:
+        - save
+      when:
+        - os: windows
+"Dora: Rainforest Rescue":
+  id:
+    lutris: dora-rainforest-rescue
+  installDir:
+    Project MAP: {}
+  launch:
+    "<base>/Dora Rainforest Rescue.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3273550
 DoraKone:
   installDir:
     DoraKone: {}
@@ -236451,6 +236477,18 @@ Elysion:
           - store: steam
   steam:
     id: 1070110
+Elysium:
+  files:
+    "<winLocalAppData>/Elysium/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Elysium/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
 Elysium VR:
   cloud:
     steam: true
@@ -424619,6 +424657,8 @@ Lost in the Ocean VR:
   steam:
     id: 542520
 Lost in the Roots:
+  id:
+    lutris: lost-in-the-roots
   steam:
     id: 2872240
 Lost in the Tomb:
@@ -452195,6 +452235,7 @@ Metal Gear Solid - Master Collection Version:
       when:
         - os: windows
   id:
+    lutris: metal-gear-solid-4-guns-of-the-patriots-master-col
     steamExtra:
       - 3859630
       - 4184400
@@ -452759,6 +452800,9 @@ Metal Slug XX:
         workingDir: "<base>/metal_slug_launcher"
   steam:
     id: 2963870
+"Metal Slug: Ultimate Collection":
+  steam:
+    id: 3975260
 Metal Soldiers 2:
   installDir:
     Metal Soldiers 2: {}
@@ -516492,6 +516536,13 @@ OtterBash:
             store: steam
   steam:
     id: 668800
+Otterly Lost:
+  id:
+    steamExtra:
+      - 4064140
+      - 4079110
+  steam:
+    id: 3861710
 Otto and the Ancient Worlds:
   cloud:
     steam: true
@@ -621097,7 +621148,9 @@ Seal World:
     id: 1684410
 Seal of Evil:
   cloud:
+    epic: true
     gog: true
+    steam: true
   files:
     "<base>/System":
       when:
@@ -673007,7 +673060,7 @@ Stalzone:
     STALZONE: {}
   launch:
     "<base>/bin_global/win64/java/bin/ExensLauncher.exe":
-      - arguments: "-platform steam bin_%REALM%/win64/java/bin/stalzonew.exe -classpath \"bin_%REALM%/classes.jar;bin_%REALM%/libs.jar;modassets;bin_%REALM%/patchassets\" -XX:-PrintCommandLineFlags -Xmx2G \"-Djava.library.path=bin_%REALM%/win64/java/bin\" \"-Dfile.encoding=UTF-8\" \"-Dread_derived=true\" \"-DusePrestitchedAtlas=true\" -XX:+UseG1GC -XX:MaxGCPauseMillis=3 \"-Dservice_type=STEAM\" \"-Dpatch_assets_dir=bin_%REALM%/patchassets\" exbo.stalcraft.engine.clientcore.Main --gameDir . --assetsDir ./assets"
+      - arguments: "-platform steam bin_%REALM%/win64/java/bin/stalzonew.exe -classpath \"bin_%REALM%/classes.jar;bin_%REALM%/libs.jar;modassets;bin_%REALM%/patchassets\" -XX:-PrintCommandLineFlags -Xmx3G \"-Djava.library.path=bin_%REALM%/win64/java/bin\" \"-Dfile.encoding=UTF-8\" \"-Dread_derived=true\" \"-DusePrestitchedAtlas=true\" -XX:+UseG1GC -XX:MaxGCPauseMillis=3 \"-Dgame_distributor=STEAM\" \"-Dpatch_assets_dir=bin_%REALM%/patchassets\" exbo.stalcraft.engine.clientcore.Main"
         when:
           - bit: 64
             os: windows
