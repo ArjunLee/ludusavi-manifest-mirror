@@ -48753,6 +48753,15 @@ Armed Seven:
             store: steam
   steam:
     id: 349690
+Armed Snake:
+  installDir:
+    Armed Snake: {}
+  launch:
+    "<base>/Armed Snake.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4829840
 Armed Warrior VR:
   installDir:
     Armed Warrior VR: {}
@@ -87907,6 +87916,20 @@ Blackwind:
   steam:
     id: 1567520
 Blackwood:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/AttritoM7 Productions/Blackwood/blackwood.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: blackwood
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/AttritoM7 Productions/Blackwood:
+      tags:
+        - config
   steam:
     id: 3639070
 Blackwood Crossing:
@@ -171499,6 +171522,11 @@ Dab on Darkness!:
 "Dab, Dance & Twerk":
   steam:
     id: 767440
+Daba Land of Water Scar:
+  id:
+    lutris: daba-land-of-water-scar
+  steam:
+    id: 4810160
 Dabda:
   steam:
     id: 665600
@@ -181714,6 +181742,33 @@ Dead Rising Deluxe Remaster:
         - store: steam
   id:
     lutris: dead-rising-deluxe-remaster
+    steamExtra:
+      - 2851890
+      - 2851900
+      - 2851910
+      - 2851920
+      - 2851930
+      - 2851940
+      - 2851950
+      - 2851960
+      - 2851970
+      - 2851980
+      - 2851990
+      - 2852000
+      - 2852010
+      - 2852020
+      - 2852030
+      - 2852040
+      - 2852050
+      - 2852060
+      - 2852070
+      - 2852080
+      - 2892640
+      - 3214130
+      - 3659690
+      - 3659770
+      - 3659830
+      - 3668680
   installDir:
     DEAD RISING DELUXE REMASTER: {}
   launch:
@@ -192551,6 +192606,13 @@ Demonschool:
             store: steam
   steam:
     id: 1900250
+"Demonworld: Dark Armies":
+  files:
+    "<base>/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
 Den of Wolves:
   steam:
     id: 1818140
@@ -235942,6 +236004,28 @@ Ellen and the Degenerates RPG:
 Ellie:
   steam:
     id: 1012140
+Ellingby House:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Jepfore Games Limited/Ellingby House/saved_games":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: ellingby-house
+    steamExtra:
+      - 3737270
+  installDir:
+    Ellingby House: {}
+  launch:
+    "<base>/ellingby_house.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3247290
 Elliot Quest:
   cloud:
     steam: true
@@ -270357,6 +270441,8 @@ FireStarter:
         - os: windows
   gog:
     id: 1434372124
+  id:
+    lutris: firestarter
 FireTry:
   cloud:
     steam: true
@@ -294066,6 +294152,34 @@ Gamble Fight Plus:
           - store: steam
   steam:
     id: 1028130
+Gamble With Your Friends:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/TENSTACK/Gamble With Your Friends/*.json":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/TENSTACK/Gamble With Your Friends/Saves/*.json":
+      when:
+        - os: windows
+          store: steam
+    "<xdgConfig>/unity3d/TENSTACK/Gamble With Your Friends/*.json":
+      when:
+        - os: linux
+          store: steam
+    "<xdgConfig>/unity3d/TENSTACK/Gamble With Your Friends/Saves/*.json":
+      when:
+        - os: linux
+          store: steam
+  id:
+    lutris: gamble-with-your-friends
+    steamExtra:
+      - 4635620
+  installDir:
+    Gamble With Your Friends: {}
+  steam:
+    id: 3892270
 Gamble of Gods:
   installDir:
     Gamble of Gods: {}
@@ -370862,6 +370976,28 @@ Intersolar Overdrive:
     id: 1207659076
   id:
     lutris: interstate-82
+Interstate Drifter 1999:
+  id:
+    lutris: interstate-drifter-1999
+  installDir:
+    Interstate Drifter 1999: {}
+  launch:
+    "<base>/Interstate Drifter 1999.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1383770
+Interstate Drifter 2000:
+  installDir:
+    Interstate Drifter 2000: {}
+  launch:
+    "<base>/Interstate Drifter 2000.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1280950
 Interstellar Invaders:
   installDir:
     Interstellar Invaders: {}
@@ -444609,6 +444745,7 @@ Matchbox Driving Adventures:
       when:
         - os: windows
   id:
+    lutris: matchpoint-tennis-championships
     steamExtra:
       - 1712010
       - 1824930
@@ -449651,6 +449788,11 @@ Melty Blood Actress Again Current Code:
             store: steam
   steam:
     id: 411370
+"Melty Blood: Twi-Lumina":
+  cloud:
+    steam: true
+  steam:
+    id: 4113000
 "Melty Blood: Type Lumina":
   files:
     "<base>/winsave":
@@ -472652,6 +472794,8 @@ Mournful Sword:
   steam:
     id: 1122930
 Mournight:
+  id:
+    lutris: mournight
   installDir:
     Mournight: {}
   launch:
@@ -653692,6 +653836,12 @@ Sol Cesto:
   cloud:
     steam: true
   files:
+    "<winLocalAppData>/SolCesto/EBWebView/Default":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: epic
     "<winLocalAppData>/SolCesto/User Data/Default":
       tags:
         - save
@@ -659578,6 +659728,27 @@ Soulstone Survivors:
             store: steam
   steam:
     id: 2066020
+Soulstonia:
+  cloud:
+    steam: true
+  files:
+    "<home>/Library/Application Support/EpicRuneTime/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<winLocalAppData>/RuneTime/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 4432160
+      - 4432170
+      - 4442140
+  steam:
+    id: 4432150
 Sound Balling:
   steam:
     id: 674610
@@ -805510,6 +805681,18 @@ Ultimo Reino:
             store: steam
   steam:
     id: 974520
+Ultimo Soccer UDC:
+  id:
+    lutris: ultimo-soccer-udc
+  installDir:
+    Ultimo Soccer UDC: {}
+  launch:
+    "<base>/Ultimo Soccer UDC.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1678930
 Ultimus bellum:
   files:
     "<home>/.config/unity3d/Lions Crayons/Ultimus bellum/*.gd":
