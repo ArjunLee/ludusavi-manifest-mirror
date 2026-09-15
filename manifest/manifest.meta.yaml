@@ -1,8 +1,8 @@
-hash: c24b1528134487fd01c951b9a93f9bd54d65433e7a5b247c02073e59474d7c02
-date: 2026-09-14
-timestamp: 1789359000
-version: v2026.9.14
-size_bytes: 17580910
-game_count: 53150
-upstream_commit: 807890417fdc91c11be0bc20e45a3abd3864b6a2
-upstream_date: 2026-09-14
+hash: 8fb72636240cc63459753f9c1d5f6144b0a50f771516c3b55b39a8569fd1577d
+date: 2026-09-15
+timestamp: 1789445340
+version: v2026.9.15
+size_bytes: 17585322
+game_count: 53160
+upstream_commit: baa4f75fbfb754f0244113399e3008a8de4ec6b8
+upstream_date: 2026-09-15

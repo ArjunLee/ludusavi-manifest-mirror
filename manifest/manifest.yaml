@@ -10701,6 +10701,11 @@ A Normal Lost Phone:
         - config
   steam:
     id: 523210
+A Normal Quiz Game where you try to solve questions but the questions have tricks and gimmicks and if you get them wrong you have to beat a wacky punishment but they are kinda fun so you lowkey wanna do them even if it means getting the question wrong.:
+  cloud:
+    steam: true
+  steam:
+    id: 5109940
 A Nova Califórnia:
   installDir:
     The New California: {}
@@ -80625,6 +80630,46 @@ Beyond All Reason:
         - config
       when:
         - os: windows
+    "<home>/.var/app/info.beyondallreason.bar/data/LuaUI/Config":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<home>/.var/app/info.beyondallreason.bar/data/Saves":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/.var/app/info.beyondallreason.bar/data/bar_hotkeys_custom.lua":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<home>/.var/app/info.beyondallreason.bar/data/config.json":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<home>/.var/app/info.beyondallreason.bar/data/demos":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/.var/app/info.beyondallreason.bar/data/screenshots":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/.var/app/info.beyondallreason.bar/data/springsettings.cfg":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<home>/.var/app/info.beyondallreason.bar/data/uikeys.txt":
+      tags:
+        - config
+      when:
+        - os: linux
 "Beyond Arm's Reach":
   steam:
     id: 713360
@@ -151691,6 +151736,8 @@ Control Freak:
   steam:
     id: 964450
 Control Resonant:
+  cloud:
+    steam: true
   id:
     lutris: control-resonant--1
   steam:
@@ -236319,6 +236366,9 @@ Elona:
 Elroy Goes Bugzerk:
   steam:
     id: 5093680
+Elroy Hits the Pavement:
+  steam:
+    id: 5227630
 Elroy and the Aliens:
   cloud:
     steam: true
@@ -236357,6 +236407,12 @@ Elroy and the Aliens:
             store: steam
   steam:
     id: 1082190
+"Elroy's Costume Closet":
+  steam:
+    id: 5233100
+"Elroy: King of the Jungle":
+  steam:
+    id: 5244970
 Else Heart.Break():
   files:
     "<base>/ElseHeartbreak_Data/Saves":
@@ -238274,6 +238330,8 @@ Empires of the Undergrowth:
         - os: windows
   gog:
     id: 1669042393
+  id:
+    lutris: empires-dawn-of-the-modern-world
   installDir:
     Empires Dawn of the Modern World: {}
   launch:
@@ -271357,6 +271415,23 @@ Fish Lab:
   id:
     steamExtra:
       - 4601570
+  installDir:
+    Fish Lab: {}
+  launch:
+    "<base>/Fishlab.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Fishlab.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/fishlab":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
   steam:
     id: 4221990
 Fish Lake:
@@ -285980,6 +286055,12 @@ Frisky Business:
   steam:
     id: 794700
 Fritz Chess 14:
+  files:
+    "<winDocuments>/ChessBase/MyWork":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     steamExtra:
       - 318770
@@ -371031,6 +371112,17 @@ Intersolar Overdrive:
   id:
     lutris: interstate-82
 Interstate Drifter 1999:
+  files:
+    "<winLocalAppData>/Interstate_Drifter_1999":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Interstate_Drifter_1999/ID1999.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: interstate-drifter-1999
   installDir:
@@ -471555,6 +471647,23 @@ Mothmen 1966:
             store: steam
   steam:
     id: 1755030
+Moto Extreme:
+  files:
+    "<base>/MOTOX.CFG":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/PLAYER1.CFG":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/PLAYER2.CFG":
+      tags:
+        - config
+      when:
+        - os: windows
 Moto RKD dash:
   installDir:
     motoRKDdash: {}
@@ -483010,6 +483119,11 @@ NHL Eastside Hockey Manager 2007:
         - config
       when:
         - os: windows
+NHRA Drag Racing:
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Tantrum Entertainment/NHRA Drag Racing/1.0:
+      tags:
+        - config
 "NHRA Drag Racing: Quarter Mile Showdown":
   files:
     "<base>/NHRA.ini":
@@ -486522,10 +486636,32 @@ NearPrime VR - Net Burn:
   steam:
     id: 286540
 Neat!:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Korova games/Neat/Saves/*.json":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Korova games/Neat/Saves/*.json":
+      when:
+        - os: mac
+          store: steam
   id:
     steamExtra:
       - 4491540
       - 4587840
+  installDir:
+    Neat: {}
+  launch:
+    "<base>/Neat.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Neat.exe":
+      - arguments: "-window-mode borderless"
+        when:
+          - os: windows
+            store: steam
   steam:
     id: 4300090
 Nebuchadnezzar:
@@ -577489,6 +577625,29 @@ Reality:
             store: steam
   steam:
     id: 561970
+Reality Break:
+  files:
+    "<home>/AppData/LocalLow/Element Games/Reality Break":
+      tags:
+        - save
+      when:
+        - os: windows
+  gog:
+    id: 1186521704
+  id:
+    gogExtra:
+      - 2000798982
+    steamExtra:
+      - 4012290
+  installDir:
+    Reality Break: {}
+  launch:
+    "<base>/Reality Break.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1473060
 Reality Falls:
   steam:
     id: 734470
@@ -582570,6 +582729,14 @@ Regular Human Basketball:
 Rehaunted:
   id:
     lutris: rehaunted
+  installDir:
+    Rehaunted: {}
+  launch:
+    "<base>/Rehaunted.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4538140
 Rehtona:
@@ -621248,6 +621415,9 @@ Sea Salt:
             store: steam
   steam:
     id: 983350
+Sea Sniffers:
+  steam:
+    id: 3045520
 Sea of Fatness:
   installDir:
     Sea Of Fatness: {}
@@ -653714,6 +653884,10 @@ Sok:
       when:
         - os: windows
           store: steam
+  id:
+    steamExtra:
+      - 1376280
+      - 1740440
   installDir:
     SOK: {}
   launch:
@@ -694642,6 +694816,15 @@ Sun Haven:
         - config
   steam:
     id: 1432860
+Sun Ultimate War:
+  installDir:
+    game: {}
+  launch:
+    "<base>/game/SunWar.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4715270
 Sun Wukong VS Robot:
   installDir:
     Sun Wukong VS Robot: {}
@@ -756538,6 +756721,13 @@ The Plague Doctor of Wippra:
   steam:
     id: 1811740
 The Plan (2013):
+  files:
+    "<home>/.config/unity3d/Krillbite Studio/The Plan/prefs":
+      tags:
+        - config
+        - save
+      when:
+        - os: linux
   installDir:
     The Plan: {}
   launch:
@@ -811371,6 +811561,11 @@ Unreal:
         - config
       when:
         - os: windows
+    "<base>/System64/*.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1207658679
   id:
@@ -850263,6 +850458,12 @@ Wolves Team:
     wolves team: {}
   steam:
     id: 1145580
+Woman Simulator:
+  id:
+    steamExtra:
+      - 4366130
+  steam:
+    id: 4072240
 "Woman's Prison":
   installDir:
     "Woman's Prison": {}
@@ -850957,6 +851158,12 @@ Woodlands:
   steam:
     id: 495350
 Woodle Tree Adventures:
+  files:
+    "<home>/.config/unity3d/Administrator/WoodleTree/prefs":
+      tags:
+        - save
+      when:
+        - os: linux
   installDir:
     WoodleTreeAdventures: {}
   launch:
