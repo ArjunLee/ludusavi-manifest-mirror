@@ -14376,6 +14376,18 @@ ALILIA-亚利利亚的精灵们:
             store: steam
   steam:
     id: 1047680
+ALIS:
+  files:
+    "<winLocalAppData>/Alis/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Alis/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
 ALLBLACK Phase 1:
   files:
     "<base>/ALLBLACKPhase1-1.6-market/game/saves":
@@ -191671,6 +191683,24 @@ Demon Gaze Extra:
         - config
   steam:
     id: 1732340
+Demon Goblin and Mr. Knight:
+  cloud:
+    steam: true
+  files:
+    "<base>/Goblin Lili & Mr. Knight/save/**/*.rmmzsave":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Demon Goblin and Mr. Knight: {}
+  launch:
+    "<base>/Goblin Lili & Mr. Knight/Game.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3526830
 Demon Grade VR:
   installDir:
     Demon Grade: {}
@@ -285948,10 +285978,20 @@ Fright Light:
   steam:
     id: 520290
 Fright Train:
+  files:
+    "<winLocalAppData>/FrightTrain/Saved/SaveGames/*.sav":
+      when:
+        - store: steam
   id:
     lutris: fright-train
     steamExtra:
       - 4458010
+  installDir:
+    Fright Train: {}
+  launch:
+    "<base>/FrightTrain.exe":
+      - when:
+          - store: steam
   steam:
     id: 4132890
 FrightShow Fighter:
@@ -327830,6 +327870,16 @@ Harry Potter and the Order of the Phoenix:
     lutris: harry-potter-and-the-philosophers-stone
 Harry Potter and the Prisoner of Azkaban:
   files:
+    "<winDocuments>/Harry Potter and the Prisoner of Azkaban":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winDocuments>/Harry Potter and the Prisoner of Azkaban/Save":
+      tags:
+        - save
+      when:
+        - os: windows
     "<winDocuments>/Harry Potter™ and the Prisoner of Azkaban":
       tags:
         - config
@@ -412072,6 +412122,11 @@ Let Hawaii Happen VR:
   steam:
     id: 534460
 Let It Die:
+  files:
+    "<base>/Savedata/<storeUserId>/brggame.*":
+      when:
+        - os: windows
+          store: steam
   installDir:
     LET IT DIE: {}
   launch:
@@ -473855,6 +473910,17 @@ Mr. Parkour 3:
   steam:
     id: 1456920
 Mr. Pogo:
+  files:
+    "<winLocalAppData>/Mr_Pogo":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Mr_Pogo/pogoscore.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: mr-pogo
   installDir:
@@ -483122,6 +483188,11 @@ NHL Eastside Hockey Manager 2007:
 NHRA Drag Racing:
   registry:
     HKEY_LOCAL_MACHINE/SOFTWARE/Tantrum Entertainment/NHRA Drag Racing/1.0:
+      tags:
+        - config
+NHRA Drag Racing 2:
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Motorsims/NHRA2 Drag Racing/1.0:
       tags:
         - config
 "NHRA Drag Racing: Quarter Mile Showdown":
@@ -506372,6 +506443,8 @@ Of Ash and Steel:
     id: 1113561740
   id:
     lutris: of-ash-and-steel
+    steamExtra:
+      - 5059740
   installDir:
     ofAshAndSteel: {}
   steam:
@@ -564989,8 +565062,7 @@ Quake:
     Quake: {}
   launch:
     "<base>/rerelease/Quake_x64_steam.exe":
-      - arguments: +d3d11_compileShaders 1
-        when:
+      - when:
           - store: steam
   steam:
     id: 2310
@@ -565100,8 +565172,7 @@ Quake Enhanced:
     Quake: {}
   launch:
     "<base>/rerelease/Quake_x64_steam.exe":
-      - arguments: +d3d11_compileShaders 1
-        when:
+      - when:
           - store: steam
   steam:
     id: 2310
@@ -606263,6 +606334,7 @@ RuneScape:
     lutris: runescape-dragonwilds
     steamExtra:
       - 3637470
+      - 4908050
   installDir:
     RSDragonwilds: {}
   steam:
@@ -610061,6 +610133,7 @@ SNK 40th Anniversary Collection:
       when:
         - os: windows
   id:
+    lutris: snk-heroines-tag-team-frenzy
     steamExtra:
       - 1016150
   installDir:
@@ -702301,6 +702374,8 @@ Superhot:
   steam:
     id: 322500
 Superhot VR:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/SUPERHOT_Team/SUPERHOT_VR/VRsuper.hot":
       tags:
@@ -709487,6 +709562,12 @@ TCG Card Shop Simulator:
         - config
       when:
         - os: windows
+    "<winLocalAppData>/Packages/OPNEONGAMES.TCGCardShopSimulator_19j6by82ahhzr/SystemAppData/wgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
   id:
     lutris: tcg-card-shop-simulator
     steamExtra:
@@ -762841,6 +762922,16 @@ The Smurfs - Mission Vileaf:
           - store: steam
   steam:
     id: 1502560
+"The Smurfs: Village Party":
+  installDir:
+    The Smurfs - Village Party: {}
+  launch:
+    "<base>/TheSmurfsVillageParty.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2800630
 The Sniper VR:
   installDir:
     The Sniper VR: {}
@@ -785930,6 +786021,11 @@ Total Tank Simulator:
         workingDir: "<base>/launcher"
   steam:
     id: 34330
+"Total War: Shogun 2 - Complete Edition":
+  cloud:
+    steam: true
+  steam:
+    id: 3846830
 "Total War: Shogun 2 - Fall of the Samurai":
   cloud:
     steam: true
@@ -790956,6 +791052,23 @@ Train Sim World 6:
             store: steam
   steam:
     id: 3656800
+Train Sim World 7:
+  cloud:
+    steam: true
+  files:
+    "<winDocuments>/My Games/TrainSimWorld7/Saved/SaveGames/<storeUserId>/*.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Train Sim World 7: {}
+  launch:
+    "<base>/WindowsNoEditor/TrainSimWorld.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4678800
 Train Simulator:
   cloud:
     steam: true
