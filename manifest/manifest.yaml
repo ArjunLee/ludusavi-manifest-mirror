@@ -31942,20 +31942,6 @@ Aliens Invaded Our Planet:
           - store: steam
   steam:
     id: 873930
-Aliens Versus Predator 2:
-  files:
-    "<base>/Save/Player_0":
-      tags:
-        - save
-      when:
-        - os: windows
-    "<base>/autoexec.cfg":
-      tags:
-        - config
-      when:
-        - os: windows
-  id:
-    lutris: aliens-versus-predator-2
 Aliens X:
   installDir:
     Aliens X: {}
@@ -32005,6 +31991,20 @@ Aliens versus Predator:
           - store: steam
   steam:
     id: 3730
+Aliens versus Predator 2:
+  files:
+    "<base>/Save/Player_0":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/autoexec.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: aliens-versus-predator-2
 Aliens vs. Predator (2010):
   files:
     "<winLocalAppData>/AliensVsPredator":
@@ -39994,6 +39994,23 @@ Angvik:
             store: steam
   steam:
     id: 611390
+Aniimo:
+  installDir:
+    Aniimo: {}
+  launch:
+    "<base>/Aniimo.exe":
+      - arguments: "-force-d3d11"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+      - arguments: "-force-d3d12"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4126040
 AnimVR:
   installDir:
     ANIMVR: {}
@@ -88009,6 +88026,14 @@ Blackwood:
         - os: windows
   id:
     lutris: blackwood
+    steamExtra:
+      - 5237010
+  installDir:
+    BLACKWOOD: {}
+  launch:
+    "<base>/Blackwood.exe":
+      - when:
+          - store: steam
   registry:
     HKEY_CURRENT_USER/SOFTWARE/AttritoM7 Productions/Blackwood:
       tags:
@@ -149601,6 +149626,8 @@ Conflict Zone:
   steam:
     id: 784950
 "Conflict: Denied Ops":
+  cloud:
+    steam: true
   files:
     "<winDocuments>/Eidos/ConflictDeniedOps":
       tags:
@@ -251383,6 +251410,25 @@ Exo Racing:
             store: steam
   steam:
     id: 875320
+Exo Rally Championship:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>low/Exbleative/Exo Rally Championship/SteamUsers":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    Exo Rally Championship: {}
+  launch:
+    "<base>/Exo Rally Championship.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2262020
 Exo TD:
   installDir:
     Exo TD: {}
@@ -271442,6 +271488,19 @@ Fish Fillets 2:
   steam:
     id: 33950
 Fish Lab:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Fish Lab/save_game_*.bin":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Fish Lab/settings.bin":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     steamExtra:
       - 4601570
@@ -328119,6 +328178,7 @@ Harvest Life:
     id: 1246870
 "Harvest Moon: The Winds of Anthos":
   cloud:
+    epic: true
     steam: true
   files:
     "<home>/AppData/LocalLowNatsume Inc_/Harvest Moon_ The Winds of Anthos/<storeUserId>/*.sav":
@@ -483195,6 +483255,11 @@ NHRA Drag Racing 2:
     HKEY_LOCAL_MACHINE/SOFTWARE/Motorsims/NHRA2 Drag Racing/1.0:
       tags:
         - config
+NHRA Drag Racing Main Event:
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Motorsims/NHRA Pro Stock Drag Racing/1.0:
+      tags:
+        - config
 "NHRA Drag Racing: Quarter Mile Showdown":
   files:
     "<base>/NHRA.ini":
@@ -531426,6 +531491,9 @@ Peninsular War Battles:
             store: steam
   steam:
     id: 675950
+Penis Bird:
+  steam:
+    id: 5102980
 Penko Park:
   cloud:
     steam: true
@@ -639916,6 +639984,7 @@ Silent Gentleman:
         - os: windows
 Silent Hill 2:
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -639991,6 +640060,7 @@ Silent Hill 3:
     lutris: silent-hill-4-the-room
 Silent Hill f:
   cloud:
+    epic: true
     gog: true
     steam: true
   files:
@@ -651623,6 +651693,21 @@ Sniper Blacklist:
             store: steam
   steam:
     id: 402280
+"Sniper Camouflage Orange Spy Warrior I Buried Two Bodies in the Garden and the Police Haven't Figured Out Yet That They're Missing Because They Were a Lonely Old Couple Who Had No Relatives Simulator 2026":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/TheOnlyWayOut/Sniper Simulator 2026":
+      when:
+        - store: steam
+  installDir:
+    Sniper Simulator 2026: {}
+  launch:
+    "<base>/Sniper Simulator 2026.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4323130
 Sniper Commando Attack:
   installDir:
     Sniper Commando Strike: {}
@@ -662825,6 +662910,44 @@ Space Mega Force Man:
             store: steam
   steam:
     id: 1232260
+Space Menace:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Only4Gamers/Space Menace/*.json":
+      when:
+        - store: steam
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Only4Gamers/Space Menace/SaveFiles/*.json":
+      when:
+        - store: steam
+        - os: windows
+          store: steam
+    "<home>/Library/Application Support/Only4Gamers/Space Menace/*.json":
+      when:
+        - store: steam
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Only4Gamers/Space Menace/SaveFiles/*.json":
+      when:
+        - store: steam
+        - os: mac
+          store: steam
+  installDir:
+    Space Menace: {}
+  launch:
+    "<base>/Space Menace.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Space Menace.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2000040
 "Space Mercenary Shooter : Episode 1":
   installDir:
     Space Mercenary Shooter  Episode 1: {}
@@ -733059,6 +733182,8 @@ The Dark Occult:
         - save
       when:
         - os: windows
+  id:
+    lutris: the-dark-occult
   installDir:
     The Dark Occult: {}
   launch:
@@ -764070,6 +764195,9 @@ The Storytale:
       when:
         - os: mac
           store: steam
+  id:
+    steamExtra:
+      - 1682760
   installDir:
     The Strange Story Of Brian Fisher Chapter 2: {}
   launch:
@@ -782763,6 +782891,8 @@ Tomb Raider II:
   steam:
     id: 225320
 Tomb Raider IV-VI Remastered:
+  alias: Tomb Raider IV–VI Remastered
+Tomb Raider IV–VI Remastered:
   cloud:
     epic: true
     gog: true
@@ -786024,6 +786154,8 @@ Total Tank Simulator:
 "Total War: Shogun 2 - Complete Edition":
   cloud:
     steam: true
+  gog:
+    id: 1688411272
   steam:
     id: 3846830
 "Total War: Shogun 2 - Fall of the Samurai":
@@ -863254,6 +863386,9 @@ Yu-Gi-Oh! Master Duel:
     HKEY_LOCAL_MACHINE/SOFTWARE/KONAMI/Yu-Gi-Oh! Power Of Chaos/flcrc:
       tags:
         - save
+Yu-Gi-Oh! Tag Force GX:
+  steam:
+    id: 4416300
 Yucatan:
   cloud:
     steam: true
