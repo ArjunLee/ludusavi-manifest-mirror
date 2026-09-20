@@ -14830,6 +14830,11 @@ AR-K:
         - save
       when:
         - os: windows
+    "<home>/AppData/LocalLow/Gato_Salvaje/ark2/datos.txt":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     steamExtra:
       - 351070
@@ -14854,6 +14859,13 @@ AR-K:
           - bit: 64
             os: linux
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Gato_Salvaje/ark1:
+      tags:
+        - config
+    HKEY_CURRENT_USER/Software/Gato_Salvaje/ark2:
+      tags:
+        - config
   steam:
     id: 269890
 "AR-K: End Game":
@@ -183372,6 +183384,8 @@ Deadlock (2016):
         - os: windows
   gog:
     id: 1207660543
+  id:
+    lutris: deadlock-2-shrine-wars
   installDir:
     Deadlock2: {}
   launch:
@@ -228857,6 +228871,11 @@ EXCHANGE:
             store: steam
   steam:
     id: 854400
+"EXD: Extra Dimensional":
+  installDir:
+    EXD: {}
+  steam:
+    id: 3962020
 "EXE: Mainframe":
   installDir:
     EXE Mainframe: {}
@@ -255618,7 +255637,7 @@ FSX SpacePort:
         - config
       when:
         - os: mac
-    "<winAppData>/FasterThanLight/settings.ini":
+    "<winAppData>/Roaming/FasterThanLight/settings.ini":
       tags:
         - config
       when:
@@ -271859,6 +271878,39 @@ Fishing Planet:
 Fishing Simulator:
   steam:
     id: 904410
+Fishing Star World Tour:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/fws/fishingstarworldtour/save":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: fishing-star-world-tour
+  installDir:
+    FishingStarWorldTour: {}
+  launch:
+    "<base>/fishingstar.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/fishingstar.x86_64":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/fishingstarworldtour.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/fws/fishingstarworldtour:
+      tags:
+        - config
+  steam:
+    id: 4350360
 Fishing on the Fly:
   files:
     "<base>/SavedKismetVariables/*.bin":
@@ -340964,6 +341016,8 @@ Hexplore:
         - os: windows
   gog:
     id: 2084944775
+  id:
+    lutris: hexplore
   installDir:
     Hexplore: {}
   launch:
@@ -345685,6 +345739,8 @@ Hoggy 2:
 Hogs of War:
   gog:
     id: 1207665593
+  id:
+    lutris: hogs-of-war
   installDir:
     HogsofWar: {}
   launch:
@@ -350481,6 +350537,11 @@ Hotel Investigation 09:
 Hotel Magnate:
   cloud:
     gog: true
+  files:
+    "<home>/AppData/LocalLow/Arcade Oven/Hotel Magnate/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1684889868
   id:
@@ -478852,6 +478913,18 @@ My Safe House:
             store: steam
   steam:
     id: 805980
+My Scene Goes Hollywood:
+  files:
+    "<base>/MySceneHW.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/launch.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 My Secret Pets!:
   installDir:
     My Secret Pets!: {}
@@ -538256,6 +538329,10 @@ Pinstripe:
   id:
     gogExtra:
       - 1556868718
+    lutris: pinstripe
+    steamExtra:
+      - 332740
+      - 616440
   installDir:
     Pinstripe: {}
   launch:
@@ -672500,6 +672577,28 @@ Spunk and Moxie:
             store: steam
   steam:
     id: 449310
+Sputnika Game:
+  files:
+    "<home>/.config/unity3d/egunan/SputnikaGame/Saves/*.json":
+      tags:
+        - save
+      when:
+        - os: linux
+  id:
+    lutris: sputnika-game--1
+  installDir:
+    Sputnika Game: {}
+  launch:
+    "<base>/SputnikaGame.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/SputnikaGame.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 2730270
 "Spy Bros. (Pipi & Bibi's DX)":
   files:
     "<winAppData>/.RAWRLab/SpyBros/*.*":
@@ -756064,6 +756163,7 @@ The Painscreek Killings:
     lutris: the-painscreek-killings
     steamExtra:
       - 1172960
+      - 4371030
   installDir:
     The Painscreek Killings: {}
   launch:
