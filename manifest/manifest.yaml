@@ -14873,6 +14873,12 @@ AR-K:
   steam:
     id: 958910
 "AR-K: The Great Escape":
+  files:
+    "<home>/AppData/LocalLow/Gato Salvaje/ArkIII":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     ARK The Great Sphere: {}
   launch:
@@ -33040,6 +33046,10 @@ Allumeria:
         - save
       when:
         - os: windows
+  id:
+    lutris: allumeria
+    steamExtra:
+      - 4247370
   installDir:
     Allumeria: {}
   launch:
@@ -151925,6 +151935,7 @@ Control Freak:
     id: 964450
 Control Resonant:
   cloud:
+    epic: true
     steam: true
   id:
     lutris: control-resonant--1
@@ -160338,6 +160349,11 @@ Crimson Desert:
     lutris: crimson-desert
     steamExtra:
       - 4024620
+      - 4024630
+      - 4193060
+      - 4572870
+      - 4783050
+      - 5001840
   installDir:
     Crimson Desert: {}
   launch:
@@ -241649,6 +241665,8 @@ Entity Researchers:
         - os: windows
   gog:
     id: 1207659993
+  id:
+    lutris: entomorph-plague-of-the-darkfall
 Entre-Deux:
   installDir:
     Entre Deux: {}
@@ -244764,6 +244782,11 @@ Escape Simulator 2:
         - save
       when:
         - os: mac
+  id:
+    steamExtra:
+      - 3499320
+      - 3804140
+      - 4575720
   installDir:
     Escape Simulator 2: {}
   launch:
@@ -246862,6 +246885,48 @@ Eternights:
           - store: steam
   steam:
     id: 1402110
+"Eternity Lost: Mystery of Aurum":
+  cloud:
+    steam: true
+  files:
+    "<base>/userData/*.backup":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/userData/*.bin":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/userData/*.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/userData/*.diff":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    "Eternity Lost Mystery of Aurum Collector's Edition": {}
+  launch:
+    "<base>/aurum.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/aurum_mac_steam.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/aurum_steam_linux_x64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 5095280
 Eternity Warriors VR:
   cloud:
     steam: true
@@ -255727,7 +255792,7 @@ FSX SpacePort:
         - config
       when:
         - os: mac
-    "<winAppData>/Roaming/FasterThanLight/settings.ini":
+    "<winAppData>/FasterThanLight/settings.ini":
       tags:
         - config
       when:
@@ -275752,6 +275817,11 @@ Flower:
     "<winDocuments>/Flower/Flower.cfg":
       tags:
         - config
+      when:
+        - os: windows
+    "<winDocuments>/Flower/SAVEGAME.BIN":
+      tags:
+        - save
       when:
         - os: windows
     "<winLocalAppData>/GOG.com/Galaxy/Applications/51964741675694916/Storage/Shared/Files/SAVEGAME.BIN":
@@ -326800,6 +326870,17 @@ Happy Wars:
   steam:
     id: 246280
 Happy Wheels:
+  installDir:
+    Happy Wheels: {}
+  launch:
+    "<base>/Happy Wheels.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/happy-wheels":
+      - when:
+          - os: linux
+            store: steam
   steam:
     id: 4705510
 Happy Words:
@@ -415243,7 +415324,7 @@ Lifeguard Holic:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/BigSStudio/Lifeguard Holic":
+    "<home>/AppData/LocalLow/BigSStudio/Lifeguard Holic/Saves":
       when:
         - os: windows
           store: steam
@@ -578148,6 +578229,9 @@ Really Big Sky:
           - store: steam
   steam:
     id: 201570
+Really Illegal Golf:
+  steam:
+    id: 4115520
 ReallyGoodBattle:
   installDir:
     ReallyGoodBattle: {}
@@ -589434,6 +589518,7 @@ Reus 2:
       - 1188267060
       - 1227600218
       - 1393809785
+      - 1445635262
       - 1556747210
       - 2005515160
     steamExtra:
@@ -589441,6 +589526,7 @@ Reus 2:
       - 3333960
       - 3564800
       - 4131780
+      - 4704830
   installDir:
     Reus2: {}
   launch:
@@ -636015,6 +636101,13 @@ Shoot Loop VR:
   steam:
     id: 496960
 Shoot Many Robots:
+  files:
+    "<winLocalAppData>/Demiurge Studios/Shoot Many Robots/<storeUserId>":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   installDir:
     Shoot Many Robots: {}
   launch:
@@ -844657,10 +844750,12 @@ Wicked Seed:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Dead Right Games/Wicked Seed/*.es3":
+    "<home>/AppData/LocalLow/Dead Right Games/Wicked Seed":
+      tags:
+        - config
+        - save
       when:
         - os: windows
-          store: steam
   id:
     lutris: wicked-seed
     steamExtra:
@@ -846068,6 +846163,13 @@ Will You Snail?:
             store: steam
   steam:
     id: 1115050
+Will of Steel:
+  files:
+    "<base>/Bin/WOS/cfg.dat":
+      tags:
+        - config
+      when:
+        - os: windows
 Will of the Gods:
   installDir:
     Will of the Gods: {}
