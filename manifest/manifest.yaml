@@ -73176,6 +73176,8 @@ Battle of Europe:
         - save
       when:
         - os: windows
+  id:
+    lutris: battle-of-europe
   installDir:
     Battle Of Europe: {}
   launch:
@@ -118577,6 +118579,17 @@ Car Tuning Simulator:
   steam:
     id: 1754150
 Car Wash Simulator:
+  files:
+    "<home>/AppData/LocalLow/MajesticTwelve/CarWashSimulator/**/*.es3":
+      when:
+        - store: steam
+  installDir:
+    Car Wash: {}
+  launch:
+    "<base>/CarWashSimulator.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 992840
 "Car Washer: Summer of the Ninja":
@@ -134951,6 +134964,12 @@ Chucky:
   steam:
     id: 999250
 "Chud Logic's: Gockbound":
+  installDir:
+    "Chud Logic's Gockbound": {}
+  launch:
+    "<base>/Chud Logic's Gockbound.exe":
+      - when:
+          - store: steam
   steam:
     id: 3802620
 Chunks:
@@ -143384,13 +143403,12 @@ Coffee Talk Tokyo:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Chorus Worldwide/CTT/SaveData/Steam/<storeUserId>":
+    "<home>/AppData/LocalLow/Chorus Worldwide/CTT":
+      tags:
+        - config
+        - save
       when:
-        - store: steam
-    "<home>/Library/Application Support/Chorus Worldwide/CTT/SaveData/Steam/<storeUserId>":
-      when:
-        - os: mac
-          store: steam
+        - os: windows
   gog:
     id: 1655473839
   installDir:
@@ -143405,6 +143423,10 @@ Coffee Talk Tokyo:
           - bit: 64
             os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/SOFTWARE/Chorus Worldwide/CTT:
+      tags:
+        - config
   steam:
     id: 3161220
 Coffee Trainer VR:
@@ -178997,6 +179019,19 @@ Davigo:
   steam:
     id: 1116540
 Davy X Jones:
+  files:
+    "<winLocalAppData>/DAVYxJONES/Saved/SaveGames/*.sh.sav":
+      when:
+        - store: steam
+  installDir:
+    DAVYxJONES: {}
+  launch:
+    "<base>/DAVYxJONES.exe":
+      - arguments: "-UseSteam"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2611170
 "Davyria: Heroes of Eternity":
@@ -208582,6 +208617,16 @@ Donkey Kong 64:
         - save
       when:
         - os: windows
+    "<xdgConfig>/DK64Recompiled":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<xdgConfig>/DK64Recompiled/saves":
+      tags:
+        - save
+      when:
+        - os: linux
 Donkey Xote:
   files:
     "<base>/SaveGame.sav":
@@ -217747,6 +217792,31 @@ Dress-up Traveller:
             store: steam
   steam:
     id: 1129010
+Dressmaker:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Cozy Lives/Dressmaker":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Documents/Cozy Lives/Dressmaker":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Dressmaker: {}
+  launch:
+    "<base>/Dressmaker.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Dressmaker.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4019220
 Drew and the Floating Labyrinth:
   files:
     "<base>/ ./save_data.txt":
@@ -225361,6 +225431,9 @@ Dust On Wheels:
           - store: steam
   steam:
     id: 1043020
+Dust Till Dawn:
+  steam:
+    id: 4694470
 "Dust and Echos: Vengeance":
   installDir:
     Dust and Echos Vengeance: {}
@@ -239949,7 +240022,7 @@ Endless Legend 2:
   cloud:
     steam: true
   files:
-    "<winDocuments>/Endless Legend 2/Save Files":
+    "<winLocalAppData>/Amplitude Studios/Endless Legend 2/Save Files":
       tags:
         - save
       when:
@@ -313349,12 +313422,40 @@ Graveyard Keeper:
             os: linux
             store: steam
   registry:
-    HKEY_CURRENT_USER/Software/Lazy Bear Games/Graveyard Keeper/setting:
+    HKEY_CURRENT_USER/Software/Lazy Bear Games/Graveyard Keeper:
       tags:
         - config
   steam:
     id: 599140
 Graveyard Keeper 2:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Lazy Bear Games/Graveyard Keeper 2/*.dat":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/Lazy Bear Games/Graveyard Keeper 2/*.info":
+      tags:
+        - save
+      when:
+        - os: windows
+  gog:
+    id: 1546179524
+  id:
+    lutris: graveyard-keeper-ii
+  installDir:
+    Graveyard Keeper 2: {}
+  launch:
+    "<base>/GraveyardKeeper2.exe":
+      - when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Lazy Bear Games/Graveyard Keeper 2:
+      tags:
+        - config
   steam:
     id: 4358690
 Graveyard Shift:
@@ -316299,6 +316400,90 @@ Grim Sight:
     id: 758580
 "Grim Tales: The Wishes Collector's Edition":
   alias: "Grim Tales: The Wishes"
+Grim Trials:
+  cloud:
+    steam: true
+  files:
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.achievement":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.collection":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.conversion":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.inventory":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.itemUpgrader":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.playtime":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.quest":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.skilltree":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.local/share/Steam/steamapps/compatdata/2621930/pfx/drive_c/users/steamuser/AppData/LocalLow/Glory Jam/Grim Trials/save/*.yarnstorage":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.achievement":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.collection":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.conversion":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.inventory":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.itemUpgrader":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.playtime":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.quest":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.skilltree":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Glory Jam/Grim Trials/save/*.yarnstorage":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Grim Trials: {}
+  launch:
+    "<base>/Grim Trials.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2621930
 Grim Wanderings:
   installDir:
     Grim wanderings: {}
@@ -326870,6 +327055,13 @@ Happy Wars:
   steam:
     id: 246280
 Happy Wheels:
+  files:
+    "<winAppData>/HappyWheels":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   installDir:
     Happy Wheels: {}
   launch:
@@ -355781,6 +355973,14 @@ Hyper Primate:
         - save
       when:
         - os: windows
+  installDir:
+    HYPER PRIMATE: {}
+  launch:
+    "<base>/HYPER PRIMATE.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2124360
 Hyper Princess Pitch:
@@ -389955,9 +390155,16 @@ Kernel Hearts:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/MahouPrototype/Saved/SaveGames/*.sav":
+    "<winLocalAppData>/MahouPrototype/Saved/Config/Windows":
+      tags:
+        - config
       when:
-        - store: steam
+        - os: windows
+    "<winLocalAppData>/MahouPrototype/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: kernel-hearts
   installDir:
@@ -474444,6 +474651,11 @@ Mr. Pumpkin Adventure:
             store: steam
   steam:
     id: 491220
+Mr. Records:
+  gog:
+    id: 1897263287
+  steam:
+    id: 3053470
 Mr. Rescue:
   files:
     "<home>/.local/share/love/mrrescue/ (highscores and stats only)":
@@ -530054,6 +530266,24 @@ Pathways into Darkness:
 Patlabor the Case Files:
   cloud:
     steam: true
+  files:
+    "<home>/deck/.local/share/Steam/steamapps/compatdata/3275400/pfx/drive_c/users/steamuser/Documents/My Games/Patlabor/Saved/SaveGames/*.sav":
+      when:
+        - os: linux
+          store: steam
+    "<winLocalAppData>/Patlabor/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Patlabor: {}
+  launch:
+    "<base>/Patlabor.exe":
+      - arguments: "-SaveToUserDir"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3275400
 Pato Box:
@@ -543568,7 +543798,14 @@ Planetary Life:
     Planetary Life: {}
   launch:
     "<base>/PlanetaryLife.exe":
-      - when:
+      - arguments: "--rendering-driver vulkan --rendering-method forward_plus"
+        when:
+          - store: steam
+      - arguments: "--rendering-driver d3d12 --rendering-method forward_plus"
+        when:
+          - store: steam
+      - arguments: "--rendering-driver opengl3 --rendering-device gl_compatibility --rendering-method gl_compatibility"
+        when:
           - store: steam
   steam:
     id: 2471970
@@ -546097,6 +546334,13 @@ Poke ALL Toads:
         - config
       when:
         - os: windows
+  installDir:
+    Poke ALL Toads: {}
+  launch:
+    "<base>/Poke ALL Toads.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 2302320
 Poker Championship:
@@ -554620,6 +554864,12 @@ Prison Simulator:
   steam:
     id: 842180
 Prison Simulator VR:
+  files:
+    "<home>/AppData/LocalLow/PlayWay/Prison Simulator VR/Data":
+      when:
+        - store: steam
+  installDir:
+    Prison Simulator VR: {}
   steam:
     id: 1088190
 Prison Test:
@@ -556069,6 +556319,9 @@ Professor Fizzwizzle and the Molten Mystery:
             store: steam
   steam:
     id: 50910
+Professor Layton and the New World of Steam:
+  steam:
+    id: 3384600
 Professor Lupo and His Horrible Pets:
   cloud:
     steam: true
@@ -565006,6 +565259,24 @@ Qipa World-Hello Big Adventure:
             store: steam
   steam:
     id: 975710
+"Qliphah in Providence's Shadow":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Qliphah/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Saved/SaveGames/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: qliphah-in-providences-shadow
+  steam:
+    id: 3882410
 Qomp:
   cloud:
     gog: true
@@ -595407,10 +595678,20 @@ Rituals in the Dark:
 Rivage:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/Rivage/Saved/SaveGames/**/*.sav":
+      when:
+        - store: steam
   id:
     lutris: rivage
     steamExtra:
       - 4465080
+  installDir:
+    Project Singularity: {}
+  launch:
+    "<base>/Rivage.exe":
+      - when:
+          - store: steam
   steam:
     id: 4094660
 Rivais Em Batalha:
@@ -615530,6 +615811,14 @@ Samurai Shodown V Special:
   steam:
     id: 1076550
 Samurai Simulator:
+  installDir:
+    SamuraiRoninsRevenge: {}
+  launch:
+    "<base>/Katanas.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 1208170
 Samurai Sword VR:
@@ -640633,8 +640922,28 @@ Silent Hill f:
   steam:
     id: 19000
 "Silent Hill: Townfall":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Townfall/Saved/SaveGames/ProfileData.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Townfall/Saved/SaveGames/SaveGame.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/Townfall/Saved/SaveGames/SaveGameSlot*.sav":
+      when:
+        - store: steam
   id:
     lutris: silent-hill-townfall
+  installDir:
+    Townfall: {}
+  launch:
+    "<base>/Townfall.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 1636440
 Silent Hope:
@@ -721779,10 +722088,12 @@ Terminal Velocity:
     gogExtra:
       - 1624869208
       - 1645176851
+      - 1832512955
     lutris: terminator-dark-fate-defiance
     steamExtra:
       - 2842170
       - 3650450
+      - 4157110
   installDir:
     Terminator Dark Fate - Defiance: {}
   launch:
@@ -741962,6 +742273,21 @@ The Guest:
         - config
   steam:
     id: 402040
+"The Guild 1 Remake: Europa 1410":
+  files:
+    "<winLocalAppData>/Europa1410/Saved/SaveGames/Games/**/*.*":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    The Guild - Europa 1410: {}
+  launch:
+    "<base>/Europa1410.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2977260
 The Guild 3:
   cloud:
     steam: true
@@ -742065,8 +742391,7 @@ The Guild II:
   steam:
     id: 39680
 "The Guild: Europa 1410":
-  steam:
-    id: 2977260
+  alias: "The Guild 1 Remake: Europa 1410"
 The Guilt and the Shadow:
   installDir:
     The Guilt and the Shadow: {}
@@ -840833,12 +841158,33 @@ Welkin Road:
 Well Dweller:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/WellDweller":
+      when:
+        - store: steam
+    "<winLocalAppData>/WellDweller/*.sav":
+      when:
+        - os: windows
+          store: steam
+    "<xdgConfig>/WellDweller":
+      when:
+        - os: linux
+          store: steam
+    "<xdgConfig>/WellDweller/**/*.sav":
+      when:
+        - store: steam
   gog:
     id: 1571381382
   id:
     lutris: well-dweller
     steamExtra:
       - 4540890
+  installDir:
+    Well Dweller: {}
+  launch:
+    "<base>/WellDweller.exe":
+      - when:
+          - store: steam
   steam:
     id: 3699590
 WellTown:
