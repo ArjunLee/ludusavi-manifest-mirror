@@ -151959,8 +151959,26 @@ Control Resonant:
   cloud:
     epic: true
     steam: true
+  files:
+    "<root>/userdata/<storeUserId>/3669870/remote":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/Remedy/CONTROLResonant/renderer.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: control-resonant--1
+  installDir:
+    CONTROL Resonant: {}
+  launch:
+    "<base>/CONTROLResonant.exe":
+      - when:
+          - store: steam
   steam:
     id: 3669870
 Control Room Alpha:
@@ -237068,6 +237086,8 @@ Elysium:
         - save
       when:
         - os: windows
+  steam:
+    id: 5219090
 Elysium VR:
   cloud:
     steam: true
@@ -327055,6 +327075,8 @@ Happy Wars:
   steam:
     id: 246280
 Happy Wheels:
+  cloud:
+    steam: true
   files:
     "<winAppData>/HappyWheels":
       tags:
@@ -340275,6 +340297,9 @@ Heroes of the Pacific:
     HKEY_LOCAL_MACHINE/SOFTWARE/Codemasters/Heroes Of The Pacific:
       tags:
         - config
+    HKEY_LOCAL_MACHINE/SOFTWARE/Ubisoft/Heroes Of The Pacific:
+      tags:
+        - config
 Heroes of the Seven Seas:
   installDir:
     Heroes of the Seven Seas: {}
@@ -346164,6 +346189,14 @@ Hogwarts Legacy:
         - os: windows
   id:
     lutris: hogwarts-legacy
+    steamExtra:
+      - 1377040
+      - 1386970
+      - 1880830
+      - 1880831
+      - 1880832
+      - 1880833
+      - 1880837
   installDir:
     Hogwarts Legacy: {}
   launch:
@@ -352541,6 +352574,8 @@ How to Cope with Boredom and Loneliness:
   steam:
     id: 797390
 How to Fish:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/Dazed Games/How to Fish/Saves/*.txt":
       tags:
@@ -371733,6 +371768,22 @@ Intersolar Overdrive:
       - 1207658836
     lutris: interstate-76
 "Interstate '82":
+  files:
+    "<base>/bindings.usr":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/config.def":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/i82perf.ini":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1207659076
   id:
@@ -434099,6 +434150,31 @@ Mad Hunting Simulator VR:
     Mad Hunting Simulator VR: {}
   steam:
     id: 988340
+Mad King Redemption:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/SECRET MISSION/Mad King Redemption/*.sav":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/SECRET MISSION/Mad King Redemption/gamesettings.json":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Mad King Redemption: {}
+  launch:
+    "<base>/Mad King Redemption.app/Contents/MacOS/Mad King Redemption":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Mad King Redemption/Mad King Redemption.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2369580
 Mad Machines:
   files:
     "<home>/AppData/LocalLow/Hero Blocks/Mad Machines/Unity/<storeUserId>/Analytics":
@@ -514152,6 +514228,18 @@ Operation Lone Wolf:
       - 1811180
   steam:
     id: 1685960
+Operation Night Strikers:
+  cloud:
+    steam: true
+  installDir:
+    Operation Night Strikers: {}
+  launch:
+    "<base>/OperationNightStrikers.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3099790
 Operation Osama Bin Laden:
   installDir:
     Operation Osam Bin Laden: {}
@@ -517843,10 +517931,26 @@ OtterBash:
   steam:
     id: 668800
 Otterly Lost:
+  files:
+    "<home>/AppData/LocalLow/SoulworksInteractive/OtterlyLost/*.bac":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/SoulworksInteractive/OtterlyLost/*.save":
+      when:
+        - store: steam
   id:
+    lutris: otterly-lost
     steamExtra:
       - 4064140
       - 4079110
+  installDir:
+    Otterly Lost: {}
+  launch:
+    "<base>/OtterlyLost.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3861710
 Otto and the Ancient Worlds:
@@ -553757,6 +553861,10 @@ Prince of Persia 3D:
         when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Ubisoft/Prince Of Persia The Lost Crown:
+      tags:
+        - config
   steam:
     id: 2751000
 "Prince of Persia: The Sands of Time":
@@ -563813,6 +563921,17 @@ Puzzle Quest 2:
           - store: steam
   steam:
     id: 47540
+Puzzle Quest 3:
+  id:
+    lutris: puzzle-quest-3
+  installDir:
+    Vengeance: {}
+  launch:
+    "<base>/PuzzleQuest3.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1380410
 "Puzzle Quest: Challenge of the Warlords":
   cloud:
     steam: true
@@ -640925,15 +641044,16 @@ Silent Hill f:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/Townfall/Saved/SaveGames/ProfileData.sav":
+    "<home>/AppData/Local/Townfall/Saved/Config/Windows":
+      tags:
+        - config
       when:
-        - store: steam
-    "<winLocalAppData>/Townfall/Saved/SaveGames/SaveGame.sav":
+        - os: windows
+    "<home>/AppData/Local/Townfall/Saved/SaveGames":
+      tags:
+        - save
       when:
-        - store: steam
-    "<winLocalAppData>/Townfall/Saved/SaveGames/SaveGameSlot*.sav":
-      when:
-        - store: steam
+        - os: windows
   id:
     lutris: silent-hill-townfall
   installDir:
@@ -650427,9 +650547,45 @@ Slots & Daggers:
 Slow Roads:
   cloud:
     steam: true
-  id:
-    steamExtra:
-      - 4551650
+  files:
+    "<home>/.config/slowroads/profiles/*.roads":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/slowroads/radio-streams.json":
+      when:
+        - os: linux
+          store: steam
+    "<home>/Library/Application Support/slowroads/profiles/*.roads":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/slowroads/radio-streams.json":
+      when:
+        - os: mac
+          store: steam
+    "<winAppData>/slowroads/profiles/*.roads":
+      when:
+        - os: windows
+          store: steam
+    "<winAppData>/slowroads/radio-streams.json":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Slow Roads: {}
+  launch:
+    "<base>/slowroads":
+      - arguments: "--no-sandbox --ozone-platform=x11"
+        when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/slowroads.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3431300
 Slow.Bullet VR:
@@ -657840,7 +657996,7 @@ Songs of Conquest:
   installDir:
     SongsOfConquest: {}
   launch:
-    "<base>/SongsOfConquest.app/Contents/MacOS/SongsOfConquest":
+    "<base>/SongsOfConquest.app":
       - when:
           - os: mac
             store: steam
@@ -760615,6 +760771,22 @@ The Royal Marines Commando:
           - store: steam
   steam:
     id: 837600
+The Royal Writ:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/TheRoyalWrit/*.save":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    The Royal Writ: {}
+  launch:
+    "<base>/TheRoyalWrit.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3333700
 "The Ruins: VR Escape the Room":
   installDir:
     The Ruins VR Escape the Room: {}
