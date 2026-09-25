@@ -30814,8 +30814,20 @@ Alien Breed 35th Anniversary Collection:
     epic: true
     gog: true
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Antstream/Alien Breed":
+      when:
+        - store: steam
   gog:
     id: 1236856891
+  installDir:
+    Alien Breed 35th Anniversary: {}
+  launch:
+    "<base>/Alien Breed.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4870460
 "Alien Breed 3: Descent":
@@ -151973,6 +151985,8 @@ Control Resonant:
         - os: windows
   id:
     lutris: control-resonant--1
+    steamExtra:
+      - 4403940
   installDir:
     CONTROL Resonant: {}
   launch:
@@ -296633,6 +296647,14 @@ Garfield Lasagna Party:
   id:
     lutris: garfield-caught-in-the-act
 "Garfield: Escape From Monday":
+  id:
+    lutris: garfield-escape-from-monday
+  installDir:
+    Monday Dreams: {}
+  launch:
+    "<base>/GFD.exe":
+      - when:
+          - store: steam
   steam:
     id: 3932790
 "Garfield: Saving Arlene":
@@ -343044,6 +343066,7 @@ High Templar VR:
     id: 588550
 High on Life:
   cloud:
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/Oregon/Saved/Config/WinGDK":
@@ -343068,6 +343091,8 @@ High on Life:
       when:
         - os: windows
           store: microsoft
+  gog:
+    id: 2040120327
   id:
     lutris: high-on-life
     steamExtra:
@@ -344801,6 +344826,27 @@ Hirogami:
           - store: steam
   steam:
     id: 3135840
+"Hirotonfa's American Revolution Smuggler":
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/HIROTONFA_AmericanRevolutionSmuggler/*.rmmzsave":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 4129720
+  installDir:
+    HIROTONFA’s American Revolution Smuggler: {}
+  launch:
+    "<base>/Game.exe":
+      - arguments: "--in-process-gpu"
+        when:
+          - store: steam
+  steam:
+    id: 3789080
 His Chuunibyou Cannot Be Cured!:
   installDir:
     His Chunnibyou Cannot Be Cured: {}
@@ -371769,6 +371815,11 @@ Intersolar Overdrive:
     lutris: interstate-76
 "Interstate '82":
   files:
+    "<base>/Bindings":
+      tags:
+        - config
+      when:
+        - os: windows
     "<base>/bindings.usr":
       tags:
         - config
@@ -371782,6 +371833,11 @@ Intersolar Overdrive:
     "<base>/i82perf.ini":
       tags:
         - config
+      when:
+        - os: windows
+    "<base>/save":
+      tags:
+        - save
       when:
         - os: windows
   gog:
@@ -429510,6 +429566,11 @@ Luminous Combat:
           - store: steam
   steam:
     id: 827410
+Luminous Nights:
+  id:
+    lutris: luminous-nights--1
+  steam:
+    id: 1949610
 Lumo:
   cloud:
     steam: true
@@ -638829,13 +638890,22 @@ SiN:
     id: 1300
 SiN Reloaded:
   cloud:
+    gog: true
     steam: true
+  files:
+    "<home>/Saved Games/Nightdive Studios/SiN Reloaded/base/save/*.pak.zst":
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 1627068096
   id:
     lutris: sin-reloaded-1
     steamExtra:
       - 4679680
+  installDir:
+    SiN Reloaded: {}
   steam:
     id: 632950
 "SiN: Reloaded":
@@ -713730,7 +713800,17 @@ Tails of Iron:
   gog:
     id: 1621159343
   id:
+    gogExtra:
+      - 1189042668
+      - 1209670251
+      - 1387230374
+      - 1417182616
+      - 1954984750
     lutris: tails-of-iron
+    steamExtra:
+      - 1677120
+      - 1792940
+      - 2715450
   installDir:
     Tails of Iron: {}
   launch:
@@ -713762,6 +713842,7 @@ Tails of Iron:
     id: 1283410
 "Tails of Iron 2: Whiskers of Winter":
   cloud:
+    epic: true
     steam: true
   files:
     "<base>/TOI2_Data/Resources/SaveFiles":
@@ -713770,6 +713851,13 @@ Tails of Iron:
         - save
       when:
         - os: windows
+  id:
+    lutris: tails-of-iron-2-whiskers-of-winter
+    steamExtra:
+      - 3058540
+      - 3119400
+      - 3246590
+      - 3349180
   installDir:
     Tails of Iron 2 Whiskers of Winter: {}
   launch:
@@ -752936,6 +753024,24 @@ The Magnificent Trufflepigs:
             store: steam
   steam:
     id: 1529550
+The Magus Circle:
+  installDir:
+    The Magus Circle: {}
+  launch:
+    "<base>/The Magus Circle.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/The-Magus-Circle.app/Contents/MacOS/The Magus Circle":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/TheMagusCircle.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 2796640
 The Mahjong Huntress:
   cloud:
     steam: true
@@ -861571,6 +861677,26 @@ Yerah:
     Yerah: {}
   steam:
     id: 717380
+Yerba Buena:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Mad About Pandas/YerbaBuena Demo/savegame.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Mad About Pandas/YerbaBuena/savegame.json":
+      when:
+        - store: steam
+  installDir:
+    Yerba Buena: {}
+  launch:
+    "<base>/YerbaBuena.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2330110
 "Yes, Master!":
   files:
     "<winAppData>/Yes, Master!":
