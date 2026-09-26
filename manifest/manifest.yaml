@@ -61206,6 +61206,17 @@ Away from beauty 色即是空:
   steam:
     id: 573110
 "Away: The Survival Series":
+  files:
+    "<winLocalAppData>/Away/Saved/Config/WindowsNoEditor/GameUserSettings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Away/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     AWAY The Survival Series: {}
   launch:
@@ -132947,11 +132958,19 @@ Chop Chop Princess!:
     id: 718740
 Chop Goblins:
   cloud:
+    gog: true
     steam: true
   files:
     "<base>/user/*.sav":
       when:
         - store: steam
+  gog:
+    id: 1928696370
+  id:
+    gogExtra:
+      - 1130101325
+      - 1967949726
+      - 2054922957
   installDir:
     Chop Goblins: {}
   launch:
@@ -151852,6 +151871,11 @@ Control:
         - store: epic
         - store: gog
         - store: steam
+    "<home>/Library/Application Support/com.remedygames.control-ue-steam/renderer.ini":
+      tags:
+        - config
+      when:
+        - os: mac
     "<home>/Library/Containers/com.remedygames.control-ue/Data/Library/Application Support/com.remedygames.control-ue/nlps-storage/Default-Apple-User":
       tags:
         - save
@@ -176973,6 +176997,7 @@ Darkenstein 3D:
   id:
     steamExtra:
       - 3007770
+      - 5224130
   installDir:
     Darkenstein 3D: {}
   launch:
@@ -182614,6 +182639,8 @@ Dead Watch:
   steam:
     id: 3464670
 Dead Weight:
+  cloud:
+    steam: true
   files:
     "<winAppData>/Godot/app_userdata/Dead_weight/saves2646720/*.res":
       when:
@@ -358301,7 +358328,13 @@ I Know Everything:
   cloud:
     steam: true
   files:
+    "<home>/AppData/LocalLow/BunchoNerds/I Know a Guy/Save_*.jpg":
+      when:
+        - store: steam
     "<home>/AppData/LocalLow/BunchoNerds/I Know a Guy/Save_*.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/BunchoNerds/I Know a Guy/SavedPhotos/*.jpg":
       when:
         - store: steam
     "<home>/AppData/LocalLow/BunchoNerds/I Know a Guy/Statistics.json":
@@ -423586,6 +423619,10 @@ Lorelei and the Laser Eyes:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: lorelei-and-the-laser-eyes
+    steamExtra:
+      - 2940730
   installDir:
     Lorelei and the Laser Eyes: {}
   launch:
@@ -448390,6 +448427,10 @@ Mechabellum:
   installDir:
     Mechabellum: {}
   launch:
+    "<base>/Mechabellum.app":
+      - when:
+          - os: mac
+            store: steam
     "<base>/Mechabellum.exe":
       - when:
           - bit: 64
@@ -638893,6 +638934,11 @@ SiN Reloaded:
     gog: true
     steam: true
   files:
+    "<home>/Saved Games/Nightdive Studios/SiN Reloaded":
+      tags:
+        - save
+      when:
+        - os: windows
     "<home>/Saved Games/Nightdive Studios/SiN Reloaded/base/save/*.pak.zst":
       tags:
         - save
@@ -672981,15 +673027,26 @@ Sprawl:
     id: 1549690
 Sprawl Zero:
   files:
-    "<winLocalAppData>/Silas/Saved/SaveGames/*_CHECKPOINT.sav":
+    "<winLocalAppData>/Silas/Saved/Config/Windows/GameUserSettings.ini":
+      tags:
+        - config
       when:
-        - store: steam
-    "<winLocalAppData>/Silas/Saved/SaveGames/Achievements.sav":
-      when:
-        - store: steam
+        - os: windows
     "<winLocalAppData>/Silas/Saved/SaveGames/Profiles.sav":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+    "<winLocalAppData>/Silas/Saved/SaveGames/Settings.sav":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Silas/Saved/SaveGames/SlotX_CHECKPOINT.sav":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: sprawl-zero
     steamExtra:
@@ -674411,6 +674468,8 @@ Squirrel Sphere:
   steam:
     id: 776790
 Squirrel Stapler:
+  gog:
+    id: 2106890500
   installDir:
     Squirrel Stapler: {}
   steam:
@@ -755583,6 +755642,16 @@ The New Queen:
     id: 1073990
 The New World:
   alias: "Colony Ship: A Post-Earth Role Playing Game"
+"The NewZealand Story: Untold Adventure":
+  installDir:
+    The NewZealand Story Untold Adventure: {}
+  launch:
+    "<base>/The NewZealand Story Untold Adventure.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4193730
 The Next Big Thing:
   cloud:
     gog: true
@@ -758434,11 +758503,14 @@ The Polynesian Cultural Center VR Experience:
     id: 67000
 The Pony Factory:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/David Szymanski/The Pony Factory/*.dat":
       when:
         - store: steam
+  gog:
+    id: 2140908917
   installDir:
     The Pony Factory: {}
   steam:
@@ -782918,6 +782990,11 @@ Tokyo Xtreme Racer:
         - save
       when:
         - os: windows
+  id:
+    steamExtra:
+      - 3959440
+      - 3959450
+      - 4781590
   installDir:
     TokyoXtremeRacer: {}
   steam:
@@ -846074,10 +846151,21 @@ Wild West Online:
 Wild West Pioneers:
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Toplitz Productions/WildWestPioneers/Saves/*.wwp":
+      when:
+        - os: windows
+          store: steam
   id:
     steamExtra:
       - 3700780
       - 4102220
+  installDir:
+    Wild West Pioneers: {}
+  launch:
+    "<base>/WWP.exe":
+      - when:
+          - store: steam
   steam:
     id: 3222640
 "Wild West Saga:Idle Tycoon":
