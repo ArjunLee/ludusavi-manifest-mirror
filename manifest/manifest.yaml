@@ -454,6 +454,7 @@ $1 Ride:
         - os: windows
           store: epic
   id:
+    lutris: 007-first-light
     steamExtra:
       - 3950810
       - 3950820
@@ -15689,6 +15690,10 @@ AVSEQ:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/BIG ROBOT Ltd/AVSEQ:
+      tags:
+        - save
   steam:
     id: 207670
 AWA:
@@ -34903,6 +34908,10 @@ Always the Same Blue Sky...:
   steam:
     id: 363410
 Am I Nima:
+  id:
+    lutris: am-i-nima
+    steamExtra:
+      - 3317110
   steam:
     id: 3224600
 Amairo Chocolate:
@@ -46129,12 +46138,7 @@ Arcade USA:
         - os: windows
 Arcadecraft:
   files:
-    "<winDocuments>/SavedGames/Arcadecraft/Arcadecraft Save 1_0/Player1/ArcadeGame.txt":
-      tags:
-        - save
-      when:
-        - os: windows
-    "<winDocuments>/SavedGames/Arcadecraft/Arcadecraft Save 1_0/Player1/Milestones.txt":
+    "<winDocuments>/SavedGames/Arcadecraft":
       tags:
         - save
       when:
@@ -46142,11 +46146,6 @@ Arcadecraft:
     "<winDocuments>/SavedGames/Arcadecraft/Arcadecraft Save 1_0/Player1/Options.txt":
       tags:
         - config
-      when:
-        - os: windows
-    "<winDocuments>/SavedGames/Arcadecraft/Arcadecraft Save 1_0/Player1/Scores.txt":
-      tags:
-        - save
       when:
         - os: windows
   installDir:
@@ -57364,7 +57363,6 @@ AtmaSphere:
   registry:
     HKEY_CURRENT_USER/Software/MazenGames/AtmaSphereFinal:
       tags:
-        - config
         - save
   steam:
     id: 753660
@@ -59154,6 +59152,12 @@ Australian Road Trains:
   steam:
     id: 964390
 Australian Trip:
+  files:
+    "<winLocalAppData>/AustralianTrip/User Data/Default/IndexedDB":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     AustralianTrip: {}
   launch:
@@ -60997,6 +61001,11 @@ Awakened:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/GenuineFlipFlopsGames(www.Genuineflip-flops.com)/Awakened:
+      tags:
+        - config
+        - save
   steam:
     id: 493770
 Awakening of Celestial:
@@ -61162,6 +61171,10 @@ Away:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Inversion Software/Away:
+      tags:
+        - config
   steam:
     id: 757910
 "Away From Earth: Moon":
@@ -62140,6 +62153,17 @@ Azai - TD:
   steam:
     id: 3014460
 Aztaka:
+  files:
+    "<base>/Aztaka.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/Aztaka/Profiles":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Aztaka: {}
   launch:
@@ -72776,6 +72800,20 @@ Battle Species:
             store: steam
   steam:
     id: 910750
+"Battle Squadron: The Destruction of the Barrax Empire":
+  installDir:
+    BattleSquadron: {}
+  launch:
+    "<base>/BSquadMenu.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/BattleSquadron.app":
+      - when:
+          - os: mac
+            store: steam
+  steam:
+    id: 383110
 Battle Squares:
   installDir:
     BattleSquares: {}
@@ -152795,6 +152833,7 @@ Coral Island:
       when:
         - os: windows
   id:
+    lutris: coral-island
     steamExtra:
       - 2273380
       - 2471180
@@ -177388,6 +177427,7 @@ Darkness Rollercoaster - Ultimate Shooter Edition:
       when:
         - os: windows
   id:
+    lutris: darkness-within-2-the-dark-lineage
     steamExtra:
       - 414640
   installDir:
@@ -177400,6 +177440,8 @@ Darkness Rollercoaster - Ultimate Shooter Edition:
   steam:
     id: 298950
 "Darkness Within: In Pursuit of Loath Nolder":
+  cloud:
+    steam: true
   files:
     "<winDocuments>/Darkness Within":
       tags:
@@ -177417,6 +177459,7 @@ Darkness Rollercoaster - Ultimate Shooter Edition:
       when:
         - os: windows
   id:
+    lutris: darkness-within-in-pursuit-of-loath-nolder
     steamExtra:
       - 414680
   installDir:
@@ -203394,6 +203437,23 @@ Disney Universe:
     id: 338300
 "Disney's Dinosaur":
   alias: Dinosaur
+"Disney's Dinosaur Activity Center":
+  files:
+    "<base>/Saved":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/engine.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/tango.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 "Disney's Hercules":
   files:
     "<base>/DISNEY.INI":
@@ -330616,18 +330676,14 @@ He Needs His Medicine:
   steam:
     id: 1590360
 He Who Watches:
+  cloud:
+    steam: true
   files:
-    "<home>/.config/unity3d/Danga Games/He Who Watches/*.sav":
-      when:
-        - os: linux
-          store: steam
     "<home>/AppData/LocalLow/Danga Games/He Who Watches/*.sav":
+      tags:
+        - save
       when:
-        - store: steam
-    "<home>/Library/Application Support/Danga Games/He Who Watches/*.sav":
-      when:
-        - os: mac
-          store: steam
+        - os: windows
   id:
     lutris: he-who-watches
     steamExtra:
@@ -386130,6 +386186,25 @@ KAKUDO:
     KAKUDO: {}
   steam:
     id: 2063510
+"KALPA: Cosmic Symphony":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/QueseraGames/KALPA CosmicSymphony":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    KALPA CosmicSymphony: {}
+  launch:
+    "<base>/KALPA CosmicSymphony.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2717010
 "KAMASUTRA \\ 爱经":
   steam:
     id: 965160
@@ -422293,8 +422368,15 @@ Look Outside:
     steam: true
   files:
     "<base>/save":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+    "<base>/save/config.rmmzsave":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1582305837
   id:
@@ -513083,7 +513165,7 @@ Onimod Land:
     epic: true
     steam: true
   files:
-    "<root>/userdata/<storeUserId>/3974650/remote/win64_save":
+    "<root>/userdata/<storeUserId>/2638890/remote/win64_save":
       tags:
         - save
       when:
@@ -533528,6 +533610,10 @@ Perfect Universe:
 Perfect Weapon:
   gog:
     id: 2114931848
+  registry:
+    HKEY_LOCAL_MACHINE/Software/American Softworks/Perfect Weapon:
+      tags:
+        - config
 Perfect World International:
   installDir:
     PWI: {}
@@ -722784,6 +722870,10 @@ Terra Nil:
 "Terra Nova: Strike Force Centauri":
   cloud:
     gog: true
+  files:
+    "<base>/TNOVA/*.RES":
+      when:
+        - store: steam
   gog:
     id: 1434984562
   id:
@@ -722791,42 +722881,24 @@ Terra Nil:
   installDir:
     Terra Nova Strike Force Centauri: {}
   launch:
-    "<base>/Terra Nova.app":
+    "<base>/_DOSBOX/TerraNova.sh":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+        workingDir: "<base>/_DOSBOX"
+    "<base>/_DOSBOX/TerraNovaSFC.command":
       - when:
           - os: mac
             store: steam
-    "<base>/dosbox_linux/daum/launch_terranova_game_daum.sh":
-      - when:
-          - os: linux
-            store: steam
-        workingDir: "<base>/dosbox_linux/daum"
-    "<base>/dosbox_linux/launch_terranova_config.sh":
-      - when:
-          - os: linux
-            store: steam
-        workingDir: "<base>/dosbox_linux"
-    "<base>/dosbox_linux/launch_terranova_game.sh":
-      - when:
-          - os: linux
-            store: steam
-        workingDir: "<base>/dosbox_linux"
-    "<base>/dosbox_windows/daum/dosbox.exe":
-      - arguments: "-conf dosbox_terranova.conf -conf dosbox_terranova_launch_windows.conf -noconsole"
+        workingDir: "<base>/_DOSBOX"
+    "<base>/_DOSBOX/dosbox-staging.exe":
+      - arguments: "-conf dosbox_terranova_windows.conf -conf dosbox_terranova_windows_launch.conf -noprimaryconf -noconsole"
         when:
-          - os: windows
+          - bit: 64
+            os: windows
             store: steam
-        workingDir: "<base>/dosbox_windows/daum"
-    "<base>/dosbox_windows/dosbox.exe":
-      - arguments: "-conf dosbox_terranova.conf -conf dosbox_terranova_launch_windows.conf -noconsole"
-        when:
-          - os: windows
-            store: steam
-        workingDir: "<base>/dosbox_windows"
-      - arguments: "-conf dosbox_terranova.conf -conf dosbox_terranova_config_windows.conf -noconsole"
-        when:
-          - os: windows
-            store: steam
-        workingDir: "<base>/dosbox_windows"
+        workingDir: "<base>/_DOSBOX"
   steam:
     id: 368600
 Terra Randoma:
@@ -751037,11 +751109,17 @@ The Life and Suffering of Prince Jerian:
   files:
     "<home>/AppData/LocalLow/Schisma/The Life and Suffering of Prince Jerian/Saves/**/*.dat":
       when:
-        - os: windows
-          store: steam
+        - store: steam
     "<home>/AppData/LocalLow/Schisma/The Life and Suffering of Prince Jerian/Saves/**/*.txt":
       when:
-        - os: windows
+        - store: steam
+    "<home>/Library/Application Support/Schisma/The Life and Suffering of Prince Jerian/Saves/*.dat":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Schisma/The Life and Suffering of Prince Jerian/Saves/*.txt":
+      when:
+        - os: mac
           store: steam
   id:
     lutris: the-life-and-suffering-of-prince-jerian
@@ -751053,6 +751131,10 @@ The Life and Suffering of Prince Jerian:
   installDir:
     The Life and Suffering of Prince Jerian: {}
   launch:
+    "<base>/The Life and Suffering of Prince Jerian.app":
+      - when:
+          - os: mac
+            store: steam
     "<base>/The Life and Suffering of Prince Jerian.exe":
       - when:
           - bit: 64
@@ -792484,10 +792566,16 @@ Train Sim World 7:
   cloud:
     steam: true
   files:
-    "<winDocuments>/My Games/TrainSimWorld7/Saved/SaveGames/<storeUserId>/*.sav":
+    "<winDocuments>/My Games/TrainSimWorld7/Saved/Config":
+      tags:
+        - config
       when:
         - os: windows
-          store: steam
+    "<winDocuments>/My Games/TrainSimWorld7/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Train Sim World 7: {}
   launch:
