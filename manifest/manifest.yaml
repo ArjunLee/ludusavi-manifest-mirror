@@ -25848,6 +25848,8 @@ Aggelos:
   steam:
     id: 717310
 "Aggression: Europe Under Fire":
+  id:
+    lutris: aggression-europe-under-fire
   installDir:
     Aggression - Reign Over Europe: {}
   launch:
@@ -61886,6 +61888,17 @@ Axis Football 2021:
             store: steam
   steam:
     id: 1641830
+"Axol's Quest":
+  installDir:
+    "Axol's Quest": {}
+  launch:
+    "<base>/Game.exe":
+      - arguments: "--in-process-gpu"
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4029480
 "Axyos: Battlecards":
   files:
     "<winLocalAppData>/AXYOS_Battlecards/Saved/SaveGames/*.sav":
@@ -72412,6 +72425,8 @@ Battle Knights:
   steam:
     id: 1172400
 Battle Mages:
+  id:
+    lutris: battle-mages
   installDir:
     Battle Mages: {}
   launch:
@@ -72422,6 +72437,8 @@ Battle Mages:
   steam:
     id: 302470
 "Battle Mages: Sign of Darkness":
+  id:
+    lutris: battle-mages-sign-of-darkness
   installDir:
     Battle Mages Sign of Darkness: {}
   launch:
@@ -78923,6 +78940,8 @@ Bejeweled 2:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: bejeweled-2-deluxe
   installDir:
     Bejeweled 2 Deluxe: {}
   launch:
@@ -80308,6 +80327,8 @@ Bet on Man:
         - config
       when:
         - os: windows
+  id:
+    lutris: bet-on-soldier
   installDir:
     Bet On Soldier: {}
   launch:
@@ -123591,6 +123612,28 @@ Catch Canvas:
             store: steam
   steam:
     id: 459550
+Catch Flex:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Vilegacy/Catch Flex/progress.json":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Catch Flex: {}
+  launch:
+    "<base>/Catch Flex.exe":
+      - when:
+          - os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Vilegacy/Catch Flex:
+      tags:
+        - config
+  steam:
+    id: 3670810
 Catch Me:
   steam:
     id: 421030
@@ -140627,6 +140670,8 @@ Close Combat:
         - os: windows
   gog:
     id: 1981721026
+  id:
+    lutris: close-combat-3-the-russian-front
   installDir:
     Close Combat 3 The Russian Front: {}
   launch:
@@ -140739,6 +140784,8 @@ Close Combat:
         - os: windows
   gog:
     id: 2016902862
+  id:
+    lutris: close-combat-5-invasion-normandy-utah-beach-to-che
   installDir:
     Close Combat 5 Invasion Normandy - Utah Beach to Cherbourg: {}
   launch:
@@ -140824,6 +140871,8 @@ Close Combat:
         - os: windows
   gog:
     id: 1714577252
+  id:
+    lutris: close-combat-4-the-battle-of-the-bulge
   installDir:
     Close Combat 4 The Battle of the Bulge: {}
   launch:
@@ -257380,6 +257429,8 @@ Fair Islands VR:
   steam:
     id: 526960
 Fair Strike:
+  id:
+    lutris: fair-strike
   installDir:
     Fair Strike: {}
   launch:
@@ -277228,6 +277279,8 @@ Fobia - St. Dinfna Hotel:
         - os: windows
   id:
     lutris: fobia-st-dinfna-hotel
+    steamExtra:
+      - 1305020
   installDir:
     FobiaStDinfnaHotel: {}
   launch:
@@ -421034,6 +421087,8 @@ LocoSoccer:
   steam:
     id: 396360
 Locoland:
+  id:
+    lutris: locoland
   installDir:
     Locoland: {}
   launch:
@@ -514648,6 +514703,8 @@ Operation Warcade VR:
         - save
       when:
         - os: windows
+  id:
+    lutris: operation-matriarchy
   installDir:
     Operation Matriarchy: {}
   launch:
@@ -533610,6 +533667,8 @@ Perfect Universe:
 Perfect Weapon:
   gog:
     id: 2114931848
+  id:
+    lutris: perfect-weapon
   registry:
     HKEY_LOCAL_MACHINE/Software/American Softworks/Perfect Weapon:
       tags:
@@ -548969,6 +549028,7 @@ Pool of Radiance:
   id:
     gogExtra:
       - 1436871302
+    lutris: pool-of-radiance
   steam:
     id: 1882370
 "Pool of Radiance: Ruins of Myth Drannor":
@@ -703764,6 +703824,11 @@ Superhot VR:
         - save
       when:
         - os: windows
+    "<home>/Library/Application Support/com.superhotgame.shmcd/shmcd.save":
+      tags:
+        - save
+      when:
+        - os: mac
     "<xdgConfig>/unity3d/SUPERHOT_Team/SHMCD/config.cfg":
       tags:
         - config
@@ -733575,6 +733640,7 @@ The Cross Horror Game:
     gogExtra:
       - 1236960892
       - 1571077515
+    lutris: the-crows-eye
     steamExtra:
       - 585730
   installDir:
@@ -765112,6 +765178,8 @@ The Stalin Subway:
         - config
       when:
         - os: windows
+  id:
+    lutris: the-stalin-subway-red-veil
   installDir:
     The Stalin Subway Red Veil: {}
   launch:
@@ -834842,6 +834910,11 @@ Warhalla:
           - bit: 64
             os: windows
             store: steam
+      - arguments: "-force-d3d11"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2532480
 "Warhammer 40,000: Regicide":
@@ -854742,6 +854815,10 @@ World of Goo 2:
       - 917260
       - 969070
       - 1083250
+      - 4944540
+      - 4972740
+      - 4972760
+      - 5130590
   installDir:
     WOG: {}
   launch:
