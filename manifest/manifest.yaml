@@ -17743,11 +17743,8 @@ Ace Attorney Investigations Collection:
   steam:
     id: 2288340
 "Ace Combat Zero: The Belkan War":
-  id:
-    steamExtra:
-      - 3635880
   steam:
-    id: 2288340
+    id: 3635880
 "Ace Combat: Assault Horizon - Enhanced Edition":
   cloud:
     steam: true
@@ -44281,7 +44278,7 @@ Apex Legends:
   installDir:
     Apex Legends: {}
   launch:
-    "<base>/start_protected_game.exe":
+    "<base>/EAAntiCheat.GameServiceLauncher.exe":
       - arguments: "-steam"
         when:
           - bit: 64
@@ -54396,6 +54393,7 @@ Asterix & Obelix XXL 2:
   id:
     gogExtra:
       - 1692964466
+    lutris: asterix-obelix-xxl-2
   installDir:
     Asterix XXL 2: {}
   launch:
@@ -79518,6 +79516,11 @@ Bendy and the Ink Machine:
         - config
   steam:
     id: 622650
+"Bendy: The Cage":
+  id:
+    lutris: bendy-the-cage
+  steam:
+    id: 2663960
 Beneath:
   cloud:
     steam: true
@@ -226040,6 +226043,21 @@ Dusty Raging Fist:
             store: steam
   steam:
     id: 385130
+Dverghold:
+  files:
+    "<home>/AppData/LocalLow/Kvltgames/Dverghold/Saves":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Dverghold: {}
+  launch:
+    "<base>/Dverghold.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4216280
 DwarVRs:
   installDir:
     DwarVRs: {}
@@ -250010,6 +250028,8 @@ Evil Dead:
         - save
       when:
         - os: windows
+  id:
+    lutris: evil-dead-the-game
   installDir:
     ED: {}
   launch:
@@ -323746,6 +323766,7 @@ Hades II:
   id:
     gogExtra:
       - 1207658759
+    lutris: haegemonia-legions-of-iron
   installDir:
     Haegemonia Legions of Iron: {}
   launch:
@@ -396286,6 +396307,9 @@ Kira:
         - save
   steam:
     id: 801120
+Kirikou:
+  id:
+    lutris: kirikou
 Kirk Mephisto:
   id:
     lutris: kirk-mephisto
@@ -429617,6 +429641,7 @@ Lumina:
     id: 1063050
 Lumina Veil:
   cloud:
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/EternalTerror/Saved/Config/Windows":
@@ -429629,6 +429654,8 @@ Lumina Veil:
         - save
       when:
         - os: windows
+  gog:
+    id: 1374090799
   id:
     lutris: lumina-veil
   installDir:
@@ -445973,6 +446000,11 @@ Match Three Pirates! Heir to Davy Jones:
 Match and Crash:
   steam:
     id: 677200
+Matchbox Caterpillar Construction Zone:
+  registry:
+    HKEY_LOCAL_MACHINE/SOFTWARE/Mattel Media/Matchbox/Caterpillar Construction Zone:
+      tags:
+        - config
 Matchbox Driving Adventures:
   cloud:
     steam: true
@@ -453836,6 +453868,8 @@ Metal Gear Solid - Master Collection Version:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: metal-gear-solid-v-ground-zeroes
   installDir:
     Metal Gear Solid Ground Zeroes: {}
   launch:
@@ -460505,8 +460539,12 @@ Minecraft Dungeons:
   steam:
     id: 1672970
 Minecraft Dungeons II:
+  cloud:
+    steam: true
   id:
     lutris: minecraft-dungeons-ii
+  installDir:
+    Minecraft Dungeons II: {}
   steam:
     id: 1912410
 Minecraft Legends:
@@ -509290,6 +509328,8 @@ Old School Rally:
   steam:
     id: 2824660
 Old School RuneScape:
+  id:
+    lutris: old-school-runescape
   installDir:
     Old School RuneScape: {}
   launch:
@@ -516081,6 +516121,24 @@ Orc Hunter VR:
     Orc Hunter VR: {}
   steam:
     id: 494530
+Orc Incremental:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/Roaming/OrcIncremental/CloudSave":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Orc Incremental: {}
+  launch:
+    "<base>/Orc Incremental.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4047270
 Orc Island:
   installDir:
     Orc Island: {}
@@ -545439,6 +545497,67 @@ Please:
             store: steam
   steam:
     id: 595030
+Please Be Happy:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Studio Élan/Please Be Happy/*.json":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/Studio Élan/Please Be Happy/NaninovelData/Saves/*.json":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/Studio Élan/Please Be Happy/NaninovelData/Saves/Settings.json":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<home>/Library/Application Support/com.vnstudioelan.pleasebehappy/*.json":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<xdgConfig>/unity3d/Studio Élan/Please Be Happy/*.json":
+      tags:
+        - save
+      when:
+        - os: linux
+  gog:
+    id: 1815674378
+  id:
+    lutris: please-be-happy
+  installDir:
+    Please Be Happy: {}
+  launch:
+    "<base>/PleaseBeHappy.app":
+      - arguments: "-force-glcore"
+        when:
+          - os: mac
+            store: steam
+    "<base>/PleaseBeHappy.exe":
+      - arguments: "-force-glcore"
+        when:
+          - os: windows
+            store: steam
+      - arguments: "-force-d3d11"
+        when:
+          - os: windows
+            store: steam
+      - arguments: "-force-d3d12"
+        when:
+          - os: windows
+            store: steam
+    "<base>/PleaseBeHappy.x86_64":
+      - arguments: "-force-glcore"
+        when:
+          - os: linux
+            store: steam
+  steam:
+    id: 844670
 Please Close the Doors:
   installDir:
     Please close the doors: {}
@@ -585505,6 +585624,8 @@ Remorses:
 "Remothered: Broken Porcelain Remastered":
   gog:
     id: 1467668812
+  id:
+    lutris: remothered-broken-porcelain-remastered
   steam:
     id: 4461560
 "Remothered: Red Nun's Legacy":
@@ -585554,6 +585675,8 @@ Remorses:
 "Remothered: Tormented Fathers Remastered":
   gog:
     id: 1391035419
+  id:
+    lutris: remothered-tormented-fathers-remastered
   steam:
     id: 4457050
 Remuage - MeltySensation:
@@ -607576,6 +607699,8 @@ RuneScape:
         - config
       when:
         - os: windows
+  id:
+    lutris: runescape
   installDir:
     RuneScape: {}
   launch:
@@ -711957,8 +712082,33 @@ TOEM:
   steam:
     id: 1307580
 TOEM 2:
+  cloud:
+    steam: true
+  files:
+    "<base>/Save":
+      when:
+        - store: steam
   id:
     lutris: toem-2
+    steamExtra:
+      - 4414810
+      - 4694330
+  installDir:
+    TOEM 2: {}
+  launch:
+    "<base>/TOEM 2.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/TOEM 2.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/TOEM 2.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
   steam:
     id: 2900640
 TOGETHER - TO GET HER:
@@ -821985,6 +822135,30 @@ Vermis Orbita:
           - store: steam
   steam:
     id: 2064320
+Vernal Edge:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/VernalEdge/default/save":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/VernalEdge/default/save/settings.json":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    Vernal Edge: {}
+  launch:
+    "<base>/VernalEdge.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1546710
 "Verne: The Shape of Fantasy":
   cloud:
     steam: true
@@ -867099,6 +867273,9 @@ Zeit²:
             store: steam
   steam:
     id: 1093800
+Zelda Classic:
+  id:
+    lutris: zelda-classic
 "Zelensky vs Poroshenko: The Destiny of Ukraine":
   cloud:
     steam: true
