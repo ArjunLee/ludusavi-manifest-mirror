@@ -139492,6 +139492,9 @@ Cliché - Critical Change:
 Click & Click:
   steam:
     id: 1085380
+Click Bait:
+  steam:
+    id: 5071780
 Click Commander:
   installDir:
     Click Commander: {}
@@ -226947,6 +226950,30 @@ Dynasty Feud:
 "Dynasty Warriors 3: Complete Edition Remastered":
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/DW3CE_RE/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/KoeiTecmo/DW3CE_RE/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/KoeiTecmo/DW3CE_RE/Saved/SaveGames_Backup":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    DW3CE_RE: {}
+  launch:
+    "<base>/DW3CE_RE.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3841510
 "Dynasty Warriors 4: Hyper":
@@ -418812,6 +418839,11 @@ Lisa and the Grimoire:
         - save
       when:
         - os: windows
+    "<base>/Lisa_1/Lisa_1/*.lsd":
+      tags:
+        - save
+      when:
+        - store: steam
   installDir:
     LISA The First: {}
   launch:
@@ -418830,11 +418862,13 @@ Lisa and the Grimoire:
         - save
       when:
         - os: windows
+        - os: linux
     "<base>/Joyful/*.rvdata2":
       tags:
         - save
       when:
         - os: windows
+        - os: linux
     "<base>/mkxp/mkxp.conf":
       tags:
         - config
@@ -442282,6 +442316,7 @@ Mariachi Legends:
       when:
         - os: windows
   id:
+    lutris: maries-room
     steamExtra:
       - 855020
       - 1962190
@@ -446005,6 +446040,13 @@ Matchbox Caterpillar Construction Zone:
     HKEY_LOCAL_MACHINE/SOFTWARE/Mattel Media/Matchbox/Caterpillar Construction Zone:
       tags:
         - config
+"Matchbox Caterpillar: Adventures in Time":
+  files:
+    "<base>/OPTIONS.DAT":
+      tags:
+        - config
+      when:
+        - os: windows
 Matchbox Driving Adventures:
   cloud:
     steam: true
@@ -529957,6 +529999,9 @@ Path:
           - store: steam
   steam:
     id: 1208400
+Path Defenders:
+  steam:
+    id: 4819620
 Path Of Aurora:
   cloud:
     steam: true
@@ -627631,6 +627676,22 @@ Serenade of the Sirens:
             store: steam
   steam:
     id: 901000
+"Serene Estates: Last Guy":
+  files:
+    "<home>/AppData/LocalLow/Digital Escape Games/The Last Guy/save*.lg":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Serene Estates - Last Guy: {}
+  launch:
+    "<base>/Serene Estates - Last Guy/The Last Guy.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3724910
 Serial Cleaner:
   cloud:
     gog: true
@@ -658520,6 +658581,32 @@ Songs of Conquest:
         - config
   steam:
     id: 867210
+Songs of Glimmerwick:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Eastshade Studios/Songs of Glimmerwick/*.dat":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Eastshade Studios/Songs of Glimmerwick/*.met":
+      when:
+        - os: windows
+          store: steam
+  id:
+    steamExtra:
+      - 4033880
+      - 5213830
+      - 5214050
+  installDir:
+    Songs of Glimmerwick: {}
+  launch:
+    "<base>/Songs of Glimmerwick.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1706510
 Songs of Silence:
   cloud:
     epic: true
@@ -746130,6 +746217,8 @@ The Invisible Hours:
         - config
       when:
         - os: windows
+  id:
+    lutris: the-invisible-hours
   installDir:
     TheInvisibleHours: {}
   launch:
@@ -857698,7 +857787,8 @@ Wuthering Waves:
     Wuthering Waves: {}
   launch:
     "<base>/Wuthering Waves.exe":
-      - when:
+      - arguments: "-krqlv=hd"
+        when:
           - bit: 64
             os: windows
             store: steam
