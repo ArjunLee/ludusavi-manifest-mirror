@@ -14523,6 +14523,28 @@ AL･FINE:
             store: steam
   steam:
     id: 545330
+AMA Superbike:
+  files:
+    "<base>/CommandMap.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/ControlMap.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/d3d.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/game.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 AMAZEing Adventures:
   cloud:
     steam: true
@@ -53152,6 +53174,12 @@ Asphyxia:
         - os: windows
   id:
     lutris: assassins-creed-ii
+    steamExtra:
+      - 22803
+      - 33360
+      - 33361
+      - 33362
+      - 48173
   installDir:
     "Assassin's Creed 2": {}
   launch:
@@ -106359,6 +106387,8 @@ Broken Spell 2:
   steam:
     id: 33610
 "Broken Sword 4: The Angel of Death":
+  cloud:
+    gog: true
   files:
     "<base>/system":
       tags:
@@ -146464,6 +146494,7 @@ Comanche:
   gog:
     id: 1835921084
   id:
+    lutris: comanche
     steamExtra:
       - 1423740
   installDir:
@@ -175650,6 +175681,7 @@ Dark Old Sun:
       - 4693910
       - 4768220
       - 4768230
+      - 5236770
   installDir:
     Dark Pals: {}
   launch:
@@ -179401,6 +179433,8 @@ Dawn of Corruption:
   steam:
     id: 661730
 Dawn of Magic:
+  cloud:
+    steam: true
   files:
     "<base>/tbm.ini":
       tags:
@@ -179409,6 +179443,14 @@ Dawn of Magic:
         - os: windows
   id:
     lutris: dawn-of-magic
+  installDir:
+    Dawn of Magic: {}
+  launch:
+    "<base>/DawnOfMagic.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4938460
 Dawn of Magic 2:
   cloud:
     gog: true
@@ -180415,6 +180457,24 @@ Days Under Custody:
             store: steam
   steam:
     id: 412730
+Days Without Incident:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/We Create Stuff/Days Without Incident/*.json":
+      when:
+        - store: steam
+  id:
+    lutris: days-without-incident
+  installDir:
+    DaysWithoutIncident: {}
+  launch:
+    "<base>/dwi.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3593490
 Days of Purgatory:
   installDir:
     DaysOfPurgatory: {}
@@ -237140,6 +237200,11 @@ Elsword:
           - store: steam
   steam:
     id: 558230
+"Elta: Defy All Gods":
+  cloud:
+    steam: true
+  steam:
+    id: 2659410
 Elteria Adventures:
   steam:
     id: 744200
@@ -241638,7 +241703,7 @@ Enlisted:
     Enlisted: {}
   launch:
     "<base>/enlisted_BE.exe":
-      - arguments: " -config:circuit:t=jupiter -game:enlisted -circuit:jupiter -noeac -skip_pkg_validation"
+      - arguments: "-forcestart -config:circuit:t=jupiter -game:enlisted -circuit:jupiter -noeac -skip_pkg_validation"
         when:
           - bit: 64
             os: windows
@@ -308330,6 +308395,8 @@ Gods vs Humans:
   steam:
     id: 322980
 "Gods, Death & Reapers":
+  id:
+    lutris: gods-death-and-reapers--2
   steam:
     id: 3086590
 Godsend:
@@ -350869,7 +350936,7 @@ Hot Wheels Stunt Track Driver:
       when:
         - os: windows
   id:
-    lutris: hot-wheels-stunt-track-driver/
+    lutris: hot-wheels-stunt-track-driver
 Hot Wheels Unleashed:
   cloud:
     steam: true
@@ -367047,6 +367114,10 @@ Indiecalypse:
         - save
       when:
         - os: windows
+  id:
+    lutris: indigo-park
+    steamExtra:
+      - 3722130
   installDir:
     Indigo Park: {}
   launch:
@@ -369528,6 +369599,8 @@ Injustice 2:
         - config
       when:
         - os: windows
+  id:
+    lutris: injustice-gods-among-us-ultimate-edition
   installDir:
     InjusticeGodsAmongUs_UltimateEdition: {}
   launch:
@@ -389036,6 +389109,11 @@ Katamari Damacy Reroll:
   cloud:
     steam: true
   files:
+    "<winLocalAppData>/BANDAI NAMCO Entertainment/katamaridamacy/Saved/SaveGames/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
     "<winLocalAppData>/BANDAI NAMCO Entertainment/katamaridamacy/Saved/SaveTemporary/<storeUserId>/Setting":
       tags:
         - config
@@ -389043,11 +389121,6 @@ Katamari Damacy Reroll:
         - os: windows
         - os: windows
           store: steam
-    "<winLocalAppData>/BANDAI NAMCO Entertainment/kataramidamacy/Saved/SaveGames/<storeUserId>":
-      tags:
-        - save
-      when:
-        - os: windows
     "<winLocalAppData>/Packages/NAMCOBANDAIGamesInc.KatamariDamacyRerollWindows_gdy2aq6ez762w/SystemAppData":
       tags:
         - save
@@ -406023,6 +406096,13 @@ Last Half of Darkness - Society of the Serpent Moon:
   steam:
     id: 384910
 "Last Half of Darkness: Society of the Serpent Moon":
+  files:
+    "<root>/steamapps/common/Last Half of Darkness - Society of the Serpent Moon/demo/media/game":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
   installDir:
     Last Half of Darkness - Society of the Serpent Moon: {}
   launch:
@@ -455738,6 +455818,8 @@ Metro Warp:
     id: 1855184473
   id:
     lutris: metro-last-light
+    steamExtra:
+      - 245350
   installDir:
     Metro Last Light: {}
   launch:
@@ -500893,6 +500975,8 @@ Nocturnal 2:
     steam: true
   id:
     lutris: nocturnal-2
+    steamExtra:
+      - 4325830
   steam:
     id: 2847780
 Nocturnal Hunt:
@@ -513461,6 +513545,8 @@ Onimod Land:
         - save
       when:
         - store: steam
+  id:
+    lutris: onimusha-2-samurais-destiny
   installDir:
     Onimusha2: {}
   launch:
@@ -685661,6 +685747,37 @@ Steep:
     lutris: steep
     steamExtra:
       - 550040
+      - 556390
+      - 556391
+      - 556392
+      - 562850
+      - 564360
+      - 564410
+      - 564411
+      - 564412
+      - 564413
+      - 564414
+      - 564415
+      - 564416
+      - 623290
+      - 623291
+      - 686890
+      - 729770
+      - 729771
+      - 730470
+      - 732380
+      - 732381
+      - 744850
+      - 744851
+      - 951660
+      - 951661
+      - 951662
+      - 951663
+      - 951664
+      - 951665
+      - 951666
+      - 951667
+      - 951668
   installDir:
     Steep: {}
   launch:
@@ -771601,6 +771718,8 @@ The Witcher:
     lutris: the-witcher-enhanced-edition
     steamExtra:
       - 9810
+      - 20902
+      - 1229370
   installDir:
     The Witcher Enhanced Edition: {}
   launch:
@@ -818867,6 +818986,23 @@ Valkyrie Elysium:
           - store: steam
   steam:
     id: 1963210
+Valkyrie Saga:
+  files:
+    "<winAppData>/Godot/app_userdata/Valkyrie Saga/*.save":
+      when:
+        - store: steam
+  installDir:
+    Valkyrie Saga: {}
+  launch:
+    "<base>/Valkyrie.exe":
+      - arguments: "--rendering-driver vulkan"
+        when:
+          - store: steam
+      - arguments: "--rendering-driver opengl3"
+        when:
+          - store: steam
+  steam:
+    id: 2663150
 Valkyrius Prime:
   files:
     "<winDocuments>/SavedGames/Valkyrius Prime/Valkyrius Prime Data/Player*/settings.sav":
