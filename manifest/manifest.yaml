@@ -26613,6 +26613,14 @@ Aion 2:
     steamExtra:
       - 4972180
       - 4972320
+  installDir:
+    AION2: {}
+  launch:
+    "<base>/Aion2/Binaries/Win64/AION2.exe":
+      - arguments: "-steam -saveddirsuffix=Steam -lp:ygquBkDAOdLk9mpXnbmwwBC20APde3oJZRLELUEkBJefDPmnhl9xRC0kjSdQP34wm5XfkKf63+on2FwMbTMySlADK6unFxXQG7ygc9xqwBOLqKVDpoEKg5xfUgwT6QLKCZELDSpOQrzHvOLrb6mNgds5VAPQx/fUDJCP/EMTCt1TAMLSo6shB0XdVdBevAVY -NoDebugExecBindings"
+        when:
+          - os: windows
+            store: steam
   steam:
     id: 3393110
 Air:
@@ -86345,18 +86353,25 @@ Black Dream:
   steam:
     id: 810470
 Black Forest:
+  cloud:
+    gog: true
+    steam: true
   files:
     "<home>/AppData/LocalLow/Lemuria/Black Forest/*.dat":
+      tags:
+        - save
       when:
-        - store: steam
-    "<home>/Library/Application Support/Lemuria/Black Forest/*.dat":
+        - os: windows
+    "<home>/Library/Application Support/Lemuria/Black Forest":
+      tags:
+        - save
       when:
         - os: mac
-          store: steam
-    "<xdgConfig>/Lemuria/Black Forest/*.dat":
+    "<xdgConfig>/Lemuria/Black Forest":
+      tags:
+        - save
       when:
         - os: linux
-          store: steam
   installDir:
     Black Forest: {}
   launch:
@@ -101856,6 +101871,11 @@ Braid Anniversary Edition:
   cloud:
     steam: true
   files:
+    "<home>/Library/Application Support/Braid, Anniversary Edition":
+      tags:
+        - save
+      when:
+        - os: mac
     "<winAppData>/Braid, Anniversary Edition":
       tags:
         - config
@@ -113702,6 +113722,33 @@ Cactus Jumper:
   steam:
     id: 791960
 Cadence:
+  files:
+    "<base>/Data/Saves":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Made With Monster Love/Cadence/Data/Saves":
+      when:
+        - os: windows
+          store: steam
+    "<home>/Library/Application Support/Made With Monster Love/Cadence/Data/Saves":
+      when:
+        - os: mac
+          store: steam
+    "<xdgConfig>/unity3d/Made With Monster Love/Cadence/Data/Saves":
+      when:
+        - os: linux
+          store: steam
+  installDir:
+    Cadence: {}
+  launch:
+    "<base>/Cadence.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Cadence.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 362800
 "Cadenza: Music, Betrayal and Death":
@@ -298490,13 +298537,19 @@ Gears of War 4:
         - os: windows
 "Gears of War: E-Day":
   files:
-    "<winLocalAppData>/FairlightConcept/Saved/Config":
+    "<winLocalAppData>/Microsoft/Gears of War E-Day/Steam/<storeUserId>/Saved/Config/Windows":
       tags:
         - config
       when:
         - os: windows
+          store: steam
   id:
     lutris: gears-of-war-e-day
+    steamExtra:
+      - 4632450
+      - 4637140
+      - 4637200
+      - 5028560
   installDir:
     GoWEDay: {}
   steam:
@@ -335720,6 +335773,7 @@ Helltaker:
       when:
         - os: linux
   id:
+    lutris: helltaker
     steamExtra:
       - 1298590
   installDir:
@@ -348737,7 +348791,7 @@ Homura Hime:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Crimson Wings":
+    "<home>/AppData/LocalLow/CrimsonDusk/HomuraHime":
       tags:
         - config
         - save
@@ -406075,6 +406129,17 @@ Last Evil:
 Last Fort:
   steam:
     id: 812350
+Last Half of Darkness (2025):
+  id:
+    lutris: last-half-of-darkness--2
+  installDir:
+    Last Half of Darkness: {}
+  launch:
+    "<base>/LastHalfOfDarkness.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3096000
 Last Half of Darkness - Society of the Serpent Moon:
   installDir:
     Last Half of Darkness - Society of the Serpent Moon: {}
@@ -496505,6 +496570,8 @@ Nightmare Files - Clap Clap:
 Nightmare Files - Stoned:
   id:
     lutris: nightmare-files-stoned
+    steamExtra:
+      - 3435410
   steam:
     id: 3212260
 Nightmare Game (噩梦游戏):
@@ -678242,6 +678309,7 @@ Star Trek Timelines:
       - 4054540
       - 4063520
       - 4861560
+      - 4861570
       - 4873370
   installDir:
     Star Trek Voyager - Across the Unknown: {}
@@ -751855,6 +751923,31 @@ The Letter - Horror Visual Novel:
 The Lewd Knight:
   steam:
     id: 1129520
+The Liar Princess and the Blind Prince:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Nippon Ichi Software, Inc/PrincessAndPrince/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Nippon Ichi Software, Inc/PrincessAndPrince/Setting.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: the-liar-princess-and-the-blind-prince
+  installDir:
+    PrincessAndPrince: {}
+  launch:
+    "<base>/PrincessAndPrince.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3901910
 The Life and Suffering of Prince Jerian:
   cloud:
     steam: true
