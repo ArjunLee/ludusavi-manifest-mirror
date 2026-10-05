@@ -72297,6 +72297,10 @@ Battle Fleet 2:
         when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Capital j Media LLC/Battle Fleet Ground Assault:
+      tags:
+        - save
   steam:
     id: 400350
 "Battle For Crown: Multiplayer":
@@ -267715,6 +267719,8 @@ Fields of Glory:
     gog: true
   gog:
     id: 1960412353
+  id:
+    lutris: fields-of-glory
   installDir:
     Fields of Glory: {}
   steam:
@@ -417336,6 +417342,8 @@ Like a Dragon 8:
       when:
         - os: windows
           store: microsoft
+  id:
+    lutris: like-a-dragon-ishin
   installDir:
     LikeADragonIshin: {}
   launch:
@@ -475746,6 +475754,20 @@ Muay Thai Fighting:
 Muchi Muchi Pork! & PinkSweets Boosted:
   cloud:
     steam: true
+  files:
+    "<winAppData>/MUCHI_PINK":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    Muchi Muchi Pork! & Pink Sweets Boosted: {}
+  launch:
+    "<base>/Muchi Muchi Pork! & Pink Sweets Boosted.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4229200
 MudRunner:
@@ -589816,6 +589838,8 @@ RetroRealms Arcade:
   steam:
     id: 2158030
 RetroSpace:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/The Wild Gentlemen/Retrospace/Saves":
       when:
@@ -803161,6 +803185,14 @@ Turbo Trucks:
       when:
         - os: windows
 Turbo Tunnel:
+  files:
+    "<home>/AppData/Local/Pipeline/Saved/Config/WindowsNoEditor":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    lutris: turbo-tunnel
   installDir:
     Turbo Tunnel: {}
   launch:
