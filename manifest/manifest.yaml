@@ -26594,6 +26594,7 @@ Ain Dodo:
     id: 1144280
 Aion:
   id:
+    lutris: aion
     steamExtra:
       - 29640
       - 29650
@@ -26610,6 +26611,12 @@ Aion:
   steam:
     id: 261430
 Aion 2:
+  files:
+    "<winLocalAppData>/AION2/Saved_Steam/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: aion-2
     steamExtra:
@@ -30345,6 +30352,11 @@ Alice Escaped!:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: alice-escaped
+    steamExtra:
+      - 1539670
+      - 2298000
   installDir:
     Alice Escaped!: {}
   launch:
@@ -57803,7 +57815,11 @@ Atomic Owl:
       when:
         - os: windows
           store: steam
+  gog:
+    id: 1883445070
   id:
+    gogExtra:
+      - 2015358201
     lutris: atomic-owl
     steamExtra:
       - 2793260
@@ -83672,6 +83688,8 @@ Binary Domain:
         - save
       when:
         - store: steam
+  id:
+    lutris: binary-domain
   installDir:
     Binary Domain: {}
   launch:
@@ -100858,6 +100876,17 @@ Boundel:
             store: steam
   steam:
     id: 454070
+Bounder:
+  cloud:
+    steam: true
+  installDir:
+    Bounder: {}
+  launch:
+    "<base>/Bounder.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2062480
 Bounders and Cads:
   installDir:
     Bounders and Cads: {}
@@ -115470,6 +115499,11 @@ Call of Duty Black Ops Cold War:
   steam:
     id: 476600
 "Call of Duty: Warzone 2.0":
+  files:
+    "<winLocalAppData>/Activision/Call of Duty/players/<storeUserId>/SteamCloud/**/*.*":
+      when:
+        - os: windows
+          store: steam
   installDir:
     Call of Duty HQ: {}
   launch:
@@ -154213,6 +154247,11 @@ Corsairs Legacy:
 "Corsairs: Battle of the Caribbean":
   cloud:
     gog: true
+  files:
+    "<home>/AppData/LocalLow/FishingCactus/Corsairs/<storeUserId>/G*.sav":
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1756882332
   id:
@@ -191782,6 +191821,11 @@ Demented Pixie:
             store: steam
   steam:
     id: 559450
+Dementium II:
+  cloud:
+    steam: true
+  steam:
+    id: 5342930
 Dementium II HD:
   cloud:
     steam: true
@@ -200867,11 +200911,11 @@ Dimhaven - The Lost Source:
     "<home>/AppData/LocalLow/Zadbox Entertainment/Dimhaven - The Lost Source/**/*.*":
       when:
         - store: steam
-    "<home>/Library/Application Support/Zadbox Entertainment/Dimhaven - The Lost Source/*.*":
+    "<home>/Library/Application Support/com.Zadbox-Entertainment.Dimhaven-Enigmas/*.*":
       when:
         - os: mac
           store: steam
-    "<home>/Zadbox Entertainment/Dimhaven - The Lost Source/*.*":
+    "<home>/snap/steam/common/.config/unity3d/Zadbox Entertainment/Dimhaven - The Lost Source/Saved Games/*.*":
       when:
         - os: linux
           store: steam
@@ -206390,6 +206434,11 @@ Dog Jam:
             store: steam
   steam:
     id: 895120
+"Dog Man: Bark in Action":
+  cloud:
+    steam: true
+  steam:
+    id: 4782240
 "Dog Man: Mission Impawsible":
   cloud:
     steam: true
@@ -298575,7 +298624,21 @@ Gears of War 4:
       when:
         - os: windows
 "Gears of War: E-Day":
+  cloud:
+    steam: true
   files:
+    "<winLocalAppData>/FairlightConcept/Saved/Config/WinGDK":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: microsoft
+    "<winLocalAppData>/Microsoft/Gears of War E-Day/Saves":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
     "<winLocalAppData>/Microsoft/Gears of War E-Day/Steam/<storeUserId>/Saved/Config/Windows":
       tags:
         - config
@@ -318401,6 +318464,19 @@ Growbot:
   steam:
     id: 661680
 Growing My Manhole:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/Godot/app_userdata/Growing My Manhole/saves":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Godot/app_userdata/Growing My Manhole/settings.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: growing-my-manhole
     steamExtra:
@@ -325125,6 +325201,8 @@ Half-Life Legacy:
   steam:
     id: 812440
 "Half-Life: Alyx":
+  cloud:
+    steam: true
   files:
     "<base>/game/hlvr/SAVE/S*":
       tags:
@@ -384734,6 +384812,18 @@ Jumphobia XL:
             store: steam
   steam:
     id: 1781380
+Jumping Jack:
+  cloud:
+    steam: true
+  installDir:
+    Jumping Jack: {}
+  launch:
+    "<base>/JumpingJack.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1978200
 Jumping Jazz Cats:
   cloud:
     steam: true
@@ -411160,6 +411250,7 @@ Lego Alpha Team:
     gogExtra:
       - 1657813519
       - 1916565870
+    lutris: lego-batman-3-beyond-gotham
   installDir:
     LEGO Batman 3 Beyond Gotham: {}
   launch:
@@ -411250,6 +411341,8 @@ Lego Alpha Team:
   steam:
     id: 21000
 Lego Brawls:
+  id:
+    lutris: lego-brawls
   installDir:
     LEGO® Brawls: {}
   launch:
@@ -411476,6 +411569,8 @@ Lego Harry Potter Collection:
         - save
       when:
         - os: windows
+  id:
+    lutris: lego-harry-pottertm-collection
   installDir:
     LHPCR: {}
   launch:
@@ -411508,6 +411603,8 @@ Lego Harry Potter Collection:
         - os: windows
   gog:
     id: 1423058817
+  id:
+    lutris: lego-harry-potter-years-1-4
   installDir:
     LEGO Harry Potter: {}
   launch:
@@ -411540,6 +411637,8 @@ Lego Harry Potter Collection:
         - os: windows
   gog:
     id: 1423058931
+  id:
+    lutris: lego-harry-potter-years-5-7
   installDir:
     LEGO Harry Potter Years 5-7: {}
   launch:
@@ -411693,6 +411792,8 @@ Lego Jurassic World:
         - config
       when:
         - os: windows
+  id:
+    lutris: lego-jurassic-world
   installDir:
     LEGO Jurassic World: {}
   launch:
@@ -411750,6 +411851,8 @@ Lego Marvel Super Heroes:
         - config
       when:
         - os: windows
+  id:
+    lutris: lego-marvel-super-heroes
   installDir:
     LEGO Marvel Super Heroes: {}
   launch:
@@ -411787,6 +411890,8 @@ Lego Marvel Super Heroes 2:
         - save
       when:
         - os: windows
+  id:
+    lutris: lego-marvel-super-heroes-2
   installDir:
     LEGO Marvel Super Heroes 2: {}
   launch:
@@ -411826,6 +411931,8 @@ Lego Marvel Super Heroes 2:
         - config
       when:
         - os: windows
+  id:
+    lutris: lego-marvels-avengers
   installDir:
     "LEGO Marvel's Avengers": {}
   launch:
@@ -411840,6 +411947,27 @@ Lego Marvel Super Heroes 2:
             store: steam
   steam:
     id: 405310
+Lego Minifigures Online:
+  id:
+    lutris: lego-minifigures-online
+  installDir:
+    LEGO Minifigures Online: {}
+  launch:
+    "<base>/LMO.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Launcher":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/Launcher.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 324790
 Lego Party:
   cloud:
     steam: true
@@ -412259,6 +412387,8 @@ Lego The Lord of the Rings:
         - os: windows
   gog:
     id: 2095741221
+  id:
+    lutris: lego-lord-of-the-rings
   installDir:
     LEGO Lord of the Rings: {}
   launch:
@@ -412322,6 +412452,8 @@ Lego Worlds:
         - save
       when:
         - os: windows
+  id:
+    lutris: lego-worlds
   installDir:
     LEGO Worlds: {}
   launch:
@@ -412983,6 +413115,10 @@ Lenin - The Lion:
   steam:
     id: 839850
 Lenin Street Geek Shop:
+  id:
+    lutris: lenin-street-geek-shop
+    steamExtra:
+      - 4336940
   steam:
     id: 3225880
 "Lenna's Inception":
@@ -499125,6 +499261,23 @@ Nitronic Rush:
             store: steam
   steam:
     id: 482450
+Nivalis Nights:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/ION LANDS/Nivalis Nights":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Nivalis Nights: {}
+  launch:
+    "<base>/Nivalis Nights.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 1488490
 No Body Home:
   steam:
     id: 794420
@@ -507155,6 +507308,9 @@ Octopath Traveler:
       when:
         - os: windows
           store: microsoft
+  id:
+    steamExtra:
+      - 1083770
   installDir:
     OCTOPATH TRAVELER: {}
   launch:
@@ -522319,6 +522475,80 @@ Overwatch 2:
         - os: windows
   id:
     lutris: overwatch-2
+    steamExtra:
+      - 259290
+      - 2437280
+      - 2443730
+      - 2443731
+      - 2443732
+      - 2443733
+      - 2443734
+      - 2528660
+      - 2528670
+      - 2584720
+      - 2584730
+      - 2618570
+      - 2618580
+      - 2707800
+      - 2809330
+      - 2923060
+      - 2923070
+      - 2961080
+      - 2961090
+      - 2977970
+      - 3031620
+      - 3031630
+      - 3039790
+      - 3039800
+      - 3039810
+      - 3157030
+      - 3157040
+      - 3157050
+      - 3259300
+      - 3259310
+      - 3317060
+      - 3317070
+      - 3317080
+      - 3364660
+      - 3364670
+      - 3364680
+      - 3526660
+      - 3526670
+      - 3526700
+      - 3665170
+      - 3665190
+      - 3665200
+      - 3813020
+      - 3813030
+      - 3819870
+      - 3943050
+      - 3943060
+      - 4044330
+      - 4044340
+      - 4186050
+      - 4186060
+      - 4186070
+      - 4186080
+      - 4374980
+      - 4375000
+      - 4375010
+      - 4485430
+      - 4586820
+      - 4586830
+      - 4586840
+      - 4586850
+      - 4586860
+      - 4815770
+      - 4815780
+      - 4815790
+      - 4815800
+      - 4921050
+      - 4921060
+      - 4921070
+      - 4921080
+      - 5026420
+      - 5026430
+      - 5026440
   installDir:
     Overwatch: {}
   launch:
@@ -524482,6 +524712,8 @@ Pacific General:
         - os: windows
   gog:
     id: 1430136184
+  id:
+    lutris: pacific-general
   installDir:
     Pacific General: {}
   launch:
@@ -551021,14 +551253,14 @@ Post Trauma:
     id: 1750030
 Post Void:
   files:
-    "<winLocalAppData>/Post_Void/config.ini":
-      tags:
-        - config
-      when:
-        - os: windows
-    "<winLocalAppData>/Post_Void/savedata.ini":
+    "<winLocalAppData>/Post_Void/*/savedata.dat":
       tags:
         - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Post_Void/*/settings.dat":
+      tags:
+        - config
       when:
         - os: windows
   installDir:
@@ -588769,7 +589001,7 @@ Resonance of Fate 4K/HD Edition:
       when:
         - os: windows
           store: steam
-    "<winDocuments>/Resonance A Plague Tale Legacy/ENGINESETTINGS":
+    "<winDocuments>/My Games/Resonance A Plague Tale Legacy":
       tags:
         - config
       when:
@@ -656104,6 +656336,13 @@ Soko Match:
           - store: steam
   steam:
     id: 518320
+Sokoban:
+  files:
+    "<base>/*.sco":
+      tags:
+        - save
+      when:
+        - os: windows
 Sokoban Classic:
   alias: Sok
 Sokoban Land DX:
@@ -678300,17 +678539,7 @@ Star Trek Timelines:
       when:
         - os: windows
 "Star Trek: The Next Generation - A Final Unity":
-  files:
-    "<base>/SAVEGAME/SAVEGAME.*":
-      tags:
-        - save
-      when:
-        - os: dos
-    "<base>/STTNG.INI":
-      tags:
-        - config
-      when:
-        - os: dos
+  alias: "Star Trek: The Next Generation – A Final Unity"
 "Star Trek: The Next Generation - Birth of the Federation":
   files:
     "<base>/game*.sav":
@@ -678337,6 +678566,18 @@ Star Trek Timelines:
         - os: windows
   id:
     lutris: star-trek-the-next-generation-klingon-honor-guard
+"Star Trek: The Next Generation – A Final Unity":
+  files:
+    "<base>/SAVEGAME/SAVEGAME.*":
+      tags:
+        - save
+      when:
+        - os: dos
+    "<base>/STTNG.INI":
+      tags:
+        - config
+      when:
+        - os: dos
 "Star Trek: Voyager - Across the Unknown":
   cloud:
     epic: true
@@ -679015,6 +679256,34 @@ Star Wars Outlaws:
   steam:
     id: 356500
 "Star Wars: Galactic Racer":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/StarWarsGalacticRacer/Saved":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/StarWarsGalacticRacer/Saved/SaveGames/*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    STAR WARS Galactic Racer: {}
+  launch:
+    "<base>/EpicOnlineServices/EpicOnlineServicesInstaller.exe":
+      - arguments: /install productId=960c149bc7904c03bd2e93f195e12fd9
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/Launcher.exe":
+      - arguments: "-isSteam"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4078430
 "Star Wars: Hunters":
@@ -751800,6 +752069,7 @@ The Lego Movie 2 Videogame:
   id:
     gogExtra:
       - 1639182085
+    lutris: the-lego-movie-2-videogame-1
   installDir:
     The LEGO Movie 2 Videogame: {}
   launch:
@@ -751847,6 +752117,7 @@ The Lego Movie Videogame:
       - 1282731468
       - 1639182085
       - 1838910200
+    lutris: the-lego-movie-videogame
   installDir:
     The LEGO Movie - Videogame: {}
   launch:
@@ -795886,6 +796157,69 @@ Transport Fever 2:
   steam:
     id: 1066780
 Transport Fever 3:
+  files:
+    "<home>/.local/share/Transport Fever 3/profile.lua":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/.local/share/Transport Fever 3/save":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/.local/share/Transport Fever 3/settings.lua":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<home>/Library/Application Support/Transport Fever 3/profile.lua":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<home>/Library/Application Support/Transport Fever 3/save":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<home>/Library/Application Support/Transport Fever 3/settings.lua":
+      tags:
+        - config
+      when:
+        - os: mac
+    "<root>/userdata/<storeUserId>/3493540/local/profile.lua":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<root>/userdata/<storeUserId>/3493540/local/save":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<root>/userdata/<storeUserId>/3493540/local/settings.lua":
+      tags:
+        - config
+      when:
+        - store: steam
+    "<winAppData>/Transport Fever 3/profile.lua":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Transport Fever 3/save":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Transport Fever 3/settings.lua":
+      tags:
+        - config
+      when:
+        - os: windows
+  gog:
+    id: 1721456477
   installDir:
     Transport Fever 3: {}
   launch:
@@ -863567,6 +863901,25 @@ Yohjo Simulator:
             store: steam
   steam:
     id: 415950
+Yoiyami Biscuit:
+  cloud:
+    steam: true
+  files:
+    "<base>/*.ybs":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: yoiyami-biscuit
+  installDir:
+    rumiaVSv_yoiyamibiscuit: {}
+  launch:
+    "<base>/rumiaVSv.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3619760
 "Yoiyami Dancers: Twilight Danmaku Dancers":
   cloud:
     steam: true
