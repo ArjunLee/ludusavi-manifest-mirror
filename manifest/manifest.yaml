@@ -17791,6 +17791,12 @@ Ace Attorney Investigations Collection:
         - config
       when:
         - os: windows
+    "<root>/userdata/<storeUserId>/2288340/remote/aczero/save":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
   steam:
     id: 3635880
 "Ace Combat: Assault Horizon - Enhanced Edition":
@@ -36131,7 +36137,7 @@ America:
         - save
       when:
         - os: windows
-    "<base>/Save2 for the Expansion Pack":
+    "<base>/Save2":
       tags:
         - save
       when:
@@ -86710,6 +86716,13 @@ Black Jewel:
             store: steam
   steam:
     id: 761320
+Black Lake:
+  cloud:
+    steam: true
+  id:
+    lutris: black-lake--1
+  steam:
+    id: 4928600
 Black Legend:
   cloud:
     gog: true
@@ -118814,6 +118827,27 @@ Car Mechanic Simulator VR:
 Car Park Capital:
   cloud:
     steam: true
+  files:
+    "<base>/saves/**/*.cpcp":
+      when:
+        - store: steam
+    "<base>/saves/*.json":
+      when:
+        - store: steam
+    "<base>/saves/blueprints/**/*.cpbp":
+      when:
+        - store: steam
+    "<base>/saves/scenarios/**/*.cpcs":
+      when:
+        - store: steam
+  installDir:
+    Car Park Capital: {}
+  launch:
+    "<base>/carparkcapital.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3031880
 Car Puzzler:
@@ -262696,6 +262730,12 @@ Farm Frenzy:
   steam:
     id: 38120
 Farm Frenzy 2:
+  files:
+    "<winProgramData>/FarmFrenzy2":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     Farm Frenzy 2: {}
   launch:
@@ -304993,6 +305033,17 @@ GlassSmash:
             store: steam
   steam:
     id: 1052220
+Glasshouse:
+  cloud:
+    steam: true
+  gog:
+    id: 1272415500
+  id:
+    lutris: glasshouse
+    steamExtra:
+      - 2818570
+  steam:
+    id: 2244700
 Glassteroids:
   installDir:
     Glassteroids: {}
@@ -334175,13 +334226,6 @@ Hektor:
             store: steam
   steam:
     id: 334070
-Hela:
-  alias: "Hela: Of Mice & Magic"
-"Hela: Of Mice & Magic":
-  id:
-    lutris: hela-of-mice-and-magic
-  steam:
-    id: 3161310
 Heldric - The legend of the shoemaker:
   installDir:
     Heldric: {}
@@ -334910,6 +334954,7 @@ Hell is Others:
 Hell is Us:
   cloud:
     epic: true
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/HellIsUs/Saved/Config/Windows/GameUserSettings.ini":
@@ -334922,6 +334967,8 @@ Hell is Us:
         - save
       when:
         - os: windows
+  gog:
+    id: 1774500758
   id:
     lutris: hell-is-us
   installDir:
@@ -459602,6 +459649,8 @@ Militia 2:
 Militsioner:
   id:
     lutris: militsioner
+    steamExtra:
+      - 4627010
   steam:
     id: 1373530
 Milk inside a Bag of Milk inside a Bag of Milk:
@@ -478398,6 +478447,35 @@ Mutazione:
         - config
   steam:
     id: 1080750
+Mute Crimson DX:
+  cloud:
+    steam: true
+  files:
+    "<winDocuments>/SavedGames/MuteCrimsonDX/SaveData/AllPlayers":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: mute-crimson-dx
+    steamExtra:
+      - 2830790
+  installDir:
+    MuteCrimsonDX: {}
+  launch:
+    "<base>/MuteCrimsonDX":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+    "<base>/MuteCrimsonDX.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2830430
 Mute Crimson+:
   cloud:
     steam: true
@@ -507781,6 +507859,13 @@ Odd Remedy:
             store: steam
   steam:
     id: 1745680
+Odd Town:
+  gog:
+    id: 1983259736
+  id:
+    lutris: odd-town--1
+  steam:
+    id: 2688780
 OddBallers:
   installDir:
     OddBallers: {}
@@ -519734,19 +519819,7 @@ Out of Sight:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/OutOfSight/Saved/*.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/OutOfSight/Saved/1/**/*.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/OutOfSight/Saved/2/**/*.sav":
-      when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/OutOfSight/Saved/3/**/*.sav":
+    "<winLocalAppData>/OutOfSight/Saved/**/*.sav":
       when:
         - os: windows
           store: steam
@@ -519759,7 +519832,7 @@ Out of Sight:
     steamExtra:
       - 4054300
   installDir:
-    OutOfSight: {}
+    Out of Sight: {}
   launch:
     "<base>/OutOfSight.exe":
       - when:
@@ -533461,6 +533534,12 @@ Peninsular War Battles:
   steam:
     id: 675950
 Penis Bird:
+  installDir:
+    Penis Bird: {}
+  launch:
+    "<base>/Penis_Bird.exe":
+      - when:
+          - store: steam
   steam:
     id: 5102980
 Penko Park:
@@ -554686,15 +554765,11 @@ Primal Planet:
     gog: true
     steam: true
   files:
-    "<home>/Godot/app_userdata/Primal Planet/*.save":
+    "<winAppData>/Godot/app_userdata/Primal Planet":
+      tags:
+        - save
       when:
-        - os: mac
-          store: steam
-        - os: linux
-          store: steam
-    "<winAppData>/Godot/app_userdata/Primal Planet/**/*.save":
-      when:
-        - store: steam
+        - os: windows
   gog:
     id: 1750052635
   id:
@@ -629412,6 +629487,16 @@ Servo:
   steam:
     id: 305510
 "Sesame Street: Friends & Fun":
+  files:
+    "<home>/AppData/LocalLow/InfinigonGames/Sesame_Street_Friends_Fun":
+      when:
+        - store: steam
+  installDir:
+    Sesame Street Friends & Fun: {}
+  launch:
+    "<base>/Sesame_Street_Friends_Fun.exe":
+      - when:
+          - store: steam
   steam:
     id: 3930330
 Session:
@@ -642484,6 +642569,7 @@ Silent Hill f:
     id: 19000
 "Silent Hill: Townfall":
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/Local/Townfall/Saved/Config/Windows":
@@ -642496,7 +642582,13 @@ Silent Hill f:
         - save
       when:
         - os: windows
+  gog:
+    id: 1777950599
   id:
+    gogExtra:
+      - 1613417652
+      - 1792007056
+      - 1834248788
     lutris: silent-hill-townfall
   installDir:
     Townfall: {}
@@ -707966,6 +708058,15 @@ Sven Co-op:
         - config
       when:
         - os: windows
+"Sven: Completely Screwed":
+  installDir:
+    Sven Completely Screwed: {}
+  launch:
+    "<base>/SvenCompletelyScrewed.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2213500
 Svoboda:
   steam:
     id: 848640
@@ -729669,6 +729770,12 @@ The Ballad Singer:
   steam:
     id: 907380
 "The Ballad Singer: Knights Templar":
+  installDir:
+    The Ballad Singer Knights Templar: {}
+  launch:
+    "<base>/KnightsTemplar.exe":
+      - when:
+          - store: steam
   steam:
     id: 1820400
 "The Ballads of Reemus: When the Bed Bites":
@@ -787348,6 +787455,14 @@ Torch of Shadows:
     "<winLocalAppData>/Torch_of_Shadows/*.sav":
       when:
         - store: steam
+    "<xdgConfig>/Torch_of_Shadows/*.ini":
+      when:
+        - os: linux
+          store: steam
+    "<xdgConfig>/Torch_of_Shadows/*.sav":
+      when:
+        - os: linux
+          store: steam
   installDir:
     TorchOfShadows: {}
   launch:
@@ -788020,6 +788135,12 @@ Tormentum II:
   cloud:
     steam: true
   files:
+    "<home>/.config/unity3d/OhNoo Studio/Tormentum II":
+      tags:
+        - config
+        - save
+      when:
+        - os: linux
     "<home>/AppData/LocalLow/OhNoo Studio/Tormentum II":
       tags:
         - save
@@ -802022,6 +802143,25 @@ Trucker 2:
 Truckful:
   cloud:
     steam: true
+  files:
+    "<base>/SavesDir/*.sav":
+      when:
+        - store: steam
+  installDir:
+    Truckful: {}
+  launch:
+    "<base>/Truckful.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Truckful.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/Truckful.x86_64":
+      - when:
+          - os: linux
+            store: steam
   steam:
     id: 3090810
 Trucking:
