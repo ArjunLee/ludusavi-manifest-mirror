@@ -6691,6 +6691,8 @@ $1 Ride:
         - os: windows
   gog:
     id: 1207660773
+  id:
+    lutris: 7th-legion
   installDir:
     7th Legion: {}
   launch:
@@ -14353,6 +14355,13 @@ ALARA Prime:
   steam:
     id: 971700
 "ALFA: Antiterror":
+  files:
+    "<root><base> system.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: steam
   installDir:
     ALFA Antiterror: {}
   launch:
@@ -63481,6 +63490,25 @@ BEAST:
             store: steam
   steam:
     id: 1145630
+BEAST CRIMES:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Link Häggman/BeastCrimes/NaninovelData/Saves":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    BeastCrimes: {}
+  launch:
+    "<base>/BeastCrimes/BeastCrimes.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1571090
 "BEAST: Bio Exo Arena Suit Team":
   steam:
     id: 3239670
@@ -72164,6 +72192,7 @@ Battle Chess 4000:
   id:
     gogExtra:
       - 1207658676
+    lutris: battle-chess-4000
   installDir:
     Battle Chess 4000: {}
   launch:
@@ -72192,6 +72221,7 @@ Battle Chess 4000:
   id:
     gogExtra:
       - 1207658676
+    lutris: battle-chess-ii-chinese-chess
   installDir:
     Battle Chess II Chinese Chess: {}
   launch:
@@ -72230,6 +72260,8 @@ Battle Chess 4000:
           store: steam
   gog:
     id: 1123635349
+  id:
+    lutris: battle-chess-game-of-kingstm
   installDir:
     Battlechess Game of Kings: {}
   launch:
@@ -76486,6 +76518,10 @@ Beasts and Bumpkins:
         - save
       when:
         - os: windows
+  registry:
+    HKEY_CURRENT_USER/Software/Worldweaver Productions/Beasts and Bumpkins:
+      tags:
+        - config
 Beasts of Bermuda:
   files:
     "<base>/BeastsOfBermuda/Saved/SaveGames/*.sav":
@@ -88205,6 +88241,8 @@ Blackthorne:
         - save
       when:
         - os: windows
+  id:
+    lutris: blackthorne
 Blackwake:
   installDir:
     Blackwake: {}
@@ -118828,18 +118866,38 @@ Car Park Capital:
   cloud:
     steam: true
   files:
-    "<base>/saves/**/*.cpcp":
+    "<base>/saves/*.cpcp":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+        - os: linux
     "<base>/saves/*.json":
+      tags:
+        - save
       when:
-        - store: steam
-    "<base>/saves/blueprints/**/*.cpbp":
+        - os: windows
+        - os: linux
+    "<base>/saves/blueprints/*.cpbp":
+      tags:
+        - save
       when:
-        - store: steam
-    "<base>/saves/scenarios/**/*.cpcs":
+        - os: windows
+        - os: linux
+    "<base>/saves/scenarios/*.cpcs":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
+        - os: linux
+    "<base>/settings.json":
+      tags:
+        - config
+      when:
+        - os: windows
+        - os: linux
+  id:
+    lutris: car-park-capital
   installDir:
     Car Park Capital: {}
   launch:
@@ -137977,6 +138035,8 @@ Citywars Savage:
         - os: windows
   gog:
     id: 1367477034
+  id:
+    lutris: civcity-rome
   installDir:
     CivCity Rome: {}
   launch:
@@ -140441,14 +140501,14 @@ Clinically Dead:
   cloud:
     steam: true
   files:
+    "<winLocalAppData>/Hellraiser/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/Hellraiser/Saved/SaveGames":
       tags:
         - save
-      when:
-        - os: windows
-    "<winLocalAppData>/Local/Hellraiser/Saved/Config/Windows":
-      tags:
-        - config
       when:
         - os: windows
   id:
@@ -150272,6 +150332,8 @@ Conflict Zone:
         - save
       when:
         - os: windows
+  id:
+    lutris: conflict-denied-ops
   installDir:
     Conflict Denied Ops: {}
   launch:
@@ -243411,6 +243473,8 @@ Epic Pinball:
         - os: dos
   gog:
     id: 1965302672
+  id:
+    lutris: epic-pinball
 Epic Quest of the 4 Crystals:
   cloud:
     steam: true
@@ -248561,6 +248625,8 @@ Eurofighter Typhoon:
         - save
       when:
         - os: windows
+  id:
+    lutris: eurofighter-typhoon
   installDir:
     Eurofighter Typhoon: {}
   launch:
@@ -253953,6 +254019,9 @@ Extreme Painting Puzzles:
             store: steam
   steam:
     id: 927670
+Extreme Pinball:
+  id:
+    lutris: extrene-pinball
 Extreme Racing on Highway:
   installDir:
     Exteme Racing on Highway: {}
@@ -290458,6 +290527,8 @@ Fur Fighters:
         - save
       when:
         - os: windows
+  id:
+    lutris: fur-fighters
 Fur Fun:
   files:
     "<base>/FurFun/Content/PaksWindowsNoEditor":
@@ -298114,6 +298185,7 @@ Gateways:
     id: 216290
 Gathering Sky:
   id:
+    lutris: gathering-sky
     steamExtra:
       - 393640
   installDir:
@@ -304663,6 +304735,8 @@ Gladiator Trainer:
         - save
       when:
         - os: windows
+  id:
+    lutris: gladiator-sword-of-vengeance
   installDir:
     Gladiator Sword of Vengeance: {}
   launch:
@@ -336304,6 +336378,11 @@ Help Will Come Tomorrow:
     "<home>/.config/unity3d/Arclight Creations/Help Will Come Tomorrow/Data":
       tags:
         - save
+      when:
+        - os: linux
+    "<home>/.config/unity3d/Arclight Creations/Help Will Come Tomorrow/Data/config.json":
+      tags:
+        - config
       when:
         - os: linux
     "<home>/AppData/LocalLow/Arclight Creations/Help Will Come Tomorrow/Data":
@@ -401098,6 +401177,8 @@ Krunker.io:
         - os: windows
   gog:
     id: 1207659196
+  id:
+    lutris: kknd2-krossfire
   installDir:
     KKND 2 Krossfire: {}
   steam:
@@ -495238,6 +495319,9 @@ Next Hero:
             store: steam
   steam:
     id: 756490
+Next Objective:
+  steam:
+    id: 5068970
 Next Space Rebels:
   cloud:
     gog: true
@@ -508538,6 +508622,8 @@ Of Kings And Men:
 Of Light and Darkness:
   gog:
     id: 1407917236
+  id:
+    lutris: of-light-and-darkness-the-prophecy
   installDir:
     Of Light and Darkness: {}
   launch:
@@ -613898,6 +613984,22 @@ Sacrament:
             store: steam
   steam:
     id: 734380
+Sacrata:
+  cloud:
+    steam: true
+  files:
+    "<base>/Windows/SACRATA/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/Windows/SACRATA/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  steam:
+    id: 3201450
 Sacred:
   files:
     "<base>/SETTINGS.CFG":
@@ -634714,6 +634816,8 @@ Shattered Throne:
   steam:
     id: 469710
 Shattered Union:
+  id:
+    lutris: shattered-union
   installDir:
     Shattered Union: {}
   launch:
@@ -669074,6 +669178,8 @@ Spartan:
   steam:
     id: 685050
 Spartan (2004):
+  id:
+    lutris: spartan
   installDir:
     Spartan: {}
   launch:
@@ -675443,6 +675549,9 @@ Squad 51 vs. the Flying Saucers:
 Squad Z:
   steam:
     id: 784030
+Squadron 42:
+  steam:
+    id: 4045720
 Squadron 51:
   alias: Squad 51 vs. the Flying Saucers
 "Squadron: Sky Guardians":
@@ -680294,6 +680403,8 @@ Star Wars Outlaws:
         - save
       when:
         - os: windows
+  id:
+    lutris: star-wars-the-clone-wars-republic-heroes
   installDir:
     Star Wars The Clone Wars: {}
   launch:
@@ -693659,6 +693770,7 @@ Stronghold Legends:
       when:
         - os: windows
   id:
+    lutris: stronghold-legends
     steamExtra:
       - 1802300
   installDir:
@@ -765586,6 +765698,7 @@ The Sinking City:
       - 2003312853
       - 2031063808
       - 2147483114
+    lutris: the-sinking-city
     steamExtra:
       - 887080
       - 975180
@@ -765650,6 +765763,8 @@ The Sinking City Remastered:
         - os: windows
   gog:
     id: 2018838490
+  id:
+    lutris: the-sinking-city-remastered
   installDir:
     The Sinking City: {}
   steam:
@@ -806875,6 +806990,8 @@ Tyrian:
         - os: dos
   gog:
     id: 1207658901
+  id:
+    lutris: tyrian
 "Tyrion Cuthbert: Attorney of the Arcane":
   files:
     "<home>/AppData/LocalLow/Diamondhenge Entertainment/Attorney of the Arcane/Save Data":
@@ -858002,6 +858119,26 @@ Worms Revolution:
     id: 1421309312
   id:
     lutris: worms-revolution
+    steamExtra:
+      - 200172
+      - 200173
+      - 200174
+      - 200175
+      - 200176
+      - 200177
+      - 200178
+      - 200179
+      - 200180
+      - 200181
+      - 200182
+      - 200183
+      - 200185
+      - 200186
+      - 200187
+      - 200188
+      - 200189
+      - 235230
+      - 2028056
   installDir:
     WormsRevolution: {}
   launch:
