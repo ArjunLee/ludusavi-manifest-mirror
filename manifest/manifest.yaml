@@ -37496,6 +37496,20 @@ Amphora:
             store: steam
   steam:
     id: 331510
+Amplexus Protocol:
+  files:
+    "<winAppData>/Renpy/AmplexusProtocol-1622743716/*.save":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Amplexus Protocol: {}
+  launch:
+    "<base>/AmplexusProtocol.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3759690
 "Amplitude: A Visual Novel":
   installDir:
     AMPLITUDEVisualNovel: {}
@@ -52071,6 +52085,25 @@ Asemblance:
             store: steam
   steam:
     id: 809950
+"Asgard's Fall: Viking Survivors":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/AsgardsFall/Save Files":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  installDir:
+    "Asgard's Fall": {}
+  launch:
+    "<base>/AsgardsFall.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2780710
 "Asgard's Wrath":
   files:
     "<winLocalAppData>/WrathGame/Saved/SaveGames":
@@ -57418,6 +57451,8 @@ Atlantis VR:
         - os: windows
   gog:
     id: 1207658944
+  id:
+    lutris: atlantis-the-lost-tales
 Atlas:
   installDir:
     ATLAS: {}
@@ -87832,6 +87867,7 @@ Blackjack of Strip:
       when:
         - os: windows
   id:
+    lutris: blacklight-retribution
     steamExtra:
       - 209872
       - 209873
@@ -114022,6 +114058,8 @@ Caesar IV:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: caesars-revenge
   installDir:
     "Caesar's Revenge": {}
   launch:
@@ -151018,6 +151056,8 @@ Consortium:
         - os: windows
   gog:
     id: 1207664203
+  id:
+    lutris: consortium
   installDir:
     Consortium: {}
   launch:
@@ -153108,10 +153148,7 @@ Copa City:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Triple Espresso/Copa City First Football Tycoon/**/*.json":
-      when:
-        - store: steam
-    "<home>/AppData/LocalLow/Triple Espresso/Copa City First Football Tycoon/Saves/**/*.json":
+    "<home>/AppData/LocalLow/Triple Espresso/Copa City":
       when:
         - store: steam
   gog:
@@ -182001,6 +182038,8 @@ Dead Island 2:
       when:
         - os: windows
           store: microsoft
+  id:
+    lutris: dead-island-2
   installDir:
     Dead Island 2: {}
   launch:
@@ -182077,6 +182116,8 @@ Dead Island 2:
   steam:
     id: 222900
 "Dead Island: Retro Revenge":
+  id:
+    lutris: dead-island-retro-revenge
   installDir:
     Dead Island Retro Revenge: {}
   launch:
@@ -182133,6 +182174,8 @@ Dead Island 2:
         - config
       when:
         - os: windows
+  id:
+    lutris: dead-island-riptide-definitive-edition
   installDir:
     DIRDE: {}
   launch:
@@ -200336,6 +200379,8 @@ Dig and Shoot:
   steam:
     id: 785070
 Dig or Die:
+  cloud:
+    steam: true
   files:
     "<winDocuments>/Dig or Die/<storeUserId>/Saves/**/*.save":
       when:
@@ -228715,6 +228760,8 @@ EA Sports WRC:
         - save
       when:
         - os: windows
+  id:
+    lutris: ea-sportstm-wrc
   installDir:
     EA SPORTS WRC: {}
   launch:
@@ -241373,6 +241420,8 @@ Enemy:
 "Enemy Engaged: Apache vs Havoc":
   gog:
     id: 1207658733
+  id:
+    lutris: enemy-engaged-apache-vs-havoc
   installDir:
     Enemy Engaged Apache vs Havoc: {}
   launch:
@@ -332143,6 +332192,12 @@ Heart of Ember CH1:
   steam:
     id: 382320
 Heart of Eternity:
+  files:
+    "C:/Users/(USERNAME)/Documents/Ñåðäöå Âå÷íîñòè":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Heart of Eternity: {}
   launch:
@@ -369958,6 +370013,13 @@ Ingression:
             store: steam
   steam:
     id: 257260
+Inherited Shadows:
+  id:
+    lutris: inherited-shadows
+    steamExtra:
+      - 4339430
+  steam:
+    id: 2939450
 Inhuman:
   cloud:
     steam: true
@@ -584022,6 +584084,8 @@ Redline Ultimate Racing:
 "Redneck Deer Huntin'":
   gog:
     id: 1647235151
+  id:
+    lutris: redneck-deer-huntin
   installDir:
     "Redneck Deer Huntin'": {}
   launch:
@@ -584125,6 +584189,8 @@ Redneck Rampage Rides Again:
         - os: dos
   gog:
     id: 1207658674
+  id:
+    lutris: redneck-rampage-rides-again
   installDir:
     Redneck Rampage Rides Again: {}
   launch:
@@ -620438,6 +620504,8 @@ Saw:
         - config
       when:
         - os: windows
+  id:
+    lutris: saw
   installDir:
     Saw: {}
   launch:
@@ -626827,6 +626895,7 @@ Sega Rally Revo:
       when:
         - os: windows
   id:
+    lutris: sega-rally-revo
     steamExtra:
       - 4790
   installDir:
@@ -631130,6 +631199,8 @@ Shadow Mist:
         - os: windows
   gog:
     id: 1479095781
+  id:
+    lutris: shadow-ops-red-mercury
   installDir:
     Shadow Ops Red Mercury: {}
   launch:
@@ -651963,6 +652034,8 @@ Slipstream 5000:
         - os: dos
   gog:
     id: 1207658953
+  id:
+    lutris: slipstream-5000
   installDir:
     Slipstream 5000: {}
   launch:
@@ -826816,6 +826889,8 @@ Virtual Pool 3:
       tags:
         - config
 Virtual Pool 4:
+  id:
+    lutris: virtual-pool-4
   installDir:
     Virtual Pool 4: {}
   launch:
@@ -831140,6 +831215,8 @@ WOUNDED:
         - config
       when:
         - os: windows
+  id:
+    lutris: wrc-10-fia-world-rally-championship
   installDir:
     WRC 10 FIA World Rally Championship: {}
   launch:
@@ -831193,6 +831270,8 @@ WOUNDED:
         - save
       when:
         - os: windows
+  id:
+    lutris: wrc-4-fia-world-rally-championship
   installDir:
     WRC 4: {}
   launch:
@@ -831217,6 +831296,7 @@ WOUNDED:
       when:
         - os: windows
   id:
+    lutris: wrc-5
     steamExtra:
       - 398470
       - 398471
@@ -831236,6 +831316,8 @@ WOUNDED:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: wrc-6
   installDir:
     WRC 6: {}
   steam:
@@ -831250,6 +831332,8 @@ WOUNDED:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: wrc-7
   installDir:
     WRC 7: {}
   launch:
@@ -831274,6 +831358,8 @@ WOUNDED:
         - config
       when:
         - os: windows
+  id:
+    lutris: wrc-8-fia-world-rally-championship
   installDir:
     WRC 8 FIA World Rally Championship: {}
   launch:
@@ -831299,6 +831385,8 @@ WOUNDED:
         - config
       when:
         - os: windows
+  id:
+    lutris: wrc-9-fia-world-rally-championship
   installDir:
     WRC 9 FIA World Rally Championship: {}
   launch:
@@ -831323,6 +831411,8 @@ WRC Generations:
         - config
       when:
         - os: windows
+  id:
+    lutris: wrc-generations-the-fia-wrc-official-game
   installDir:
     WRC Generations - The FIA WRC Official Game: {}
   launch:
@@ -831343,6 +831433,8 @@ WRC Powerslide:
         - save
       when:
         - os: windows
+  id:
+    lutris: wrc-powerslide
   installDir:
     WRC Powerslide: {}
   launch:
@@ -834641,8 +834733,20 @@ WarBreeds:
         - save
       when:
         - os: windows
+    "<base>/DATA/prefs.dbg":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/WARBREED.CFG":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1979367321
+  id:
+    lutris: warbreeds
   installDir:
     WarBreeds: {}
   launch:
@@ -867461,6 +867565,17 @@ Z Runaway:
 Z-Aftershock:
   steam:
     id: 652730
+Z-Company:
+  installDir:
+    Z-Company: {}
+  launch:
+    "<base>/ZCompany.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1583820
 Z-End:
   installDir:
     Z-End: {}
