@@ -81894,12 +81894,25 @@ Beyond The Veil (2019):
   steam:
     id: 1020670
 Beyond These Stars:
+  files:
+    "<home>/AppData/LocalLow/Balancing Monkey Games/Beyond These Stars/Saves":
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1107179410
   id:
     lutris: beyond-these-stars
     steamExtra:
       - 2546270
+  installDir:
+    Beyond These Stars: {}
+  launch:
+    "<base>/Beyond These Stars.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2295060
 Beyond Zork:
@@ -104266,9 +104279,11 @@ Breathedge 2:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/Breathedge2Game/Saved/SaveGames/*.sav":
+    "<winLocalAppData>/Breathedge2Game/Saved/SaveGames":
+      tags:
+        - save
       when:
-        - store: steam
+        - os: windows
   id:
     lutris: breathedge-2
   installDir:
@@ -127194,6 +127209,34 @@ ChainMan:
     ChainMan: {}
   steam:
     id: 646300
+Chained Beasts:
+  cloud:
+    steam: true
+  files:
+    "<home>/.config/unity3d/Featherweight Games/ChainedBeasts/SaveData":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/Featherweight Games/ChainedBeasts/SaveData":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/unity.Featherweight Games.ChainedBeasts/SaveData":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Chained Beasts: {}
+  launch:
+    "<base>/ChainedBeasts.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/ChainedBeasts.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3569420
 Chained Echoes:
   cloud:
     gog: true
@@ -209585,6 +209628,7 @@ Donut County:
   id:
     gogExtra:
       - 1837490372
+    lutris: donut-county
     steamExtra:
       - 931370
   installDir:
@@ -217123,9 +217167,23 @@ Dreadlands:
   steam:
     id: 1054690
 Dreadline Express:
+  files:
+    "<home>/AppData/LocalLow/DavidKonecny/DreadlineExpress/steam<storeUserId>/Saves/**/*.data":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/DavidKonecny/DreadlineExpress/steam<storeUserId>/Saves/**/*.json":
+      when:
+        - store: steam
   id:
     steamExtra:
       - 3411220
+  installDir:
+    DreadlineExpress: {}
+  launch:
+    "<base>/DreadlineExpress.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3327120
 Dreadnought:
@@ -232485,6 +232543,37 @@ Echo Royale:
             store: steam
   steam:
     id: 762010
+Echo Weaver:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Moonlight Kids/Echo Weaver/*.dat":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Moonlight Kids/Echo Weaver/*.json":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Moonlight Kids/Echo Weaver/*.dat":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Moonlight Kids/Echo Weaver/*.json":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Echo Weaver: {}
+  launch:
+    "<base>/Echo Weaver.app/Contents/MacOS/Echo Weaver":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Echo Weaver.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2184080
 Echo of Combats:
   installDir:
     Echo of Combats: {}
@@ -295732,6 +295821,8 @@ Gallery One:
   steam:
     id: 912260
 Gallipoli:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/WW1 Game Series/Gallipoli/Steam/<storeUserId>/SaveData_User.dat*":
       when:
@@ -318427,6 +318518,9 @@ Grobda Remix:
   steam:
     id: 739000
 Grobnopolis Last Days:
+  id:
+    steamExtra:
+      - 4670260
   steam:
     id: 3851090
 Groggers!:
@@ -322787,6 +322881,7 @@ Guts and Syringes:
     gogExtra:
       - 1130692937
       - 1251269536
+    lutris: gwent-rogue-mage
     steamExtra:
       - 1971540
   installDir:
@@ -436593,6 +436688,26 @@ Maestro:
     Maestro: {}
   steam:
     id: 2701700
+Maestro VR:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Symphonic Games/Maestro VR/*.sav":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/Symphonic Games/Maestro VR/*.sav.bak":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: maestro-vr
+    steamExtra:
+      - 3293890
+  installDir:
+    MaestroVR: {}
+  steam:
+    id: 1327920
 "Maestro: Dark Talent":
   installDir:
     "Maestro Dark Talent Collector's Edition": {}
@@ -691009,12 +691124,6 @@ Stranded Deep:
         - config
       when:
         - os: mac
-    "<winLocalAppData>/Packages/BeamTeamPublishing.StrandedDeepPC_z3g0437ken9pg/SystemAppData/wgs":
-      tags:
-        - save
-      when:
-        - os: windows
-          store: microsoft
     "<xdgConfig>/unity3d/Beam Team Games/Stranded Deep/Data":
       tags:
         - save
@@ -723740,6 +723849,19 @@ TendyTrainer:
   steam:
     id: 983120
 Tenebris Somnia:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/TenebrisSomnia/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/TenebrisSomnia/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
   gog:
     id: 2084941195
   id:
@@ -723748,6 +723870,12 @@ Tenebris Somnia:
     lutris: tenebris-somnia
     steamExtra:
       - 2578120
+  installDir:
+    Tenebris Somnia: {}
+  launch:
+    "<base>/TenebrisSomnia.exe":
+      - when:
+          - store: steam
   steam:
     id: 2121510
 Tenebrous Dungeon:
@@ -773489,7 +773617,11 @@ The Witcher:
   gog:
     id: 1207658930
   id:
-    lutris: the-witcher-2-assassins-of-kings-enhanced-edition
+    lutris: the-witcher-2-assassins-of-kings
+    steamExtra:
+      - 206783
+      - 228460
+      - 1229350
   installDir:
     the witcher 2: {}
   launch:
@@ -773800,6 +773932,12 @@ The Wolf Among Us:
         - config
       when:
         - os: windows
+    "<winLocalAppData>/Packages/TelltaleGames.TheWolfAmongUs-ATelltaleGamesSeries_4p9dzwrngadje/SystemAppData/wgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
   gog:
     id: 1432213513
   installDir:
@@ -782410,6 +782548,8 @@ Tiny Bunny:
 Tiny Chills - Not From Ear:
   id:
     lutris: tiny-chills-not-from-ear
+    steamExtra:
+      - 5237240
   steam:
     id: 3878740
 Tiny Combat Arena:
@@ -787501,6 +787641,8 @@ Tonka Construction:
         - save
       when:
         - os: windows
+  id:
+    lutris: tony-hawks-pro-skater-hd
   installDir:
     "Tony Hawk's Pro Skater HD": {}
   launch:
@@ -793543,10 +793685,11 @@ Toy Story:
         - os: windows
 "Toy Story 3: Complete Edition":
   files:
-    "<winAppData>/Disney/Toy Story 3 Complete Edition/**/Saved Game":
+    "<winAppData>/Roaming/Disney/Toy Story 3 Complete Edition/savedata":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
   installDir:
     Toy Story 3 Complete Edition: {}
   launch:
@@ -797541,6 +797684,8 @@ Transport Fever 3:
         - os: windows
   gog:
     id: 1721456477
+  id:
+    lutris: transport-fever-3
   installDir:
     Transport Fever 3: {}
   launch:
