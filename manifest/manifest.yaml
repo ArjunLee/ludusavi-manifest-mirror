@@ -4659,6 +4659,8 @@ $1 Ride:
   steam:
     id: 745670
 3D Ultra Minigolf Adventures:
+  id:
+    lutris: 3d-ultra-minigolf-adventures-deluxe
   installDir:
     3D Ultra Mini Golf Adventures: {}
   launch:
@@ -10837,6 +10839,22 @@ A Pixel Story:
             store: steam
   steam:
     id: 339460
+A Place Out Here:
+  files:
+    "<base>/Stillmere/Saved/SaveGames":
+      when:
+        - store: steam
+    "<base>/Stillmere/Saved/SaveGames/DISv4":
+      when:
+        - store: steam
+  installDir:
+    A Place Out Here: {}
+  launch:
+    "<base>/SurvivalGame.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3149450
 A Place for the Unwilling:
   cloud:
     steam: true
@@ -110763,6 +110781,13 @@ Buried Alive VR:
     Buried Alive VR: {}
   steam:
     id: 678830
+Buried stars:
+  files:
+    "<home>/AppData/LocalLow/LINE Games/BURIED STARS":
+      tags:
+        - save
+      when:
+        - os: windows
 "Buried: An Interactive Story":
   installDir:
     Buried An Interactive Story: {}
@@ -150418,6 +150443,9 @@ Concrete and Steel:
   steam:
     id: 444830
 Concubine:
+  cloud:
+    gog: true
+    steam: true
   files:
     "<winLocalAppData>/Concubine/Saved/Config/Windows":
       tags:
@@ -192460,7 +192488,7 @@ Dementium II:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/Dementium II/saves/*.*":
+    "<winLocalAppData>/Dementium II/Saves/*.*":
       when:
         - store: steam
   installDir:
@@ -192502,6 +192530,8 @@ Dementium II HD:
     "<winLocalAppData>/Dementium - The Ward/saves/*.*":
       when:
         - store: steam
+  id:
+    lutris: dementium-the-ward
   installDir:
     Dementium - The Ward: {}
   launch:
@@ -306290,6 +306320,14 @@ GloGo:
             store: steam
   steam:
     id: 764080
+Glob & the Missing Globbies:
+  cloud:
+    steam: true
+  id:
+    steamExtra:
+      - 4950650
+  steam:
+    id: 4935930
 Global ATC Simulator:
   installDir:
     Global ATC Simulator: {}
@@ -319306,6 +319344,9 @@ Grounds of Glory:
             store: steam
   steam:
     id: 869120
+Groundwork Simulator:
+  steam:
+    id: 5306540
 Grove flowers:
   installDir:
     Grove flowers: {}
@@ -355732,6 +355773,11 @@ Hunger:
             store: steam
   steam:
     id: 581740
+Hunger (2026):
+  cloud:
+    epic: true
+  steam:
+    id: 1752080
 Hunger Apartment:
   cloud:
     steam: true
@@ -433094,6 +433140,16 @@ Lyne:
         - config
   steam:
     id: 266010
+"Lynked: Banner of the Spark":
+  installDir:
+    Lynked Banner of the Spark: {}
+  launch:
+    "<base>/Saturn.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3159570
 Lynne:
   files:
     "<base>/game/saves":
@@ -476756,6 +476812,9 @@ Mr. Pumpkin Adventure:
 Mr. Records:
   gog:
     id: 1897263287
+  id:
+    steamExtra:
+      - 4869950
   steam:
     id: 3053470
 Mr. Rescue:
@@ -606534,6 +606593,48 @@ Root Letter:
         - config
   steam:
     id: 550310
+"Roots in the Sky: The Hand of Glory 2":
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<winLocalAppData>/Madit Entertainment/Roots in the Sky - The Hand of Glory 2/Savegames":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/Madit Entertainment/Roots in the Sky - The Hand of Glory 2/config.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+  gog:
+    id: 1910404586
+  id:
+    gogExtra:
+      - 1768727131
+      - 1788507471
+    lutris: roots-in-the-sky-the-hand-of-glory-2
+    steamExtra:
+      - 2285560
+      - 5167490
+  installDir:
+    Roots in the Sky - The Hand of Glory 2: {}
+  launch:
+    "<base>/Roots in the Sky - The Hand of Glory 2.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Roots in the Sky.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/start":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 2062380
 Roots of Insanity:
   id:
     lutris: roots-of-insanity
@@ -630529,6 +630630,11 @@ Serious Sam Fusion 2017:
           - store: steam
   steam:
     id: 41060
+"Serious Sam: The Third Encounter":
+  cloud:
+    steam: true
+  steam:
+    id: 459920
 "Serious Sam: Tormental":
   cloud:
     steam: true
@@ -669152,6 +669258,16 @@ SpaceShot:
             store: steam
   steam:
     id: 675940
+SpaceTanks:
+  installDir:
+    Space Tanks: {}
+  launch:
+    "<base>/Space_Tanks.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4185150
 SpaceTone:
   cloud:
     steam: true
@@ -689816,8 +689932,7 @@ Still Wakes the Deep:
   steam:
     id: 3465690
 Stillmere:
-  steam:
-    id: 3149450
+  alias: A Place Out Here
 Stilt Fella:
   cloud:
     steam: true
@@ -695590,10 +695705,31 @@ Stupid Invaders:
       when:
         - os: windows
 Stupid Never Dies:
+  files:
+    "<base>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.json":
+      when:
+        - store: steam
+    "<base>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.json":
+      when:
+        - store: steam
+    "<winLocalAppData>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.sav":
+      when:
+        - store: steam
   id:
     lutris: stupid-never-dies
     steamExtra:
+      - 4228930
       - 4880100
+  installDir:
+    StupidNeverDies: {}
+  launch:
+    "<base>/StupidNeverDies.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3486530
 Stupid Quest - Medieval Adventures:
@@ -744455,6 +744591,15 @@ The Ghosts of Hackney Mills:
             store: steam
   steam:
     id: 739240
+"The Gigglebone Gang: AlphaBonk Farm":
+  steam:
+    id: 5450950
+"The Gigglebone Gang: Infinity City":
+  steam:
+    id: 5460730
+"The Gigglebone Gang: Pantsylvania":
+  steam:
+    id: 5442080
 "The Gigglebone Gang: World Tour":
   steam:
     id: 5460970
@@ -815126,6 +815271,12 @@ Unhappy Ever After:
             store: steam
   steam:
     id: 552350
+Unharvest:
+  id:
+    steamExtra:
+      - 5165160
+  steam:
+    id: 5138990
 Unheard:
   cloud:
     steam: true
@@ -819023,6 +819174,18 @@ Usurper:
   steam:
     id: 1151450
 "Utawarerumono: ZAN 2":
+  files:
+    "<base>/savedata":
+      when:
+        - store: steam
+  installDir:
+    Utawarerumono ZAN 2: {}
+  launch:
+    "<base>/UtawarerumonoZAN2.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3074850
 Uterine Supremacy:
