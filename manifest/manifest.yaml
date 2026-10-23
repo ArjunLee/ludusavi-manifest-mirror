@@ -17812,13 +17812,21 @@ Ace Attorney Investigations Collection:
   id:
     steamExtra:
       - 3594180
+      - 3635880
   installDir:
     ACE COMBAT 8: {}
   steam:
     id: 2288340
 "Ace Combat Zero: The Belkan War":
+  cloud:
+    steam: true
   files:
     "<base>/ACE COMBAT 8/ACZero/settings/setting.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/ACZero/settings/setting.ini":
       tags:
         - config
       when:
@@ -17829,8 +17837,13 @@ Ace Attorney Investigations Collection:
       when:
         - os: windows
           store: steam
+  id:
+    steamExtra:
+      - 3635880
+  installDir:
+    ACE COMBAT ZERO THE BELKAN WAR (Steam Version): {}
   steam:
-    id: 3635880
+    id: 5370600
 "Ace Combat: Assault Horizon - Enhanced Edition":
   cloud:
     steam: true
@@ -94516,8 +94529,20 @@ Bloodthief:
   steam:
     id: 2533600
 Bloodville:
+  files:
+    "<winLocalAppData>/BLOODVILLE/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
   id:
     lutris: bloodville
+  installDir:
+    BLOODVILLE: {}
+  launch:
+    "<base>/BLOODVILLE.exe":
+      - when:
+          - bit: 64
+            store: steam
   steam:
     id: 3802770
 "Bloodwings: Pumpkinhead's Revenge":
@@ -107275,6 +107300,23 @@ Brotato:
             store: steam
   steam:
     id: 1942280
+Brothel Master:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/BrothelSim/Saved/SaveGames/save.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Brothel Master: {}
+  launch:
+    "<base>/BrothelMaster.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3892630
 Brother Bear:
   files:
     "<winProgramData>/Disney Interactive/Brother Bear/System":
@@ -170513,6 +170555,14 @@ Cyberpunk 2077:
         - config
       when:
         - os: windows
+        - os: windows
+          store: microsoft
+    "<winLocalAppData>/Packages/CDPROJEKTSA.4d0e9834-20b1-4580-9bdc-4501ef2ffaac_0xkrdv0gjmk28/SystemAppData/wgs":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: microsoft
   id:
     gogExtra:
       - 1256837418
@@ -201600,7 +201650,12 @@ Dimetrosaur:
   steam:
     id: 887550
 Dimhaven - The Lost Source:
+  alias: "Dimhaven: The Lost Source"
+Dimhaven Enigmas:
+  alias: "Dimhaven: The Lost Source"
+"Dimhaven: The Lost Source":
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/Zadbox Entertainment/Dimhaven - The Lost Source/**/*.*":
@@ -201614,10 +201669,15 @@ Dimhaven - The Lost Source:
       when:
         - os: linux
           store: steam
+  gog:
+    id: 1308963382
   id:
+    gogExtra:
+      - 1949666569
     lutris: dimhaven-the-lost-source
     steamExtra:
       - 3010310
+      - 5215080
   installDir:
     Dimhaven - The Lost Source: {}
   launch:
@@ -201635,8 +201695,6 @@ Dimhaven - The Lost Source:
             store: steam
   steam:
     id: 2458980
-Dimhaven Enigmas:
-  alias: Dimhaven - The Lost Source
 Diminutive:
   id:
     steamExtra:
@@ -246501,6 +246559,32 @@ Escape from Paradise 2:
           - store: steam
   steam:
     id: 47120
+Escape from Playtime:
+  files:
+    "<winLocalAppData>/EscapeFromPlaytime/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winLocalAppData>/EscapeFromPlaytime/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 5309180
+      - 5401680
+  installDir:
+    Escape From Playtime: {}
+  launch:
+    "<base>/EscapeFromPlaytime.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 2087540
 Escape from Pleasure Planet:
   installDir:
     Escape from Pleasure Planet: {}
@@ -256493,6 +256577,8 @@ FIFA 17:
         - config
       when:
         - os: windows
+  id:
+    lutris: fifa-17
 FIFA 18:
   cloud:
     origin: true
@@ -263852,8 +263938,6 @@ Farming Incremental But With Guns:
         - save
       when:
         - os: windows
-  id:
-    lutris: farming-incremental-but-with-guns
   installDir:
     Farming Incremental But With Guns: {}
   launch:
@@ -270196,6 +270280,24 @@ Final Fantasy IX:
 Final Fantasy Resonance:
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/FFRS/Steam/<storeUserId>/GameSaveData*.sav":
+      when:
+        - os: windows
+          store: steam
+    "<winLocalAppData>/FFRS_DEMO/Steam/<storeUserId>/GameSaveData*.sav":
+      when:
+        - os: windows
+          store: steam
+  id:
+    steamExtra:
+      - 4347910
+  installDir:
+    FINAL FANTASY RESONANCE: {}
+  launch:
+    "<base>/FFRS.exe":
+      - when:
+          - store: steam
   steam:
     id: 3259780
 Final Fantasy Tactics - The Ivalice Chronicles:
@@ -284483,6 +284585,40 @@ Foundry:
             store: steam
   steam:
     id: 983870
+Fountains:
+  cloud:
+    steam: true
+  files:
+    "<home>.local/share/godot/app_userdata/Fountains/saves_RELEASE/*.fsave":
+      when:
+        - os: linux
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Fountains/saves_RELEASE/*.fsave":
+      when:
+        - os: mac
+          store: steam
+    "<winAppData>/Godot/app_userdata/Fountains/saves_RELEASE/**/*.fsave":
+      when:
+        - store: steam
+  installDir:
+    FOUNTAINS: {}
+  launch:
+    "<base>/FOUNTAINS.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/FOUNTAINS.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/FOUNTAINS.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+  steam:
+    id: 1841240
 Four Color Jump:
   installDir:
     Four color jumps: {}
@@ -352503,6 +352639,7 @@ Hotel Architect:
     id: 1602000
 Hotel Barcelona:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/The Cult Games Ltd/HOTEL BARCELONA/*.data":
@@ -352510,6 +352647,14 @@ Hotel Barcelona:
         - save
       when:
         - os: windows
+  gog:
+    id: 1296112477
+  id:
+    gogExtra:
+      - 1082855294
+      - 1216529154
+    steamExtra:
+      - 4582750
   installDir:
     HOTEL BARCELONA: {}
   launch:
@@ -374993,6 +375138,13 @@ Invicta Beam:
   steam:
     id: 2060870
 Invincible VS:
+  files:
+    "<winLocalAppData>/TagFighter/Saved/SaveGames/<storeUserId>/EnhancedInputUserSettings.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/TagFighter/Saved/SaveGames/<storeUserId>/Slot*.sav":
+      when:
+        - store: steam
   id:
     lutris: invincible-vs
     steamExtra:
@@ -428525,6 +428677,10 @@ Love Language Japanese:
       - when:
           - os: windows
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Initiative Media/Love Language Japanese:
+      tags:
+        - save
   steam:
     id: 445800
 Love Letter:
@@ -502994,6 +503150,14 @@ Nomad:
             store: steam
   steam:
     id: 378370
+Nomad Drive:
+  id:
+    steamExtra:
+      - 4451030
+      - 4568400
+      - 5199100
+  steam:
+    id: 2223980
 Nomad Fleet:
   installDir:
     Nomad Fleet: {}
@@ -514184,6 +514348,19 @@ One Piece Odyssey:
 "One Piece: Grand Gourmet":
   cloud:
     steam: true
+  files:
+    "<winLocalAppData>/OPGG/saves/<storeUserId>":
+      when:
+        - store: steam
+  id:
+    lutris: one-piece-grand-gourmet
+  installDir:
+    ONE PIECE Grand Gourmet: {}
+  launch:
+    "<base>/OPGG.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3905010
 "One Piece: Pirate Warriors 3":
@@ -573908,6 +574085,7 @@ RaceRoom Racing Experience:
       when:
         - os: windows
   id:
+    lutris: raceroom-racing-experience
     steamExtra:
       - 272770
       - 331800
@@ -573920,6 +574098,13 @@ RaceRoom Racing Experience:
       - 455280
   installDir:
     raceroom racing experience: {}
+  launch:
+    "<base>/Game/x64dxvk/RRRE64.exe":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
+        workingDir: "<base>/Game/x64dxvk"
   steam:
     id: 211500
 RaceXXL Space:
@@ -799976,6 +800161,8 @@ Treasure of Nadia:
         - os: windows
   gog:
     id: 1592693763
+  id:
+    lutris: treasure-of-nadia
   installDir:
     Treasure of Nadia: {}
   launch:
@@ -827344,6 +827531,22 @@ Vikings Wars:
           - store: steam
   steam:
     id: 1216930
+"Vikings: Sex and Blood":
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Viking/Saved/SaveGames/**/*.sav":
+      when:
+        - store: steam
+  installDir:
+    Vikings Sex and Blood: {}
+  launch:
+    "<base>/VikingsSexAndBlood.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2774580
 "Vikings: Wolves of Midgard":
   cloud:
     steam: true
@@ -827790,6 +827993,16 @@ Vintage Hero:
     id: 667240
 Vintage Story:
   files:
+    "<home>/.config/VintagestoryData/Saves":
+      tags:
+        - save
+      when:
+        - os: linux
+    "<home>/.config/VintagestoryData/clientsettings.json":
+      tags:
+        - config
+      when:
+        - os: linux
     "<home>/.var/app/at.vintagestory.VintageStory/config/VintagestoryData/Saves":
       tags:
         - save
@@ -839739,6 +839952,8 @@ Warlords Battlecry:
         - os: windows
   gog:
     id: 1207659110
+  id:
+    lutris: warlords-battlecry
 Warlords Battlecry II:
   files:
     "<winDocuments>/Warlords Battlecry II":
@@ -839758,6 +839973,8 @@ Warlords Battlecry III:
         - os: windows
   gog:
     id: 1207658725
+  id:
+    lutris: warlords-battlecry-iii
   installDir:
     Warlords Battlecry III: {}
   launch:
@@ -843809,6 +844026,18 @@ We Were Here Together:
 We Were Here Tomorrow:
   cloud:
     steam: true
+  files:
+    "<base>/SavesDir/*.data":
+      when:
+        - store: steam
+  installDir:
+    We Were Here Tomorrow: {}
+  launch:
+    "<base>/We Were Here Tomorrow.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 2315050
 We Were Here Too:
@@ -850274,6 +850503,11 @@ Wildcat Gun Machine:
             store: steam
   steam:
     id: 1288610
+Wildekin:
+  id:
+    lutris: wildekin
+  steam:
+    id: 1368180
 Wildermyth:
   cloud:
     gog: true
