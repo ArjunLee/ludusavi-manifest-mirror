@@ -64351,6 +64351,10 @@ BRKÖUT:
   steam:
     id: 616690
 "BROK - Natal Tail, A New Christmas":
+  gog:
+    id: 1435190833
+  id:
+    lutris: brok-natal-tail-a-new-christmas
   installDir:
     BROKChristmas: {}
   launch:
@@ -106267,11 +106271,15 @@ Brok the InvestiGator:
       - 1129298921
       - 1191894002
       - 1428415487
-      - 1611369673
       - 2127411015
     lutris: brok-the-investigator
     steamExtra:
       - 1318790
+      - 1538690
+      - 2116310
+      - 2156870
+      - 2931330
+      - 4309650
   installDir:
     Brok: {}
   launch:
@@ -106289,6 +106297,13 @@ Brok the InvestiGator:
             store: steam
   steam:
     id: 949480
+"Brok: The Brawl Bar":
+  cloud:
+    steam: true
+  gog:
+    id: 1611369673
+  id:
+    lutris: brok-the-investigator-the-brawl-bar
 Broke Girl:
   steam:
     id: 1077580
@@ -118958,6 +118973,8 @@ Car Mechanic Simulator 2014:
   steam:
     id: 270850
 Car Mechanic Simulator 2015:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/Red Dot Games/Car Mechanic Simulator 2015/profile*":
       tags:
@@ -118965,6 +118982,7 @@ Car Mechanic Simulator 2015:
       when:
         - os: windows
   id:
+    lutris: car-mechanic-simulator-2015
     steamExtra:
       - 361820
       - 361840
@@ -127043,6 +127061,16 @@ Celsius:
   steam:
     id: 1130640
 Celsius Strays:
+  cloud:
+    steam: true
+  gog:
+    id: 1426577730
+  id:
+    gogExtra:
+      - 1468565130
+    lutris: celsius-strays--1
+    steamExtra:
+      - 4272400
   steam:
     id: 4271620
 Celtabula:
@@ -167827,6 +167855,19 @@ Cubway:
             store: steam
   steam:
     id: 511160
+Cucina Stellata:
+  id:
+    steamExtra:
+      - 5307250
+  installDir:
+    Cucina Stellata ✦ Starred Cuisine: {}
+  launch:
+    "<base>/Cucina Stellata ✦ Starred Cuisine.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3976340
 Cuckold Simulator:
   alias: "Cuckold Simulator: Life as a Beta Male Cuck"
 "Cuckold Simulator: Life as a Beta Male Cuck":
@@ -203475,6 +203516,13 @@ Discontinue:
     Discontinue: {}
   steam:
     id: 1061220
+Discord Times:
+  files:
+    "<base>/_Global.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 Discounty:
   cloud:
     steam: true
@@ -209400,6 +209448,12 @@ Don Bradman Cricket 17:
             store: steam
   steam:
     id: 793600
+"Don't Pick Up":
+  id:
+    steamExtra:
+      - 5208890
+  steam:
+    id: 4878690
 "Don't Play This Game":
   steam:
     id: 679240
@@ -249214,6 +249268,7 @@ Euro Truck Simulator 2:
       - 2780810
       - 2932420
       - 3034950
+      - 3796990
       - 4159240
       - 4348650
   installDir:
@@ -267494,10 +267549,18 @@ Femboy Besties:
   steam:
     id: 1572450
 Femboy Futa House:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Femboy Futa House":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     FEMBOY FUTA HOUSE: {}
   launch:
-    "<base>/FEMBOY FUTA HOUSE/FEMBOY FUTA HOUSE.exe":
+    "<base>/FEMBOY FUTA HOUSE.exe":
       - when:
           - bit: 64
             os: windows
@@ -365281,6 +365344,13 @@ Immunity:
           - store: steam
   steam:
     id: 811470
+Imp:
+  files:
+    "<base>/config.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 Imp of the Sun:
   files:
     "<winLocalAppData>/IotS/Saved/Config/WindowsNoEditor":
@@ -387669,6 +387739,11 @@ Just VR Slingshot Target Practice:
     Just VR Slingshot Target Practice: {}
   steam:
     id: 586990
+Just Volleyball:
+  cloud:
+    steam: true
+  steam:
+    id: 5037200
 Just a Cleric:
   files:
     "<base>/SAVES/*.ini":
@@ -503248,6 +503323,7 @@ Nomad:
     id: 378370
 Nomad Drive:
   id:
+    lutris: nomad-drive
     steamExtra:
       - 4451030
       - 4568400
@@ -522137,6 +522213,36 @@ Outerverse:
             store: steam
   steam:
     id: 1293540
+Outhold:
+  cloud:
+    steam: true
+  files:
+    "<home>/Library/Application Support/Godot/app_userdata/Outhold":
+      tags:
+        - save
+      when:
+        - os: mac
+    "<winAppData>/Godot/app_userdata/Outhold":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: outhold
+  installDir:
+    Outhold: {}
+  launch:
+    "<base>/outhold_macos.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/windows/outhold_windows.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3767740
 Outland:
   cloud:
     steam: true
@@ -651912,6 +652018,21 @@ Slayaway Camp:
         - config
   steam:
     id: 530390
+Slayblade:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Slayblade/*.save":
+      when:
+        - store: steam
+  installDir:
+    Slayblade: {}
+  launch:
+    "<base>/Slayblade.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4117730
 Slayer Shock:
   cloud:
     steam: true
@@ -696046,19 +696167,15 @@ Stupid Invaders:
       when:
         - os: windows
 Stupid Never Dies:
+  cloud:
+    steam: true
   files:
-    "<base>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.json":
+    "<base>/StupidNeverDies/Saved/SaveGames/<storeUserId>":
+      tags:
+        - config
+        - save
       when:
-        - store: steam
-    "<base>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.sav":
-      when:
-        - store: steam
-    "<winLocalAppData>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.json":
-      when:
-        - store: steam
-    "<winLocalAppData>/StupidNeverDies/Saved/SaveGames/<storeUserId>/*.sav":
-      when:
-        - store: steam
+        - os: windows
   id:
     lutris: stupid-never-dies
     steamExtra:
@@ -714017,6 +714134,9 @@ Sébastien Loeb Rally EVO:
       tags:
         - config
         - save
+"Söldner: Secret Wars":
+  id:
+    lutris: soldner-secret-wars--1
 "Söldner: Secret Wars Remastered":
   cloud:
     steam: true
@@ -736173,6 +736293,9 @@ The Coin Game:
             store: steam
   steam:
     id: 598980
+The Coin Goblin:
+  steam:
+    id: 5254020
 The Cold War Era:
   id:
     steamExtra:
@@ -768451,6 +768574,16 @@ The Spatials:
             store: steam
   steam:
     id: 450700
+"The Spectre Files: Deathstalker":
+  installDir:
+    The Spectre Files Deathstalker: {}
+  launch:
+    "<base>/SpectreFiles.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1356760
 The Spectrum Retreat:
   cloud:
     epic: true
@@ -806864,6 +806997,9 @@ Turok (2015):
             store: steam
   steam:
     id: 1996770
+"Turok: Dinosaur Hunter":
+  id:
+    lutris: turok-dinosaur-hunter
 "Turok: Dinosaur Hunter (2015)":
   alias: Turok (2015)
 "Turok: Escape from Lost Valley":
@@ -847893,6 +848029,9 @@ Where Cards Fall:
             store: steam
   steam:
     id: 589450
+Where Did I Park?:
+  steam:
+    id: 5195880
 Where Dolls Hang:
   steam:
     id: 4581370
