@@ -15388,6 +15388,27 @@ ASKA:
           - store: steam
   steam:
     id: 1898300
+ASPIS:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/ASPIS/Saved/SaveGames/**/*.sav":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: aspis
+  installDir:
+    ASPIS: {}
+  launch:
+    "<base>/Aspis.exe":
+      - arguments: "-SaveToUserDir"
+        when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3129420
 ASRECorp:
   installDir:
     ASRECorp: {}
@@ -69831,6 +69852,9 @@ Barbie Fashion Designer:
         - os: windows
   id:
     lutris: barbie-horse-adventures-riding-camp
+Barbie Horse Ride & Rescue:
+  steam:
+    id: 4436840
 Barbie Horse Trails:
   files:
     "<home>/AppData/LocalLow/Outright Games Ltd/Barbie":
@@ -114604,6 +114628,8 @@ Caketomino:
   steam:
     id: 517770
 "Cakey's Twisted Bakery":
+  id:
+    lutris: cakeys-twisted-bakery
   installDir:
     "Cakey's Twisted Bakery": {}
   launch:
@@ -119241,6 +119267,10 @@ Car Parking Multiplayer 2:
     "<base>/Car Parking 2.exe":
       - when:
           - os: windows
+            store: steam
+    "<base>/CarParking2.app":
+      - when:
+          - os: mac
             store: steam
   steam:
     id: 4252340
@@ -124886,6 +124916,9 @@ Catizens:
         when:
           - os: windows
             store: steam
+    "<base>/game.exe":
+      - when:
+          - store: steam
   steam:
     id: 957660
 Catlateral Damage:
@@ -276012,6 +276045,13 @@ Flex Apocalypse Racing:
             store: steam
   steam:
     id: 1000790
+Flick:
+  id:
+    lutris: flick
+    steamExtra:
+      - 5267890
+  steam:
+    id: 4450660
 FlickSync - Mad Hatter VR:
   installDir:
     FlickSync - Mad Hatter VR: {}
@@ -276611,6 +276651,11 @@ FlipWitch - Forbidden Sex Hex:
         - save
       when:
         - os: windows
+  gog:
+    id: 1196438244
+  id:
+    gogExtra:
+      - 1968799206
   installDir:
     FlipWitch Forbidden Sex Hex: {}
   launch:
@@ -290158,6 +290203,7 @@ Fruit for the Village:
     id: 528930
 Fruitbus:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/Krillbite/Fruitbus":
@@ -303328,6 +303374,11 @@ Ghost of a Tale:
         - config
   steam:
     id: 417290
+Ghost of a Tale 2:
+  cloud:
+    steam: true
+  steam:
+    id: 5141030
 Ghost on the Shore:
   cloud:
     gog: true
@@ -306881,10 +306932,19 @@ Gloomgrave:
   installDir:
     Gloomgrave: {}
   launch:
+    "<base>/Gloomgrave.app":
+      - when:
+          - os: mac
+            store: steam
     "<base>/Gloomgrave.exe":
       - when:
           - bit: 64
             os: windows
+            store: steam
+    "<base>/Gloomgrave_x86_64":
+      - when:
+          - bit: 64
+            os: linux
             store: steam
   steam:
     id: 1907000
@@ -335285,6 +335345,15 @@ Hektor:
             store: steam
   steam:
     id: 334070
+Hela:
+  alias: "Hela: Of Mice & Magic"
+"Hela: Of Mice & Magic":
+  cloud:
+    steam: true
+  id:
+    lutris: hela-of-mice-and-magic
+  steam:
+    id: 3161310
 Heldric - The legend of the shoemaker:
   installDir:
     Heldric: {}
@@ -345009,7 +345078,6 @@ High on Life 2:
         - os: windows
     "<winLocalAppData>/Packages/2637SquanchGamesInc.HighOnLife2_mh7dg3tfmz2cj/SystemAppData":
       tags:
-        - config
         - save
       when:
         - os: windows
@@ -350534,6 +350602,9 @@ Hookbots:
             store: steam
   steam:
     id: 1866180
+Hookeye:
+  steam:
+    id: 4670350
 Hooklings:
   installDir:
     Hooklings: {}
@@ -365927,6 +365998,11 @@ Impossible Jumpy Quest:
             store: steam
   steam:
     id: 787050
+Impossible Mission II:
+  installDir:
+    Impossible Mission II: {}
+  steam:
+    id: 1400680
 Impossible Quest:
   cloud:
     steam: true
@@ -373703,6 +373779,9 @@ Interregnum-Alpha:
         - os: windows
   gog:
     id: 1500286266
+  id:
+    gogExtra:
+      - 1285751719
   installDir:
     Interrogation: {}
   launch:
@@ -384181,6 +384260,24 @@ Johnny Bung:
             store: steam
   steam:
     id: 476030
+Johnny Rocket:
+  installDir:
+    Johnny Rocket: {}
+  launch:
+    "<base>/Johnny Rocket.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/JohnnyRocket.app/Contents/MacOS/JohnnyRocket":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/JohnnyRocket.linux/JohnnyRocket.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 942300
 Johns.game:
   installDir:
     johnsgame: {}
@@ -457167,6 +457264,7 @@ Metro 2033:
 Metro 2033 Redux:
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/<storeUserId>/user.cfg":
       tags:
@@ -462199,6 +462297,7 @@ MindsEye:
       - 1447749925
       - 1490532977
       - 1564697638
+      - 1716948078
       - 1749653555
       - 1779285224
       - 2010638935
@@ -483223,6 +483322,9 @@ Mysterious Insects:
   gog:
     id: 1334820000
   id:
+    gogExtra:
+      - 1632954325
+      - 1751021680
     lutris: mysterious-journey-ii-chameleon
 Mysterious Realms RPG:
   cloud:
@@ -483305,6 +483407,21 @@ Mysterium:
             store: steam
   steam:
     id: 438560
+"Mystery Case Files: Huntsville":
+  files:
+    HKEY_CURRENT_USER/Software/Big Fish Games/Games/Mystery Case Files - Huntsville:
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Mystery Case Files Huntsville: {}
+  launch:
+    "<base>/Huntsville.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 50960
 "Mystery Case Files: Key to Ravenhearst":
   installDir:
     "Mystery Case Files Key to Ravenhearst Collector's Edition": {}
@@ -485613,6 +485730,17 @@ NBA 2K26:
           - store: steam
   steam:
     id: 3472040
+NBA 2K27:
+  cloud:
+    steam: true
+  installDir:
+    NBA 2K27: {}
+  launch:
+    "<base>/start_protected_game.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4356430
 NBA 2K9:
   installDir:
     NBA 2K9: {}
@@ -501315,6 +501443,8 @@ No More Heroes:
   gog:
     id: 1952635766
   id:
+    gogExtra:
+      - 1993197743
     lutris: no-more-heroes
   installDir:
     No More Heroes: {}
@@ -501342,13 +501472,12 @@ No More Heroes:
         - os: windows
   gog:
     id: 2123918043
+  id:
+    gogExtra:
+      - 1993197743
   installDir:
     No More Heroes 2 Desperate Struggle: {}
   launch:
-    "<base>/ConfigurationTool.exe":
-      - arguments: en
-        when:
-          - store: steam
     "<base>/nmh2.exe":
       - when:
           - os: windows
@@ -501377,6 +501506,12 @@ No More Heroes 3:
         - os: windows
   gog:
     id: 1608160993
+  id:
+    gogExtra:
+      - 1251489693
+      - 1408957560
+      - 1944219414
+      - 1993197743
   installDir:
     No More Heroes 3: {}
   launch:
@@ -501713,6 +501848,8 @@ No Rest for the Wicked:
         - os: windows
   id:
     lutris: no-rest-for-the-wicked--1
+    steamExtra:
+      - 4600710
   installDir:
     NoRestForTheWicked: {}
   launch:
@@ -503322,6 +503459,13 @@ Nomad:
   steam:
     id: 378370
 Nomad Drive:
+  files:
+    "<home>/AppData/LocalLow/Indie Devil/Nomad Drive":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
   id:
     lutris: nomad-drive
     steamExtra:
@@ -504272,6 +504416,14 @@ Northgard:
             store: steam
   steam:
     id: 466560
+Northgard Battlegrounds:
+  cloud:
+    steam: true
+  id:
+    steamExtra:
+      - 5090100
+  steam:
+    id: 4487060
 Northland:
   files:
     "<base>/Saves/singleplayer/savegames/**/*.sav":
@@ -627412,6 +627564,26 @@ Secrets of Rætikon:
             store: steam
   steam:
     id: 246680
+Secrets of Velendar Castle - Escape Room:
+  files:
+    "<home>/AppData/LocalLow/mc2games/SecretsOfVelendarCastle":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  gog:
+    id: 1475441601
+  id:
+    lutris: secrets-of-velendar-castle-escape-room
+  installDir:
+    Secrets of Velendar Castle - Escape Room: {}
+  launch:
+    "<base>/SecretsOfVelendarCastle.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4016880
 Secrets of War:
   installDir:
     SecretsOfWar: {}
@@ -695893,6 +696065,7 @@ Stuart Little 2:
         - os: windows
 Stubbs the Zombie in Rebel Without a Pulse:
   cloud:
+    gog: true
     steam: true
   files:
     "<root>/userdata/<storeUserId>/7800":
@@ -804084,6 +804257,11 @@ Tropico 3:
         - save
       when:
         - os: windows
+    "<winAppData>/Tropico 3/UserConfig2.lua":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1207659056
   id:
@@ -804105,6 +804283,11 @@ Tropico 4:
         - save
       when:
         - os: mac
+    "<winAppData>/Tropico 4/Users.lua":
+      tags:
+        - save
+      when:
+        - os: windows
     "<winAppData>/Tropico 4/users":
       tags:
         - save
@@ -804345,6 +804528,26 @@ Trouble Witches Origin - Episode1 Daughters of Amalgam -:
             store: steam
   steam:
     id: 460630
+Troublemaker:
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<winLocalAppData>/Troublemaker/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
+  gog:
+    id: 1560920637
+  installDir:
+    Troublemaker: {}
+  launch:
+    "<base>/Troublemaker.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1498740
 Troubles Land:
   installDir:
     Troubles Land: {}
@@ -830292,6 +830495,21 @@ Vivisector - Beast Within:
         - os: windows
   id:
     lutris: vivisector-beast-within
+Vixen 357:
+  cloud:
+    steam: true
+  files:
+    "<base>/saves":
+      when:
+        - store: steam
+  installDir:
+    Vixen 357: {}
+  launch:
+    "<base>/Vixen357.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4365560
 Vixen Wars:
   installDir:
     Vixen Wars: {}
@@ -848623,6 +848841,7 @@ While I Sleep I Am Debug:
     id: 619150
 While We Wait Here:
   cloud:
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/While_We_Wait_Here/Saved/Config/Windows/GameUserSettings.ini":
@@ -848635,6 +848854,12 @@ While We Wait Here:
         - save
       when:
         - os: windows
+  gog:
+    id: 1985859739
+  id:
+    gogExtra:
+      - 1283879645
+      - 1866861783
   installDir:
     While We Wait Here: {}
   launch:
@@ -850096,6 +850321,7 @@ Wienne:
     id: 1180370
 Wife Quest:
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/Pippin Games/Wife Quest/*.save":
@@ -850106,7 +850332,13 @@ Wife Quest:
       when:
         - os: mac
           store: steam
+  gog:
+    id: 1465434701
   id:
+    gogExtra:
+      - 1196876641
+      - 1506609383
+      - 1863214247
     lutris: wife-quest
     steamExtra:
       - 1627460
@@ -877443,23 +877675,7 @@ Zzzzz:
   steam:
     id: 937780
 ✌ Johnny Rocket:
-  installDir:
-    Johnny Rocket: {}
-  launch:
-    "<base>/Johnny Rocket.exe":
-      - when:
-          - os: windows
-            store: steam
-    "<base>/JohnnyRocket.app/Contents/MacOS/JohnnyRocket":
-      - when:
-          - os: mac
-            store: steam
-    "<base>/JohnnyRocket.linux/JohnnyRocket.x86_64":
-      - when:
-          - os: linux
-            store: steam
-  steam:
-    id: 942300
+  alias: Johnny Rocket
 《鬼畜战记：金坷垃传说》:
   installDir:
     JINKELA: {}
