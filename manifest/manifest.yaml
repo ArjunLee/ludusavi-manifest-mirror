@@ -88363,7 +88363,11 @@ Blackshard:
       when:
         - os: windows
           store: steam
+  gog:
+    id: 1447508775
   id:
+    gogExtra:
+      - 1953880831
     lutris: blackshard
     steamExtra:
       - 3462270
@@ -99213,6 +99217,9 @@ Boom Island:
 Boom Squad:
   steam:
     id: 712360
+Boom or Bloom:
+  steam:
+    id: 5503620
 Boom! Boom!:
   installDir:
     Boom! Boom!: {}
@@ -114664,6 +114671,11 @@ Cairn:
   gog:
     id: 1300489906
   id:
+    gogExtra:
+      - 1421906078
+      - 1855069799
+      - 1883087033
+      - 2073429017
     lutris: cairn--3
     steamExtra:
       - 3937220
@@ -162475,9 +162487,24 @@ Croc 2:
         - config
 "Croc 2: Kingdom of the Gobbos":
   cloud:
+    gog: true
     steam: true
+  files:
+    "<winAppData>/Croc 2/saves/<storeUserId>":
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1402283956
+  id:
+    lutris: croc-2-kingdom-of-the-gobbos
+  installDir:
+    Croc 2: {}
+  launch:
+    "<base>/croc2.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 4198360
 "Croc's World Construction Kit":
@@ -205760,6 +205787,7 @@ Dive Inside:
     id: 955980
 "Dive or Die: Children of Rain":
   cloud:
+    gog: true
     steam: true
   files:
     "<home>/AppData/LocalLow/DropRateStudio/Dive or Die":
@@ -205768,6 +205796,8 @@ Dive Inside:
         - save
       when:
         - os: windows
+  gog:
+    id: 1169559449
   id:
     lutris: dive-or-die-children-of-rain
     steamExtra:
@@ -225632,6 +225662,38 @@ Dungeons & Darkness:
             store: steam
   steam:
     id: 479990
+Dungeons & Degenerate Gamblers:
+  cloud:
+    steam: true
+  files:
+    "<home>/.local/share/godot/app_userdata/Dungeons & Degenerate Gamblers/1/*.cfg":
+      when:
+        - os: linux
+          store: steam
+    "<home>/Library/Application Support/Godot/app_userdata/Dungeons & Degenerate Gamblers/1/*.cfg":
+      when:
+        - store: steam
+    "<winAppData>/Godot/app_userdata/Dungeons & Degenerate Gamblers/1/*.cfg":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    Dungeons & Degenerate Gamblers: {}
+  launch:
+    "<base>/DnDG_64.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/DnDG_linux.x86_64":
+      - when:
+          - os: linux
+            store: steam
+    "<base>/Dungeons & Degenerate Gamblers.app":
+      - when:
+          - os: mac
+            store: steam
+  steam:
+    id: 2400510
 Dungeons & Dragons Online:
   files:
     "<winDocuments>/Dungeons and Dragons Online":
@@ -233765,6 +233827,45 @@ Ecstatica:
       - 1335460878
       - 1942439921
     steamExtra:
+      - 5418140
+      - 5418150
+  installDir:
+    Ecstatica: {}
+  launch:
+    "<base>/Ecstatica.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4834840
+Ecstatica (2026):
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<winAppData>/SNEG/Ecstatica/Save Slots/000*.ecs":
+      when:
+        - store: steam
+    "<winAppData>/SNEG/Ecstatica/Save Slots/000*.png":
+      when:
+        - store: steam
+    "<winAppData>/SNEG/Ecstatica/controls.bin":
+      when:
+        - store: steam
+    "<winAppData>/SNEG/Ecstatica/settings.json":
+      when:
+        - store: steam
+    "<winAppData>/SNEG/Ecstatica/store.bin":
+      when:
+        - store: steam
+  gog:
+    id: 1333226285
+  id:
+    gogExtra:
+      - 1335460878
+      - 1942439921
+    lutris: ecstatica
+    steamExtra:
+      - 5307880
       - 5418140
       - 5418150
   installDir:
@@ -293634,6 +293735,9 @@ GPRO:
             store: steam
   steam:
     id: 2169220
+GRASS.EXE:
+  steam:
+    id: 5459380
 GRAV:
   installDir:
     GRAV: {}
@@ -336314,7 +336418,23 @@ Hell is Us:
   gog:
     id: 1774500758
   id:
+    gogExtra:
+      - 1090940828
+      - 1165122201
+      - 1174177493
+      - 1420106896
+      - 1441208969
+      - 1643292408
+      - 1920579039
     lutris: hell-is-us
+    steamExtra:
+      - 1237358
+      - 2912150
+      - 3494340
+      - 3494350
+      - 3494370
+      - 3494380
+      - 3494390
   installDir:
     Hell Is Us: {}
   launch:
@@ -359326,6 +359446,16 @@ Hypnorain:
   steam:
     id: 495230
 Hypnos:
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<winLocalAppData>/HYPNOS/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
+  gog:
+    id: 1334825172
   id:
     lutris: hypnos
     steamExtra:
@@ -396723,6 +396853,18 @@ Kingdom Elemental:
             store: steam
   steam:
     id: 285350
+Kingdom Hearts 358/2 Days:
+  files:
+    "<base>/saves":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<base>/saves/settings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
 Kingdom Hearts HD 1.5 + 2.5 ReMIX:
   cloud:
     steam: true
@@ -434792,6 +434934,12 @@ MINImax Tinyverse:
     gog: true
     steam: true
   files:
+    "<winLocalAppData>/MIO/Saves/Steam/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
     "<winLocalAppData>/Packages/FocusHomeInteractiveSA.MioMemoriesinOrbit_4hny5m903y3g0/SystemAppData/wgs":
       tags:
         - save
@@ -441395,6 +441543,8 @@ Majesty Gold HD:
         - config
       when:
         - os: linux
+  id:
+    lutris: majesty-gold-edition
   installDir:
     Majesty Gold Edition: {}
   launch:
@@ -538623,10 +538773,21 @@ Phantom Blade Zero:
   cloud:
     steam: true
   files:
-    "<base>/ProjectPBZ/Saved/SaveGames/Steam/<storeUserId>/**/*.sav":
+    "<base>/ProjectPBZ/Saved":
+      tags:
+        - config
       when:
         - os: windows
-          store: steam
+    "<base>/ProjectPBZ/Saved/SaveGames/Steam/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winLocalAppData>/ProjectPBZ/Saved/Config/Windows":
+      tags:
+        - config
+      when:
+        - os: windows
   id:
     lutris: phantom-blade-0
     steamExtra:
@@ -627382,6 +627543,14 @@ Secret Files 3:
           - store: steam
   steam:
     id: 40330
+"Secret Files: Tunguska - Remastered":
+  gog:
+    id: 1362256803
+  id:
+    steamExtra:
+      - 5363640
+  steam:
+    id: 4504840
 Secret Government:
   cloud:
     steam: true
@@ -636870,28 +637039,7 @@ Shattered:
   steam:
     id: 712620
 Shattered - Tale of the Forgotten King:
-  cloud:
-    gog: true
-    steam: true
-  files:
-    "<winLocalAppData>/ShatteredTOTFK/Saved/SaveGames/*.sav":
-      when:
-        - os: windows
-          store: steam
-  gog:
-    id: 1402489296
-  id:
-    lutris: shattered-tale-of-the-forgotten-king
-  installDir:
-    Shattered - Tale of the Forgotten King: {}
-  launch:
-    "<base>/ShatteredTOTFK.exe":
-      - when:
-          - bit: 64
-            os: windows
-            store: steam
-  steam:
-    id: 1045180
+  alias: "Shattered: Tale of the Forgotten King"
 Shattered God - Quest for the Divine Relic:
   cloud:
     steam: true
@@ -637134,6 +637282,29 @@ Shattered Universe:
             store: steam
   steam:
     id: 1179840
+"Shattered: Tale of the Forgotten King":
+  cloud:
+    gog: true
+    steam: true
+  files:
+    "<winLocalAppData>/ShatteredTOTFK/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
+  gog:
+    id: 1402489296
+  id:
+    lutris: shattered-tale-of-the-forgotten-king
+  installDir:
+    Shattered - Tale of the Forgotten King: {}
+  launch:
+    "<base>/ShatteredTOTFK.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 1045180
 Shatterline:
   files:
     "<winLocalAppData>/Shatterline":
@@ -677655,6 +677826,8 @@ Spy Drops Gaiden:
     "<base>/Saves/*.*":
       when:
         - store: steam
+  id:
+    lutris: spy-fox-2-some-assembly-required
   installDir:
     Spy Fox 2: {}
   launch:
@@ -677684,6 +677857,8 @@ Spy Drops Gaiden:
     "<base>/Saves/*.*":
       when:
         - store: steam
+  id:
+    lutris: spy-fox-3-operation-ozone
   installDir:
     Spy Fox 3: {}
   launch:
@@ -677737,6 +677912,8 @@ Spy Drops Gaiden:
         - config
       when:
         - os: windows
+  id:
+    lutris: spy-fox-in-cheese-chase
   installDir:
     Spy Fox In Cheese Chase: {}
   launch:
@@ -677766,6 +677943,8 @@ Spy Drops Gaiden:
     "<base>/Saves/*.*":
       when:
         - store: steam
+  id:
+    lutris: spy-fox-in-hold-the-mustard
   installDir:
     Spy Fox In Hold the Mustard: {}
   launch:
@@ -677807,6 +677986,8 @@ Spy Drops Gaiden:
         - save
       when:
         - os: windows
+  id:
+    lutris: spy-fox-in-dry-cereal
   installDir:
     Spy Fox 1: {}
   launch:
@@ -712526,6 +712707,7 @@ Sword of the Samurai:
 Sword of the Sea:
   cloud:
     epic: true
+    gog: true
     steam: true
   files:
     "<winLocalAppData>/SwordOfTheSea/Saved":
@@ -712538,7 +712720,11 @@ Sword of the Sea:
         - save
       when:
         - os: windows
+  gog:
+    id: 1798252985
   id:
+    gogExtra:
+      - 1250101750
     lutris: sword-of-the-sea
   installDir:
     Sword of the Sea: {}
@@ -725800,6 +725986,9 @@ Tenis PC3:
         - config
       when:
         - os: windows
+Tenjutsu:
+  steam:
+    id: 1363940
 Tenkyu:
   installDir:
     tenkyu: {}
@@ -729567,18 +729756,22 @@ That Which Binds Us:
     "<winAppData>/Godot/app_userdata/That's not my neighbor":
       tags:
         - config
+      when:
+        - os: windows
+    "<winAppData>/That's not my Neighbor":
+      tags:
         - save
       when:
         - os: windows
   installDir:
     "That's not my Neighbor": {}
   launch:
-    "<base>/That's not my neighbor (Steam).exe":
+    "<base>/That's not my neighbor.exe":
       - when:
           - bit: 64
             os: windows
             store: steam
-    "<base>/That's not my neighbor (Steam).x86_64":
+    "<base>/That's not my neighbor.x86_64":
       - when:
           - bit: 64
             os: linux
@@ -775897,12 +776090,27 @@ The Wolf Among Us:
             store: steam
   steam:
     id: 250320
+The Wolf Among Us 2:
+  id:
+    lutris: the-wolf-among-us-2
+  steam:
+    id: 1884870
 The Wolf Among Us Remastered:
   cloud:
     steam: true
+  files:
+    "<winDocuments>/Telltale Games/The Wolf Among Us Remastered":
+      when:
+        - store: steam
   id:
     steamExtra:
       - 5280090
+  installDir:
+    The Wolf Among Us Remastered: {}
+  launch:
+    "<base>/TheWolfAmongUsRemastered.exe":
+      - when:
+          - store: steam
   steam:
     id: 3884860
 "The Wolf's Bite":
@@ -789793,6 +790001,12 @@ Too Many F*cking Nazis:
   steam:
     id: 3900950
 Too Many Toys!:
+  files:
+    "<home>/AppData/LocalLow/Jakub T & 4ydam/Too Many Toys!/*.es3":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Too Many Toys!: {}
   launch:
@@ -810773,6 +810987,13 @@ USAGIRI:
             store: steam
   steam:
     id: 1153950
+USAR Hooters ProCup Racing:
+  files:
+    "<base>/VIDEO.CFG":
+      tags:
+        - config
+      when:
+        - os: windows
 "USC: Counterforce":
   cloud:
     gog: true
@@ -865110,6 +865331,29 @@ Xenoraid:
             store: steam
   steam:
     id: 460220
+Xenosensory:
+  cloud:
+    steam: true
+  files:
+    "<winLocalAppData>/Xenosensory":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: xenosensory
+    steamExtra:
+      - 4289240
+  installDir:
+    Xenosensory: {}
+  launch:
+    "<base>/Xenosensory.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4037830
 "Xenosis: Alien Infection":
   cloud:
     steam: true
@@ -868362,6 +868606,16 @@ You Are Empty:
       when:
         - os: windows
     "<winDocuments>/My Games/YaE/savegames":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winDocuments>/My Games/YaE_Absolute/config_*":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winDocuments>/My Games/YaE_Absolute/savegames/Save*":
       tags:
         - save
       when:
