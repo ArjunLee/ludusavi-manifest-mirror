@@ -116927,6 +116927,17 @@ Campus Notes - forget me not.:
         - config
       when:
         - os: windows
+"Can 'Em All":
+  installDir:
+    "Can 'Em All": {}
+  launch:
+    "<base>/Can 'Em All.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 5133900
 Can You Eat by Yourself:
   steam:
     id: 761720
@@ -184209,6 +184220,9 @@ Dead of Night:
   steam:
     id: 656630
 Dead of the Brain:
+  cloud:
+    gog: true
+    steam: true
   files:
     "<home>/.pcx/DeadoftheBrain/*.bin":
       when:
@@ -184276,6 +184290,8 @@ Dead of the Brain:
     "<winAppData>/PCX/DeadoftheBrain/persistent":
       when:
         - store: steam
+  gog:
+    id: 1645689113
   id:
     lutris: dead-of-the-brain
   installDir:
@@ -186823,6 +186839,8 @@ Death Toll:
         - os: windows
   gog:
     id: 1386697093
+  id:
+    lutris: death-track-resurrection
   installDir:
     Death Track: {}
   launch:
@@ -190220,6 +190238,13 @@ Deer & Boy:
           - store: steam
   steam:
     id: 1803140
+Deer Avenger 3D:
+  files:
+    "<base>/savegame":
+      tags:
+        - save
+      when:
+        - os: windows
 Deer Hunt Legends:
   installDir:
     Deer Hunt Legends: {}
@@ -202289,6 +202314,10 @@ Ding Dong XL:
       - when:
           - os: linux
             store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/Nickervision Studios/Ding Dong XL:
+      tags:
+        - config
   steam:
     id: 862570
 DingDingDing:
@@ -416751,7 +416780,7 @@ Level Devil:
   cloud:
     steam: true
   files:
-    "<xdgConfig>/share/leveldevil":
+    "<xdgData>/leveldevil":
       tags:
         - config
       when:
@@ -496856,6 +496885,9 @@ New World Horizon:
             store: steam
   steam:
     id: 1017670
+New World Order:
+  id:
+    lutris: new-world-order
 "New World: The Tupis":
   installDir:
     New World The Tupis: {}
@@ -523356,6 +523388,27 @@ Outline:
             store: steam
   steam:
     id: 812850
+Outlive 25:
+  files:
+    "<winAppData>/Continuum/Outlive25/Players/<storeUserId>":
+      when:
+        - os: windows
+          store: steam
+    "<winDocuments>/Outlive25/User Maps/**/*.map":
+      when:
+        - os: windows
+          store: steam
+  id:
+    lutris: outlive-25
+  installDir:
+    Outlive 25: {}
+  launch:
+    "<base>/Outlive2025.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2948680
 "Outliver: Redemption":
   installDir:
     Outliver Redemption: {}
@@ -710856,6 +710909,15 @@ Survivor of Eschewal:
             store: steam
   steam:
     id: 738260
+"Survivor: Castaway Island":
+  installDir:
+    Survivor: {}
+  launch:
+    "<base>/Survivor.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2396060
 "Survivor: The Living Dead":
   installDir:
     Survivor The Living Dead: {}
@@ -756383,6 +756445,11 @@ The Lion King:
     gog: true
     uplay: true
   files:
+    "<base>/engine.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/Mipumi/TLS/*.save":
       tags:
         - save
@@ -756396,8 +756463,15 @@ The Lion King:
   gog:
     id: 1740490644
   id:
+    gogExtra:
+      - 1645403563
+    lutris: the-lions-song
     steamExtra:
+      - 459140
+      - 477020
+      - 477030
       - 477040
+      - 774871
   installDir:
     "The Lion's Song": {}
   launch:
@@ -841499,6 +841573,8 @@ Warlords Battlecry II:
         - os: windows
   gog:
     id: 1207659137
+  id:
+    lutris: warlords-battlecry-2
 Warlords Battlecry III:
   files:
     "<winDocuments>/Warlords Battlecry III/Saved Games":
@@ -857837,6 +857913,12 @@ Wolfpack:
   steam:
     id: 490920
 Wolfschanze:
+  files:
+    "<base>/Data/*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
   id:
     lutris: wolfschanze
 Wolfsong:
