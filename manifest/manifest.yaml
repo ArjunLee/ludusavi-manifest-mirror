@@ -15584,6 +15584,13 @@ ATOM RPG:
         - os: linux
   gog:
     id: 1673367037
+  id:
+    gogExtra:
+      - 1531569593
+      - 2085203195
+    steamExtra:
+      - 1093400
+      - 5210340
   installDir:
     ATOM RPG: {}
   launch:
@@ -58494,6 +58501,13 @@ Atrocity:
             store: steam
   steam:
     id: 979620
+Atrox:
+  files:
+    "<base>/Users/<storeUserId>":
+      tags:
+        - save
+      when:
+        - os: windows
 Attached:
   installDir:
     Attached: {}
@@ -105620,9 +105634,15 @@ Brief Karate Foolish:
     "<base>/SavesDir/*.sav":
       when:
         - store: steam
+  id:
+    lutris: brief-karate-foolish
   installDir:
     Brief Karate Foolish: {}
   launch:
+    "<base>/BriefKarateLauncher.exe":
+      - arguments: "-netplay"
+        when:
+          - store: steam
     "<base>/SFWinCf.EXE":
       - when:
           - store: steam
@@ -107527,6 +107547,7 @@ Brotato:
       - 2146695817
     lutris: brotato
     steamExtra:
+      - 1979010
       - 2868390
       - 3281080
       - 4498220
@@ -115943,6 +115964,11 @@ Call of Duty Black Ops Cold War:
     id: 115300
 "Call of Duty: Modern Warfare 4":
   files:
+    "<winAppData>/Local/Activision/Call of Duty/players":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/Activision/Call of Duty/players/<storeUserId>":
       tags:
         - save
@@ -157462,6 +157488,17 @@ Cozy Game Restoration:
       - 4668150
       - 4742270
       - 5338940
+  installDir:
+    Cozy Game Restoration: {}
+  launch:
+    "<base>/CozyGameRestoration.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/CozyGameRestoration.exe":
+      - when:
+          - os: windows
+            store: steam
   steam:
     id: 3581230
 Cozy Grove:
@@ -343961,6 +343998,8 @@ Hexologic:
         - save
       when:
         - store: steam
+  id:
+    lutris: hexologic
   installDir:
     Hexologic: {}
   launch:
@@ -393754,6 +393793,16 @@ Kiborg:
             store: steam
   steam:
     id: 2796130
+Kick:
+  installDir:
+    Kick it: {}
+  launch:
+    "<base>/Kick.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3760370
 Kick Ass Commandos:
   installDir:
     Kick Ass Commandos: {}
@@ -423466,6 +423515,27 @@ Living The Deal:
             store: steam
   steam:
     id: 647550
+"Living With Sister: Monochrome Fantasy":
+  cloud:
+    steam: true
+  files:
+    "<base>/Save":
+      tags:
+        - save
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 3062990
+      - 3155140
+  installDir:
+    Living With SIster Monochrome Fantasy: {}
+  launch:
+    "<base>/Game.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 2429860
 Living with Jaguars:
   installDir:
     Jaguars VR: {}
@@ -452947,6 +453017,7 @@ MegaRace:
   id:
     gogExtra:
       - 1207658758
+    lutris: megarace
   installDir:
     MegaRace 1: {}
   launch:
@@ -452982,6 +453053,7 @@ MegaRace 2:
   id:
     gogExtra:
       - 1207658758
+    lutris: megarace-2
   installDir:
     MegaRace 2: {}
   launch:
@@ -453019,6 +453091,8 @@ MegaRace 3:
         - os: windows
   gog:
     id: 1207658764
+  id:
+    lutris: megarace-3
   installDir:
     MegaRace 3: {}
   launch:
@@ -478276,6 +478350,25 @@ Mr. Vegan:
             store: steam
   steam:
     id: 1198310
+Mr.Mine:
+  cloud:
+    steam: true
+  id:
+    lutris: mr-dot-mine
+  installDir:
+    MrMine: {}
+  launch:
+    "<base>/Mr.Mine.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/win-unpacked/Mr.Mine.exe":
+      - arguments: "--in-process-gpu --process-start-args \"-disable-features=HardwareMediaKeyHandling\""
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1397920
 Mr.President Prologue Episode:
   installDir:
     mrpresidentprologue: {}
@@ -483133,6 +483226,23 @@ My Sweet Waifu:
             store: steam
   steam:
     id: 793760
+My Sweet Waifu Konko:
+  cloud:
+    steam: true
+  files:
+    "<base>/*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    My Sweet Waifu Konko: {}
+  launch:
+    "<base>/game.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3099780
 My Therapist is a Futanari:
   installDir:
     My Therapist is a Futanari: {}
@@ -488860,6 +488970,8 @@ Nanairo Reincarnation:
   steam:
     id: 220420
 "Nancy Drew: The Final Scene":
+  id:
+    lutris: nancy-drew-the-final-scene
   installDir:
     Nancy Drew The Final Scene: {}
   launch:
@@ -488992,6 +489104,8 @@ Nanairo Reincarnation:
   steam:
     id: 42230
 "Nancy Drew: Treasure in the Royal Tower":
+  id:
+    lutris: nancy-drew-treasure-in-the-royal-tower
   installDir:
     Nancy Drew Treasure in the Royal Tower: {}
   launch:
@@ -535430,6 +535544,11 @@ Peace of Evil:
     id: 1070240
 "Peace, Death!":
   files:
+    "<winLocalAppData>/PeaceDeath/*.ini":
+      tags:
+        - config
+      when:
+        - os: windows
     "<winLocalAppData>/PeaceDeath/stageselectroom100.ini":
       tags:
         - save
@@ -554735,6 +554854,34 @@ Potata:
             store: steam
   steam:
     id: 1044020
+Potato Please:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/GoldenHorn/PotatoPlease/profile.json":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/GoldenHorn/PotatoPlease/saves/*.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    Potato Please: {}
+  launch:
+    "<base>/PotatoPlease.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  registry:
+    HKEY_CURRENT_USER/Software/GoldenHorn/PotatoPlease:
+      tags:
+        - config
+  steam:
+    id: 5266240
 Potato Thriller Steamed Potato Edition:
   installDir:
     Potato_Thriller_Steamed_Potato_Edition: {}
@@ -561007,6 +561154,26 @@ Project Abyss:
             store: steam
   steam:
     id: 552410
+Project Afterfall:
+  cloud:
+    gog: true
+    steam: true
+  gog:
+    id: 2070989186
+  id:
+    lutris: project-thea
+    steamExtra:
+      - 3799020
+  installDir:
+    Project Thea: {}
+  launch:
+    "<base>/ProjectThea.exe":
+      - arguments: "-force-d3d11"
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3360890
 Project Aftermath:
   installDir:
     Project Aftermath: {}
@@ -562758,15 +562925,7 @@ Project Temporality:
   steam:
     id: 290320
 Project Thea:
-  installDir:
-    Project Thea: {}
-  launch:
-    "<base>/ProjectThea.exe":
-      - when:
-          - os: windows
-            store: steam
-  steam:
-    id: 3360890
+  alias: Project Afterfall
 Project Three:
   cloud:
     steam: true
@@ -579494,6 +579653,16 @@ Raptor Valley:
         - save
       when:
         - store: steam
+    "<winAppData>/Raptor2015":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/Raptor2015/options.dat":
+      tags:
+        - config
+      when:
+        - os: windows
   gog:
     id: 1207658879
   installDir:
@@ -619921,6 +620090,11 @@ Samorost 2:
   cloud:
     epic: true
   files:
+    "<home>/Library/Application Support/Amanita Design/Samorost 2/s2save.bin":
+      tags:
+        - save
+      when:
+        - os: mac
     "<winAppData>/amanita-design.samorost3/Local Store":
       tags:
         - config
@@ -719623,6 +719797,23 @@ Tale Of Starship:
             store: steam
   steam:
     id: 1081430
+Tale Sweeper:
+  files:
+    "<home>/AppData/LocalLow/DefaultCompany/Tale Sweeper/save.dat":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/DefaultCompany/Tale Sweeper/save.dat":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    Tale Sweeper: {}
+  launch:
+    "<base>/Tale Sweeper.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 4764420
 Tale of Alamar:
   installDir:
     Tale of Alamar: {}
@@ -721558,6 +721749,16 @@ Tametsi:
         - save
       when:
         - os: windows
+    "<xdgData>/Epic/Shadows/Config/LinuxNoEditor":
+      tags:
+        - config
+      when:
+        - os: linux
+    "<xdgData>/Epic/Shadows/Saved/SaveGames":
+      tags:
+        - save
+      when:
+        - os: linux
   gog:
     id: 1883930697
   id:
@@ -832809,11 +833010,10 @@ Void/Breaker:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/VOIDBREAKER/Saved/Config/Windows/*.ini":
+    "<winLocalAppData>/VOIDBREAKER/Saved/SaveGames/LimaSaveGame.sav":
       when:
-        - os: windows
-          store: steam
-    "<winLocalAppData>/VOIDBREAKER/Saved/SaveGames/*.sav":
+        - store: steam
+    "<winLocalAppData>/VOIDBREAKER/Saved/SaveGames/TimePlayed.sav":
       when:
         - store: steam
   installDir:
@@ -847772,6 +847972,22 @@ Wells:
             store: steam
   steam:
     id: 789700
+"WendyQuest: Legend of the Four Corner Stones":
+  cloud:
+    steam: true
+  files:
+    "<base>/package.nw/save/*.rmmzsave":
+      when:
+        - store: steam
+  installDir:
+    Wendy Quest: {}
+  launch:
+    "<base>/WendyQuest.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3339970
 Wenjia:
   installDir:
     Wenjia: {}
@@ -866908,22 +867124,6 @@ YORG.io 3:
     id: 1134480
 YOU - The Untold Stories:
   alias: "You: The Untold Stories"
-"YOU and ME and HER: A Love Story":
-  files:
-    "<winAppData>/Nitroplus/totono":
-      tags:
-        - save
-      when:
-        - os: windows
-  installDir:
-    YOU and ME and HER - A Love Story: {}
-  launch:
-    "<base>/totono_Steam.exe":
-      - when:
-          - os: windows
-            store: steam
-  steam:
-    id: 1293820
 "YU-NO: A Girl Who Chants Love at the Bound of this World":
   alias: "YU-NO: A Girl Who Chants Love at the Bound of this World (2017)"
 "YU-NO: A Girl Who Chants Love at the Bound of this World (2017)":
@@ -869954,6 +870154,22 @@ You Will Never Get This Achievement:
             store: steam
   steam:
     id: 771410
+"You and Me and Her: A Love Story":
+  files:
+    "<winAppData>/Nitroplus/totono":
+      tags:
+        - save
+      when:
+        - os: windows
+  installDir:
+    YOU and ME and HER - A Love Story: {}
+  launch:
+    "<base>/totono_Steam.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 1293820
 You are Never Alone:
   installDir:
     You are Never Alone: {}
@@ -875497,6 +875713,7 @@ Zombie Army VR:
   cloud:
     steam: true
   id:
+    lutris: zombie-assault-resurgence
     steamExtra:
       - 3929860
       - 4377450
