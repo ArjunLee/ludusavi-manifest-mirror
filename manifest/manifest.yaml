@@ -475,6 +475,7 @@ $1 Ride:
       - 4521840
       - 4601250
       - 4707780
+      - 5283790
   installDir:
     007 First Light: {}
   launch:
@@ -80687,6 +80688,21 @@ Besiege:
             store: steam
   steam:
     id: 346010
+"Bessie's Milk Delivery":
+  cloud:
+    steam: true
+  files:
+    "<base>/www/save/*.rpgsave":
+      when:
+        - store: steam
+  installDir:
+    Milkdelivery: {}
+  launch:
+    "<base>/Game.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3367320
 Best Buds vs Bad Guys:
   installDir:
     Best Buds: {}
@@ -164635,6 +164651,7 @@ Crusader Kings III:
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/Crusader.cfg":
       tags:
@@ -164648,10 +164665,20 @@ Crusader Kings III:
         - os: dos
   gog:
     id: 1207658982
+  installDir:
+    Crusader No Regret: {}
+  launch:
+    "<base>/DOSBOX/Crusader No Regret.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3066900
 "Crusader: No Remorse":
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/Crusader.cfg":
       tags:
@@ -164667,6 +164694,15 @@ Crusader Kings III:
     id: 1207658933
   id:
     lutris: crusader-no-remorse
+  installDir:
+    Crusader No Remorse: {}
+  launch:
+    "<base>/DOSBOX/Crusader No Remorse.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3066890
 Crusaders of Light:
   installDir:
     CrusadersOfLight: {}
@@ -167173,10 +167209,38 @@ Cube Mission:
   cloud:
     steam: true
   files:
+    "<home>/.config/unity3d/NanningsGames/Cube Mission/RelicCollection/collection-v1.json":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/unity3d/NanningsGames/Cube Mission/RelicCollection/completion-rewards-v2.json":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/unity3d/NanningsGames/Cube Mission/RelicCollection/cosmetics-v1.json":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/unity3d/NanningsGames/Cube Mission/RelicCollection/selected-skin-v1.json":
+      when:
+        - os: linux
+          store: steam
     "<home>/.config/unity3d/NanningsGames/Cube Mission/savedata":
       when:
         - os: linux
           store: steam
+    "<home>/AppData/LocalLow/NanningsGames/Cube Mission/RelicCollection/collection-v1.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/NanningsGames/Cube Mission/RelicCollection/completion-rewards-v2.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/NanningsGames/Cube Mission/RelicCollection/cosmetics-v1.json":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/NanningsGames/Cube Mission/RelicCollection/selected-skin-v1.json":
+      when:
+        - store: steam
     "<home>/AppData/LocalLow/NanningsGames/Cube Mission/savedata":
       when:
         - store: steam
@@ -202549,6 +202613,13 @@ Dino Crisis 2:
           - store: steam
   steam:
     id: 4249140
+Dino Crisis 3:
+  files:
+    "<base>/dc3.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
 Dino D-Day:
   cloud:
     steam: true
@@ -290924,6 +290995,8 @@ Fuel:
         - save
       when:
         - os: windows
+  id:
+    lutris: fuel
   installDir:
     FUEL: {}
   launch:
@@ -423519,6 +423592,11 @@ Living The Deal:
   cloud:
     steam: true
   files:
+    "<base>/Game.ini":
+      tags:
+        - config
+      when:
+        - os: windows
     "<base>/Save":
       tags:
         - save
@@ -488579,6 +488657,8 @@ Nanairo Reincarnation:
         - save
       when:
         - os: windows
+  id:
+    lutris: nancy-drew-dossier-lights-camera-curses
   installDir:
     "Nancy Drew Lights, Camera, Curses": {}
   launch:
@@ -488588,6 +488668,8 @@ Nanairo Reincarnation:
   steam:
     id: 31870
 "Nancy Drew Dossier: Resorting to Danger!":
+  id:
+    lutris: nancy-drew-dossier-resorting-to-danger
   installDir:
     Nancy Drew Dossier - Resorting to Danger: {}
   launch:
@@ -488597,6 +488679,8 @@ Nanairo Reincarnation:
   steam:
     id: 42200
 "Nancy Drew: Alibi in Ashes":
+  id:
+    lutris: nancy-drew-alibi-in-ashes
   installDir:
     Nancy Drew Alibi in Ashes: {}
   launch:
@@ -488625,6 +488709,8 @@ Nanairo Reincarnation:
         - os: windows
   gog:
     id: 1207659205
+  id:
+    lutris: nancy-drew-curse-of-blackmoor-manor
   installDir:
     Nancy Drew Curse of Blackmoor Manor: {}
   launch:
@@ -488634,6 +488720,8 @@ Nanairo Reincarnation:
   steam:
     id: 31830
 "Nancy Drew: Danger by Design":
+  id:
+    lutris: nancy-drew-danger-by-design
   installDir:
     Nancy Drew Danger by Design: {}
   launch:
@@ -488665,6 +488753,8 @@ Nanairo Reincarnation:
         - config
       when:
         - os: windows
+  id:
+    lutris: nancy-drew-ghost-dogs-of-moon-lake
   installDir:
     Nancy Drew Ghost Dogs of Moon Lake: {}
   launch:
@@ -488699,6 +488789,8 @@ Nanairo Reincarnation:
       when:
         - os: windows
           store: steam
+  id:
+    lutris: nancy-drew-ghost-of-thornton-hall
   installDir:
     Nancy Drew The Ghost of Thornton Hall: {}
   launch:
@@ -488726,6 +488818,8 @@ Nanairo Reincarnation:
         - config
       when:
         - os: windows
+  id:
+    lutris: nancy-drew-labyrinth-of-lies
   installDir:
     Nancy Drew Labyrinth of Lies: {}
   launch:
@@ -488736,6 +488830,8 @@ Nanairo Reincarnation:
   steam:
     id: 572710
 "Nancy Drew: Last Train to Blue Moon Canyon":
+  id:
+    lutris: nancy-drew-last-train-to-blue-moon-canyon
   installDir:
     Nancy Drew Last Train to Blue Moon Canyon: {}
   launch:
@@ -488745,6 +488841,8 @@ Nanairo Reincarnation:
   steam:
     id: 31810
 "Nancy Drew: Legend of the Crystal Skull":
+  id:
+    lutris: nancy-drew-legend-of-the-crystal-skull
   installDir:
     Nancy Drew Legend of The Crystal Skull: {}
   launch:
@@ -488754,6 +488852,8 @@ Nanairo Reincarnation:
   steam:
     id: 31860
 "Nancy Drew: Message in a Haunted Mansion":
+  id:
+    lutris: nancy-drew-message-in-a-haunted-mansion
   installDir:
     Nancy Drew Message in a Haunted Mansion: {}
   launch:
@@ -488775,6 +488875,8 @@ Nanairo Reincarnation:
         - config
       when:
         - os: windows
+  id:
+    lutris: nancy-drew-midnight-in-salem
   installDir:
     NancyDrew_MidnightInSalem: {}
   launch:
@@ -488825,6 +488927,8 @@ Nanairo Reincarnation:
       when:
         - os: mac
           store: steam
+  id:
+    lutris: nancy-drew-mystery-of-the-seven-keys
   installDir:
     NancyDrew_MysteryOfTheSevenKeys: {}
   launch:
@@ -488860,6 +488964,8 @@ Nanairo Reincarnation:
         - config
       when:
         - os: windows
+  id:
+    lutris: nancy-drew-sea-of-darkness
   installDir:
     Nancy Drew The Sea of Darkness: {}
   launch:
@@ -488870,6 +488976,8 @@ Nanairo Reincarnation:
   steam:
     id: 572700
 "Nancy Drew: Secret of the Old Clock":
+  id:
+    lutris: nancy-drew-secret-of-the-old-clock
   installDir:
     Nancy Drew Secret of the Old Clock: {}
   launch:
@@ -488879,6 +488987,8 @@ Nanairo Reincarnation:
   steam:
     id: 31880
 "Nancy Drew: Secret of the Scarlet Hand":
+  id:
+    lutris: nancy-drew-secret-of-the-scarlet-hand
   installDir:
     Nancy Drew Secret of the Scarlet Hand: {}
   launch:
@@ -488887,6 +488997,9 @@ Nanairo Reincarnation:
           - store: steam
   steam:
     id: 31890
+"Nancy Drew: Secrets Can Kill":
+  id:
+    lutris: nancy-drew-secrets-can-kill
 "Nancy Drew: Secrets Can Kill Remastered":
   installDir:
     Nancy Drew Secrets Can Kill: {}
@@ -488903,6 +489016,8 @@ Nanairo Reincarnation:
   steam:
     id: 42210
 "Nancy Drew: Shadow at the Water's Edge":
+  id:
+    lutris: nancy-drew-shadow-at-the-waters-edge
   installDir:
     Nancy Drew - Shadow Waters Edge: {}
   launch:
@@ -488930,6 +489045,8 @@ Nanairo Reincarnation:
       when:
         - os: windows
 "Nancy Drew: The Captive Curse":
+  id:
+    lutris: nancy-drew-the-captive-curse
   installDir:
     Nancy Drew The Captive Curse: {}
   launch:
@@ -488945,6 +489062,8 @@ Nanairo Reincarnation:
   steam:
     id: 42220
 "Nancy Drew: The Creature of Kapu Cave":
+  id:
+    lutris: nancy-drew-the-creature-of-kapu-cave
   installDir:
     Nancy Drew The Creature of Kapu Cave: {}
   launch:
@@ -488954,6 +489073,8 @@ Nanairo Reincarnation:
   steam:
     id: 31900
 "Nancy Drew: The Deadly Device":
+  id:
+    lutris: nancy-drew-the-deadly-device
   installDir:
     Nancy Drew - TheDeadlyDevice: {}
   launch:
@@ -488993,6 +489114,8 @@ Nanairo Reincarnation:
   steam:
     id: 31820
 "Nancy Drew: The Haunting of Castle Malloy":
+  id:
+    lutris: nancy-drew-the-haunting-of-castle-malloy
   installDir:
     Nancy Drew The Haunting of Castle Malloy: {}
   launch:
@@ -489013,6 +489136,8 @@ Nanairo Reincarnation:
         - config
       when:
         - os: windows
+  id:
+    lutris: nancy-drew-the-phantom-of-venice
   installDir:
     Nancy Drew The Phantom of Venice: {}
   launch:
@@ -489034,6 +489159,8 @@ Nanairo Reincarnation:
   steam:
     id: 572740
 "Nancy Drew: The Shattered Medallion":
+  id:
+    lutris: nancy-drew-the-shattered-medallion
   installDir:
     Nancy Drew The Shattered Medallion: {}
   launch:
@@ -489055,6 +489182,8 @@ Nanairo Reincarnation:
         - config
       when:
         - os: windows
+  id:
+    lutris: nancy-drew-the-silent-spy
   installDir:
     Nancy Drew The Silent Spy: {}
   launch:
@@ -489065,6 +489194,8 @@ Nanairo Reincarnation:
   steam:
     id: 572730
 "Nancy Drew: The White Wolf of Icicle Creek":
+  id:
+    lutris: nancy-drew-the-white-wolf-of-icicle-creek
   installDir:
     Nancy Drew - The White Wolf of Icicle Creek: {}
   launch:
@@ -489074,6 +489205,8 @@ Nanairo Reincarnation:
   steam:
     id: 31930
 "Nancy Drew: Tomb of the Lost Queen":
+  id:
+    lutris: nancy-drew-tomb-of-the-lost-queen
   installDir:
     Nancy Drew - Tomb of the Lost Queen: {}
   launch:
@@ -489089,6 +489222,8 @@ Nanairo Reincarnation:
   steam:
     id: 210230
 "Nancy Drew: Trail of the Twister":
+  id:
+    lutris: nancy-drew-trail-of-the-twister
   installDir:
     Nancy Drew Trail of the Twister: {}
   launch:
@@ -489116,6 +489251,8 @@ Nanairo Reincarnation:
   steam:
     id: 615780
 "Nancy Drew: Warnings at Waverly Academy":
+  id:
+    lutris: nancy-drew-warnings-at-waverly-academy
   installDir:
     Nancy Drew Warnings at Waverly Academy: {}
   launch:
@@ -535410,6 +535547,14 @@ Payday 3:
 "Payday: Aces High":
   id:
     lutris: payday-aces-high
+    steamExtra:
+      - 5021070
+      - 5031920
+      - 5031930
+      - 5031940
+      - 5031950
+  installDir:
+    PAYDAY Aces High: {}
   steam:
     id: 3456660
 "Payday: The Heist":
@@ -559415,6 +559560,7 @@ Private Detective Punch Drunk:
 "Privateer 2: The Darkening":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/DARK.CFG":
       tags:
@@ -559429,7 +559575,15 @@ Private Detective Punch Drunk:
         - os: dos
         - os: windows
   gog:
-    id: 1207659613
+    id: 2120290282
+  id:
+    gogExtra:
+      - 1207659613
+      - 1649380437
+  installDir:
+    Privateer 2 The Darkening: {}
+  steam:
+    id: 3067130
 Privateers:
   files:
     "<base>/Saves/*.bin":
@@ -624663,6 +624817,8 @@ Schein:
         - os: windows
   gog:
     id: 1471706990
+  id:
+    lutris: schizm-mysterious-journey
   installDir:
     Schizm Mysterious Journey: {}
   launch:
@@ -696242,6 +696398,7 @@ Strike Cars:
 Strike Commander:
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/*.SAV":
       tags:
@@ -696260,6 +696417,15 @@ Strike Commander:
         - os: dos
   gog:
     id: 1207659195
+  installDir:
+    Strike Commander: {}
+  launch:
+    "<base>/DOSBOX/Strike Commander.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067110
 Strike Force Remastered:
   cloud:
     steam: true
@@ -731557,6 +731723,11 @@ The Adventures of Kusoge:
           - store: steam
   steam:
     id: 787140
+The Adventures of Lomax:
+  registry:
+    HKEY_CURRENT_USER/Software/Psygnosis/Lomax:
+      tags:
+        - config
 The Adventures of Looppy:
   installDir:
     The Adventures of Looppy: {}
@@ -778230,6 +778401,7 @@ Theme Hospital:
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/HOSPITAL.CFG":
       tags:
@@ -778247,6 +778419,15 @@ Theme Hospital:
     id: 1207659026
   id:
     lutris: theme-hospital
+  installDir:
+    Theme Hospital: {}
+  launch:
+    "<base>/DOSBOX/Theme Hospital.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 2229820
 Theme Park:
   cloud:
     gog: true
@@ -812412,6 +812593,7 @@ Ultima Defesa:
 "Ultima I: The First Age of Darkness":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/PLAYER*.U1":
       tags:
@@ -812424,9 +812606,19 @@ Ultima Defesa:
     gogExtra:
       - 1207658961
     lutris: ultima
+  installDir:
+    Ultima I: {}
+  launch:
+    "<base>/DOSBOX/Ultima I.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067480
 "Ultima II: The Revenge of the Enchantress":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/PLAYER":
       tags:
@@ -812439,9 +812631,19 @@ Ultima Defesa:
     gogExtra:
       - 1207658961
     lutris: ultima-ii-the-revenge-of-the-enchantress
+  installDir:
+    Ultima II: {}
+  launch:
+    "<base>/DOSBOX/Ultima II.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067490
 "Ultima III: Exodus":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/PARTY.ULT":
       tags:
@@ -812464,9 +812666,19 @@ Ultima Defesa:
     gogExtra:
       - 1207658961
     lutris: exodus-ultima-iii
+  installDir:
+    Ultima III: {}
+  launch:
+    "<base>/DOSBOX/Ultima III.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067500
 "Ultima IV: Quest of the Avatar":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/*.SAV":
       tags:
@@ -812477,10 +812689,20 @@ Ultima Defesa:
     id: 1207658962
   id:
     lutris: ultima-iv-quest-of-the-avatar
+  installDir:
+    Ultima IV: {}
+  launch:
+    "<base>/DOSBOX/Ultima IV.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067510
 "Ultima IX: Ascension":
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/Options.ini":
       tags:
@@ -812494,12 +812716,21 @@ Ultima Defesa:
         - os: windows
   gog:
     id: 1207659093
+  installDir:
+    Ultima IX: {}
+  launch:
+    "<base>/u9.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 3067560
 Ultima Online:
   id:
     lutris: ultima-online
 "Ultima Underworld II: Labyrinth of Worlds":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/SAVE*":
       tags:
@@ -812517,9 +812748,19 @@ Ultima Online:
     gogExtra:
       - 1207658937
     lutris: ultima-underworld-ii-labyrinth-of-worlds
+  installDir:
+    Ultima Underworld II: {}
+  launch:
+    "<base>/DOSBOX/Ultima Underworld II.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067590
 "Ultima Underworld: The Stygian Abyss":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/SAVE*":
       tags:
@@ -812537,9 +812778,19 @@ Ultima Online:
     gogExtra:
       - 1207658937
     lutris: ultima-underworld-the-stygian-abyss
+  installDir:
+    Ultima Underworld I: {}
+  launch:
+    "<base>/DOSBOX/Ultima Underworld I.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067580
 "Ultima V: Warriors of Destiny":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/SAVED.GAM":
       tags:
@@ -812552,9 +812803,19 @@ Ultima Online:
     gogExtra:
       - 1207658965
     lutris: ulltima-v-warriors-of-destiny
+  installDir:
+    Ultima V: {}
+  launch:
+    "<base>/DOSBOX/Ultima V.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067520
 "Ultima VI: The False Prophet":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/CONFIG.U6":
       tags:
@@ -812572,9 +812833,19 @@ Ultima Online:
     gogExtra:
       - 1207658965
     lutris: ultima-vi
+  installDir:
+    Ultima VI: {}
+  launch:
+    "<base>/DOSBOX/Ultima VI.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067530
 "Ultima VII Part Two: Serpent Isle":
   cloud:
     origin: true
+    steam: true
   files:
     "<base>/GAME*.U7":
       tags:
@@ -812588,10 +812859,15 @@ Ultima Online:
         - os: mac
   gog:
     id: 1207662633
+  installDir:
+    Ultima VII: {}
+  steam:
+    id: 3067540
 "Ultima VII: The Black Gate":
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/GAME*.U7":
       tags:
@@ -812609,10 +812885,15 @@ Ultima Online:
     gogExtra:
       - 1207658984
     lutris: ultima-viitm-the-black-gate-the-forge-of-virtue
+  installDir:
+    Ultima VII: {}
+  steam:
+    id: 3067540
 "Ultima VIII: Pagan":
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/SAVEGAME":
       tags:
@@ -812628,6 +812909,15 @@ Ultima Online:
     id: 1207659015
   id:
     lutris: ultima-8-gold-edition
+  installDir:
+    Ultima VIII: {}
+  launch:
+    "<base>/DOSBOX/Ultima VIII.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067550
 "Ultima Worlds of Adventure 2: Martian Dreams":
   cloud:
     gog: true
@@ -826675,6 +826965,11 @@ Veil of Darkness:
   cloud:
     steam: true
   files:
+    "<base>/GRAPH.INI (No text editable)":
+      tags:
+        - config
+      when:
+        - os: dos
     "<base>/SAVES":
       tags:
         - save
@@ -854580,6 +854875,7 @@ Wing Commander:
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/00000*.WSG":
       tags:
@@ -854588,10 +854884,20 @@ Wing Commander:
         - os: dos
         - os: windows
   gog:
-    id: 1207658966
+    id: 1418263391
   id:
+    gogExtra:
+      - 1207658966
+      - 1784225157
     lutris: wing-commander-iii-heart-of-the-tiger
+  installDir:
+    Wing Commander III: {}
+  steam:
+    id: 2008740
 "Wing Commander IV: The Price of Freedom":
+  cloud:
+    gog: true
+    steam: true
   files:
     "<base>/*.WSG":
       tags:
@@ -854606,12 +854912,20 @@ Wing Commander:
         - os: dos
         - os: windows
   gog:
-    id: 1207659021
+    id: 1154804755
   id:
+    gogExtra:
+      - 1207659021
+      - 2023550212
     lutris: wing-commander-iv-the-price-of-freedom
+  installDir:
+    Wing Commander IV: {}
+  steam:
+    id: 2008750
 "Wing Commander: Academy":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/MISSIONS":
       tags:
@@ -854622,9 +854936,19 @@ Wing Commander:
     id: 1207659473
   id:
     lutris: wing-commander-academy
+  installDir:
+    Wing Commander - Academy: {}
+  launch:
+    "<base>/DOSBOX/Wing Commander Academy.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 3067090
 "Wing Commander: Armada":
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/GAME.OPT":
       tags:
@@ -854640,10 +854964,15 @@ Wing Commander:
     id: 1207659603
   id:
     lutris: wing-commander-armada
+  installDir:
+    Wing Commander Armada: {}
+  steam:
+    id: 3067100
 "Wing Commander: Privateer":
   cloud:
     gog: true
     origin: true
+    steam: true
   files:
     "<base>/*.PRS":
       tags:
@@ -854659,7 +854988,19 @@ Wing Commander:
     id: 1207658938
   id:
     lutris: wing-commander-privateer
+  installDir:
+    Wing Commander Privateer: {}
+  launch:
+    "<base>/DOSBOX/Wing Commander Privateer.exe":
+      - when:
+          - store: steam
+        workingDir: "<base>/DOSBOX"
+  steam:
+    id: 2008760
 "Wing Commander: Prophecy":
+  cloud:
+    gog: true
+    steam: true
   files:
     "<base>/save":
       tags:
@@ -854667,18 +855008,53 @@ Wing Commander:
       when:
         - os: windows
   gog:
-    id: 1207662663
+    id: 2051767712
   id:
     gogExtra:
       - 1207660153
+      - 1207662663
     lutris: wing-commandertm-5-prophecy-gold-edition
+  installDir:
+    Wing Commander - Prophecy: {}
+  steam:
+    id: 3067120
 "Wing Commander: Secret Ops":
+  files:
+    "<base>/Enhanced/Secret Ops/save/**/*.*":
+      when:
+        - os: windows
+          store: steam
+    "<base>/Enhanced/history/**/*.*":
+      when:
+        - os: windows
+          store: steam
+    "<base>/Enhanced/save/**/*.*":
+      when:
+        - os: windows
+          store: steam
+    "<base>/Original/Secret Ops/save/**/*.*":
+      when:
+        - os: windows
+          store: steam
+    "<base>/Original/history/**/*.*":
+      when:
+        - os: windows
+          store: steam
+    "<base>/Original/save/**/*.*":
+      when:
+        - os: windows
+          store: steam
   gog:
-    id: 1207662673
+    id: 2051767712
   id:
     gogExtra:
       - 1207660153
+      - 1207662673
     lutris: wing-commandertm-5-prophecy-gold-edition
+  installDir:
+    Wing Commander - Prophecy: {}
+  steam:
+    id: 3067120
 Wing of Darkness:
   files:
     "<winLocalAppData>/YF/Saved/SaveGames/*.sav":
