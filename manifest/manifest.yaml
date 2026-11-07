@@ -41243,6 +41243,19 @@ Animyst:
   steam:
     id: 871100
 Ankh - Anniversary Edition:
+  alias: "Ankh: Anniversary Edition"
+"Ankh Guardian - Treasure of the Demon's Temple/ゴッド・オブ・ウォール 魔宮の秘宝":
+  installDir:
+    Ankh Guardian: {}
+  launch:
+    "<base>/Ankh Guardian - Treasure of the Demon's Temple.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 975160
+"Ankh: Anniversary Edition":
   cloud:
     gog: true
   files:
@@ -41280,17 +41293,6 @@ Ankh - Anniversary Edition:
         workingDir: "<base>/bin/release"
   steam:
     id: 353980
-"Ankh Guardian - Treasure of the Demon's Temple/ゴッド・オブ・ウォール 魔宮の秘宝":
-  installDir:
-    Ankh Guardian: {}
-  launch:
-    "<base>/Ankh Guardian - Treasure of the Demon's Temple.exe":
-      - when:
-          - bit: 64
-            os: windows
-            store: steam
-  steam:
-    id: 975160
 "Ankh: Battle of the Gods":
   cloud:
     gog: true
@@ -117035,6 +117037,17 @@ Campus Notes - forget me not.:
       when:
         - os: windows
 "Can 'Em All":
+  files:
+    "<home>/AppData/LocalLow/LuisDev/Can 'Em All/save.sav":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/LuisDev/Can 'Em All/settings.sav":
+      tags:
+        - config
+      when:
+        - os: windows
   installDir:
     "Can 'Em All": {}
   launch:
@@ -117043,6 +117056,10 @@ Campus Notes - forget me not.:
           - bit: 64
             os: windows
             store: steam
+  registry:
+    "HKEY_CURRENT_USER/Software/LuisDev/Can 'Em All":
+      tags:
+        - config
   steam:
     id: 5133900
 Can You Eat by Yourself:
@@ -121249,6 +121266,8 @@ Carnivores 2:
 "Carnivores: Dinosaur Hunter Reborn":
   cloud:
     steam: true
+  id:
+    lutris: carnivores-dinosaur-hunter-reborn
   installDir:
     CarnivoresReborn: {}
   launch:
@@ -286256,6 +286275,8 @@ Fragile Allegiance:
         - os: dos
   gog:
     id: 1207659059
+  id:
+    lutris: fragile-allegiance
   installDir:
     Fragile Allegiance: {}
   launch:
@@ -330622,6 +330643,8 @@ Hardwar:
         - save
       when:
         - os: windows
+  id:
+    lutris: hardwar
   installDir:
     Hardwar: {}
   launch:
@@ -331574,6 +331597,18 @@ Has-Been Heroes:
   steam:
     id: 492290
 Hasbro Games Junior Collection:
+  files:
+    "<home>/AppData/LocalLow/Casual Brothers/Hasbro Games Junior Collection":
+      when:
+        - store: steam
+  installDir:
+    HBGC: {}
+  launch:
+    "<base>/HBGC.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 4124830
 Hasfax:
@@ -449755,6 +449790,10 @@ Max and the Magic Marker:
         - save
       when:
         - store: steam
+  id:
+    lutris: max-the-curse-of-brotherhood
+    steamExtra:
+      - 272390
   installDir:
     Max The Curse of Brotherhood: {}
   launch:
@@ -507326,9 +507365,38 @@ Number Hunt:
   steam:
     id: 851770
 "Number Machine: Math Factory":
+  files:
+    "<home>/.config/unity3d/ARIELEK/Number Machine/Steam_<storeUserId>/*.sav":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/ARIELEK/Number Machine/Steam_<storeUserId>/*.sav":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/com.ARIELEK.Number Machine/Steam_<storeUserId>/*.sav":
+      when:
+        - os: mac
+          store: steam
   id:
     steamExtra:
       - 2243290
+  installDir:
+    Number Machine: {}
+  launch:
+    "<base>/Number Machine.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/Number Machine.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+    "<base>/Number Machine.x86_64":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
   steam:
     id: 2231090
 Number World:
@@ -511412,17 +511480,6 @@ Off Grid:
     steam: true
   steam:
     id: 526720
-Off The Grid:
-  files:
-    "<winLocalAppData>/G01/Saved/Config/WindowsClient/GameUserSettings.ini":
-      tags:
-        - config
-      when:
-        - os: windows
-  installDir:
-    OffTheGrid: {}
-  steam:
-    id: 3659280
 "Off The Record: The Art of Deception":
   installDir:
     "Off The Record The Art of Deception Collector's Edition": {}
@@ -511435,6 +511492,17 @@ Off The Grid:
     id: 600170
 "Off The Record: The Art of Deception Collector's Edition":
   alias: "Off The Record: The Art of Deception"
+Off the Grid:
+  files:
+    "<winLocalAppData>/G01/Saved/Config/WindowsClient/GameUserSettings.ini":
+      tags:
+        - config
+      when:
+        - os: windows
+  installDir:
+    OffTheGrid: {}
+  steam:
+    id: 3659280
 "Off the Record: Liberty Stone":
   installDir:
     "Off The Record Liberty Stone Collector's Edition": {}
@@ -535583,7 +535651,8 @@ Payday 3:
   launch:
     "<base>/payday_win32_release.exe":
       - when:
-          - store: steam
+          - os: windows
+            store: steam
   steam:
     id: 24240
 Payroll:
@@ -553197,6 +553266,9 @@ Pool of Radiance:
   steam:
     id: 1882370
 "Pool of Radiance: Ruins of Myth Drannor":
+  cloud:
+    gog: true
+    steam: true
   files:
     "<base>/savegames":
       tags:
@@ -553207,6 +553279,12 @@ Pool of Radiance:
     id: 1405279681
   id:
     lutris: pool-of-radiance-ruins-of-myth-drannor
+  installDir:
+    Pool of Radiance Ruins of Myth Drannor: {}
+  launch:
+    "<base>/por2launch.exe":
+      - when:
+          - store: steam
   steam:
     id: 4834760
 Pools:
@@ -583687,6 +583765,8 @@ Realms of the Haunting:
         - os: dos
   gog:
     id: 1207658921
+  id:
+    lutris: realms-of-the-haunting
   installDir:
     Realms of the Haunting: {}
   launch:
@@ -601574,11 +601654,25 @@ Road Rage Royale:
   steam:
     id: 884610
 Road Rash:
+  cloud:
+    gog: true
+    steam: true
+  gog:
+    id: 2141922451
+  installDir:
+    RoadRash: {}
+  launch:
+    "<base>/RoadRash95.exe":
+      - when:
+          - os: windows
+            store: steam
   registry:
     HKEY_LOCAL_MACHINE/SOFTWARE/WOW6432Node/Electronic Arts/RoadRash 95:
       tags:
         - config
         - save
+  steam:
+    id: 2448570
 Road Redemption:
   cloud:
     gog: true
@@ -665987,6 +666081,8 @@ Soulbringer:
         - os: windows
   gog:
     id: 1207659003
+  id:
+    lutris: soulbringer
   installDir:
     Soulbringer: {}
   launch:
