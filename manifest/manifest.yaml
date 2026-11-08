@@ -93971,6 +93971,9 @@ Blood of Steel:
     steam: true
   steam:
     id: 567630
+Blood of the Lead Moon:
+  steam:
+    id: 4407900
 Blood of the Werewolf:
   id:
     lutris: blood-of-the-werewolf
@@ -125795,6 +125798,12 @@ Cave Confectioner:
   steam:
     id: 1181900
 Cave Digger:
+  files:
+    "<home>/AppData/LocalLow/Mekiwi/Cave Digger_ Riches/progress.save":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Cave Digger: {}
   steam:
@@ -302200,6 +302209,45 @@ Genome Guardian:
             store: steam
   steam:
     id: 2891310
+Genotype:
+  files:
+    "<home>/AppData/LocalLow/BolverkGames/GenotypeGame/0":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/BolverkGames/GenotypeGame/1":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/BolverkGames/GenotypeGame/2":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/BolverkGames/GenotypeGame/3":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/BolverkGames/GenotypeGame/4":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<home>/AppData/LocalLow/BolverkGames/GenotypeGame/GameSettings.data":
+      tags:
+        - config
+      when:
+        - os: windows
+  id:
+    steamExtra:
+      - 3023920
+  installDir:
+    Genotype: {}
+  steam:
+    id: 2667980
 Genshin Impact:
   registry:
     HKEY_CURRENT_USER/SOFTWARE/miHoYo/Genshin Impact:
@@ -410125,12 +410173,12 @@ Layers of Fear (2023):
     gog: true
     steam: true
   files:
-    "<winLocalAppData>/Local/Cron/Saved/Config/Windows":
+    "<winLocalAppData>/Cron/Saved/Config/Windows":
       tags:
         - config
       when:
         - os: windows
-    "<winLocalAppData>/Local/Cron/Saved/SaveGames/<storeUserId>":
+    "<winLocalAppData>/Cron/Saved/SaveGames/<storeUserId>":
       tags:
         - save
       when:
@@ -487740,6 +487788,18 @@ NIMRODS:
     id: 2086430
 "NIMRODS: GunCraft Survivor":
   alias: NIMRODS
+"NIRA: Intense Import Drag Racing":
+  files:
+    "<base>/NIRA.CFG":
+      tags:
+        - config
+      when:
+        - os: dos
+    "<base>/SAVE":
+      tags:
+        - save
+      when:
+        - os: dos
 NIRO:
   id:
     lutris: nero
@@ -559570,6 +559630,13 @@ Prison Tycoon Alcatraz:
             store: steam
   steam:
     id: 1515460
+Prison of Husks:
+  id:
+    lutris: prison-of-husks
+    steamExtra:
+      - 3746300
+  steam:
+    id: 2975260
 Prisoner:
   installDir:
     Prisoner: {}
@@ -560608,10 +560675,11 @@ Probably Stolen:
   cloud:
     steam: true
   files:
-    "<home>/AppData/LocalLow/Questing Goose Studio/Probably Stolen/*.es3":
+    "<winLocalAppData>/Questing Goose Studio/Probably Stolen":
+      tags:
+        - save
       when:
         - os: windows
-          store: steam
   installDir:
     Probably Stolen: {}
   launch:
@@ -601656,6 +601724,7 @@ Road Rage Royale:
 Road Rash:
   cloud:
     gog: true
+    origin: true
     steam: true
   gog:
     id: 2141922451
@@ -604939,6 +605008,11 @@ Rockman X7:
 "Rocko's Quest":
   files:
     "<base>/Options.cfg":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<base>/RData/Misc/strujen.opt":
       tags:
         - config
       when:
@@ -681157,6 +681231,9 @@ Star Fox 64 (Starship):
         - save
       when:
         - os: windows
+Star Fox Adventures:
+  id:
+    lutris: star-fox-adventures
 Star Garden:
   steam:
     id: 3370970
@@ -736563,6 +736640,8 @@ The Callisto Protocol:
   steam:
     id: 1544020
 "The Cameron Files: The Secret at Loch Ness":
+  id:
+    lutris: the-cameron-files-the-secret-at-loch-ness
   installDir:
     The Cameron Files The Secret at Loch Ness: {}
   launch:
@@ -823517,6 +823596,8 @@ VRobot:
   steam:
     id: 588560
 VRog:
+  cloud:
+    steam: true
   files:
     "<home>/AppData/LocalLow/Illusion Walk/VRog/*.dat":
       when:
@@ -834668,6 +834749,12 @@ Vox:
   steam:
     id: 252770
 Vox Machinae:
+  files:
+    "<home>/AppData/LocalLow/SpaceBulletDynamicsCorporation/VoxMachinae":
+      tags:
+        - save
+      when:
+        - os: windows
   installDir:
     Vox Machinae: {}
   launch:
@@ -854979,6 +855066,22 @@ Wing Commander:
       when:
         - os: dos
         - os: windows
+    "<base>/DOS/*.WSG":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<base>/Kilrathi_Saga/*.WSG":
+      tags:
+        - save
+      when:
+        - store: steam
+    "<winAppData>/wc3w_en/*.WSG":
+      tags:
+        - save
+      when:
+        - os: windows
+          store: steam
   gog:
     id: 1418263391
   id:
