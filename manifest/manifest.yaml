@@ -41476,6 +41476,7 @@ Anna - Extended Edition:
     id: 217690
 "Anna's Quest":
   cloud:
+    epic: true
     steam: true
   files:
     "<winLocalAppData>/Daedalic Entertainment GmbH/Anna's Quest/Savegames":
@@ -108355,6 +108356,17 @@ Bubblien Pop:
             store: steam
   steam:
     id: 764870
+Bubbly:
+  installDir:
+    Bubbly: {}
+  launch:
+    "<base>/Bubbly.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4706340
 Bubli:
   installDir:
     Bubli: {}
@@ -110403,14 +110415,7 @@ Bunker - Nightmare Begins:
   steam:
     id: 1053740
 Bunker - The Underground Game:
-  installDir:
-    Bunker: {}
-  launch:
-    "<base>/Bunker.exe":
-      - when:
-          - store: steam
-  steam:
-    id: 354180
+  alias: "Bunker: The Underground Game"
 Bunker 56:
   installDir:
     Bunker: {}
@@ -110488,6 +110493,15 @@ Bunker Tidy Up:
           - store: steam
   steam:
     id: 5212940
+"Bunker: The Underground Game":
+  installDir:
+    Bunker: {}
+  launch:
+    "<base>/Bunker.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 354180
 Bunny & Piggy:
   steam:
     id: 549810
@@ -135831,6 +135845,9 @@ Chrono Project:
             store: steam
   steam:
     id: 893810
+Chrono Punk:
+  steam:
+    id: 5081550
 Chrono Trigger:
   cloud:
     steam: true
@@ -204835,6 +204852,7 @@ Disjunction:
   id:
     gogExtra:
       - 1515245162
+    lutris: disney-classic-games-aladdin-and-the-lion-king
     steamExtra:
       - 1636800
   installDir:
@@ -226149,6 +226167,7 @@ Dungeons & Dragons Online:
         - os: windows
           store: microsoft
   id:
+    lutris: dungeons-dragons-dark-alliance
     steamExtra:
       - 1670843
   installDir:
@@ -285495,6 +285514,10 @@ Four Last Things:
   installDir:
     Four Last Things: {}
   launch:
+    "<base>/Four Last Things.app":
+      - when:
+          - os: mac
+            store: steam
     "<base>/Four Last Things.exe":
       - when:
           - os: windows
@@ -300549,12 +300572,6 @@ Gears of War 4:
   cloud:
     steam: true
   files:
-    "<winLocalAppData>/FairlightConcept/Saved/Config/WinGDK":
-      tags:
-        - config
-      when:
-        - os: windows
-          store: microsoft
     "<winLocalAppData>/Microsoft/Gears of War E-Day/Saves":
       tags:
         - config
@@ -300567,6 +300584,12 @@ Gears of War 4:
       when:
         - os: windows
           store: steam
+    "<winLocalAppData>/Microsoft/Gears of War E-Day/WinGDK/<storeUserId>/Saved/Config/WinGDK":
+      tags:
+        - config
+      when:
+        - os: windows
+          store: microsoft
     "<winLocalAppData>/Packages/Microsoft.Fairlightbasegame_8wekyb3d8bbwe/SystemAppData/wgs":
       tags:
         - config
@@ -366549,6 +366572,8 @@ Imperial Glory:
 Imperialism:
   gog:
     id: 1207659139
+  id:
+    lutris: imperialism
 "Imperialism II: The Age of Exploration":
   gog:
     id: 1207659153
@@ -387845,6 +387870,7 @@ Jurassic World Evolution 2:
       when:
         - os: windows
   id:
+    lutris: jurassic-world-evolution-2
     steamExtra:
       - 1336321
       - 1336322
@@ -387871,6 +387897,7 @@ Jurassic World Evolution 3:
       when:
         - os: windows
   id:
+    lutris: jurassic-world-evolution-3
     steamExtra:
       - 3651190
       - 3651200
@@ -444602,6 +444629,23 @@ Marble Blast Gold:
         - save
       when:
         - os: windows
+Marble Blast Ultra:
+  files:
+    "<winAppData>/GarageGames/Marble Blast Ultra/achievements.cs":
+      tags:
+        - save
+      when:
+        - os: windows
+    "<winAppData>/GarageGames/Marble Blast Ultra/prefs.cs":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winAppData>/GarageGames/Marble Blast Ultra/scores.cs":
+      tags:
+        - save
+      when:
+        - os: windows
 Marble Combat:
   files:
     "<winLocalAppData>/P8Ball/*.sav":
@@ -468799,6 +468843,13 @@ Molly - Can you survive 100 nights?:
             store: steam
   steam:
     id: 1177350
+Molokaust:
+  id:
+    lutris: molokaust
+    steamExtra:
+      - 4592180
+  steam:
+    id: 4503570
 Molten Armor:
   files:
     "<winLocalAppData>/MOLTEN_ARMOR":
@@ -499730,6 +499781,7 @@ Nighthaw-X3000:
 Nighthawks:
   cloud:
     gog: true
+    steam: true
   files:
     "<base>/saves/**/*.*":
       when:
@@ -647070,12 +647122,6 @@ Silver Pines:
       - 5153460
   installDir:
     Silver Pines: {}
-  launch:
-    "<base>/Carpenter.exe":
-      - when:
-          - bit: 64
-            os: windows
-            store: steam
   steam:
     id: 2333000
 Silver Tale:
@@ -726275,6 +726321,10 @@ Telling Lies:
         - config
   steam:
     id: 762830
+Telltale Batman Season 1:
+  alias: "Batman: The Telltale Series"
+Telltale Batman Season 2:
+  alias: "Batman: The Enemy Within - The Telltale Series"
 "Telltale Texas Hold 'Em":
   files:
     "<base>/prefs.prop":
@@ -870141,6 +870191,16 @@ You Are Empty:
   cloud:
     steam: true
   files:
+    "<winAppData>/YaE_Absolute/config_*":
+      tags:
+        - config
+      when:
+        - os: windows
+    "<winAppData>/YaE_Absolute/savegames/Save*":
+      tags:
+        - save
+      when:
+        - os: windows
     "<winDocuments>/My Games/YaE":
       tags:
         - config
@@ -870335,6 +870395,8 @@ You Died but a Necromancer revived you:
   steam:
     id: 1107040
 "You Don't Know Jack":
+  id:
+    lutris: you-dont-know-jack-vol-1-xl
   installDir:
     YDKJ_VOL1XL: {}
   launch:
