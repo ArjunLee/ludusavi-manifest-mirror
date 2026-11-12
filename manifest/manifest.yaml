@@ -8596,6 +8596,28 @@ A Dance of Fire and Ice:
             store: steam
   steam:
     id: 977950
+A Dark Cave:
+  cloud:
+    steam: true
+  files:
+    "<winAppData>/A Dark Cave Demo/adc-steam-demo-save.dat":
+      when:
+        - store: steam
+    "<winAppData>/A Dark Cave/adc-steam-demo-save.dat":
+      when:
+        - store: steam
+    "<winAppData>/A Dark Cave/adc-steam-save.dat":
+      when:
+        - store: steam
+  installDir:
+    A Dark Cave: {}
+  launch:
+    "<base>/A Dark Cave.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 4882240
 "A Dark World: The Glowing City":
   installDir:
     A Dark World The Glowing City: {}
@@ -28951,6 +28973,11 @@ Alabaster Dawn:
   cloud:
     steam: true
   files:
+    "<winLocalAppData>/Alabaster Dawn/Saves/Default":
+      tags:
+        - save
+      when:
+        - os: windows
     "<xdgConfig>/Alabaster Dawn":
       tags:
         - config
@@ -96846,6 +96873,25 @@ Bob Came in Pieces:
         - config
   steam:
     id: 46000
+Bob Logistics:
+  files:
+    "<winLocalAppData>/BOBLOGISTICS/Saved/SaveGames/BOBLOGISTICS_Main.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/BOBLOGISTICS/Saved/SaveGames/BOBLOGISTICS_Main_Backup.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/BOBLOGISTICS/Saved/SaveGames/BOBLOGISTICS_Main_Branch.sav":
+      when:
+        - store: steam
+  installDir:
+    BOB LOGISTICS: {}
+  launch:
+    "<base>/BOBLOGISTICS.exe":
+      - when:
+          - store: steam
+  steam:
+    id: 5009390
 Bob Was Hungry:
   installDir:
     Bob Was Hungry: {}
@@ -101798,6 +101844,18 @@ Box Align:
             store: steam
   steam:
     id: 768590
+Box Flow:
+  installDir:
+    Box Flow: {}
+  launch:
+    "<base>/box-flow.exe":
+      - when:
+          - store: steam
+      - arguments: "--use-webgpu-adapter=d3d11"
+        when:
+          - store: steam
+  steam:
+    id: 4909100
 Box It:
   cloud:
     steam: true
@@ -105099,6 +105157,28 @@ Brick Breaker with Risa:
             store: steam
   steam:
     id: 910420
+Brick Buddies:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/BunnyHopHome/BrickBuddies/Steam/<storeUserId>/*.json":
+      when:
+        - os: windows
+          store: steam
+    "<home>/AppData/LocalLow/BunnyHopHome/BrickBuddies/Steam/<storeUserId>/BrickProgressIndependent/*.json":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    CigBreak: {}
+  launch:
+    "<base>/2026September.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4901540
 Brick Inventions:
   files:
     "<home>/AppData/LocalLow/BrickInventions/Brick Inventions/Inventions/*.bim":
@@ -143481,6 +143561,16 @@ Clutchball:
             store: steam
   steam:
     id: 733810
+"Cluttermancer: Tidy Up the Nightmare Alley":
+  installDir:
+    Cluttermancer Tidy Up the Nightmare Alley: {}
+  launch:
+    "<base>/Cluttermancer.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 5032140
 Cmoar VR Cinema:
   installDir:
     Cmoar VR Cinema: {}
@@ -153398,8 +153488,13 @@ Control Resonant:
       tags:
         - save
       when:
+        - store: steam
+    "<winLocalAppData>/GOG.com/Galaxy/Applications/60085018752855325/Storage/Shared/Files":
+      tags:
+        - save
+      when:
         - os: windows
-          store: steam
+          store: gog
     "<winLocalAppData>/Remedy/CONTROLResonant/renderer.ini":
       tags:
         - config
@@ -157797,6 +157892,73 @@ Crab God:
             store: steam
   steam:
     id: 2289390
+Crack:
+  files:
+    "<home>/.config/unity3d/Rafoli/CRACK/world_slot*":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/unity3d/Rafoli/CRACK/world_slot0_timelapse":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/unity3d/Rafoli/CRACK/world_slot1_timelapse":
+      when:
+        - os: linux
+          store: steam
+    "<home>/.config/unity3d/Rafoli/CRACK/world_slot2_timelapse":
+      when:
+        - os: linux
+          store: steam
+    "<home>/AppData/LocalLow/Rafoli/CRACK/world_slot*":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Rafoli/CRACK/world_slot0_timelapse":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Rafoli/CRACK/world_slot1_timelapse":
+      when:
+        - store: steam
+    "<home>/AppData/LocalLow/Rafoli/CRACK/world_slot2_timelapse":
+      when:
+        - store: steam
+    "<home>/Library/Application Support/Rafoli/CRACK/world_slot*":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Rafoli/CRACK/world_slot0_timelapse":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Rafoli/CRACK/world_slot1_timelapse":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Rafoli/CRACK/world_slot2_timelapse":
+      when:
+        - os: mac
+          store: steam
+  installDir:
+    CRACK: {}
+  launch:
+    "<base>/CRACK.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/CRACK.exe":
+      - when:
+          - os: windows
+            store: steam
+      - arguments: "-force-vulkan"
+        when:
+          - os: windows
+            store: steam
+    "<base>/CRACK.x86_64":
+      - when:
+          - os: linux
+            store: steam
+  steam:
+    id: 4312190
 Crack Down:
   files:
     "<base>/CRACKDWN.SAV":
@@ -170158,6 +170320,24 @@ Cutlass:
     Cutlass: {}
   steam:
     id: 663020
+Cutout Village:
+  files:
+    "<base>/saved":
+      when:
+        - store: steam
+  installDir:
+    Cutout Village: {}
+  launch:
+    "<base>/CutoutVillage.app/Contents/MacOS/CutoutVillage":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/CutoutVillage.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 3907910
 Cutthroat:
   files:
     "<base>/SavesDir/*.txt":
@@ -248951,6 +249131,29 @@ Eternal Maze:
             store: steam
   steam:
     id: 652990
+Eternal Palace Sakura:
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/DennekoYugi/SakuraTower/Steam/<storeUserId>/System/SaveFile":
+      tags:
+        - config
+        - save
+      when:
+        - os: windows
+  id:
+    lutris: eternal-palace-sakura
+    steamExtra:
+      - 4070720
+  installDir:
+    星樹の機神 夢幻桜楼閣: {}
+  launch:
+    "<base>/SakuraTower.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2991310
 Eternal Radiance:
   cloud:
     steam: true
@@ -281011,6 +281214,38 @@ Football Manager 26:
             store: steam
   steam:
     id: 3551340
+Football Manager 27:
+  cloud:
+    steam: true
+  files:
+    "<home>/Library/Application Support/Sports Interactive/Football Manager 27/cloud/**/*.fmf":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/Sports Interactive/Football Manager 27/cloud/games/*.fm":
+      when:
+        - os: mac
+          store: steam
+    "<winLocalAppData>/Sports Interactive/Football Manager 27/cloud/**/*.fmf":
+      when:
+        - store: steam
+    "<winLocalAppData>/Sports Interactive/Football Manager 27/cloud/games/*.fm":
+      when:
+        - store: steam
+  installDir:
+    Football Manager 27: {}
+  launch:
+    "<base>/fm.app":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/fm.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 4530370
 Football Manager Touch 2016:
   cloud:
     steam: true
@@ -294264,6 +294499,25 @@ GRAV:
         workingDir: "<base>/Binaries/Win64"
   steam:
     id: 332500
+GRAVHOUNDS:
+  files:
+    "<base>/WFO/Saved/SaveGames/**/*.sav":
+      when:
+        - store: steam
+    "<winLocalAppData>/WFO/Saved/SaveGames/*.sav":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    GravHounds: {}
+  launch:
+    "<base>/WFOSteam.exe":
+      - arguments: "-SaveToUserDir"
+        when:
+          - os: windows
+            store: steam
+  steam:
+    id: 2440760
 GRAY:
   files:
     "<winAppData>/MMFApplications/DontReadME":
@@ -403992,6 +404246,7 @@ Kung Fu Panda:
         - config
 "Kung Fu Panda: Showdown of Legendary Legends":
   id:
+    lutris: kung-fu-panda-showdown-of-legendary-legends
     steamExtra:
       - 413800
       - 413801
@@ -446974,6 +447229,10 @@ Marvel Cosmic Invasion:
       when:
         - os: windows
           store: microsoft
+  id:
+    steamExtra:
+      - 4436470
+      - 5032670
   installDir:
     MARVEL Cosmic Invasion: {}
   launch:
@@ -559453,6 +559712,19 @@ Princessfall:
 "Prinny Party: Going Overboard!":
   cloud:
     steam: true
+  files:
+    "<winAppData>/Nippon Ichi Software, Inc/Prinny Party Going Overboard!/<storeUserId>/.systemsave":
+      when:
+        - store: steam
+    "<winAppData>/Nippon Ichi Software, Inc/Prinny Party Going Overboard!/<storeUserId>/save.*":
+      when:
+        - store: steam
+  installDir:
+    Prinny Party Going Overboard!: {}
+  launch:
+    "<base>/PrinnyParty.exe":
+      - when:
+          - store: steam
   steam:
     id: 4509300
 Prism:
@@ -678932,8 +679204,20 @@ Spring of Decadence:
 "Springs, Eternal":
   cloud:
     steam: true
+  files:
+    "<home>/AppData/LocalLow/Fullbright/Springs, Eternal/*.es3*":
+      when:
+        - store: steam
   id:
     lutris: springs-eternal
+  installDir:
+    "Springs, Eternal": {}
+  launch:
+    "<base>/Springs, Eternal.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
   steam:
     id: 3677850
 "Sprint Cars: Road to Knoxville":
@@ -716608,6 +716892,24 @@ TANKNAROK:
             store: steam
   steam:
     id: 1029760
+"TANUKI: Pon's Summer":
+  cloud:
+    steam: true
+  files:
+    "<home>/AppData/LocalLow/Denkiworks/TANUKI_ Pon's Summer/SaveData":
+      when:
+        - os: windows
+          store: steam
+  installDir:
+    "TANUKI Pon's Summer": {}
+  launch:
+    "<base>/TANUKI Pon's Summer.exe":
+      - when:
+          - bit: 64
+            os: windows
+            store: steam
+  steam:
+    id: 3218570
 TAOTH - The Adventures of the Herkulez:
   installDir:
     TAOTH: {}
@@ -738406,9 +738708,17 @@ The Citadel:
   steam:
     id: 1378290
 The Citadel Project:
+  cloud:
+    steam: true
   id:
     steamExtra:
       - 5111940
+  installDir:
+    The Citadel Project: {}
+  launch:
+    "<base>/TheCitadelProject.exe":
+      - when:
+          - store: steam
   steam:
     id: 4795460
 The Clans - Saga of the Twins:
@@ -814586,6 +814896,22 @@ Ultra Hardcore:
   steam:
     id: 793720
 Ultra Maze:
+  installDir:
+    Ultra Maze: {}
+  launch:
+    "<base>/UltraMaze.app/Contents/MacOS/UltraMaze":
+      - when:
+          - os: mac
+            store: steam
+    "<base>/UltraMaze.exe":
+      - when:
+          - os: windows
+            store: steam
+    "<base>/UltraMaze.sh":
+      - when:
+          - bit: 64
+            os: linux
+            store: steam
   steam:
     id: 3341190
 "Ultra Off-Road Simulator 2019: Alaska":
@@ -847004,6 +847330,63 @@ We Stay Behind:
     id: 1229497338
   steam:
     id: 1142570
+"We Steal From Old People: The Game":
+  cloud:
+    steam: true
+  files:
+    "<home>/Library/Application Support/WeStealFromOldPeople.staging/save/cloud/users/<storeUserId>/**/*.data":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/WeStealFromOldPeople.staging/save/cloud/users/<storeUserId>/**/*.webp":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/WeStealFromOldPeople/save/cloud/users/<storeUserId>/**/*.data":
+      when:
+        - os: mac
+          store: steam
+    "<home>/Library/Application Support/WeStealFromOldPeople/save/cloud/users/<storeUserId>/**/*.webp":
+      when:
+        - os: mac
+          store: steam
+    "<winAppData>/WeStealFromOldPeople.staging/save/cloud/users/<storeUserId>/**/*.data":
+      when:
+        - store: steam
+    "<winAppData>/WeStealFromOldPeople.staging/save/cloud/users/<storeUserId>/**/*.webp":
+      when:
+        - store: steam
+    "<winAppData>/WeStealFromOldPeople/save/cloud/users/<storeUserId>/**/*.data":
+      when:
+        - store: steam
+    "<winAppData>/WeStealFromOldPeople/save/cloud/users/<storeUserId>/**/*.webp":
+      when:
+        - store: steam
+    "<xdgData>/WeStealFromOldPeople.staging/save/cloud/users/<storeUserId>/**/*.data":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/WeStealFromOldPeople.staging/save/cloud/users/<storeUserId>/**/*.webp":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/WeStealFromOldPeople/save/cloud/users/<storeUserId>/**/*.data":
+      when:
+        - os: linux
+          store: steam
+    "<xdgData>/WeStealFromOldPeople/save/cloud/users/<storeUserId>/**/*.webp":
+      when:
+        - os: linux
+          store: steam
+  installDir:
+    We Steal From Old People The Game: {}
+  launch:
+    "<base>/WeStealFromOldPeople.exe":
+      - when:
+          - os: windows
+            store: steam
+  steam:
+    id: 5051080
 We Walked in Darkness:
   installDir:
     We Walked In Darkness: {}
